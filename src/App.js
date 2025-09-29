@@ -8,16 +8,32 @@ import React, { useState } from "react";
 // ================== Hero ==================
 const Hero = () => {
   return (
-    <header
-      className="relative bg-cover bg-center text-white"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80')`
-      }}
-    >
-      <div className="bg-gradient-to-r from-black/70 to-emerald-900/70">
+    <header className="relative h-screen overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="/✨ Indulge in Luxury, Rekindle Romance ✨Treat your loved one to an unforgettable 4N-5D Private To.mp4" type="video/mp4" />
+        {/* Fallback image if video doesn't load */}
+        <img 
+          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80" 
+          alt="Kerala Tourism Background" 
+          className="w-full h-full object-cover"
+        />
+      </video>
+      
+      {/* Overlay with gradient */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 to-emerald-900/70" />
+      
+      {/* Content */}
+      <div className="relative z-10 h-full flex items-center justify-center">
         <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-emerald-600/80 rounded-full text-sm font-medium mb-4">
-            🌟 Omkar Tour and Travels - Trusted Since 2010
+          <div className="inline-flex items-center px-4 py-2 bg-emerald-600/80 rounded-full text-lg font-medium mb-4 backdrop-blur-sm">
+            <h2 className="text-xl">🌟 Omkar Tour and Travels</h2>  - Trusted Since 2010
           </div>
           <h2 className="text-lg uppercase tracking-widest text-emerald-200 mb-4">
             Experience God's Own Country with Experts
@@ -25,7 +41,7 @@ const Hero = () => {
           <h1 className="text-6xl md:text-7xl font-bold mb-6 drop-shadow-2xl">
             KERALA
           </h1>
-          <p className="mt-6 text-xl max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-6 text-xl max-w-3xl mx-auto leading-relaxed text-white">
             Your trusted travel partner for unforgettable Kerala experiences. From customized 
             itineraries to luxury stays, we craft perfect journeys through backwaters, hills, 
             and cultural wonders.
@@ -33,13 +49,13 @@ const Hero = () => {
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="#packages"
-              className="px-8 py-4 bg-emerald-600 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition duration-300 shadow-lg"
+              className="px-8 py-4 bg-emerald-600 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition duration-300 shadow-lg hover:scale-105 transform"
             >
               View Tour Packages
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 border-2 border-white rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-900 transition duration-300"
+              className="px-8 py-4 border-2 border-white rounded-lg font-semibold text-lg hover:bg-white hover:text-emerald-900 transition duration-300 hover:scale-105 transform"
             >
               Get Custom Quote
             </a>
@@ -57,6 +73,15 @@ const Hero = () => {
               <span className="w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
               24/7 Customer Support
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="animate-bounce">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
           </div>
         </div>
       </div>
