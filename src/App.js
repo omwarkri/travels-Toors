@@ -30,61 +30,67 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/80 to-emerald-900/80" />
       
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-center">
-        <div className="max-w-6xl mx-auto px-6 py-24 text-center">
-          <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-lg font-medium mb-4 backdrop-blur-sm border border-white/30">
-            <h2 className="text-xl text-white font-bold">🌟 Omkar Tour and Travels</h2>
-            <span className="ml-2 text-emerald-200 font-semibold">- Trusted Since 2010</span>
+      <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-24 text-center">
+          {/* Company Badge - Made responsive */}
+          <div className="inline-flex flex-col sm:flex-row items-center px-3 sm:px-4 py-2 bg-white/20 rounded-full text-base sm:text-lg font-medium mb-4 sm:mb-6 backdrop-blur-sm border border-white/30 mx-2">
+            <h2 className="text-lg sm:text-xl text-white font-bold text-center sm:text-left">🌟 Omkar Tour and Travels</h2>
+            <span className="text-emerald-200 font-semibold text-sm sm:text-base mt-1 sm:mt-0 sm:ml-2">- Trusted Since 2010</span>
           </div>
           
-          <h2 className="text-xl uppercase tracking-widest text-emerald-300 mb-4 font-semibold drop-shadow-lg">
+          {/* Subheading */}
+          <h2 className="text-lg sm:text-xl uppercase tracking-widest text-emerald-300 mb-4 sm:mb-6 font-semibold drop-shadow-lg px-2">
             Experience God's Own Country with Experts
           </h2>
           
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+          {/* Main Heading */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl">
             KERALA
           </h1>
           
-          <p className="mt-6 text-xl max-w-3xl mx-auto leading-relaxed text-white font-medium drop-shadow-lg">
+          {/* Description */}
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-2xl sm:max-w-3xl mx-auto leading-relaxed text-white font-medium drop-shadow-lg px-4">
             Your trusted travel partner for unforgettable Kerala experiences. From customized 
             itineraries to luxury stays, we craft perfect journeys through backwaters, hills, 
             and cultural wonders.
           </p>
           
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          {/* Buttons */}
+          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <a
               href="#packages"
-              className="px-8 py-4 bg-emerald-500 rounded-lg font-bold text-lg text-white hover:bg-emerald-600 transition duration-300 shadow-lg hover:scale-105 transform border-2 border-emerald-400"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 rounded-lg font-bold text-base sm:text-lg text-white hover:bg-emerald-600 transition duration-300 shadow-lg hover:scale-105 transform border-2 border-emerald-400"
             >
               View Tour Packages
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 bg-transparent border-2 border-white rounded-lg font-bold text-lg text-white hover:bg-white hover:text-emerald-900 transition duration-300 hover:scale-105 transform"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white rounded-lg font-bold text-base sm:text-lg text-white hover:bg-white hover:text-emerald-900 transition duration-300 hover:scale-105 transform"
             >
               Get Custom Quote
             </a>
           </div>
           
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-base text-white font-medium">
-            <div className="flex items-center bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-              <span className="w-3 h-3 bg-emerald-400 rounded-full mr-3"></span>
+          {/* Stats */}
+          <div className="mt-6 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-sm sm:text-base text-white font-medium px-2">
+            <div className="flex items-center bg-white/20 px-3 py-2 rounded-full backdrop-blur-sm">
+              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
               5000+ Happy Customers
             </div>
-            <div className="flex items-center bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-              <span className="w-3 h-3 bg-emerald-400 rounded-full mr-3"></span>
+            <div className="flex items-center bg-white/20 px-3 py-2 rounded-full backdrop-blur-sm">
+              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
               Best Price Guarantee
             </div>
-            <div className="flex items-center bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm">
-              <span className="w-3 h-3 bg-emerald-400 rounded-full mr-3"></span>
+            <div className="flex items-center bg-white/20 px-3 py-2 rounded-full backdrop-blur-sm">
+              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
               24/7 Customer Support
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      {/* Scroll indicator - Hidden on very small screens */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden sm:block">
         <div className="animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
