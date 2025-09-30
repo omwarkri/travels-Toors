@@ -33,7 +33,9 @@ const Hero = () => {
       <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-24 text-center">
           {/* Company Badge - Made responsive */}
+          <a className="text-white">Whats app</a>
           <div className="inline-flex flex-col sm:flex-row items-center px-3 sm:px-4 py-2 bg-white/20 rounded-full text-base sm:text-lg font-medium mb-4 sm:mb-6 backdrop-blur-sm border border-white/30 mx-2">
+          
             <h2 className="text-lg sm:text-xl text-white font-bold text-center sm:text-left">🌟 Omkar Tour and Travels</h2>
             <span className="text-emerald-200 font-semibold text-sm sm:text-base mt-1 sm:mt-0 sm:ml-2">- Trusted Since 2010</span>
           </div>
@@ -49,11 +51,7 @@ const Hero = () => {
           </h1>
           
           {/* Description */}
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-2xl sm:max-w-3xl mx-auto leading-relaxed text-white font-medium drop-shadow-lg px-4">
-            Your trusted travel partner for unforgettable Kerala experiences. From customized 
-            itineraries to luxury stays, we craft perfect journeys through backwaters, hills, 
-            and cultural wonders.
-          </p>
+          
           
           {/* Buttons */}
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
@@ -218,7 +216,10 @@ const TourPackageCard = ({ pkg }) => (
       </div>
 
       <button className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-4 rounded-xl font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center group">
-        <span>GET FREE QUOTE</span>
+    <a href="https://wa.me/919028803309" target="_blank" rel="noopener noreferrer">
+  <span>Whats App</span>
+</a>
+
         <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
