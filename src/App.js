@@ -551,28 +551,57 @@ const ContactSection = ({ id = "contact" }) => {
           Get your personalized Kerala tour package with best price guarantee. Our travel experts are here to help you plan the perfect trip.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div className="bg-emerald-700 p-6 rounded-2xl">
-            <div className="text-2xl mb-4">📞</div>
-            <h3 className="text-xl font-bold mb-2">Call Us</h3>
-            <p className="text-emerald-100">+91-9958809033</p>
-            <p className="text-emerald-100">+91-9898765432</p>
-          </div>
-          
-          <div className="bg-emerald-700 p-6 rounded-2xl">
-            <div className="text-2xl mb-4">💬</div>
-            <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
-            <p className="text-emerald-100">+91-9958809033</p>
-            <p className="text-emerald-100">24/7 Available</p>
-          </div>
-          
-          <div className="bg-emerald-700 p-6 rounded-2xl">
-            <div className="text-2xl mb-4">✉️</div>
-            <h3 className="text-xl font-bold mb-2">Email</h3>
-            <p className="text-emerald-100">info@omkartours.com</p>
-            <p className="text-emerald-100">tour@omkartours.com</p>
-          </div>
-        </div>
+   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+  {/* Call Us */}
+  <div className="bg-emerald-700 p-6 rounded-2xl">
+    <div className="text-2xl mb-4">📞</div>
+    <h3 className="text-xl font-bold mb-2">Call Us</h3>
+    <p className="text-emerald-100">
+      <a href="tel:+919958809033" className="hover:underline">
+        +91-9958809033
+      </a>
+    </p>
+    <p className="text-emerald-100">
+      <a href="tel:+919898765432" className="hover:underline">
+        +91-9898765432
+      </a>
+    </p>
+  </div>
+  
+  {/* WhatsApp */}
+  <div className="bg-emerald-700 p-6 rounded-2xl">
+    <div className="text-2xl mb-4">💬</div>
+    <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
+    <p className="text-emerald-100">
+      <a
+        href="https://wa.me/919958809033"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        +91-9958809033
+      </a>
+    </p>
+    <p className="text-emerald-100">24/7 Available</p>
+  </div>
+  
+  {/* Email */}
+  <div className="bg-emerald-700 p-6 rounded-2xl">
+    <div className="text-2xl mb-4">✉️</div>
+    <h3 className="text-xl font-bold mb-2">Email</h3>
+    <p className="text-emerald-100">
+      <a href="mailto:info@omkartours.com" className="hover:underline">
+        info@omkartours.com
+      </a>
+    </p>
+    <p className="text-emerald-100">
+      <a href="mailto:tour@omkartours.com" className="hover:underline">
+        tour@omkartours.com
+      </a>
+    </p>
+  </div>
+</div>
+
 
         <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition duration-300 shadow-lg">
           Get Free Custom Quote
@@ -619,28 +648,47 @@ const Footer = () => (
           </ul>
         </div>
 
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-          <div className="space-y-2 text-gray-300">
-            <p className="flex items-center">
-              <span className="mr-2">📱</span>
-              +91-9958809033 (24/7)
-            </p>
-            <p className="flex items-center">
-              <span className="mr-2">💬</span>
-              +91-9958809033 (WhatsApp)
-            </p>
-            <p className="flex items-center">
-              <span className="mr-2">✉️</span>
-              info@omkartours.com
-            </p>
-            <p className="text-sm mt-4">
-              Office: No 79/47, New Gardens Enrichakkal Sangamam<br />
-              Nagar Vallakadavur EQ,<br />
-              Thiruvananthapuram, Kerala 695008
-            </p>
-          </div>
-        </div>
+       <div>
+  <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+  <div className="space-y-2 text-gray-300">
+    {/* Phone */}
+    <p className="flex items-center">
+      <span className="mr-2">📱</span>
+      <a href="tel:+919028803309" className="hover:underline">
+        +91-9028803309 (24/7)
+      </a>
+    </p>
+
+    {/* WhatsApp */}
+    <p className="flex items-center">
+      <span className="mr-2">💬</span>
+      <a 
+        href="https://wa.me/919028803309" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        +91-9028803309 (WhatsApp)
+      </a>
+    </p>
+
+    {/* Email */}
+    <p className="flex items-center">
+      <span className="mr-2">✉️</span>
+      <a href="mailto:omkartours143@gmail.com" className="hover:underline">
+        omkartours143@gmail.com
+      </a>
+    </p>
+
+    {/* Address */}
+    <p className="text-sm mt-4">
+      Office: No 79/47, New Gardens Enrichakkal Sangamam<br />
+      Nagar Vallakadavur EQ,<br />
+      Thiruvananthapuram, Kerala 695008
+    </p>
+  </div>
+</div>
+
       </div>
 
       <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
