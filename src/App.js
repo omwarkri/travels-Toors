@@ -247,6 +247,24 @@ const TourPackages = ({ id = "packages" }) => {
         "24/7 Omkar travel support"
       ],
     },
+       {
+      name: "Maharastra Bliss Experience",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Alleppey",
+      bestSeason: "Sep - Mar",
+      price: "30,999",
+      discount: "Special 15% Off",
+      rating: "4.8",
+      reviews: "124",
+      image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      highlights: [
+        "Airport pickup with traditional welcome",
+        "Luxury AC vehicle throughout the tour",
+        "Premium houseboat cruise in Alleppey",
+        "Tea estate stay in Munnar",
+        "24/7 Omkar travel support"
+      ],
+    },
     {
       name: "Backwaters & Beaches Deluxe",
       duration: "07 Nights / 08 Days",
