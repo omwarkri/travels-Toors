@@ -7,129 +7,219 @@ const SinglePackagePage = () => {
   const { packageId } = useParams();
   
   const allPackages = {
-    "kerala-bliss-experience": {
-      id: "kerala-bliss-experience",
-      name: "Kerala Bliss Experience",
-      duration: "06 Nights / 07 Days",
-      destination: "Kochi, Munnar, Alleppey",
+    "kerala-backwaters-beaches": {
+      id: "kerala-backwaters-beaches",
+      name: "Kerala Backwaters & Beaches",
+      duration: "05 Nights / 06 Days",
+      destination: "Alleppey, Kovalam, Thiruvananthapuram",
       bestSeason: "Sep - Mar",
-      price: "24,999",
-      originalPrice: "29,999",
-      discount: "Special 15% Off",
-      rating: "4.8",
-      reviews: "124",
+      price: "22,999",
+      originalPrice: "27,999",
+      discount: "Special 18% Off",
+      rating: "4.7",
+      reviews: "89",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
       highlights: [
-        "Airport pickup with traditional welcome",
-        "Luxury AC vehicle throughout the tour",
-        "Premium houseboat cruise in Alleppey",
-        "Tea estate stay in Munnar",
-        "24/7 Omkar travel support",
-        "Traditional Kathakali dance performance",
-        "Spice plantation visit"
+        "Alleppey houseboat cruise through palm-lined waterways",
+        "Kovalam beach relaxation and water sports",
+        "Visit historic Alleppey Beach with 137-year-old pier",
+        "Traditional Kerala street food experience",
+        "Vijaya Beach Park family fun",
+        "Sunset views at Alleppey Beach",
+        "Local village culture experience"
       ],
       itinerary: [
         {
           day: "Day 1",
-          title: "Arrival in Kochi",
-          description: "Arrive at Cochin International Airport, traditional welcome and transfer to hotel. Evening visit to Fort Kochi and Chinese fishing nets."
+          title: "Arrival in Alleppey",
+          description: "Arrive at Cochin International Airport, transfer to Alleppey. Evening visit to Alleppey Beach - walk on soft white sand, witness breathtaking sunset views, and enjoy local street food."
         },
         {
           day: "Day 2",
-          title: "Kochi to Munnar",
-          description: "Scenic drive to Munnar through tea plantations. Visit tea museum and enjoy panoramic views of Western Ghats."
+          title: "Alleppey Backwaters Cruise",
+          description: "Full day houseboat cruise through Kerala's famous backwaters. Experience peaceful journey through green palm-lined waterways, traditional villages, and rich wildlife. Enjoy birdwatching and scenic paddy fields."
         },
         {
           day: "Day 3",
-          title: "Munnar Exploration",
-          description: "Full day exploring Munnar - Echo Point, Mattupetty Dam, and tea gardens. Evening at leisure."
+          title: "Alleppey Beach & Water Sports",
+          description: "Morning at Vijaya Beach Park for family fun. Afternoon enjoy exciting water sports at Alleppey Beach - motorboat rides, parasailing, and surfing. Evening local market exploration."
+        },
+        {
+          day: "Day 4",
+          title: "Alleppey to Kovalam",
+          description: "Travel to Kovalam. Check into beach resort. Evening at Lighthouse Beach - enjoy swimming, sunbathing, and panoramic views from Vizhinjam Lighthouse."
+        },
+        {
+          day: "Day 5",
+          title: "Kovalam Beach Experience",
+          description: "Full day exploring Kovalam's three crescent-shaped beaches. Enjoy water sports like surfing and parasailing. Relish fresh local seafood at beach shacks. Visit vibrant evening markets."
+        },
+        {
+          day: "Day 6",
+          title: "Departure from Thiruvananthapuram",
+          description: "Morning visit to Padmanabhaswamy Temple in Thiruvananthapuram. Explore the famous Hindu temple's unique architecture and spiritual significance. Transfer to airport for departure."
+        }
+      ],
+      inclusions: [
+        "Accommodation in 3-star hotels and houseboat",
+        "Daily breakfast and all meals on houseboat",
+        "AC vehicle for all transfers & sightseeing",
+        "Alleppey backwater houseboat cruise",
+        "Beach entry and basic water sports equipment",
+        "All toll taxes, parking & driver allowances",
+        "Tour guide services"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Lunch and dinner (except on houseboat)",
+        "Premium water sports activities",
+        "Personal expenses",
+        "Travel insurance",
+        "Temple entry fees"
+      ]
+    },
+    "kerala-tea-plantation-wildlife": {
+      id: "kerala-tea-plantation-wildlife",
+      name: "Kerala Tea Plantation & Wildlife",
+      duration: "06 Nights / 07 Days",
+      destination: "Munnar, Thekkady, Periyar",
+      bestSeason: "Oct - May",
+      price: "28,500",
+      originalPrice: "33,500",
+      discount: "Special 15% Off",
+      rating: "4.9",
+      reviews: "67",
+      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80",
+      highlights: [
+        "Munnar tea estate exploration and factory visit",
+        "Periyar Lake wildlife boat cruise",
+        "Kannan Devan Hills tea plantation walk",
+        "Bamboo rafting in Periyar",
+        "Fresh tea tasting sessions",
+        "Elephant and deer spotting",
+        "Misty mountain photography"
+      ],
+      itinerary: [
+        {
+          day: "Day 1",
+          title: "Arrival in Munnar",
+          description: "Arrive at Cochin Airport, scenic drive to Munnar through winding hills. Check into tea estate resort. Evening at leisure enjoying cool climate and misty mountains."
+        },
+        {
+          day: "Day 2",
+          title: "Munnar Tea Estates Exploration",
+          description: "Full day exploring Kerala's famous tea estates. Visit Kannan Devan Hills, learn about tea processing at local factories, enjoy fresh tea tastings. Scenic walks through neatly trimmed tea bushes."
+        },
+        {
+          day: "Day 3",
+          title: "Munnar Nature Experience",
+          description: "Visit Kolukkumalai tea estate - one of the highest tea plantations. Enjoy panoramic views, photography sessions. Afternoon visit to echo points and waterfalls in the region."
         },
         {
           day: "Day 4",
           title: "Munnar to Thekkady",
-          description: "Drive to Thekkady, visit spice plantations. Evening wildlife sanctuary boat cruise."
+          description: "Travel to Thekkady. Enroute visit spice plantations. Check into hotel near Periyar National Park. Evening cultural performance."
         },
         {
           day: "Day 5",
-          title: "Thekkady to Alleppey",
-          description: "Travel to Alleppey, check into traditional houseboat for backwater cruise."
+          title: "Periyar Lake Wildlife",
+          description: "Morning boat cruise on Periyar Lake through rich wildlife habitats. Spot elephants, deer, and various bird species. Afternoon bamboo rafting and nature walks in Periyar National Park."
         },
         {
           day: "Day 6",
-          title: "Alleppey Backwaters",
-          description: "Full day houseboat experience through serene backwaters, village visits."
+          title: "Thekkady Exploration",
+          description: "Full day exploring Thekkady region. Visit spice gardens, learn about cardamom, pepper cultivation. Evening at leisure or optional spice shopping."
         },
         {
           day: "Day 7",
           title: "Departure",
-          description: "Morning at leisure, transfer to Kochi airport for departure with beautiful memories."
+          description: "Morning at leisure. Transfer to Kochi airport with memories of tea plantations and wildlife encounters."
         }
       ],
       inclusions: [
-        "Accommodation in 3-star hotels",
+        "Accommodation in tea estate resorts and 3-star hotels",
         "Daily breakfast and dinner",
         "AC vehicle for all transfers & sightseeing",
-        "Alleppey houseboat cruise with meals",
-        "All toll taxes, parking & driver allowances",
-        "Tour guide services",
-        "Hotel taxes and service charges"
+        "Tea factory visits and tasting sessions",
+        "Periyar Lake boat cruise tickets",
+        "Nature walk and bamboo rafting",
+        "All taxes and service charges"
       ],
       exclusions: [
         "Flight tickets",
-        "Lunch except on houseboat",
-        "Personal expenses",
+        "Lunch throughout the tour",
+        "Personal expenses and tips",
         "Travel insurance",
-        "Anything not mentioned in inclusions"
+        "Optional activities not mentioned"
       ]
     },
-    "maharastra-bliss-experience": {
-      id: "maharastra-bliss-experience",
-      name: "Maharashtra Bliss Experience",
-      duration: "06 Nights / 07 Days",
-      destination: "Mumbai, Pune, Mahabaleshwar",
-      bestSeason: "Oct - Feb",
-      price: "30,999",
-      originalPrice: "36,499",
-      discount: "Special 15% Off",
-      rating: "4.8",
-      reviews: "124",
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80",
+    "kerala-cultural-heritage": {
+      id: "kerala-cultural-heritage",
+      name: "Kerala Cultural Heritage Tour",
+      duration: "04 Nights / 05 Days",
+      destination: "Guruvayur, Ambalapuzha, Alappuzha",
+      bestSeason: "Year Round",
+      price: "18,999",
+      originalPrice: "22,499",
+      discount: "Special 16% Off",
+      rating: "4.6",
+      reviews: "45",
+      image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
       highlights: [
-        "City tour of Mumbai including Gateway of India",
-        "Hill station experience in Mahabaleshwar",
-        "Wine tasting in Nashik vineyards",
-        "Historical sites in Pune",
-        "24/7 Omkar travel support"
+        "Guruvayur Temple darshan and rituals",
+        "Ambalapuzha Temple Palpayasam offering",
+        "Nehru Trophy Boat Race venue visit",
+        "Traditional Kerala architecture",
+        "Sacred temple experiences",
+        "Cultural festivals and rituals",
+        "Historical spiritual sites"
       ],
       itinerary: [
         {
           day: "Day 1",
-          title: "Arrival in Mumbai",
-          description: "Arrive at Mumbai airport, transfer to hotel. Evening visit to Marine Drive and Juhu Beach."
+          title: "Arrival in Guruvayur",
+          description: "Arrive at Cochin Airport, transfer to Guruvayur. Evening visit to Guruvayur Temple - one of Kerala's most sacred temples dedicated to Lord Krishna. Witness vibrant rituals and spiritual atmosphere."
         },
         {
           day: "Day 2",
-          title: "Mumbai City Tour",
-          description: "Full day exploring Mumbai - Gateway of India, Elephanta Caves, and shopping at Colaba Causeway."
+          title: "Guruvayur Temple Experience",
+          description: "Morning special darshan at Guruvayur Temple. Learn about temple's history and the 5,000-year-old idol. Afternoon explore temple architecture and visit nearby cultural sites."
+        },
+        {
+          day: "Day 3",
+          title: "Guruvayur to Ambalapuzha",
+          description: "Travel to Ambalapuzha. Visit Ambalapuzha Krishna Temple famous for its Palpayasam (sweet milk-rice pudding). Explore stunning Kerala architecture and colorful murals."
+        },
+        {
+          day: "Day 4",
+          title: "Alappuzha Cultural Day",
+          description: "Visit Punnamada Lake - venue of famous Nehru Trophy Boat Race. Learn about snake boats and traditional boat songs. Evening visit to local markets and cultural centers."
+        },
+        {
+          day: "Day 5",
+          title: "Departure",
+          description: "Morning participation in temple rituals. Transfer to Cochin airport with spiritual memories and cultural insights."
         }
       ],
       inclusions: [
-        "Accommodation in 3-star hotels",
+        "Accommodation in 3-star hotels near temples",
         "Daily breakfast",
         "AC vehicle for all transfers & sightseeing",
-        "All sightseeing as per itinerary",
-        "All toll taxes, parking & driver allowances"
+        "Temple entry and special darshan arrangements",
+        "Cultural guide services",
+        "All taxes and driver allowances"
       ],
       exclusions: [
         "Flight tickets",
         "Lunch and dinner",
-        "Personal expenses",
-        "Travel insurance"
+        "Personal offerings at temples",
+        "Travel insurance",
+        "Camera fees at temples"
       ]
     }
   };
 
-  const pkg = allPackages[packageId] || allPackages["kerala-bliss-experience"];
+  const pkg = allPackages[packageId] || allPackages["kerala-backwaters-beaches"];
 
   return (
     <div className="pt-20 min-h-screen">
