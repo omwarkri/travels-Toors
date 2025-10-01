@@ -1,0 +1,64 @@
+
+{
+  "packages": [
+    {
+      "id": "alleppey-beach",
+      "name": "Alleppey Beach",
+      "duration": "05 Nights / 06 Days",
+      "destination": "Alleppey, Kovalam, Thiruvananthapuram",
+      "bestSeason": "Sep - Mar",
+      "price": "22,999",
+      "originalPrice": "27,999",
+      "discount": "Special 18% Off",
+      "rating": "4.7",
+      "reviews": "89",
+      "image": "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      "highlights": [
+        "Alleppey Beach with historic 137-year-old pier",
+        "Houseboat cruise through palm-lined backwaters",
+        "Kovalam's three crescent-shaped beaches",
+        "Vijaya Beach Park family fun",
+        "Water sports - motorboat, parasailing, surfing",
+        "Traditional Kerala street food experience"
+      ]
+    },
+    {
+      "id": "backwaters",
+      "name": "Backwaters",
+      "duration": "06 Nights / 07 Days",
+      "destination": "Munnar, Thekkady, Periyar",
+      "bestSeason": "Oct - May",
+      "price": "28,500",
+      "originalPrice": "33,500",
+      "discount": "Special 15% Off",
+      "rating": "4.9",
+      "reviews": "67",
+      "image": "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      "highlights": [
+        "Munnar tea estate exploration and factory visit",
+        "Periyar Lake wildlife boat cruise",
+        "Kannan Devan Hills tea plantation walk",
+        "Bamboo rafting in Periyar"
+      ]
+    },
+    {
+      "id": "tea-estate",
+      "name": "Tea Estate",
+      "duration": "04 Nights / 05 Days",
+      "destination": "Guruvayur, Ambalapuzha, Alappuzha",
+      "bestSeason": "Year Round",
+      "price": "18,999",
+      "originalPrice": "22,499",
+      "discount": "Special 16% Off",
+      "rating": "4.6",
+      "reviews": "45",
+      "image": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+      "highlights": [
+        "Guruvayur Temple darshan and rituals",
+        "Ambalapuzha Temple Palpayasam offering",
+        "Nehru Trophy Boat Race venue visit",
+        "Traditional Kerala architecture"
+      ]
+    }
+  ]
+}
