@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from 'react-router-dom';
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 
 const SinglePackagePage = () => {
   const { packageId } = useParams();
+  console.log("Package ID from URL:", packageId);
+  const [selectedImage, setSelectedImage] = useState(0);
   
-  const allPackages = {
-    "kerala-backwaters-beaches": {
+  // Direct package data (same structure as AllPackagesPage)
+  const packageData = [
+    {
       id: "kerala-backwaters-beaches",
       name: "Kerala Backwaters & Beaches",
       duration: "05 Nights / 06 Days",
@@ -19,6 +22,14 @@ const SinglePackagePage = () => {
       rating: "4.7",
       reviews: "89",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1526761122244-c85047c1e4bb?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Experience the ultimate Kerala getaway with our Backwaters & Beaches tour. This carefully crafted 6-day journey takes you through the serene backwaters of Alleppey and the stunning beaches of Kovalam.",
+      detailedDescription: "Our Kerala Backwaters & Beaches package offers an unforgettable journey through God's Own Country. Begin your adventure in Alleppey, often called the 'Venice of the East,' where you'll cruise through tranquil backwaters on traditional houseboats.",
       highlights: [
         "Alleppey houseboat cruise through palm-lined waterways",
         "Kovalam beach relaxation and water sports",
@@ -37,27 +48,27 @@ const SinglePackagePage = () => {
         {
           day: "Day 2",
           title: "Alleppey Backwaters Cruise",
-          description: "Full day houseboat cruise through Kerala's famous backwaters. Experience peaceful journey through green palm-lined waterways, traditional villages, and rich wildlife. Enjoy birdwatching and scenic paddy fields."
+          description: "Full day houseboat cruise through Kerala's famous backwaters. Experience peaceful journey through green palm-lined waterways, traditional villages, and rich wildlife."
         },
         {
           day: "Day 3",
-          title: "Alleppey Beach & Water Sports",
-          description: "Morning at Vijaya Beach Park for family fun. Afternoon enjoy exciting water sports at Alleppey Beach - motorboat rides, parasailing, and surfing. Evening local market exploration."
+          title: "Travel to Kovalam",
+          description: "Check out from Alleppey and travel to the beautiful beach destination of Kovalam. Check into your beach resort and enjoy the evening at leisure."
         },
         {
           day: "Day 4",
-          title: "Alleppey to Kovalam",
-          description: "Travel to Kovalam. Check into beach resort. Evening at Lighthouse Beach - enjoy swimming, sunbathing, and panoramic views from Vizhinjam Lighthouse."
+          title: "Kovalam Beach Experience",
+          description: "Full day to enjoy Kovalam's famous beaches. Try water sports, relax on the golden sands, and visit the iconic lighthouse."
         },
         {
           day: "Day 5",
-          title: "Kovalam Beach Experience",
-          description: "Full day exploring Kovalam's three crescent-shaped beaches. Enjoy water sports like surfing and parasailing. Relish fresh local seafood at beach shacks. Visit vibrant evening markets."
+          title: "Thiruvananthapuram Sightseeing",
+          description: "Explore the capital city with visits to Padmanabhaswamy Temple, Napier Museum, and Kowdiar Palace."
         },
         {
           day: "Day 6",
-          title: "Departure from Thiruvananthapuram",
-          description: "Morning visit to Padmanabhaswamy Temple in Thiruvananthapuram. Explore the famous Hindu temple's unique architecture and spiritual significance. Transfer to airport for departure."
+          title: "Departure",
+          description: "After breakfast, check out from the hotel and transfer to Thiruvananthapuram International Airport for your departure."
         }
       ],
       inclusions: [
@@ -65,9 +76,8 @@ const SinglePackagePage = () => {
         "Daily breakfast and all meals on houseboat",
         "AC vehicle for all transfers & sightseeing",
         "Alleppey backwater houseboat cruise",
-        "Beach entry and basic water sports equipment",
-        "All toll taxes, parking & driver allowances",
-        "Tour guide services"
+        "Kovalam beach resort accommodation",
+        "All applicable taxes"
       ],
       exclusions: [
         "Flight tickets",
@@ -75,165 +85,303 @@ const SinglePackagePage = () => {
         "Premium water sports activities",
         "Personal expenses",
         "Travel insurance",
-        "Temple entry fees"
+        "Anything not mentioned in inclusions"
       ]
     },
-    "kerala-tea-plantation-wildlife": {
-      id: "kerala-tea-plantation-wildlife",
-      name: "Kerala Tea Plantation & Wildlife",
-      duration: "06 Nights / 07 Days",
-      destination: "Munnar, Thekkady, Periyar",
-      bestSeason: "Oct - May",
-      price: "28,500",
-      originalPrice: "33,500",
-      discount: "Special 15% Off",
-      rating: "4.9",
+    {
+      id: "munnar-tea-plantations",
+      name: "Munnar Tea Plantations Tour",
+      duration: "04 Nights / 05 Days",
+      destination: "Munnar, Thekkady",
+      bestSeason: "Aug - May",
+      price: "18,999",
+      originalPrice: "22,999",
+      discount: "Special 17% Off",
+      rating: "4.8",
       reviews: "67",
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80",
+      image: "https://images.unsplash.com/photo-1580752300992-559f8e0734e0?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1580752300992-559f8e0734e0?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578305998411-8c7c3fe8f8f2?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Explore the misty hills and sprawling tea plantations of Munnar. Experience the beauty of Kerala's hill stations with this immersive 5-day tour.",
+      detailedDescription: "Discover the enchanting hill station of Munnar, famous for its tea plantations, lush greenery, and cool climate. This package takes you through the best of Munnar's natural beauty.",
       highlights: [
-        "Munnar tea estate exploration and factory visit",
-        "Periyar Lake wildlife boat cruise",
-        "Kannan Devan Hills tea plantation walk",
-        "Bamboo rafting in Periyar",
-        "Fresh tea tasting sessions",
-        "Elephant and deer spotting",
-        "Misty mountain photography"
+        "Visit Tata Tea Museum",
+        "Eravikulam National Park",
+        "Tea plantation walking tour",
+        "Mattupetty Dam and Lake",
+        "Spice garden visit in Thekkady",
+        "Kathakali dance performance"
       ],
       itinerary: [
         {
           day: "Day 1",
           title: "Arrival in Munnar",
-          description: "Arrive at Cochin Airport, scenic drive to Munnar through winding hills. Check into tea estate resort. Evening at leisure enjoying cool climate and misty mountains."
+          description: "Arrive at Cochin Airport and transfer to Munnar. Check into hotel and rest of the day at leisure."
         },
         {
           day: "Day 2",
-          title: "Munnar Tea Estates Exploration",
-          description: "Full day exploring Kerala's famous tea estates. Visit Kannan Devan Hills, learn about tea processing at local factories, enjoy fresh tea tastings. Scenic walks through neatly trimmed tea bushes."
+          title: "Munnar Sightseeing",
+          description: "Full day exploring Munnar's attractions including tea plantations, Eravikulam National Park, and Mattupetty Dam."
         },
         {
           day: "Day 3",
-          title: "Munnar Nature Experience",
-          description: "Visit Kolukkumalai tea estate - one of the highest tea plantations. Enjoy panoramic views, photography sessions. Afternoon visit to echo points and waterfalls in the region."
+          title: "Thekkady Wildlife Experience",
+          description: "Travel to Thekkady and enjoy jungle safari in Periyar Wildlife Sanctuary."
         },
         {
           day: "Day 4",
-          title: "Munnar to Thekkady",
-          description: "Travel to Thekkady. Enroute visit spice plantations. Check into hotel near Periyar National Park. Evening cultural performance."
-        },
-        {
-          day: "Day 5",
-          title: "Periyar Lake Wildlife",
-          description: "Morning boat cruise on Periyar Lake through rich wildlife habitats. Spot elephants, deer, and various bird species. Afternoon bamboo rafting and nature walks in Periyar National Park."
-        },
-        {
-          day: "Day 6",
-          title: "Thekkady Exploration",
-          description: "Full day exploring Thekkady region. Visit spice gardens, learn about cardamom, pepper cultivation. Evening at leisure or optional spice shopping."
-        },
-        {
-          day: "Day 7",
-          title: "Departure",
-          description: "Morning at leisure. Transfer to Kochi airport with memories of tea plantations and wildlife encounters."
-        }
-      ],
-      inclusions: [
-        "Accommodation in tea estate resorts and 3-star hotels",
-        "Daily breakfast and dinner",
-        "AC vehicle for all transfers & sightseeing",
-        "Tea factory visits and tasting sessions",
-        "Periyar Lake boat cruise tickets",
-        "Nature walk and bamboo rafting",
-        "All taxes and service charges"
-      ],
-      exclusions: [
-        "Flight tickets",
-        "Lunch throughout the tour",
-        "Personal expenses and tips",
-        "Travel insurance",
-        "Optional activities not mentioned"
-      ]
-    },
-    "kerala-cultural-heritage": {
-      id: "kerala-cultural-heritage",
-      name: "Kerala Cultural Heritage Tour",
-      duration: "04 Nights / 05 Days",
-      destination: "Guruvayur, Ambalapuzha, Alappuzha",
-      bestSeason: "Year Round",
-      price: "18,999",
-      originalPrice: "22,499",
-      discount: "Special 16% Off",
-      rating: "4.6",
-      reviews: "45",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
-      highlights: [
-        "Guruvayur Temple darshan and rituals",
-        "Ambalapuzha Temple Palpayasam offering",
-        "Nehru Trophy Boat Race venue visit",
-        "Traditional Kerala architecture",
-        "Sacred temple experiences",
-        "Cultural festivals and rituals",
-        "Historical spiritual sites"
-      ],
-      itinerary: [
-        {
-          day: "Day 1",
-          title: "Arrival in Guruvayur",
-          description: "Arrive at Cochin Airport, transfer to Guruvayur. Evening visit to Guruvayur Temple - one of Kerala's most sacred temples dedicated to Lord Krishna. Witness vibrant rituals and spiritual atmosphere."
-        },
-        {
-          day: "Day 2",
-          title: "Guruvayur Temple Experience",
-          description: "Morning special darshan at Guruvayur Temple. Learn about temple's history and the 5,000-year-old idol. Afternoon explore temple architecture and visit nearby cultural sites."
-        },
-        {
-          day: "Day 3",
-          title: "Guruvayur to Ambalapuzha",
-          description: "Travel to Ambalapuzha. Visit Ambalapuzha Krishna Temple famous for its Palpayasam (sweet milk-rice pudding). Explore stunning Kerala architecture and colorful murals."
-        },
-        {
-          day: "Day 4",
-          title: "Alappuzha Cultural Day",
-          description: "Visit Punnamada Lake - venue of famous Nehru Trophy Boat Race. Learn about snake boats and traditional boat songs. Evening visit to local markets and cultural centers."
+          title: "Spice Plantation Tour",
+          description: "Visit spice plantations and enjoy cultural shows in the evening."
         },
         {
           day: "Day 5",
           title: "Departure",
-          description: "Morning participation in temple rituals. Transfer to Cochin airport with spiritual memories and cultural insights."
+          description: "After breakfast, check out and transfer to Cochin Airport for departure."
         }
       ],
       inclusions: [
-        "Accommodation in 3-star hotels near temples",
+        "Accommodation in 3-star hotels",
         "Daily breakfast",
-        "AC vehicle for all transfers & sightseeing",
-        "Temple entry and special darshan arrangements",
-        "Cultural guide services",
-        "All taxes and driver allowances"
+        "AC vehicle for transfers & sightseeing",
+        "All entry tickets",
+        "All applicable taxes"
       ],
       exclusions: [
         "Flight tickets",
         "Lunch and dinner",
-        "Personal offerings at temples",
-        "Travel insurance",
-        "Camera fees at temples"
+        "Personal expenses",
+        "Travel insurance"
+      ]
+    },
+    {
+      id: "complete-kerala-experience",
+      name: "Complete Kerala Experience",
+      duration: "07 Nights / 08 Days",
+      destination: "Munnar, Thekkady, Alleppey, Kovalam",
+      bestSeason: "Sep - Apr",
+      price: "35,999",
+      originalPrice: "42,999",
+      discount: "Special 16% Off",
+      rating: "4.9",
+      reviews: "124",
+      image: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "The ultimate Kerala tour covering hill stations, wildlife, backwaters, and beaches. Experience everything Kerala has to offer in one comprehensive package.",
+      detailedDescription: "This comprehensive package gives you the complete Kerala experience - from misty hills to serene backwaters and golden beaches.",
+      highlights: [
+        "Munnar tea gardens",
+        "Thekkady wildlife sanctuary",
+        "Alleppey houseboat stay",
+        "Kovalam beach relaxation",
+        "Spice plantation tour",
+        "Traditional cultural shows"
+      ],
+      itinerary: [
+        {
+          day: "Day 1",
+          title: "Arrival in Munnar",
+          description: "Arrive at Cochin Airport and transfer to Munnar. Check into hotel."
+        },
+        {
+          day: "Day 2",
+          title: "Munnar Exploration",
+          description: "Full day exploring tea plantations and local attractions."
+        },
+        {
+          day: "Day 3",
+          title: "Travel to Thekkady",
+          description: "Transfer to Thekkady, evening jungle safari."
+        },
+        {
+          day: "Day 4",
+          title: "Thekkady to Alleppey",
+          description: "Morning spice plantation tour, then travel to Alleppey."
+        },
+        {
+          day: "Day 5",
+          title: "Alleppey Backwaters",
+          description: "Full day houseboat cruise through backwaters."
+        },
+        {
+          day: "Day 6",
+          title: "Alleppey to Kovalam",
+          description: "Travel to Kovalam, check into beach resort."
+        },
+        {
+          day: "Day 7",
+          title: "Kovalam Beach Day",
+          description: "Relax at Kovalam beaches and visit local attractions."
+        },
+        {
+          day: "Day 8",
+          title: "Departure",
+          description: "Transfer to Thiruvananthapuram Airport for departure."
+        }
+      ],
+      inclusions: [
+        "Accommodation in 3-star hotels and houseboat",
+        "Daily breakfast and all meals on houseboat",
+        "AC vehicle for entire tour",
+        "All entry tickets and activities",
+        "All applicable taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Lunch and dinner (except on houseboat)",
+        "Personal expenses",
+        "Travel insurance"
+      ]
+    },
+    {
+      id: "kerala-honeymoon-special",
+      name: "Kerala Honeymoon Special",
+      duration: "06 Nights / 07 Days",
+      destination: "Munnar, Alleppey, Kovalam",
+      bestSeason: "Oct - Mar",
+      price: "28,999",
+      originalPrice: "34,999",
+      discount: "Special 17% Off",
+      rating: "4.9",
+      reviews: "156",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Romantic Kerala getaway perfect for honeymooners. Private experiences, luxury stays, and unforgettable moments.",
+      highlights: [
+        "Private houseboat cruise",
+        "Candlelight dinners",
+        "Luxury resort stays",
+        "Couple spa treatments",
+        "Private sightseeing"
+      ],
+      inclusions: [
+        "Luxury accommodation",
+        "All meals included",
+        "Private AC vehicle",
+        "Romantic experiences",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
+      ]
+    },
+    {
+      id: "kerala-wildlife-adventure",
+      name: "Kerala Wildlife Adventure",
+      duration: "05 Nights / 06 Days",
+      destination: "Thekkady, Munnar",
+      bestSeason: "Nov - Apr",
+      price: "21,999",
+      originalPrice: "26,999",
+      discount: "Special 19% Off",
+      rating: "4.6",
+      reviews: "78",
+      image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Thrilling wildlife experience in Kerala's best national parks and sanctuaries. Perfect for nature and adventure lovers.",
+      highlights: [
+        "Periyar Wildlife Sanctuary",
+        "Jungle safari",
+        "Bamboo rafting",
+        "Spice plantation tour",
+        "Elephant ride experience"
+      ],
+      inclusions: [
+        "Jungle resort accommodation",
+        "All safari charges",
+        "Naturalist guide",
+        "All activities included",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
+      ]
+    },
+    {
+      id: "kerala-cultural-heritage",
+      name: "Kerala Cultural Heritage",
+      duration: "04 Nights / 05 Days",
+      destination: "Kochi, Thrissur, Guruvayur",
+      bestSeason: "Year Round",
+      price: "16,999",
+      originalPrice: "20,999",
+      discount: "Special 19% Off",
+      rating: "4.5",
+      reviews: "92",
+      image: "https://images.unsplash.com/photo-1587132135057-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1587132135057-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Immerse yourself in Kerala's rich cultural heritage with temple visits, traditional art forms, and historical sites.",
+      highlights: [
+        "Kathakali dance show",
+        "Traditional temple visits",
+        "Portuguese architecture",
+        "Local cuisine experience",
+        "Cultural workshops"
+      ],
+      inclusions: [
+        "Heritage hotel stays",
+        "Cultural show tickets",
+        "Expert local guide",
+        "All entry fees",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
       ]
     }
-  };
+  ];
 
-  const pkg = allPackages[packageId] || allPackages["kerala-backwaters-beaches"];
+  // CORRECTED: Use find() to get the package by ID
+  const pkg = packageData.find(pkg => pkg.id === packageId);
+  
+  console.log("Found package:", pkg);
+
+  // If package not found, show error
+  if (!pkg) {
+    return (
+      <div className="pt-20 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Package Not Found</h1>
+          <p className="text-gray-600 mb-8">The package you're looking for doesn't exist.</p>
+          <Link 
+            to="/packages"
+            className="inline-flex items-center px-6 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition duration-300"
+          >
+            Browse All Packages
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-20 min-h-screen">
       <SEOHead 
         title={`${pkg.name} | ${pkg.duration} | Omkar Tour and Travels`}
-        description={`Book ${pkg.name} - ${pkg.duration} starting at ₹${pkg.price}. Includes ${pkg.highlights.slice(0, 3).join(', ')}`}
+        description={`${pkg.description} Book ${pkg.name} - ${pkg.duration} starting at ₹${pkg.price}.`}
         keywords={`${pkg.destination}, Kerala tour packages, ${pkg.name}, ${pkg.duration}`}
       />
       
       {/* Package Header */}
       <section className="relative h-96 bg-gray-900">
         <img
-          src={pkg.image}
-          alt={`${pkg.name} - ${pkg.destination}`}
+          src={pkg.images ? pkg.images[selectedImage] : pkg.image}
+          alt={pkg.name}
           className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-black/50"></div>
@@ -267,6 +415,52 @@ const SinglePackagePage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            {/* Image Gallery */}
+            {pkg.images && pkg.images.length > 1 && (
+              <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <div className="flex flex-col space-y-4">
+                  {/* Main Image */}
+                  <div className="rounded-xl overflow-hidden">
+                    <img
+                      src={pkg.images[selectedImage]}
+                      alt={pkg.name}
+                      className="w-full h-80 object-cover"
+                    />
+                  </div>
+                  
+                  {/* Thumbnail Gallery */}
+                  <div className="flex space-x-3 overflow-x-auto pb-2">
+                    {pkg.images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImage(index)}
+                        className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition duration-200 ${
+                          selectedImage === index ? 'border-emerald-500' : 'border-gray-200'
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`${pkg.name} view ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Package Description */}
+            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+              <h2 className="text-3xl font-bold mb-6">Package Overview</h2>
+              <div className="prose max-w-none">
+                <p className="text-lg text-gray-700 mb-4">{pkg.description}</p>
+                {pkg.detailedDescription && (
+                  <p className="text-gray-600">{pkg.detailedDescription}</p>
+                )}
+              </div>
+            </div>
+
             {/* Highlights */}
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold mb-6">Tour Highlights</h2>
@@ -281,22 +475,24 @@ const SinglePackagePage = () => {
             </div>
 
             {/* Itinerary */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold mb-6">Detailed Itinerary</h2>
-              <div className="space-y-6">
-                {pkg.itinerary.map((day, index) => (
-                  <div key={index} className="flex space-x-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="flex-shrink-0 w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <span className="text-emerald-600 font-bold text-sm">{day.day}</span>
+            {pkg.itinerary && (
+              <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+                <h2 className="text-3xl font-bold mb-6">Detailed Itinerary</h2>
+                <div className="space-y-6">
+                  {pkg.itinerary.map((day, index) => (
+                    <div key={index} className="flex space-x-4 p-4 bg-gray-50 rounded-lg">
+                      <div className="flex-shrink-0 w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
+                        <span className="text-emerald-600 font-bold text-sm">{day.day}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{day.title}</h3>
+                        <p className="text-gray-600">{day.description}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{day.title}</h3>
-                      <p className="text-gray-600">{day.description}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

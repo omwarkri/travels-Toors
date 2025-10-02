@@ -1,159 +1,381 @@
+// src/pages/AllPackagesPage.js
 import React from "react";
 import { Link } from 'react-router-dom';
-import PlaceCard from "../components/places/PlaceCard";
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
+import TourPackageCard from "../components/packages/TourPackageCard";
 
-const AllPlacesPage = () => {
-  const allPlaces = [
-    { 
-      id: "munnar",
-      name: "MUNNAR", 
-      desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.", 
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-      rating: "4.8",
-      tours: "12",
-      bestTime: "Sep - May"
-    },
-    { 
-      id: "alleppey",
-      name: "ALLEPPEY", 
-      desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.", 
-      image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80",
-      rating: "4.9",
-      tours: "8",
-      bestTime: "Aug - Mar"
-    },
-    { 
-      id: "kovalam",
-      name: "KOVALAM", 
-      desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.", 
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=1200&q=80",
+const AllPackagesPage = () => {
+  // Direct package data (same structure as SinglePackagePage)
+     const allPackages =[
+    {
+      id: "kerala-backwaters-beaches",
+      name: "Kerala Backwaters & Beaches",
+      duration: "05 Nights / 06 Days",
+      destination: "Alleppey, Kovalam, Thiruvananthapuram",
+      bestSeason: "Sep - Mar",
+      price: "22,999",
+      originalPrice: "27,999",
+      discount: "Special 18% Off",
       rating: "4.7",
-      tours: "6",
-      bestTime: "Sep - May"
-    },
-    { 
-      id: "wayanad",
-      name: "WAYANAD", 
-      desc: "Exceptional hill station famous for aborigine populace, exotic hills and evergreen forests.", 
+      reviews: "89",
       image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1526761122244-c85047c1e4bb?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Experience the ultimate Kerala getaway with our Backwaters & Beaches tour. This carefully crafted 6-day journey takes you through the serene backwaters of Alleppey and the stunning beaches of Kovalam.",
+      detailedDescription: "Our Kerala Backwaters & Beaches package offers an unforgettable journey through God's Own Country. Begin your adventure in Alleppey, often called the 'Venice of the East,' where you'll cruise through tranquil backwaters on traditional houseboats.",
+      highlights: [
+        "Alleppey houseboat cruise through palm-lined waterways",
+        "Kovalam beach relaxation and water sports",
+        "Visit historic Alleppey Beach with 137-year-old pier",
+        "Traditional Kerala street food experience",
+        "Vijaya Beach Park family fun",
+        "Sunset views at Alleppey Beach",
+        "Local village culture experience"
+      ],
+      itinerary: [
+        {
+          day: "Day 1",
+          title: "Arrival in Alleppey",
+          description: "Arrive at Cochin International Airport, transfer to Alleppey. Evening visit to Alleppey Beach - walk on soft white sand, witness breathtaking sunset views, and enjoy local street food."
+        },
+        {
+          day: "Day 2",
+          title: "Alleppey Backwaters Cruise",
+          description: "Full day houseboat cruise through Kerala's famous backwaters. Experience peaceful journey through green palm-lined waterways, traditional villages, and rich wildlife."
+        },
+        {
+          day: "Day 3",
+          title: "Travel to Kovalam",
+          description: "Check out from Alleppey and travel to the beautiful beach destination of Kovalam. Check into your beach resort and enjoy the evening at leisure."
+        },
+        {
+          day: "Day 4",
+          title: "Kovalam Beach Experience",
+          description: "Full day to enjoy Kovalam's famous beaches. Try water sports, relax on the golden sands, and visit the iconic lighthouse."
+        },
+        {
+          day: "Day 5",
+          title: "Thiruvananthapuram Sightseeing",
+          description: "Explore the capital city with visits to Padmanabhaswamy Temple, Napier Museum, and Kowdiar Palace."
+        },
+        {
+          day: "Day 6",
+          title: "Departure",
+          description: "After breakfast, check out from the hotel and transfer to Thiruvananthapuram International Airport for your departure."
+        }
+      ],
+      inclusions: [
+        "Accommodation in 3-star hotels and houseboat",
+        "Daily breakfast and all meals on houseboat",
+        "AC vehicle for all transfers & sightseeing",
+        "Alleppey backwater houseboat cruise",
+        "Kovalam beach resort accommodation",
+        "All applicable taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Lunch and dinner (except on houseboat)",
+        "Premium water sports activities",
+        "Personal expenses",
+        "Travel insurance",
+        "Anything not mentioned in inclusions"
+      ]
+    },
+    {
+      id: "munnar-tea-plantations",
+      name: "Munnar Tea Plantations Tour",
+      duration: "04 Nights / 05 Days",
+      destination: "Munnar, Thekkady",
+      bestSeason: "Aug - May",
+      price: "18,999",
+      originalPrice: "22,999",
+      discount: "Special 17% Off",
       rating: "4.8",
-      tours: "10",
-      bestTime: "Oct - May"
+      reviews: "67",
+      image: "https://images.unsplash.com/photo-1580752300992-559f8e0734e0?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1580752300992-559f8e0734e0?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578305998411-8c7c3fe8f8f2?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Explore the misty hills and sprawling tea plantations of Munnar. Experience the beauty of Kerala's hill stations with this immersive 5-day tour.",
+      detailedDescription: "Discover the enchanting hill station of Munnar, famous for its tea plantations, lush greenery, and cool climate. This package takes you through the best of Munnar's natural beauty.",
+      highlights: [
+        "Visit Tata Tea Museum",
+        "Eravikulam National Park",
+        "Tea plantation walking tour",
+        "Mattupetty Dam and Lake",
+        "Spice garden visit in Thekkady",
+        "Kathakali dance performance"
+      ],
+      itinerary: [
+        {
+          day: "Day 1",
+          title: "Arrival in Munnar",
+          description: "Arrive at Cochin Airport and transfer to Munnar. Check into hotel and rest of the day at leisure."
+        },
+        {
+          day: "Day 2",
+          title: "Munnar Sightseeing",
+          description: "Full day exploring Munnar's attractions including tea plantations, Eravikulam National Park, and Mattupetty Dam."
+        }
+      ],
+      inclusions: [
+        "Accommodation in 3-star hotels",
+        "Daily breakfast",
+        "AC vehicle for transfers & sightseeing",
+        "All entry tickets",
+        "All applicable taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Lunch and dinner",
+        "Personal expenses",
+        "Travel insurance"
+      ]
     },
-    { 
-      id: "kochi",
-      name: "KOCHI", 
-      desc: "Urban Kerala with malls and busy city life blending with traditional Kerala culture.", 
-      image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1200&q=80",
-      rating: "4.6",
-      tours: "15",
-      bestTime: "Oct - Mar"
-    },
-    { 
-      id: "athirappally",
-      name: "ATHIRAPALLY", 
-      desc: "Breathtaking waterfall with exotic flora and fauna - a truly grand and beautiful spot.", 
-      image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1200&q=80",
+    {
+      id: "complete-kerala-experience",
+      name: "Complete Kerala Experience",
+      duration: "07 Nights / 08 Days",
+      destination: "Munnar, Thekkady, Alleppey, Kovalam",
+      bestSeason: "Sep - Apr",
+      price: "35,999",
+      originalPrice: "42,999",
+      discount: "Special 16% Off",
       rating: "4.9",
-      tours: "5",
-      bestTime: "Jun - Jan"
+      reviews: "124",
+      image: "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "The ultimate Kerala tour covering hill stations, wildlife, backwaters, and beaches. Experience everything Kerala has to offer in one comprehensive package.",
+      detailedDescription: "This comprehensive package gives you the complete Kerala experience - from misty hills to serene backwaters and golden beaches.",
+      highlights: [
+        "Munnar tea gardens",
+        "Thekkady wildlife sanctuary",
+        "Alleppey houseboat stay",
+        "Kovalam beach relaxation",
+        "Spice plantation tour",
+        "Traditional cultural shows"
+      ],
+      itinerary: [
+        {
+          day: "Day 1",
+          title: "Arrival in Munnar",
+          description: "Arrive at Cochin Airport and transfer to Munnar. Check into hotel."
+        },
+        {
+          day: "Day 2",
+          title: "Munnar Exploration",
+          description: "Full day exploring tea plantations and local attractions."
+        }
+      ],
+      inclusions: [
+        "Accommodation in 3-star hotels and houseboat",
+        "Daily breakfast and all meals on houseboat",
+        "AC vehicle for entire tour",
+        "All entry tickets and activities",
+        "All applicable taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Lunch and dinner (except on houseboat)",
+        "Personal expenses",
+        "Travel insurance"
+      ]
     },
-    { 
-      id: "thekkady",
-      name: "THEKKADY", 
-      desc: "Famous for Periyar Wildlife Sanctuary - ideal for nature lovers and wildlife enthusiasts.", 
-      image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
-      rating: "4.7",
-      tours: "7",
-      bestTime: "Sep - Apr"
+    {
+      id: "kerala-honeymoon-special",
+      name: "Kerala Honeymoon Special",
+      duration: "06 Nights / 07 Days",
+      destination: "Munnar, Alleppey, Kovalam",
+      bestSeason: "Oct - Mar",
+      price: "28,999",
+      originalPrice: "34,999",
+      discount: "Special 17% Off",
+      rating: "4.9",
+      reviews: "156",
+      image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Romantic Kerala getaway perfect for honeymooners. Private experiences, luxury stays, and unforgettable moments.",
+      highlights: [
+        "Private houseboat cruise",
+        "Candlelight dinners",
+        "Luxury resort stays",
+        "Couple spa treatments",
+        "Private sightseeing"
+      ],
+      inclusions: [
+        "Luxury accommodation",
+        "All meals included",
+        "Private AC vehicle",
+        "Romantic experiences",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
+      ]
     },
-    { 
-      id: "kumarakom",
-      name: "KUMARAKOM", 
-      desc: "Serene backwater destination with luxurious resorts and houseboat experiences.", 
-      image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80",
-      rating: "4.8",
-      tours: "9",
-      bestTime: "Sep - Mar"
-    },
-    { 
-      id: "varkala",
-      name: "VARKALA", 
-      desc: "Cliff beach with mineral springs and stunning views of the Arabian Sea.", 
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    {
+      id: "kerala-wildlife-adventure",
+      name: "Kerala Wildlife Adventure",
+      duration: "05 Nights / 06 Days",
+      destination: "Thekkady, Munnar",
+      bestSeason: "Nov - Apr",
+      price: "21,999",
+      originalPrice: "26,999",
+      discount: "Special 19% Off",
       rating: "4.6",
-      tours: "4",
-      bestTime: "Sep - May"
+      reviews: "78",
+      image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Thrilling wildlife experience in Kerala's best national parks and sanctuaries. Perfect for nature and adventure lovers.",
+      highlights: [
+        "Periyar Wildlife Sanctuary",
+        "Jungle safari",
+        "Bamboo rafting",
+        "Spice plantation tour",
+        "Elephant ride experience"
+      ],
+      inclusions: [
+        "Jungle resort accommodation",
+        "All safari charges",
+        "Naturalist guide",
+        "All activities included",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
+      ]
+    },
+    {
+      id: "kerala-cultural-heritage",
+      name: "Kerala Cultural Heritage",
+      duration: "04 Nights / 05 Days",
+      destination: "Kochi, Thrissur, Guruvayur",
+      bestSeason: "Year Round",
+      price: "16,999",
+      originalPrice: "20,999",
+      discount: "Special 19% Off",
+      rating: "4.5",
+      reviews: "92",
+      image: "https://images.unsplash.com/photo-1587132135057-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1587132135057-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      description: "Immerse yourself in Kerala's rich cultural heritage with temple visits, traditional art forms, and historical sites.",
+      highlights: [
+        "Kathakali dance show",
+        "Traditional temple visits",
+        "Portuguese architecture",
+        "Local cuisine experience",
+        "Cultural workshops"
+      ],
+      inclusions: [
+        "Heritage hotel stays",
+        "Cultural show tickets",
+        "Expert local guide",
+        "All entry fees",
+        "All taxes"
+      ],
+      exclusions: [
+        "Flight tickets",
+        "Personal expenses",
+        "Travel insurance"
+      ]
     }
   ];
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen bg-gray-50">
       <SEOHead 
-        title="Popular Places to Visit in Kerala | Complete Travel Guide 2025"
-        description="Explore the most popular destinations in Kerala - Munnar, Alleppey, Kovalam, Wayanad and more. Complete travel guide with best time to visit, attractions and tour packages."
-        keywords="places to visit in Kerala, Kerala destinations, Munnar, Alleppey, Kovalam, Wayanad, Kerala tourism places"
+        title="Kerala Tour Packages | Omkar Tour and Travels - Best Deals 2024"
+        description="Discover amazing Kerala tour packages. Backwaters, beaches, tea plantations, wildlife & cultural tours. Best price guarantee. Book your dream Kerala vacation today!"
+        keywords="Kerala tour packages, Alleppey houseboat, Munnar tea gardens, Kovalam beach, Kerala backwaters"
       />
       
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">All Popular Destinations</h1>
+          <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
+            🏆 {allPackages.length} Curated Packages
+          </div>
+          <h1 className="text-5xl font-bold text-gray-800 mb-6">Kerala Tour Packages</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore the most beautiful and popular destinations in God's Own Country - from serene backwaters to lush hill stations
+            Discover the magic of God's Own Country with our carefully curated Kerala tour packages. 
+            From serene backwaters to misty tea plantations, experience the best of Kerala.
           </p>
         </div>
 
-        {/* Destination Categories */}
-        <div className="flex flex-wrap gap-4 mb-8 justify-center">
-          <button className="px-6 py-2 bg-emerald-500 text-white rounded-full font-medium hover:bg-emerald-600 transition duration-300">
-            All Places
-          </button>
-          <button className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition duration-300">
-            Hill Stations
-          </button>
-          <button className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition duration-300">
-            Backwaters
-          </button>
-          <button className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition duration-300">
-            Beaches
-          </button>
-          <button className="px-6 py-2 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition duration-300">
-            Wildlife
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allPlaces.map((place) => (
-            <PlaceCard key={place.id} place={place} />
+        {/* Package Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {allPackages.map((pkg) => (
+            <TourPackageCard key={pkg.id} pkg={pkg} />
           ))}
         </div>
 
-        {/* Travel Tips */}
-        <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Kerala Travel Tips</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-2xl mb-2">🌦️</div>
-              <h4 className="font-semibold mb-2">Best Time to Visit</h4>
-              <p className="text-sm text-gray-600">September to March for pleasant weather</p>
+        {/* Package Stats */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-emerald-600">{allPackages.length}</div>
+              <div className="text-gray-600">Tour Packages</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2">👕</div>
-              <h4 className="font-semibold mb-2">What to Wear</h4>
-              <p className="text-sm text-gray-600">Light cotton clothes, comfortable footwear</p>
+            <div>
+              <div className="text-3xl font-bold text-emerald-600">
+                {Math.max(...allPackages.map(p => parseFloat(p.rating)))}
+              </div>
+              <div className="text-gray-600">Highest Rating</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2">🍛</div>
-              <h4 className="font-semibold mb-2">Local Cuisine</h4>
-              <p className="text-sm text-gray-600">Try authentic Kerala sadhya and seafood</p>
+            <div>
+              <div className="text-3xl font-bold text-emerald-600">
+                ₹{Math.min(...allPackages.map(p => parseInt(p.price.replace(/,/g, '')))).toLocaleString()}
+              </div>
+              <div className="text-gray-600">Starting From</div>
             </div>
-            <div className="text-center">
-              <div className="text-2xl mb-2">🚗</div>
-              <h4 className="font-semibold mb-2">Transport</h4>
-              <p className="text-sm text-gray-600">Well-connected by road, rail, and air</p>
+            <div>
+              <div className="text-3xl font-bold text-emerald-600">
+                {allPackages.reduce((acc, pkg) => acc + parseInt(pkg.reviews), 0)}
+              </div>
+              <div className="text-gray-600">Happy Travelers</div>
             </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl p-8 text-center text-white shadow-xl">
+          <h2 className="text-3xl font-bold mb-4">Ready to Explore Kerala?</h2>
+          <p className="text-emerald-100 mb-6 max-w-2xl mx-auto text-lg">
+            Contact our travel experts to book your perfect Kerala experience. 
+            Get personalized recommendations and the best deals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/919028803309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-50 transition duration-300 shadow-lg"
+            >
+              💬 Chat on WhatsApp
+            </a>
+            <a
+              href="tel:+919028803309"
+              className="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition duration-300"
+            >
+              📞 Call Now
+            </a>
           </div>
         </div>
       </section>
@@ -162,4 +384,4 @@ const AllPlacesPage = () => {
   );
 };
 
-export default AllPlacesPage;
+export default AllPackagesPage;
