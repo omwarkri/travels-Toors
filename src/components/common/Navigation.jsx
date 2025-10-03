@@ -5,7 +5,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-[#e3f3f9] backdrop-blur-md z-50 shadow-lg">
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
