@@ -11,7 +11,7 @@ const AboutUsPage = () => {
         keywords="Omkar Tour and Travels about, Kerala travel agency, tour operators Kerala, trusted travel company"
       />
       
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto py-8">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">About Omkar Tour and Travels</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

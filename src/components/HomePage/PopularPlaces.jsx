@@ -108,7 +108,7 @@ const PopularPlaces = ({ id = "places" }) => {
   const popularPlaces = places.slice(0, 6); // Show first 6 places as popular
 
   return (
-    <section id={id} className="max-w-7xl mx-auto px-6 py-16">
+    <section id={id} className="max-w-7xl mx-auto  py-8">
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🌟 Top Destinations

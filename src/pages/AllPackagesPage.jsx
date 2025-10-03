@@ -404,7 +404,7 @@ const AllPackagesPage = () => {
         keywords="Kerala tour packages, Kerala backwaters, Alleppey houseboat, Munnar tea estates, Kerala beaches, wildlife tours, cultural packages, honeymoon packages Kerala"
       />
       
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto py-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
             🏆 {allPackages.length}+ Curated Packages
