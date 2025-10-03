@@ -161,7 +161,7 @@ const AllPlacesPage = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-emerald-600">
-                {places.reduce((acc, place) => acc + place.tours, 0)}
+                {places.reduce((acc, place) => acc + parseInt(place.tours), 0)}
               </div>
               <div className="text-gray-600">Tour Packages</div>
             </div>
@@ -182,7 +182,13 @@ const AllPlacesPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {places.map((place) => (
-              <PlaceCard key={place.id} place={place} />
+              <Link 
+                key={place.id} 
+                to={`/places/${place.id}`}
+                className="block transition-transform duration-300 hover:scale-105"
+              >
+                <PlaceCard place={place} />
+              </Link>
             ))}
           </div>
         </div>
@@ -204,7 +210,13 @@ const AllPlacesPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {hillStations.map((place) => (
-                <PlaceCard key={place.id} place={place} />
+                <Link 
+                  key={place.id} 
+                  to={`/places/${place.id}`}
+                  className="block transition-transform duration-300 hover:scale-105"
+                >
+                  <PlaceCard place={place} />
+                </Link>
               ))}
             </div>
           </div>
@@ -222,7 +234,13 @@ const AllPlacesPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {backwaters.map((place) => (
-                <PlaceCard key={place.id} place={place} />
+                <Link 
+                  key={place.id} 
+                  to={`/places/${place.id}`}
+                  className="block transition-transform duration-300 hover:scale-105"
+                >
+                  <PlaceCard place={place} />
+                </Link>
               ))}
             </div>
           </div>
@@ -240,7 +258,13 @@ const AllPlacesPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {beaches.map((place) => (
-                <PlaceCard key={place.id} place={place} />
+                <Link 
+                  key={place.id} 
+                  to={`/places/${place.id}`}
+                  className="block transition-transform duration-300 hover:scale-105"
+                >
+                  <PlaceCard place={place} />
+                </Link>
               ))}
             </div>
           </div>
@@ -258,7 +282,13 @@ const AllPlacesPage = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {cultural.map((place) => (
-                <PlaceCard key={place.id} place={place} />
+                <Link 
+                  key={place.id} 
+                  to={`/places/${place.id}`}
+                  className="block transition-transform duration-300 hover:scale-105"
+                >
+                  <PlaceCard place={place} />
+                </Link>
               ))}
             </div>
           </div>

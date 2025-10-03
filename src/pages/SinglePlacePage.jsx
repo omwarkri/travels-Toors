@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams, Link } from 'react-router-dom';
-
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 
@@ -8,231 +7,123 @@ const SinglePlacePage = () => {
   const { placeId } = useParams();
   
   const allPlaces = [
-  {
-    id: "Alleppey Beach",
-    name: "Alleppey Beach",
-    duration: "04 Nights / 05 Days",
-    destination: "Alleppey, Kerala",
-    places: ["alleppey"],
-    bestSeason: "Sep - May",
-    price: 18999,
-    originalPrice: 22999,
-    discount: "17% Off",
-    rating: 4.8,
-    reviews: 67,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
-    images: [
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg"
-    ],
-    description: "Alleppey Beach is famous for its long, beautiful coastline and the historic pier that extends over 137 years into the sea. Visitors love walking on the soft white sand and enjoying breathtaking sunset views.",
-    detailedDescription: "Alleppey Beach offers a perfect blend of natural beauty and exciting activities. The beach features a historic pier extending into the sea, soft white sands, and spectacular sunset views. Enjoy thrilling water sports like motorboat rides, parasailing, and surfing. Nearby Vijaya Beach Park provides family-friendly entertainment, while local vendors offer fresh coconut water and delicious Kerala street food.",
-    highlights: ["Historic Pier", "Water Sports", "Sunset Views", "Beach Park", "Local Cuisine"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alleppey", description: "Arrive at Cochin Airport, transfer to Alleppey, check-in at beach resort." },
-      { day: "Day 2", title: "Beach Exploration", description: "Visit Alleppey Beach, historic pier, enjoy water sports and sunset views." },
-      { day: "Day 3", title: "Local Attractions", description: "Explore Vijaya Beach Park, local markets, and try street food." },
-      { day: "Day 4", title: "Backwaters Experience", description: "Optional backwater cruise or relax at beach." },
-      { day: "Day 5", title: "Departure", description: "Transfer to Cochin Airport for departure." }
-    ],
-    inclusions: ["Beach resort stay", "Daily breakfast", "AC vehicle", "Beach entry", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Water sports charges", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Backwaters",
-    name: "Backwaters",
-    duration: "03 Nights / 04 Days",
-    destination: "Alleppey, Kumarakom",
-    places: ["alleppey", "kumarakom"],
-    bestSeason: "Aug - Mar",
-    price: 16999,
-    originalPrice: 20999,
-    discount: "19% Off",
-    rating: 4.9,
-    reviews: 89,
-    image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80"
-    ],
-    description: "Kerala Backwaters are a network of rivers, lakes, and canals that flow alongside the Arabian Sea. Visitors enjoy peaceful houseboat cruises through green palm-lined waterways and traditional villages.",
-    detailedDescription: "Experience the serene beauty of Kerala's famous backwaters through peaceful houseboat cruises along palm-lined waterways. Explore traditional villages, witness rich wildlife, and admire scenic paddy fields. This journey offers perfect relaxation, excellent birdwatching opportunities, and deep immersion into Kerala's unique natural beauty and local culture.",
-    highlights: ["Houseboat Cruise", "Backwaters", "Vembanad Lake", "Traditional Food", "Sunset Views"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alleppey", description: "Check-in, evening walk at Alleppey Beach." },
-      { day: "Day 2", title: "Houseboat Cruise", description: "Full day backwater houseboat cruise with meals." },
-      { day: "Day 3", title: "Kumarakom Excursion", description: "Visit bird sanctuary and relax by Vembanad Lake." },
-      { day: "Day 4", title: "Departure", description: "Check-out and transfer to Cochin Airport." }
-    ],
-    inclusions: ["Houseboat stay", "Meals on houseboat", "AC vehicle", "All entry fees", "All taxes"],
-    exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Tea estate",
-    name: "Tea Estate Tour",
-    duration: "03 Nights / 04 Days",
-    destination: "Munnar, Thekkady",
-    places: ["munnar", "thekkady"],
-    bestSeason: "Sep - Mar",
-    price: 15999,
-    originalPrice: 19999,
-    discount: "20% Off",
-    rating: 4.7,
-    reviews: 56,
-    image: "https://images.unsplash.com/photo-1558618047-3c76ca7d13?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1558618047-3c76ca7d13?auto=format&fit=crop&w=1200&q=80"],
-    description: "Explore Kerala's famous tea estates in Munnar and Thekkady with lush green hills covered with neatly trimmed tea bushes. Learn about tea processing and enjoy fresh tea tastings.",
-    detailedDescription: "Discover the enchanting world of Kerala's tea estates in Munnar and Thekkady. Walk through vast, lush green hills covered with perfectly manicured tea bushes. Visit tea factories to learn about tea processing from leaf to cup, and enjoy fresh tea tastings. The cool climate and misty mountains create a perfect setting for scenic walks and photography. Explore famous estates like Kannan Devan Hills and Kolukkumalai, combining natural beauty with rich tea cultivation history.",
-    highlights: ["Tea Plantations", "Tea Factory Tour", "Tea Tasting", "Scenic Walks", "Mountain Views"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Munnar", description: "Transfer to Munnar, check-in at plantation resort." },
-      { day: "Day 2", title: "Te Estate Exploration", description: "Visit tea plantations, factory, enjoy tea tasting session." },
-      { day: "Day 3", title: "Travel to Thekkady", description: "Transfer to Thekkady, visit spice gardens." },
-      { day: "Day 4", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Plantation resort", "Daily breakfast", "AC vehicle", "Tea factory tour", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Periyar Lake Thekkady",
-    name: "Periyar Lake Thekkady",
-    duration: "04 Nights / 05 Days",
-    destination: "Thekkady, Periyar",
-    places: ["thekkady"],
-    bestSeason: "Nov - Apr",
-    price: 17999,
-    originalPrice: 21999,
-    discount: "18% Off",
-    rating: 4.6,
-    reviews: 72,
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&w=1200&q=80"],
-    description: "Periyar Lake in Thekkady offers serene boat cruises through rich wildlife habitats surrounded by lush Periyar National Park. Spot elephants, deer, and various bird species.",
-    detailedDescription: "Periyar Lake, located in Thekkady, is an artificial lake formed by the Mullaperiyar Dam, surrounded by the lush Periyar National Park. Enjoy serene boat cruises through rich wildlife habitats where you can spot elephants, deer, and various bird species along the lake's banks. Enhance your adventure with bamboo rafting and guided nature walks through the forest. This destination offers a perfect blend of natural beauty and wildlife exploration in Kerala's Western Ghats.",
-    highlights: ["Periyar Wildlife Sanctuary", "Boat Cruise", "Bamboo Rafting", "Nature Walks", "Spice Plantations"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Thekkady", description: "Check-in at jungle resort near Periyar Lake." },
-      { day: "Day 2", title: "Wildlife Experience", description: "Boat cruise on Periyar Lake, wildlife spotting." },
-      { day: "Day 3", title: "Adventure Day", description: "Bamboo rafting, nature walks, spice plantation visit." },
-      { day: "Day 4", title: "Leisure & Culture", description: "Relax at resort, evening cultural program." },
-      { day: "Day 5", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Jungle resort", "Boat cruise", "AC vehicle", "All entry tickets", "All taxes"],
-    exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "The Nehru Trophy Boat Race",
-    name: "The Nehru Trophy Boat Race",
-    duration: "03 Nights / 04 Days",
-    destination: "Alappuzha, Kerala",
-    places: ["alleppey"],
-    bestSeason: "Aug (Annual Event)",
-    price: 16999,
-    originalPrice: 20999,
-    discount: "19% Off",
-    rating: 4.5,
-    reviews: 92,
-    image: "https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&w=1200&q=80"],
-    description: "Witness the thrilling Nehru Trophy Boat Race featuring massive snake boats with over 100 oarsmen rowing in perfect rhythm on Punnamada Lake.",
-    detailedDescription: "Experience the spectacular Nehru Trophy Boat Race, Kerala's most famous annual boat race held on Punnamada Lake near Alappuzha. Watch massive snake boats (chundan vallams), each manned by over 100 oarsmen rowing in perfect rhythm to traditional boat songs. Inaugurated in 1952 by India's first Prime Minister Jawaharlal Nehru, this vibrant cultural festival celebrates Kerala's heritage, unity, and sporting spirit. Join thousands of spectators for this thrilling event that showcases incredible teamwork and traditional Kerala culture.",
-    highlights: ["Snake Boat Race", "Cultural Festival", "Traditional Music", "Vibrant Atmosphere", "Local Cuisine"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alappuzha", description: "Check-in, explore local area." },
-      { day: "Day 2", title: "Boat Race Day", description: "Full day at Nehru Trophy Boat Race event." },
-      { day: "Day 3", title: "Backwaters Relaxation", description: "Houseboat cruise or beach relaxation." },
-      { day: "Day 4", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Hotel accommodation", "Boat race tickets", "AC vehicle", "Guide services", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Kovalam Beach",
-    name: "Kovalam Beach",
-    duration: "03 Nights / 04 Days",
-    destination: "Kovalam, Thiruvananthapuram",
-    places: ["kovalam"],
-    bestSeason: "Sep - Mar",
-    price: 15999,
-    originalPrice: 19999,
-    discount: "20% Off",
-    rating: 4.7,
-    reviews: 48,
-    image: "https://images.unsplash.com/photo-1565955887216-68d71c13f6c1?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1565955887216-68d71c13f6c1?auto=format&w=1200&q=80"],
-    description: "Kovalam Beach features three crescent-shaped beaches with sparkling sands, palm-lined shores, and clear waters perfect for swimming and water sports.",
-    detailedDescription: "Kovalam Beach is famous for its three beautiful crescent-shaped beaches: Lighthouse Beach, Hawa Beach, and Samudra Beach. Enjoy sparkling sands, palm-lined shores, and clear waters perfect for swimming, sunbathing, and exciting water sports like surfing and parasailing. Climb the iconic Vizhinjam Lighthouse for panoramic views of the Arabian Sea. Savor fresh local seafood at beach shacks and explore vibrant evening markets. Kovalam offers the perfect blend of relaxation, adventure, and cultural experiences in southern Kerala.",
-    highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage", "Local Seafood"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Kovalam", description: "Check-in at beach resort, evening beach walk." },
-      { day: "Day 2", title: "Beach Day", description: "Full day to relax, swim, and try water sports." },
-      { day: "Day 3", title: "Local Exploration", description: "Visit lighthouse, local markets, Ayurvedic center." },
-      { day: "Day 4", title: "Departure", description: "Transfer to Thiruvananthapuram airport." }
-    ],
-    inclusions: ["Beach resort", "Daily breakfast", "AC vehicle", "Lighthouse entry", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Water sports", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Guruvayur Temple",
-    name: "Guruvayur Temple",
-    duration: "02 Nights / 03 Days",
-    destination: "Guruvayur, Kerala",
-    places: ["guruvayur"],
-    bestSeason: "Year Round",
-    price: 12999,
-    originalPrice: 15999,
-    discount: "19% Off",
-    rating: 4.8,
-    reviews: 34,
-    image: "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&w=1200&q=80"],
-    description: "Guruvayur Temple is one of the most sacred Hindu temples dedicated to Lord Krishna, known for its exquisite Kerala-style architecture and spiritual significance.",
-    detailedDescription: "Guruvayur Temple is one of Kerala's most sacred Hindu temples dedicated to Lord Krishna (Guruvayurappan). The temple's idol is believed to be over 5,000 years old, originally from the ancient city of Dwarka. Renowned for its exquisite Kerala-style architecture, the temple attracts millions of devotees annually and is often called 'Bhooloka Vaikunta' - the earthly abode of Lord Vishnu. Experience the strong spiritual atmosphere, witness vibrant festivals, and participate in traditional rituals that have been preserved for centuries.",
-    highlights: ["Temple Darshan", "Traditional Architecture", "Spiritual Rituals", "Festivals", "Cultural Experience"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Guruvayur", description: "Check-in, evening temple visit." },
-      { day: "Day 2", title: "Temple Experience", description: "Morning rituals, temple darshan, explore temple complex." },
-      { day: "Day 3", title: "Departure", description: "Transfer to airport or next destination." }
-    ],
-    inclusions: ["Hotel accommodation", "Temple guidance", "AC vehicle", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Ambalapuzha Krishna Temple",
-    name: "Ambalapuzha Krishna Temple",
-    duration: "02 Nights / 03 Days",
-    destination: "Ambalapuzha, Alleppey",
-    places: ["ambalapuzha"],
-    bestSeason: "Year Round",
-    price: 11999,
-    originalPrice: 14999,
-    discount: "20% Off",
-    rating: 4.6,
-    reviews: 28,
-    image: "https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&w=1200&q=80"],
-    description: "Ambalapuzha Krishna Temple is famous for its traditional Kerala architecture, serene ambiance, and the legendary Palpayasam sweet offering to Lord Krishna.",
-    detailedDescription: "Ambalapuzha Krishna Temple in Alappuzha district is a magnificent example of 15th-century traditional Kerala architecture. The temple is renowned for its serene ambiance and the legendary Palpayasam - a sweet milk-rice pudding offered daily to Lord Krishna. Historically significant, it served as the safe haven for Guruvayoor Temple's idol during Tipu Sultan's invasion. Admire the temple's colorful murals and experience the magical atmosphere during oil lamp-lit evenings. The temple also hosts annual festivals and boat races, adding vibrant cultural celebrations to your spiritual journey.",
-    highlights: ["Temple Architecture", "Palpayasam Offering", "Colorful Murals", "Oil Lamp Rituals", "Cultural Festivals"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Ambalapuzha", description: "Check-in, evening temple visit." },
-      { day: "Day 2", title: "Temple Exploration", description: "Morning rituals, taste Palpayasam, explore temple art." },
-      { day: "Day 3", title: "Departure", description: "Transfer to airport or continue journey." }
-    ],
-    inclusions: ["Hotel stay", "Temple guidance", "AC vehicle", "Palpayasam tasting", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  }
-]
+    { 
+      id: "munnar",
+      name: "MUNNAR", 
+      desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+      rating: "4.8",
+      tours: "12",
+      highlights: ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam", "Tea Museum"],
+      bestSeason: "September to May",
+      packages: ["Munnar Tea Plantations Tour", "Complete Kerala Experience", "Kerala Honeymoon Special"],
+      longDescription: "Munnar is a breathtaking hill station nestled in the Western Ghats of Kerala, renowned for its sprawling tea plantations, misty mountains, and cool climate. Once the summer resort of the British government in South India, Munnar still retains its old-world charm with colonial bungalows and winding roads. The town is situated at the confluence of three mountain streams - Muthirapuzha, Nallathanni, and Kundala.",
+      climate: "Cool and pleasant throughout the year, with temperatures ranging from 5°C to 25°C",
+      attractions: [
+        { name: "Tea Plantations", description: "Visit the endless stretches of tea gardens and learn about tea processing." },
+        { name: "Eravikulam National Park", description: "Home to the endangered Nilgiri Tahr and offering stunning views." },
+        { name: "Mattupetty Dam", description: "Beautiful dam and lake perfect for boating and photography." },
+        { name: "Tea Museum", description: "Learn about the history and process of tea making in Kerala." }
+      ]
+    },
+    { 
+      id: "alleppey",
+      name: "ALLEPPEY", 
+      desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      rating: "4.9",
+      tours: "8",
+      highlights: ["Houseboat Cruise", "Backwaters", "Alleppey Beach", "Vembanad Lake"],
+      bestSeason: "August to March",
+      packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"],
+      longDescription: "Alappuzha, popularly known as Alleppey, is famous for its backwaters, beaches, and canal networks. Often called the 'Venice of the East', this charming city is the center for backwater tourism in Kerala. The houseboat cruises along the backwaters are a once-in-a-lifetime experience.",
+      climate: "Tropical climate with moderate temperatures ranging from 22°C to 35°C",
+      attractions: [
+        { name: "Houseboat Cruise", description: "Stay overnight in traditional houseboats through backwaters." },
+        { name: "Alleppey Beach", description: "Pristine beach with a 150-year-old pier and lighthouse." },
+        { name: "Vembanad Lake", description: "Longest lake in India, perfect for sunset views." },
+        { name: "Backwaters", description: "Network of canals, lakes, and lagoons parallel to the coast." }
+      ]
+    },
+    { 
+      id: "kovalam",
+      name: "KOVALAM", 
+      desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      rating: "4.7",
+      tours: "6",
+      highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage"],
+      bestSeason: "September to March",
+      packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"],
+      longDescription: "Kovalam is an internationally renowned beach destination with three adjacent crescent beaches. It's known for its shallow waters and low tidal waves, making it ideal for swimming. The beaches are lined with coconut palms and offer spectacular sunset views.",
+      climate: "Tropical coastal climate with temperatures between 24°C to 32°C",
+      attractions: [
+        { name: "Lighthouse Beach", description: "Most popular beach with a 35-meter high lighthouse." },
+        { name: "Hawa Beach", description: "Known for its strong winds and beach activities." },
+        { name: "Water Sports", description: "Enjoy surfing, parasailing, and other water activities." },
+        { name: "Ayurvedic Massage", description: "Rejuvenate with traditional Ayurvedic treatments." }
+      ]
+    },
+    { 
+      id: "thekkady",
+      name: "THEKKADY", 
+      desc: "Home to Periyar Wildlife Sanctuary, offering thrilling jungle experiences and spice plantations.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      rating: "4.6",
+      tours: "9",
+      highlights: ["Periyar Wildlife Sanctuary", "Spice Plantations", "Bamboo Rafting", "Elephant Ride"],
+      bestSeason: "November to April",
+      packages: ["Kerala Wildlife Adventure", "Complete Kerala Experience", "Munnar Tea Plantations Tour"],
+      longDescription: "Thekkady is home to the Periyar Wildlife Sanctuary, one of India's most fascinating natural wildlife reserves. Spread across 777 sq km, the sanctuary is known for its dense evergreen forests and diverse wildlife including elephants, tigers, and various bird species.",
+      climate: "Pleasant climate with temperatures ranging from 15°C to 30°C",
+      attractions: [
+        { name: "Periyar Wildlife Sanctuary", description: "Famous tiger reserve and elephant sightings." },
+        { name: "Spice Plantations", description: "Tour through cardamom, pepper, and coffee plantations." },
+        { name: "Bamboo Rafting", description: "Unique rafting experience through the forest." },
+        { name: "Elephant Ride", description: "Jungle safari on elephant back through forest trails." }
+      ]
+    },
+    { 
+      id: "kochi",
+      name: "KOCHI", 
+      desc: "The commercial capital of Kerala blending Portuguese, Dutch, and British colonial influences.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+      rating: "4.5",
+      tours: "7",
+      highlights: ["Fort Kochi", "Chinese Fishing Nets", "Jewish Synagogue", "Kathakali Dance"],
+      bestSeason: "Year Round",
+      packages: ["Kerala Cultural Heritage", "Complete Kerala Experience"],
+      longDescription: "Kochi, also known as Cochin, is a vibrant port city with a rich colonial history and multicultural influences. From Chinese fishing nets to Portuguese architecture, Dutch palaces to British buildings, Kochi showcases a blend of various cultures that have influenced it over centuries.",
+      climate: "Tropical climate with moderate temperatures year-round",
+      attractions: [
+        { name: "Fort Kochi", description: "Historic area with colonial architecture and cultural sites." },
+        { name: "Chinese Fishing Nets", description: "Iconic fishing nets introduced by Chinese traders." },
+        { name: "Jewish Synagogue", description: "Oldest active synagogue in Commonwealth nations." },
+        { name: "Kathakali Dance", description: "Traditional dance-drama performances." }
+      ]
+    }
+  ];
 
-  const place = allPlaces[placeId] || allPlaces["munnar"];
+  // Find the place by ID
+  console.log(placeId,"placeId")
+  const place = allPlaces.find(p => p.id === placeId) || allPlaces[0];
+   console.log(place,"place")
+
+  // Sample package data
+  const packageData = {
+    "Munnar Tea Plantations Tour": { duration: "3 Days", price: "7,999" },
+    "Complete Kerala Experience": { duration: "7 Days", price: "18,999" },
+    "Kerala Honeymoon Special": { duration: "5 Days", price: "12,999" },
+    "Kerala Backwaters & Beaches": { duration: "4 Days", price: "9,999" },
+    "Kerala Wildlife Adventure": { duration: "4 Days", price: "10,999" },
+    "Kerala Cultural Heritage": { duration: "3 Days", price: "6,999" }
+  };
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen bg-gray-50">
       <SEOHead 
         title={`${place.name} Kerala - Complete Travel Guide | Omkar Tour and Travels`}
-        description={`Visit ${place.name} - ${place.description}. Book ${place.tours}+ tour packages starting from ₹4,999. Best time to visit: ${place.bestTime}`}
+        description={`Visit ${place.name} - ${place.desc}. Book ${place.tours}+ tour packages starting from ₹4,999. Best time to visit: ${place.bestSeason}`}
         keywords={`${place.name}, ${place.name} Kerala, ${place.name} tour packages, ${place.name} tourism`}
       />
       
@@ -256,11 +147,11 @@ const SinglePlacePage = () => {
               Back to Destinations
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{place.name}</h1>
-            <p className="text-xl max-w-3xl">{place.description}</p>
+            <p className="text-xl max-w-3xl">{place.desc}</p>
             <div className="flex flex-wrap items-center gap-4 mt-4">
               <span className="bg-white/20 px-3 py-1 rounded-full">⭐ {place.rating}</span>
               <span className="bg-white/20 px-3 py-1 rounded-full">🚗 {place.tours} tours available</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">📅 Best: {place.bestTime}</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">📅 Best: {place.bestSeason}</span>
             </div>
           </div>
         </div>
@@ -278,7 +169,7 @@ const SinglePlacePage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2">🌤️ Best Time to Visit</h3>
-                  <p className="text-gray-700">{place.bestTime}</p>
+                  <p className="text-gray-700">{place.bestSeason}</p>
                 </div>
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold mb-2">🌡️ Climate</h3>
@@ -305,10 +196,10 @@ const SinglePlacePage = () => {
               <div className="space-y-4 mb-6">
                 {place.packages.map((pkg, index) => (
                   <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-emerald-500 transition duration-300">
-                    <h4 className="font-semibold text-gray-800">{pkg.name}</h4>
+                    <h4 className="font-semibold text-gray-800">{pkg}</h4>
                     <div className="flex justify-between items-center mt-2">
-                      <span className="text-sm text-gray-600">{pkg.duration}</span>
-                      <span className="text-emerald-600 font-bold">₹{pkg.price}</span>
+                      <span className="text-sm text-gray-600">{packageData[pkg]?.duration || "Custom"}</span>
+                      <span className="text-emerald-600 font-bold">₹{packageData[pkg]?.price || "Custom"}</span>
                     </div>
                     <a
                       href="https://wa.me/919028803309"
