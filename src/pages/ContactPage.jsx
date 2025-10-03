@@ -1,148 +1,159 @@
-import React, { useState } from "react";
+import React from "react";
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    package: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    const message = `Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0APackage: ${formData.package}%0AMessage: ${formData.message}`;
-    window.open(`https://wa.me/919028803309?text=${message}`, '_blank');
-  };
-
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen bg-gradient-to-br from-gray-50 to-emerald-50">
       <SEOHead 
         title="Contact Omkar Tour and Travels | Kerala Tour Packages Booking"
         description="Contact Omkar Tour and Travels for Kerala tour packages. Call +91-9028803309, WhatsApp, or email omkartours143@gmail.com. 24/7 customer support available."
         keywords="contact Omkar Tour and Travels, Kerala tour booking, travel agency contact"
       />
       
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">Get In Touch</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to plan your Kerala adventure? Contact us for personalized tour packages and expert travel advice.
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
+            Contact Us
+          </h1>
+          <p className="text-xl sm:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
+            Ready to plan your Kerala adventure? Get in touch with our travel experts for personalized tour packages.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">📞</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Call Us</h3>
-                  <p className="text-gray-600">
-                    <a href="tel:+919028803309" className="hover:text-emerald-600 transition duration-200">
-                      +91-9028803309
-                    </a>
-                  </p>
-                  <p className="text-gray-600">
-                    <a href="tel:+919028803309" className="hover:text-emerald-600 transition duration-200">
-                      +91-9028803309
-                    </a>
-                  </p>
-                </div>
+      {/* Main Content - Centered Single Column */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 -mt-10 relative z-10">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We're here to help you plan the perfect Kerala experience. Reach out through any channel that's convenient for you.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+            {/* Phone */}
+            <div className="flex items-start space-x-4 p-6 rounded-2xl bg-emerald-50 hover:bg-emerald-100 transition duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <span className="text-2xl text-white">📞</span>
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">💬</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">WhatsApp</h3>
-                  <p className="text-gray-600">
-                    <a 
-                      href="https://wa.me/919028803309" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-emerald-600 transition duration-200"
-                    >
-                      +91-9028803309
-                    </a>
-                  </p>
-                  <p className="text-sm text-gray-500">24/7 Available</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">✉️</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <p className="text-gray-600">
-                    <a href="mailto:omkartours143@gmail.com" className="hover:text-emerald-600 transition duration-200">
-                      omkartours143@gmail.com
-                    </a>
-                  </p>
-                  <p className="text-gray-600">
-                    <a href="mailto:omkartours143@gmail.com" className="hover:text-emerald-600 transition duration-200">
-                      omkartours143@gmail.com
-                    </a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-xl">🏢</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">Office Address</h3>
-                  <p className="text-gray-600">
-                    Office No 238 Rashtrakuta Building<br />
-                    Empire Industrial Centrum<br />
-                    Chikhloli Kalyan Badlapur road<br />
-                    Ambernath west 421505<br />
-                    Tal: Ambernath Dist - Thane
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
+                <p className="text-gray-700 mb-1">
+                  <a href="tel:+919028803309" className="hover:text-emerald-600 transition duration-200 font-semibold text-lg">
+                    +91-9028803309
+                  </a>
+                </p>
+                <p className="text-gray-700">
+                  <a href="tel:+919028803309" className="hover:text-emerald-600 transition duration-200 font-semibold text-lg">
+                    +91-9028803309
+                  </a>
+                </p>
+                <p className="text-sm text-gray-600 mt-2 font-medium">Direct line to our travel experts</p>
               </div>
             </div>
 
-            {/* Quick Contact Buttons */}
-            <div className="space-y-3">
-              <a
-                href="https://wa.me/919028803309"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-600 text-white py-4 rounded-xl font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
-              >
-                💬 Chat on WhatsApp
-              </a>
-              <a
-                href="tel:+919028803309"
-                className="w-full bg-emerald-500 text-white py-4 rounded-xl font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
-              >
-                📞 Call Now
-              </a>
+            {/* WhatsApp */}
+            <div className="flex items-start space-x-4 p-6 rounded-2xl bg-green-50 hover:bg-green-100 transition duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <span className="text-2xl text-white">💬</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">WhatsApp</h3>
+                <p className="text-gray-700 mb-1">
+                  <a 
+                    href="https://wa.me/919028803309" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-600 transition duration-200 font-semibold text-lg"
+                  >
+                    +91-9028803309
+                  </a>
+                </p>
+                <p className="text-sm text-gray-600 font-medium">24/7 Available • Instant Response</p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start space-x-4 p-6 rounded-2xl bg-blue-50 hover:bg-blue-100 transition duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <span className="text-2xl text-white">✉️</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                <p className="text-gray-700 mb-1">
+                  <a href="mailto:omkartours143@gmail.com" className="hover:text-emerald-600 transition duration-200 font-semibold text-base break-all">
+                    omkartours143@gmail.com
+                  </a>
+                </p>
+                <p className="text-gray-700">
+                  <a href="mailto:omkartours143@gmail.com" className="hover:text-emerald-600 transition duration-200 font-semibold text-base break-all">
+                    omkartours143@gmail.com
+                  </a>
+                </p>
+                <p className="text-sm text-gray-600 mt-2 font-medium">For detailed inquiries</p>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div className="flex items-start space-x-4 p-6 rounded-2xl bg-purple-50 hover:bg-purple-100 transition duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <span className="text-2xl text-white">🏢</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">Office Address</h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  Office No 238 Rashtrakuta Building<br />
+                  Empire Industrial Centrum<br />
+                  Chikhloli Kalyan Badlapur road<br />
+                  Ambernath west 421505<br />
+                  Tal: Ambernath Dist - Thane
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-        
+          {/* Quick Contact Buttons */}
+          <div className="space-y-4 max-w-md mx-auto">
+            <a
+              href="https://wa.me/919028803309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
+            >
+              <span className="mr-3 text-2xl">💬</span>
+              Chat on WhatsApp
+              <span className="ml-2">→</span>
+            </a>
+            <a
+              href="tel:+919028803309"
+              className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-4 px-6 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
+            >
+              <span className="mr-3 text-2xl">📞</span>
+              Call Now
+              <span className="ml-2">→</span>
+            </a>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-emerald-400 rounded-full mr-2"></span>
+                ✅ 5000+ Happy Customers
+              </div>
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-emerald-400 rounded-full mr-2"></span>
+                ⭐ Best Price Guarantee
+              </div>
+              <div className="flex items-center">
+                <span className="w-3 h-3 bg-emerald-400 rounded-full mr-2"></span>
+                🕒 24/7 Support
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
