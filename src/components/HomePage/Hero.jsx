@@ -81,7 +81,7 @@ const Hero = () => {
          
 
           {/* Main Heading - Kerala Logo */}
-          <div className="flex justify-center mb-4 sm:mb-6 border-b-2 border-red-200">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <img 
               className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md border-b-[2px]" 
               src="/kerla-logo-2.png" 
@@ -110,7 +110,7 @@ const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-1 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-sm sm:text-base text-white font-medium px-2">
+          <div className="mt-1 sm:mt-8 flex flex-wrap justify-center gap-1 sm:gap-4 md:gap-6 text-sm sm:text-base text-white font-medium px-2">
             <div className="flex items-center bg-white/20 px-3 py-2 rounded-full backdrop-blur-sm">
               <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
               5000+ Happy Customers
