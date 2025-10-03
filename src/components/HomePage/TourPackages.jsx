@@ -6,8 +6,8 @@ const TourPackages = ({ id = "packages" }) => {
   // Direct package data (same structure as other components)
   const allPackages = [
   {
-    id: "munnar",
-    name: "MUNNAR",
+    id: "Alleppey Beach",
+    name: "Alleppey Beach",
     duration: "04 Nights / 05 Days",
     destination: "Munnar, Thekkady",
     places: ["munnar", "thekkady"],
@@ -23,7 +23,7 @@ const TourPackages = ({ id = "packages" }) => {
      
     ],
 
-    description: "Explore the misty hills and sprawling tea plantations of Munnar.",
+    description: "Alleppey Beach is famous for its long, beautiful coastline and the historic pier that extends over 137 years into the sea. Visitors love walking on the soft white sand and enjoying breathtaking sunset views. The beach offers exciting water sports like motorboat rides, parasailing, and surfing. Near the beach, Vijaya Beach Park provides fun and relaxation for families and kids. Local vendors add charm by offering fresh coconut water and delicious Kerala street food.",
     detailedDescription: "Discover Munnar's scenic beauty, Tata Tea Museum, and Eravikulam National Park.",
     highlights: ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam", "Tea Museum", "Kathakali Dance"],
     itinerary: [
@@ -37,8 +37,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "alleppey",
-    name: "ALLEPPEY",
+    id: "Backwaters",
+    name: "Backwaters",
     duration: "03 Nights / 04 Days",
     destination: "Alleppey, Kumarakom",
     places: ["alleppey", "kumarakom"],
@@ -53,8 +53,8 @@ const TourPackages = ({ id = "packages" }) => {
       "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80"
     ],
-    description: "Cruise through the serene backwaters of Alleppey and Kumarakom.",
-    detailedDescription: "Experience houseboats, local village culture, and tranquil waterways.",
+    description: "Kerala Backwaters are a network of rivers, lakes, and canals that flow alongside the Arabian Sea. Visitors enjoy peaceful houseboat cruises through green palm-lined waterways and traditional villages. The backwaters offer rich wildlife, scenic paddy fields, and unique local culture experiences. It’s a perfect place for relaxation, birdwatching, and exploring Kerala’s natural beauty.",
+    detailedDescription: "Kerala Backwaters are a network of rivers, lakes, and canals that flow alongside the Arabian Sea. Visitors enjoy peaceful houseboat cruises through green palm-lined waterways and traditional villages. The backwaters offer rich wildlife, scenic paddy fields, and unique local culture experiences. It’s a perfect place for relaxation, birdwatching, and exploring Kerala’s natural beauty.",
     highlights: ["Houseboat Cruise", "Backwaters", "Vembanad Lake", "Traditional Food", "Sunset Views"],
     itinerary: [
       { day: "Day 1", title: "Arrival in Alleppey", description: "Check-in, evening walk at Alleppey Beach." },
@@ -66,8 +66,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "kovalam",
-    name: "KOVALAM",
+    id: "Tea estate",
+    name: "Tea estate",
     duration: "03 Nights / 04 Days",
     destination: "Kovalam, Thiruvananthapuram",
     places: ["kovalam"],
@@ -79,8 +79,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "56",
     image: "https://images.unsplash.com/photo-1558618047-3c76ca7d13?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1558618047-3c76ca7d13?auto=format&fit=crop&w=1200&q=80"],
-    description: "Relax on the golden beaches of Kovalam and enjoy water sports.",
-    detailedDescription: "Spend leisure time on Lighthouse Beach, try water sports, and visit local markets.",
+    description: "Kerala’s tea estates, especially in Munnar and Thekkady, offer vast, lush green hills covered with neatly trimmed tea bushes. Visitors can explore tea factories, learn about tea processing, and enjoy fresh tea tastings. The cool climate and misty mountains create a perfect setting for scenic walks and photography. Famous estates like Kannan Devan Hills and Kolukkumalai are popular spots for nature lovers and tea enthusiasts alike. These plantations combine natural beauty, culture, and a rich history of tea cultivation.",
+    detailedDescription: "Kerala’s tea estates, especially in Munnar and Thekkady, offer vast, lush green hills covered with neatly trimmed tea bushes. Visitors can explore tea factories, learn about tea processing, and enjoy fresh tea tastings. The cool climate and misty mountains create a perfect setting for scenic walks and photography. Famous estates like Kannan Devan Hills and Kolukkumalai are popular spots for nature lovers and tea enthusiasts alike. These plantations combine natural beauty, culture, and a rich history of tea cultivation. ",
     highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage"],
     itinerary: [
       { day: "Day 1", title: "Arrival in Kovalam", description: "Check-in and beach walk." },
@@ -92,8 +92,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "thekkady",
-    name: "THEKKADY",
+    id: "Periyar Lake Thekkady",
+    name: "Periyar Lake Thekkady",
     duration: "04 Nights / 05 Days",
     destination: "Thekkady, Periyar",
     places: ["thekkady", "munnar"],
@@ -105,8 +105,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "72",
     image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&w=1200&q=80"],
-    description: "Explore Periyar Wildlife Sanctuary and spice plantations in Thekkady.",
-    detailedDescription: "Enjoy bamboo rafting, elephant rides, and cultural shows in Kerala's wildlife heartland.",
+    description: "Periyar Lake, located in Thekkady, is an artificial lake formed by the Mullaperiyar Dam. It is surrounded by the lush Periyar National Park, offering serene boat cruises through rich wildlife habitats. Visitors can spot elephants, deer, and various bird species along the lake’s banks. Bamboo rafting and nature walks add to the adventure. The lake is a perfect blend of natural beauty and wildlife exploration.",
+    detailedDescription: "Periyar Lake, located in Thekkady, is an artificial lake formed by the Mullaperiyar Dam. It is surrounded by the lush Periyar National Park, offering serene boat cruises through rich wildlife habitats. Visitors can spot elephants, deer, and various bird species along the lake’s banks. Bamboo rafting and nature walks add to the adventure. The lake is a perfect blend of natural beauty and wildlife exploration.",
     highlights: ["Periyar Wildlife Sanctuary", "Spice Plantations", "Bamboo Rafting", "Elephant Ride"],
     itinerary: [
       { day: "Day 1", title: "Arrival", description: "Check-in at jungle resort." },
@@ -119,8 +119,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "kochi",
-    name: "KOCHI",
+    id: "The Nehru Trophy Boat Race",
+    name: "The Nehru Trophy Boat Race",
     duration: "03 Nights / 04 Days",
     destination: "Kochi, Thrissur",
     places: ["kochi", "thrissur"],
@@ -132,8 +132,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "92",
     image: "https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&w=1200&q=80"],
-    description: "Explore Kochi's colonial charm, Chinese fishing nets, and heritage walks.",
-    detailedDescription: "Visit Fort Kochi, Dutch Palace, Jewish Synagogue, and enjoy local cuisine.",
+    description: "The Nehru Trophy Boat Race is a famous annual boat race held on Punnamada Lake near Alappuzha, Kerala. It features massive snake boats called chundan vallams, each manned by over 100 oarsmen rowing in perfect rhythm to traditional boat songs. The race was inaugurated in 1952 by India’s first Prime Minister, Jawaharlal Nehru, who donated the trophy and famously joined the winning boat. Thousands of spectators gather each year to witness this thrilling and vibrant cultural festival, which celebrates Kerala’s heritage, unity, and sporting spirit.",
+    detailedDescription: "The Nehru Trophy Boat Race is a famous annual boat race held on Punnamada Lake near Alappuzha, Kerala. It features massive snake boats called chundan vallams, each manned by over 100 oarsmen rowing in perfect rhythm to traditional boat songs. The race was inaugurated in 1952 by India’s first Prime Minister, Jawaharlal Nehru, who donated the trophy and famously joined the winning boat. Thousands of spectators gather each year to witness this thrilling and vibrant cultural festival, which celebrates Kerala’s heritage, unity, and sporting spirit.",
     highlights: ["Fort Kochi", "Chinese Fishing Nets", "Jewish Synagogue", "Kathakali Dance"],
     itinerary: [
       { day: "Day 1", title: "Arrival in Kochi", description: "Check-in, evening at Fort Kochi." },
@@ -145,8 +145,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "wayanad",
-    name: "WAYANAD",
+    id: "Kovalam Beach",
+    name: "Kovalam Beach",
     duration: "03 Nights / 04 Days",
     destination: "Wayanad, Edakkal",
     places: ["wayanad"],
@@ -158,8 +158,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "48",
     image: "https://images.unsplash.com/photo-1565955887216-68d71c13f6c1?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1565955887216-68d71c13f6c1?auto=format&w=1200&q=80"],
-    description: "Explore waterfalls, caves, and tribal heritage in Wayanad.",
-    detailedDescription: "Trek to Chembra Peak, visit Banasura Sagar Dam, Edakkal caves, and wildlife sanctuary.",
+    description: "Kovalam Beach is famous for its three crescent-shaped beaches: Lighthouse Beach, Hawa Beach, and Samudra Beach. The sparkling sands, palm-lined shores, and clear waters offer perfect spots for swimming, sunbathing, and water sports like surfing and parasailing. The iconic Vizhinjam Lighthouse provides panoramic views of the Arabian Sea. Visitors can enjoy fresh local seafood at beach shacks and vibrant evening markets. Kovalam is a top destination for relaxation, adventure, and cultural experiences in Kerala.",
+    detailedDescription: "Kovalam Beach is famous for its three crescent-shaped beaches: Lighthouse Beach, Hawa Beach, and Samudra Beach. The sparkling sands, palm-lined shores, and clear waters offer perfect spots for swimming, sunbathing, and water sports like surfing and parasailing. The iconic Vizhinjam Lighthouse provides panoramic views of the Arabian Sea. Visitors can enjoy fresh local seafood at beach shacks and vibrant evening markets. Kovalam is a top destination for relaxation, adventure, and cultural experiences in Kerala.",
     highlights: ["Edakkal Caves", "Banasura Sagar Dam", "Chembra Peak", "Wildlife Sanctuary"],
     itinerary: [
       { day: "Day 1", title: "Arrival", description: "Check-in at resort." },
@@ -171,8 +171,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "kumarakom",
-    name: "KUMARAKOM",
+    id: "Guruvayur Temple",
+    name: "Guruvayur Temple",
     duration: "02 Nights / 03 Days",
     destination: "Kumarakom, Alleppey",
     places: ["kumarakom"],
@@ -184,8 +184,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "34",
     image: "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&w=1200&q=80"],
-    description: "Luxury backwater experience in Kumarakom with houseboats and serene lakes.",
-    detailedDescription: "Relax at resorts, explore bird sanctuary, and enjoy Vembanad Lake views.",
+    description: `Guruvayur Temple, located in Kerala, is one of the most sacred Hindu temples dedicated to Lord Krishna, known here as Guruvayurappan. The temple's idol is believed to be over 5,000 years old and was brought from the ancient city of Dwarka. Renowned for its exquisite Kerala-style architecture, the temple attracts millions of devotees annually. It is often called "Bhooloka Vaikunta," meaning the earthly abode of Lord Vishnu. Guruvayur is famous for its strong spiritual significance, vibrant festivals, and traditional rituals.`,
+    detailedDescription: `Guruvayur Temple, located in Kerala, is one of the most sacred Hindu temples dedicated to Lord Krishna, known here as Guruvayurappan. The temple's idol is believed to be over 5,000 years old and was brought from the ancient city of Dwarka. Renowned for its exquisite Kerala-style architecture, the temple attracts millions of devotees annually. It is often called "Bhooloka Vaikunta," meaning the earthly abode of Lord Vishnu. Guruvayur is famous for its strong spiritual significance, vibrant festivals, and traditional rituals.`,
     highlights: ["Vembanad Lake", "Bird Sanctuary", "Luxury Resorts", "Houseboat Stays"],
     itinerary: [
       { day: "Day 1", title: "Arrival", description: "Check-in at luxury resort, relax by lake." },
@@ -196,8 +196,8 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "varkala",
-    name: "VARKALA",
+    id: "Ambalapuzha Krishna Temple",
+    name: "Ambalapuzha Krishna Temple",
     duration: "02 Nights / 03 Days",
     destination: "Varkala, Trivandrum",
     places: ["varkala"],
@@ -209,8 +209,8 @@ const TourPackages = ({ id = "packages" }) => {
     reviews: "28",
     image: "https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&fit=crop&w=1200&q=80",
     images: ["https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&w=1200&q=80"],
-    description: "Cliff-side beach relaxation with mineral springs and Arabian Sea views.",
-    detailedDescription: "Enjoy Varkala Beach, cliff walks, temples, and local cuisine.",
+    description: "Ambalapuzha Krishna Temple in Alappuzha district is a stunning example of traditional Kerala architecture built in the 15th century. The temple is famous for its serene ambiance and the legendary Palpayasam—a sweet milk-rice pudding offered to Lord Krishna daily. It has strong historical ties to Guruvayoor Temple, with the idol safely kept here during Tipu Sultan’s invasion. The temple’s colorful murals and oil lamp-lit evenings create a magical atmosphere. Annual festivals and boat races add vibrant cultural celebrations for visitors to enjoy.",
+    detailedDescription: "Ambalapuzha Krishna Temple in Alappuzha district is a stunning example of traditional Kerala architecture built in the 15th century. The temple is famous for its serene ambiance and the legendary Palpayasam—a sweet milk-rice pudding offered to Lord Krishna daily. It has strong historical ties to Guruvayoor Temple, with the idol safely kept here during Tipu Sultan’s invasion. The temple’s colorful murals and oil lamp-lit evenings create a magical atmosphere. Annual festivals and boat races add vibrant cultural celebrations for visitors to enjoy.",
     highlights: ["Varkala Beach", "Janardanaswamy Temple", "Mineral Springs", "Cliff Views"],
     itinerary: [
       { day: "Day 1", title: "Arrival", description: "Check-in and relax at beach." },
@@ -221,7 +221,7 @@ const TourPackages = ({ id = "packages" }) => {
     exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
   },
   {
-    id: "thrissur",
+    id: "thr",
     name: "THRISSUR",
     duration: "03 Nights / 04 Days",
     destination: "Thrissur, Athirapally",
