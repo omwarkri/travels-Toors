@@ -139,7 +139,7 @@ const AllPlacesPage = () => {
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
             🗺️ {places.length} Amazing Destinations
           </div>
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">Explore Kerala's Destinations</h1>
+          <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">KERALA'S STUNNING WONDERS</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover the diverse beauty of God's Own Country. From misty hill stations to serene backwaters, 
             golden beaches to rich cultural heritage - Kerala has something for every traveler.

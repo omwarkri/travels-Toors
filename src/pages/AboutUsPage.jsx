@@ -13,7 +13,7 @@ const AboutUsPage = () => {
       
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6">About Omkar Tour and Travels</h1>
+          <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">About Omkar Tour and Travels</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted travel partner in Kerala since 2010, creating unforgettable experiences in God's Own Country.
           </p>
