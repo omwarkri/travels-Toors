@@ -169,7 +169,7 @@ const SinglePackagePage = () => {
   };
 
   return (
-    <div className="pt-16 sm:pt-20">
+    <div className="pt-16 sm:pt-20 mt-3 pb-3 bg-black">
       <SEOHead 
         title={`${pkg.name} | ${pkg.duration} | Omkar Tour and Travels`}
         description={`Book ${pkg.name} - ${pkg.duration} starting at ₹${pkg.price}. Includes ${pkg.highlights.slice(0, 3).join(', ')}`}
