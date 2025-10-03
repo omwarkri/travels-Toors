@@ -114,7 +114,7 @@ const PopularPlaces = ({ id = "places" }) => {
           🌟 Top Destinations
         </div>
         <h2 className="text-4xl font-bold text-gray-800 mb-4">Most Popular Places to Visit</h2>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+        <p className="text-gray-500 text-lg max-w-3xl mx-auto">
           Kerala is a rare place adorned with beautiful landscapes, hill stations, water bodies and everything a traveler would love to explore.
         </p>
       </div>

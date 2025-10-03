@@ -405,10 +405,9 @@ const TourPackages = ({ id = "packages" }) => {
         <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
           Curated Kerala Experiences
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Handcrafted itineraries by Omkar Tour and Travels. Experience Kerala with local insights, 
-          premium accommodations, and personalized service that makes your journey unforgettable.
-        </p>
+    <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+  Curated Kerala experiences with local insights, premium stays & personalized service.
+</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

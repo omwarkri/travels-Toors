@@ -410,10 +410,9 @@ const AllPackagesPage = () => {
             🏆 {allPackages.length}+ Curated Packages
           </div>
           <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">Kerala Tour Packages</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the magic of God's Own Country with our carefully curated Kerala tour packages. 
-            From serene backwaters to misty tea plantations, experience the best of Kerala with 13+ years of expertise.
-          </p>
+         <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+  Your perfect Kerala awaits. From misty hills to serene backwaters - let us craft your dream vacation.
+</p>
         </div>
 
         {/* Package Stats */}

@@ -140,11 +140,9 @@ const AllPlacesPage = () => {
             🗺️ {places.length} Amazing Destinations
           </div>
           <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">KERALA'S STUNNING WONDERS</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the diverse beauty of God's Own Country. From misty hill stations to serene backwaters, 
-            golden beaches to rich cultural heritage - Kerala has something for every traveler.
-          </p>
-        </div>
+<p className="text-xl text-gray-500 max-w-3xl mx-auto">
+  Kerala's diversity: hill stations, backwaters, beaches & rich culture for every traveler.
+</p>        </div>
 
         {/* Quick Stats */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
