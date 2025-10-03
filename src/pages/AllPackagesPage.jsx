@@ -133,8 +133,13 @@ const AllPackagesPage = () => {
     discount: "19% Off",
     rating: 4.5,
     reviews: 92,
-    image: "https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
-    images: ["https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&w=1200&q=80"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+  images: [
+    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488541/boat_race_2_wp6u5y.jpg",
+    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488542/boat_race_3_cmenpt.jpg",
+    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488547/boat_race_4_rgquq4.jpg"
+  ],
     description: "Witness the thrilling Nehru Trophy Boat Race featuring massive snake boats with over 100 oarsmen rowing in perfect rhythm on Punnamada Lake.",
     detailedDescription: "Experience the spectacular Nehru Trophy Boat Race, Kerala's most famous annual boat race held on Punnamada Lake near Alappuzha. Watch massive snake boats (chundan vallams), each manned by over 100 oarsmen rowing in perfect rhythm to traditional boat songs. Inaugurated in 1952 by India's first Prime Minister Jawaharlal Nehru, this vibrant cultural festival celebrates Kerala's heritage, unity, and sporting spirit. Join thousands of spectators for this thrilling event that showcases incredible teamwork and traditional Kerala culture.",
     highlights: ["Snake Boat Race", "Cultural Festival", "Traditional Music", "Vibrant Atmosphere", "Local Cuisine"],
@@ -390,6 +395,151 @@ const AllPackagesPage = () => {
 
   ];
 
+  // Extended tour packages (6+ days)
+  const extendedPackages = [
+    {
+      id: "kerala-grand-tour",
+      name: "Kerala Grand Tour",
+      duration: "09 Nights / 10 Days",
+      destination: "Cochin, Munnar, Thekkady, Alleppey, Kovalam",
+      places: ["cochin", "munnar", "thekkady", "alleppey", "kovalam"],
+      bestSeason: "Sep - May",
+      price: 45999,
+      originalPrice: 54999,
+      discount: "16% Off",
+      rating: 4.9,
+      reviews: 124,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490000/kerala-grand-tour_ujkf8s.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490000/kerala-grand-tour_ujkf8s.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490001/kerala-backwaters_ozm2xp.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490002/kerala-tea-estates_xqjvlr.jpg"
+      ],
+      description: "Comprehensive Kerala experience covering backwaters, tea estates, wildlife, beaches, and cultural heritage in one unforgettable journey.",
+      detailedDescription: "Embark on the ultimate Kerala adventure with our comprehensive 10-day grand tour. This meticulously crafted itinerary takes you through the very best of God's Own Country. Begin in historic Cochin with its colonial heritage, ascend to the misty tea plantations of Munnar, explore the wildlife-rich forests of Thekkady, cruise through the serene backwaters of Alleppey, and conclude with sun-kissed beaches in Kovalam. Experience diverse landscapes, rich cultures, authentic cuisine, and warm hospitality across Kerala's most iconic destinations.",
+      highlights: ["Fort Kochi Heritage", "Munnar Tea Gardens", "Periyar Wildlife", "Houseboat Cruise", "Kovalam Beaches", "Cultural Shows", "Spice Plantations", "Ayurvedic Experience"],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Cochin", description: "Airport pickup, check-in at hotel, explore Fort Kochi, Chinese fishing nets, evening cultural show." },
+        { day: "Day 2", title: "Cochin to Munnar", description: "Scenic drive to Munnar (4 hours), visit spice gardens, check-in at plantation resort." },
+        { day: "Day 3", title: "Munnar Exploration", description: "Visit tea plantations, tea museum, Echo Point, Mattupetty Dam, and Kundala Lake." },
+        { day: "Day 4", title: "Munnar to Thekkady", description: "Drive to Thekkady (3 hours), afternoon Periyar Lake boat cruise, wildlife spotting." },
+        { day: "Day 5", title: "Thekkady Adventures", description: "Morning spice plantation tour, elephant ride, evening Kathakali dance performance." },
+        { day: "Day 6", title: "Thekkady to Alleppey", description: "Drive to Alleppey (4 hours), check into traditional houseboat, overnight backwater cruise." },
+        { day: "Day 7", title: "Alleppey Backwaters", description: "Morning disembark from houseboat, visit local villages, afternoon beach relaxation." },
+        { day: "Day 8", title: "Alleppey to Kovalam", description: "Drive to Kovalam (5 hours), check-in at beach resort, evening lighthouse visit." },
+        { day: "Day 9", title: "Kovalam & Trivandrum", description: "Beach relaxation, water sports, visit Padmanabhaswamy Temple, shopping." },
+        { day: "Day 10", title: "Departure", description: "Last minute shopping, transfer to Trivandrum airport for departure." }
+      ],
+      inclusions: ["9 nights accommodation", "Daily breakfast & dinner", "All transfers in AC vehicle", "Houseboat stay with meals", "Boat cruise tickets", "All entry fees", "Cultural show tickets", "Tour guide services", "All taxes"],
+      exclusions: ["Flights", "Lunch", "Personal expenses", "Travel insurance", "Water sports activities"]
+    },
+    {
+      id: "kerala-honeymoon-special",
+      name: "Kerala Honeymoon Special",
+      duration: "07 Nights / 08 Days",
+      destination: "Munnar, Thekkady, Kumarakom, Alleppey",
+      places: ["munnar", "thekkady", "kumarakom", "alleppey"],
+      bestSeason: "Aug - Apr",
+      price: 38999,
+      originalPrice: 46999,
+      discount: "17% Off",
+      rating: 4.9,
+      reviews: 89,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490003/kerala-honeymoon_mmbvqx.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490003/kerala-honeymoon_mmbvqx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490004/honeymoon-houseboat_tv8fyi.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490005/honeymoon-tea-gardens_pnzqkl.jpg"
+      ],
+      description: "Romantic Kerala getaway for couples featuring private houseboats, luxury resorts, candlelight dinners, and intimate experiences.",
+      detailedDescription: "Celebrate your love with this exquisite 8-day honeymoon package through Kerala's most romantic destinations. Begin in the misty hills of Munnar with private tea estate walks and cozy mountain resorts. Continue to Thekkady for wildlife adventures and spice-scented romance. Experience ultimate luxury with a private houseboat cruise through Kumarakom's backwaters, followed by serene moments in Alleppey. This package includes special romantic touches like candlelight dinners, flower bed decorations, couple spa treatments, and private tours designed exclusively for honeymooners.",
+      highlights: ["Private Houseboat", "Candlelight Dinners", "Couple Spa Treatments", "Tea Estate Walks", "Sunset Cruises", "Flower Bed Decoration", "Romantic Photo Sessions", "Private Guides"],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Cochin", description: "Airport pickup with flower greeting, transfer to Munnar, romantic welcome dinner." },
+        { day: "Day 2", title: "Munnar Romance", description: "Private tea estate tour, visit Attukal Waterfalls, couple photo session, candlelight dinner." },
+        { day: "Day 3", title: "Munnar to Thekkady", description: "Scenic drive, spice plantation visit, evening Kathakali show, couple spa treatment." },
+        { day: "Day 4", title: "Thekkady Adventures", description: "Private boat cruise on Periyar Lake, elephant interaction, romantic lakeside dinner." },
+        { day: "Day 5", title: "Thekkady to Kumarakom", description: "Drive to Kumarakom, check into luxury resort, private backwater cruise, sunset viewing." },
+        { day: "Day 6", title: "Kumarakom Houseboat", description: "Full day private houseboat cruise through Vembanad Lake, traditional Kerala meals onboard." },
+        { day: "Day 7", title: "Kumarakom to Alleppey", description: "Morning yoga session, transfer to Alleppey, beach relaxation, farewell romantic dinner." },
+        { day: "Day 8", title: "Departure", description: "Last romantic breakfast, transfer to Cochin airport with souvenirs." }
+      ],
+      inclusions: ["7 nights luxury accommodation", "All meals included", "Private AC vehicle", "Luxury houseboat stay", "Couple spa treatments", "Candlelight dinners", "Flower decorations", "Photo session", "All entry tickets", "Romantic surprises"],
+      exclusions: ["Flights", "Personal shopping", "Additional activities", "Travel insurance"]
+    },
+    {
+      id: "kerala-wildlife-adventure",
+      name: "Kerala Wildlife Adventure",
+      duration: "08 Nights / 09 Days",
+      destination: "Wayanad, Bandipur, Thekkady, Parambikulam",
+      places: ["wayanad", "bandipur", "thekkady", "parambikulam"],
+      bestSeason: "Oct - Jun",
+      price: 42999,
+      originalPrice: 51999,
+      discount: "18% Off",
+      rating: 4.7,
+      reviews: 67,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490006/wildlife-kerala_dqjvlc.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490006/wildlife-kerala_dqjvlc.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490007/elephant-safari_ympqjr.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490008/bird-watching_tnkjzu.jpg"
+      ],
+      description: "Comprehensive wildlife tour covering Kerala's premier national parks and tiger reserves with expert naturalists and jungle stays.",
+      detailedDescription: "Embark on an extraordinary wildlife expedition through Kerala's most biodiverse regions. This 9-day adventure takes you deep into the Western Ghats, exploring multiple ecosystems and wildlife habitats. Track elephants and tigers in Wayanad's dense forests, experience the rich biodiversity of Bandipur Tiger Reserve, cruise through Periyar's wildlife-rich waters, and explore the pristine Parambikulam Tiger Reserve. With expert naturalists, jungle safaris, bird watching expeditions, and stays in eco-friendly jungle lodges, this package offers an immersive wildlife experience for nature enthusiasts and photographers.",
+      highlights: ["Jungle Safaris", "Elephant Tracking", "Bird Watching", "Nature Walks", "Tiger Reserve Visits", "Expert Naturalists", "Jungle Lodges", "Wildlife Photography"],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Calicut", description: "Airport pickup, drive to Wayanad, check into jungle resort, evening orientation." },
+        { day: "Day 2", title: "Wayanad Wildlife", description: "Morning and evening jungle safaris in Wayanad Wildlife Sanctuary, visit elephant camp." },
+        { day: "Day 3", title: "Wayanad Exploration", description: "Trek to Chembra Peak, visit Banasura Sagar Dam, tribal village interaction." },
+        { day: "Day 4", title: "Wayanad to Bandipur", description: "Cross-border drive to Bandipur, afternoon safari in Bandipur Tiger Reserve." },
+        { day: "Day 5", title: "Bandipur Adventures", description: "Early morning and late afternoon safaris, wildlife photography session, naturalist talk." },
+        { day: "Day 6", title: "Bandipur to Thekkady", description: "Drive to Thekkady, evening Periyar Lake boat cruise for wildlife spotting." },
+        { day: "Day 7", title: "Thekkady to Parambikulam", description: "Morning spice plantation visit, drive to Parambikulam, evening jungle walk." },
+        { day: "Day 8", title: "Parambikulam Safari", description: "Full day wildlife experience with multiple safaris, visit to ancient Kannimara Teak." },
+        { day: "Day 9", title: "Departure", description: "Morning bird watching, transfer to Coimbatore airport for departure." }
+      ],
+      inclusions: ["8 nights jungle accommodation", "All meals", "All safari tickets", "Expert naturalist guides", "AC vehicle transfers", "All entry fees", "Jungle walk permissions", "Wildlife photography assistance"],
+      exclusions: ["Flights", "Camera fees", "Personal expenses", "Travel insurance", "Additional activities"]
+    },
+    {
+      id: "kerala-cultural-heritage",
+      name: "Kerala Cultural Heritage",
+      duration: "10 Nights / 11 Days",
+      destination: "Thiruvananthapuram, Kollam, Alappuzha, Kochi, Guruvayur, Palakkad",
+      places: ["thiruvananthapuram", "kollam", "alappuzha", "kochi", "guruvayur", "palakkad"],
+      bestSeason: "Year Round",
+      price: 47999,
+      originalPrice: 57999,
+      discount: "17% Off",
+      rating: 4.8,
+      reviews: 92,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490009/kerala-cultural_qzvn8h.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490009/kerala-cultural_qzvn8h.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490010/temple-heritage_mmxpvw.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490011/theyyam-performance_rzwfee.jpg"
+      ],
+      description: "Deep dive into Kerala's rich cultural heritage featuring ancient temples, traditional art forms, historic sites, and authentic local experiences.",
+      detailedDescription: "Immerse yourself in the vibrant cultural tapestry of Kerala with this comprehensive 11-day heritage tour. Explore ancient temples dating back centuries, witness spectacular traditional art forms like Kathakali and Theyyam, visit historic palaces and forts, and experience authentic village life. From the majestic Padmanabhaswamy Temple to the sacred Guruvayur Temple, from the Portuguese influences in Fort Kochi to the traditional Kalaripayattu martial arts demonstrations, this journey offers a profound understanding of Kerala's diverse cultural heritage and living traditions.",
+      highlights: ["Ancient Temple Visits", "Kathakali & Theyyam Shows", "Kerala Village Life", "Traditional Crafts", "Historic Palaces", "Martial Arts Demo", "Local Cuisine", "Cultural Workshops"],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Trivandrum", description: "Airport pickup, visit Padmanabhaswamy Temple, Napier Museum, check-in at hotel." },
+        { day: "Day 2", title: "Trivandrum Heritage", description: "Visit Kuthiramalika Palace, Sri Chitra Art Gallery, evening cultural show with Kathakali." },
+        { day: "Day 3", title: "Trivandrum to Kollam", description: "Drive to Kollam, visit Ashtamudi Lake, traditional cashew processing unit, Thangassery Light House." },
+        { day: "Day 4", title: "Kollam to Alleppey", description: "Visit Amritapuri Ashram, drive to Alleppey, evening at Alleppey Beach, local market visit." },
+        { day: "Day 5", title: "Alleppey Culture", description: "Visit Ambalapuzha Temple, traditional boat building yard, evening backwater village tour." },
+        { day: "Day 6", title: "Alleppey to Kochi", description: "Drive to Kochi, visit Jewish Synagogue, St. Francis Church, Chinese fishing nets." },
+        { day: "Day 7", title: "Kochi Heritage", description: "Fort Kochi walking tour, visit Dutch Palace, Bolghatty Palace, evening Kalaripayattu show." },
+        { day: "Day 8", title: "Kochi to Guruvayur", description: "Drive to Guruvayur, temple darshan, visit Punnathur Kotta Elephant Sanctuary." },
+        { day: "Day 9", title: "Guruvayur to Palakkad", description: "Visit Kava Island, drive to Palakkad, visit Palakkad Fort, Malampuzha Gardens." },
+        { day: "Day 10", title: "Palakkad Exploration", description: "Visit Silent Valley National Park, traditional Kerala village tour, handicraft workshop." },
+        { day: "Day 11", title: "Departure", description: "Morning at leisure, transfer to Coimbatore airport for departure." }
+      ],
+      inclusions: ["10 nights heritage accommodation", "All meals", "AC vehicle throughout", "All temple entry fees", "Cultural show tickets", "Expert cultural guide", "Workshop participation", "All taxes and charges"],
+      exclusions: ["Flights", "Personal shopping", "Camera fees at monuments", "Travel insurance", "Additional rituals at temples"]
+    }
+  ];
 
   return (
     <div className="pt-20 min-h-screen">
@@ -414,7 +564,7 @@ const AllPackagesPage = () => {
         {/* Package Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
-            <div className="text-2xl font-bold text-emerald-600 mb-2">{allPackages.length}+</div>
+            <div className="text-2xl font-bold text-emerald-600 mb-2">{allPackages.length + extendedPackages.length}+</div>
             <div className="text-sm text-gray-600">Tour Packages</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center shadow-lg border border-gray-100">
@@ -453,11 +603,37 @@ const AllPackagesPage = () => {
           </button>
         </div>
 
-        {/* Package Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {allPackages.map((pkg) => (
-            <TourPackageCard key={pkg.id} pkg={pkg} />
-          ))}
+        {/* Short & Medium Packages (2-5 days) */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Short & Medium Tours</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Perfect getaways from 2-5 days covering specific destinations and experiences
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allPackages.map((pkg) => (
+              <TourPackageCard key={pkg.id} pkg={pkg} />
+            ))}
+          </div>
+        </div>
+
+        {/* Extended Kerala Tours Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4">
+              🌟 Extended Tours (6+ Days)
+            </div>
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">Extended Kerala Tours</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive packages covering multiple destinations for the complete Kerala experience
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {extendedPackages.map((pkg) => (
+              <TourPackageCard key={pkg.id} pkg={pkg} />
+            ))}
+          </div>
         </div>
 
         {/* Package Categories Info */}

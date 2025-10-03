@@ -6,14 +6,14 @@ import Footer from "../components/common/Footer";
 import PlaceCard from '../components/places/PlaceCard';
 
 const AllPlacesPage = () => {
-  const places = [
+   const places = [
     { 
       id: "munnar",
       name: "MUNNAR", 
       desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.", 
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.8,
-      tours: 12,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+      rating: "4.8",
+      tours: "12",
       highlights: ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam", "Tea Museum"],
       bestSeason: "September to May",
       packages: ["Munnar Tea Plantations Tour", "Complete Kerala Experience", "Kerala Honeymoon Special"]
@@ -22,9 +22,9 @@ const AllPlacesPage = () => {
       id: "alleppey",
       name: "ALLEPPEY", 
       desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.", 
-      image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.9,
-      tours: 8,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      rating: "4.9",
+      tours: "8",
       highlights: ["Houseboat Cruise", "Backwaters", "Alleppey Beach", "Vembanad Lake"],
       bestSeason: "August to March",
       packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"]
@@ -33,9 +33,9 @@ const AllPlacesPage = () => {
       id: "kovalam",
       name: "KOVALAM", 
       desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.", 
-      image: "https://images.unsplash.com/photo-1558618047-3c76ca7d13?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.7,
-      tours: 6,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      rating: "4.7",
+      tours: "6",
       highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage"],
       bestSeason: "September to March",
       packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"]
@@ -44,9 +44,9 @@ const AllPlacesPage = () => {
       id: "thekkady",
       name: "THEKKADY", 
       desc: "Home to Periyar Wildlife Sanctuary, offering thrilling jungle experiences and spice plantations.", 
-      image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.6,
-      tours: 9,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg ",
+      rating: "4.6",
+      tours: "9",
       highlights: ["Periyar Wildlife Sanctuary", "Spice Plantations", "Bamboo Rafting", "Elephant Ride"],
       bestSeason: "November to April",
       packages: ["Kerala Wildlife Adventure", "Complete Kerala Experience", "Munnar Tea Plantations Tour"]
@@ -55,9 +55,9 @@ const AllPlacesPage = () => {
       id: "kochi",
       name: "KOCHI", 
       desc: "The commercial capital of Kerala blending Portuguese, Dutch, and British colonial influences.", 
-      image: "https://images.unsplash.com/photo-1587132135056-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.5,
-      tours: 7,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+      rating: "4.5",
+      tours: "7",
       highlights: ["Fort Kochi", "Chinese Fishing Nets", "Jewish Synagogue", "Kathakali Dance"],
       bestSeason: "Year Round",
       packages: ["Kerala Cultural Heritage", "Complete Kerala Experience"]
@@ -66,9 +66,9 @@ const AllPlacesPage = () => {
       id: "wayanad",
       name: "WAYANAD", 
       desc: "Lush green paradise with mist-clad mountains, waterfalls, and rich tribal heritage.", 
-      image: "https://images.unsplash.com/photo-1565955887216-68d71c13f6c1?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.7,
-      tours: 5,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490597/Blue__Green___White_pqixgb.jpg",
+      rating: "4.7",
+      tours: "5",
       highlights: ["Edakkal Caves", "Banasura Sagar Dam", "Chembra Peak", "Wildlife Sanctuary"],
       bestSeason: "October to May",
       packages: ["Kerala Wildlife Adventure", "Nature & Adventure Tour"]
@@ -77,9 +77,9 @@ const AllPlacesPage = () => {
       id: "kumarakom",
       name: "KUMARAKOM", 
       desc: "A picturesque backwater destination with luxurious resorts and serene Vembanad Lake views.", 
-      image: "https://images.unsplash.com/photo-1565498258066-166b3a4eb9e2?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.8,
-      tours: 4,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
+      rating: "4.8",
+      tours: "4",
       highlights: ["Vembanad Lake", "Bird Sanctuary", "Luxury Resorts", "Houseboat Stays"],
       bestSeason: "September to March",
       packages: ["Kerala Backwaters & Beaches", "Luxury Kerala Experience"]
@@ -88,9 +88,9 @@ const AllPlacesPage = () => {
       id: "varkala",
       name: "VARKALA", 
       desc: "Cliff-side beach destination with mineral springs and stunning views of the Arabian Sea.", 
-      image: "https://images.unsplash.com/photo-1552465018-69ad1d81d952?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.6,
-      tours: 3,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490719/Varkala_Beach__Varkala__Kerala_vuiq2z.jpg",
+      rating: "4.6",
+      tours: "3",
       highlights: ["Varkala Beach", "Janardanaswamy Temple", "Mineral Springs", "Cliff Views"],
       bestSeason: "August to March",
       packages: ["Beach & Backwaters Tour", "Spiritual Kerala Tour"]
@@ -99,9 +99,9 @@ const AllPlacesPage = () => {
       id: "thrissur",
       name: "THRISSUR", 
       desc: "Cultural capital of Kerala known for Thrissur Pooram festival and ancient temples.", 
-      image: "https://images.unsplash.com/photo-1587132135057-48ae4dc7fa32?auto=format&fit=crop&w=1200&q=80",
-      rating: 4.4,
-      tours: 4,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490719/Varkala_Beach__Varkala__Kerala_vuiq2z.jpg",
+      rating: "4.4",
+      tours: "4",
       highlights: ["Vadakkunnathan Temple", "Thrissur Pooram", "Archaeological Museum", "Athirapally Falls"],
       bestSeason: "Year Round",
       packages: ["Kerala Cultural Heritage", "Temple Tour Kerala"]
