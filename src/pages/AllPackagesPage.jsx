@@ -397,14 +397,14 @@ const AllPackagesPage = () => {
 
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen py-8">
       <SEOHead 
         title="All Kerala Tour Packages | Omkar Tour and Travels - Best Deals 2025"
         description="Browse all Kerala tour packages from Omkar Tour and Travels. Backwaters, beaches, tea plantations, wildlife & cultural tours. Best price guarantee. Book your dream Kerala vacation today!"
         keywords="Kerala tour packages, Kerala backwaters, Alleppey houseboat, Munnar tea estates, Kerala beaches, wildlife tours, cultural packages, honeymoon packages Kerala"
       />
       
-      <section className="max-w-7xl mx-auto py-8">
+      <section className="max-w-7xl mx-auto py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
             🏆 {allPackages.length}+ Curated Packages

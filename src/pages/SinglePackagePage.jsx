@@ -430,7 +430,7 @@ const SinglePackagePage = () => {
       />
       
       {/* Package Header */}
-      <section className="relative h-96 bg-gray-900">
+      <section className="relative h-96 bg-gray-900 py-8">
         <img
           src={pkg.images ? pkg.images[selectedImage] : pkg.image}
           alt={pkg.name}
@@ -438,7 +438,7 @@ const SinglePackagePage = () => {
         />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto py-16">
             <Link 
               to="/packages"
               className="inline-flex items-center text-white/80 hover:text-white mb-4 transition duration-200"
@@ -463,7 +463,7 @@ const SinglePackagePage = () => {
       </section>
 
       {/* Package Details */}
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
