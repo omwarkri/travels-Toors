@@ -83,14 +83,14 @@ const Hero = () => {
           {/* Main Heading - Kerala Logo */}
           <div className="flex justify-center mb-4 sm:mb-6">
             <img 
-              className="w-[60%] sm:w-[50%] md:w-[40%] lg:w-[35%] max-w-md" 
+              className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md" 
               src="/kerla-logo-2.png" 
               alt="Kerala - God's Own Country" 
             />
           </div>
 
           {/* Description */}
-  <h5 className="text-xl text-black bg-red-100 leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
+  <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
   Experience God's Own Country with Experts
 </h5>
           {/* Buttons */}
