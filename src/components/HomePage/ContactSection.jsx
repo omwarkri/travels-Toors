@@ -24,7 +24,7 @@ const ContactPage = () => {
       </section>
 
       {/* Main Content - Centered Single Column */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 -mt-10 relative z-10">
+      <section id="contact" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 -mt-10 relative z-10">
         <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>

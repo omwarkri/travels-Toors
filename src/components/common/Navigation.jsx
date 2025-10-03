@@ -37,20 +37,20 @@ const Navigation = () => {
             >
               Home
             </Link>
-            <Link
-              to="/packages"
+            <a
+              href="#packages"
               className="text-gray-700 hover:text-emerald-600 font-medium"
               onClick={() => handleScrollTop("/packages")}
             >
               Tour Packages
-            </Link>
-            <Link
-              to="/places"
+            </a>
+            <a
+              href="#places"
               className="text-gray-700 hover:text-emerald-600 font-medium"
               onClick={() => handleScrollTop("/places")}
             >
               Popular Places
-            </Link>
+            </a>
             <Link
               to="/about"
               className="text-gray-700 hover:text-emerald-600 font-medium"
@@ -58,13 +58,13 @@ const Navigation = () => {
             >
               About Us
             </Link>
-            <Link
-              to="/contact"
+            <q
+              to="#contact"
               className="bg-emerald-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-600 transition duration-300"
               onClick={() => handleScrollTop("/contact")}
             >
               Contact
-            </Link>
+            </q>
           </div>
 
           {/* Mobile Menu Button */}
