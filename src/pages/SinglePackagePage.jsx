@@ -12,7 +12,7 @@ const SinglePackagePage = () => {
   const sampleReviews = [
     {
       id: 1,
-      name: "Priya Sharma",
+      name: "Pranit",
       rating: 5,
       date: "2024-12-15",
       comment: "Amazing experience! The houseboat stay was absolutely magical. The food was delicious and the staff was very helpful. Will definitely recommend to friends and family.",
@@ -20,7 +20,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 2,
-      name: "Rajesh Kumar",
+      name: "Rajesh",
       rating: 4,
       date: "2024-12-10",
       comment: "Great package overall. The backwater cruise was peaceful and scenic. Only suggestion would be to include more meal options. Otherwise, excellent value for money.",
@@ -28,7 +28,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 3,
-      name: "Anita Patel",
+      name: "Anita",
       rating: 5,
       date: "2024-12-08",
       comment: "Perfect family vacation! The kids loved the boat ride and we enjoyed the serene environment. The tour guide was knowledgeable and made our trip memorable.",
@@ -36,7 +36,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 4,
-      name: "Michael Thomas",
+      name: "Michael",
       rating: 4,
       date: "2024-12-05",
       comment: "Beautiful locations and well-organized itinerary. The accommodation was comfortable and the transportation was punctual. Good experience overall.",
@@ -44,7 +44,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 5,
-      name: "Sneha Menon",
+      name: "Sneha",
       rating: 5,
       date: "2024-12-01",
       comment: "Absolutely loved every moment! The sunset views were breathtaking and the cultural experiences were authentic. Omkar Tours made everything so smooth and hassle-free.",
@@ -52,7 +52,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 6,
-      name: "Vikram Singh",
+      name: "Vikram",
       rating: 4,
       date: "2024-11-28",
       comment: "Value for money package. The destinations were well-chosen and the timing was perfect. The driver was professional and the vehicle was comfortable.",
@@ -263,60 +263,75 @@ const SinglePackagePage = () => {
               </div>
             )}
 
-            {/* Customer Reviews */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-              <h2 className="text-3xl font-bold mb-6">Customer Reviews</h2>
-              <div className="space-y-6">
-                {sampleReviews.map((review) => (
-                  <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0">
-                    <div className="flex items-start space-x-4">
-                      <img
-                        src={review.avatar}
-                        alt={review.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-semibold text-gray-800">{review.name}</h4>
-                          <span className="text-sm text-gray-500">
-                            {new Date(review.date).toLocaleDateString('en-IN', {
-                              year: 'numeric',
-                              month: 'long',
-                              day: 'numeric'
-                            })}
-                          </span>
-                        </div>
-                        <div className="mb-3">
-                          {renderStars(review.rating)}
-                        </div>
-                        <p className="text-gray-600 leading-relaxed">{review.comment}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Review Summary */}
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Overall Rating</h3>
-                    <div className="flex items-center space-x-4">
-                      <div className="text-4xl font-bold text-gray-800">{pkg.rating}</div>
-                      <div>
-                        {renderStars(pkg.rating)}
-                        <p className="text-gray-600 mt-1">Based on {pkg.reviews} reviews</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-gray-600 mb-2">⭐ 5000+ Happy Customers</p>
-                    <p className="text-gray-600">🏆 Trusted Since 2010</p>
-                  </div>
-                </div>
-              </div>
+      {/* Customer Reviews - Mobile Responsive */}
+<div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 mb-6 sm:mb-8">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">Customer Reviews</h2>
+  
+  <div className="space-y-4 sm:space-y-6">
+    {sampleReviews.map((review) => (
+      <div key={review.id} className="border-b border-gray-200 pb-4 sm:pb-6 last:border-b-0">
+        <div className="flex items-start space-x-3 sm:space-x-4">
+          <img
+            src={review.avatar}
+            alt={review.name}
+            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
+          />
+          <div className="flex-1 min-w-0">
+            {/* Header - Stack on mobile, row on larger screens */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-1 sm:gap-0">
+              <h4 className="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">{review.name}</h4>
+              <span className="text-xs sm:text-sm text-gray-500">
+                {new Date(review.date).toLocaleDateString('en-IN', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </span>
             </div>
-
+            
+            {/* Star Rating */}
+            <div className="mb-2 sm:mb-3">
+              {renderStars(review.rating)}
+            </div>
+            
+            {/* Review Comment */}
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              {review.comment}
+            </p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  
+  {/* Review Summary - Responsive */}
+  <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg sm:rounded-xl">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 text-center sm:text-left">
+          {pkg.rating}
+        </div>
+        <div className="text-center sm:text-left">
+          <div className="flex justify-center sm:justify-start mb-1">
+            {renderStars(pkg.rating)}
+          </div>
+          <p className="text-gray-600 text-sm sm:text-base">
+            Based on {pkg.reviews} reviews
+          </p>
+        </div>
+      </div>
+      
+      <div className="text-center sm:text-right">
+        <p className="text-gray-600 text-sm sm:text-base mb-1 sm:mb-2">
+          ⭐ 5000+ Happy Customers
+        </p>
+        <p className="text-gray-600 text-sm sm:text-base">
+          🏆 Trusted Since 2010
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
             {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-2xl shadow-lg p-8">
