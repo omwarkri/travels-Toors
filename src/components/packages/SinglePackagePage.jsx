@@ -111,7 +111,7 @@ const SinglePackagePage = () => {
   const customerReviews = [
     {
       id: 1,
-      name: "Priya Sharma",
+      name: "Pranit",
       location: "Delhi",
       rating: 5,
       date: "2 weeks ago",
@@ -120,7 +120,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 2,
-      name: "Rahul Verma",
+      name: "Rahul",
       location: "Mumbai",
       rating: 4.5,
       date: "1 month ago",
@@ -129,7 +129,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 3,
-      name: "Anita Patel",
+      name: "Anita",
       location: "Ahmedabad",
       rating: 5,
       date: "3 weeks ago",
@@ -138,7 +138,7 @@ const SinglePackagePage = () => {
     },
     {
       id: 4,
-      name: "Sanjay Kumar",
+      name: "Sanjay",
       location: "Bangalore",
       rating: 4.8,
       date: "2 months ago",
@@ -237,45 +237,65 @@ const SinglePackagePage = () => {
               </div>
             </div>
 
-            {/* Customer Reviews */}
-            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Customer Reviews</h2>
-              <div className="space-y-6">
-                {customerReviews.map((review) => (
-                  <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                    <div className="flex items-start space-x-3 sm:space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-emerald-100 rounded-full flex items-center justify-center text-lg sm:text-xl">
-                        {review.avatar}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                          <div>
-                            <h3 className="font-semibold text-gray-800">{review.name}</h3>
-                            <p className="text-gray-500 text-sm">{review.location} • {review.date}</p>
-                          </div>
-                          <StarRating rating={review.rating} />
-                        </div>
-                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">{review.comment}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+{/* Customer Reviews - Mobile Optimized */}
+<div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">Customer Reviews</h2>
+  
+  {/* Reviews Container with Limited Height on Mobile */}
+  <div className="max-h-96 sm:max-h-none overflow-y-auto mb-4 sm:mb-6">
+    <div className="space-y-4 sm:space-y-6">
+      {customerReviews.slice(0, 3).map((review) => ( // Show only 3 reviews on mobile
+        <div key={review.id} className="border-b border-gray-200 pb-4 sm:pb-6 last:border-b-0 last:pb-0">
+          <div className="flex items-start space-x-3">
+            {/* Compact Avatar */}
+            <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center text-sm sm:text-base md:text-lg">
+              {review.avatar}
+            </div>
+            
+            {/* Review Content */}
+            <div className="flex-1 min-w-0"> {/* min-w-0 prevents text overflow */}
+              {/* Header - Stacked on mobile */}
+              <div className="mb-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                  <h3 className="font-semibold text-gray-800 text-sm sm:text-base truncate">{review.name}</h3>
+                  <StarRating rating={review.rating} size="small" />
+                </div>
+                <p className="text-gray-500 text-xs sm:text-sm">{review.location} • {review.date}</p>
               </div>
               
-              {/* Overall Rating Summary */}
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-semibold text-gray-800">Overall Rating</h3>
-                    <p className="text-gray-600 text-sm">Based on {pkg.reviews} reviews</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-emerald-600">{pkg.rating}</div>
-                    <StarRating rating={parseFloat(pkg.rating)} />
-                  </div>
-                </div>
-              </div>
+              {/* Comment - Limited lines on mobile */}
+              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">
+                {review.comment}
+              </p>
             </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  {/* Show More Button for Mobile */}
+  <div className="sm:hidden text-center">
+    <button className="text-emerald-600 text-sm font-medium hover:text-emerald-700 transition-colors">
+      Show More Reviews ({customerReviews.length - 3}+)
+    </button>
+  </div>
+  
+  {/* Overall Rating Summary - Compact */}
+  <div className="mt-4 p-3 sm:p-4 bg-gray-50 rounded-lg">
+    <div className="flex items-center justify-between">
+      <div>
+        <h3 className="font-semibold text-gray-800 text-sm sm:text-base">Overall Rating</h3>
+        <p className="text-gray-600 text-xs sm:text-sm">{pkg.reviews} reviews</p>
+      </div>
+      <div className="text-right">
+        <div className="text-xl sm:text-2xl font-bold text-emerald-600">{pkg.rating}</div>
+        <StarRating rating={parseFloat(pkg.rating)} size="small" />
+      </div>
+    </div>
+  </div>
+</div>
+
 
             {/* Inclusions & Exclusions */}
             <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 md:p-8">
