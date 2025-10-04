@@ -33,41 +33,41 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               onClick={() => handleScrollTop("/")}
             >
               Home
-            </Link>
-            <Link
-              to="/packages"
+            </a>
+            <a
+              href="#packages"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
-              onClick={() => handleScrollTop("/packages")}
+              // onClick={() => handleScrollTop("/packages")}
             >
               Tour Packages
-            </Link>
-            <Link
-              to="/places"
+            </a>
+            <a
+              href="#places"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               onClick={() => handleScrollTop("/places")}
             >
               Popular Places
-            </Link>
-            <Link
-              to="/about"
+            </a>
+            <a
+              href="#about"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               onClick={() => handleScrollTop("/about")}
             >
               About Us
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="#contact"
               className="bg-emerald-500 text-white px-4 py-2 lg:px-6 lg:py-2 rounded-lg font-medium hover:bg-emerald-600 transition-all duration-300 text-sm lg:text-base"
               onClick={() => handleScrollTop("/contact")}
             >
               Contact
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,41 +105,41 @@ const Navigation = () => {
           }`}
         >
           <div className="flex flex-col space-y-3">
-            <Link
-              to="/"
+            <a
+              href="/"
               className="text-gray-700 hover:text-emerald-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
               onClick={() => handleScrollTop("/")}
             >
               Home
-            </Link>
-            <Link
-              to="/packages"
+            </a>
+            <a
+              href="#packages"
               className="text-gray-700 hover:text-emerald-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
-              onClick={() => handleScrollTop("/packages")}
+              // onClick={() => handleScrollTop("/packages")}
             >
               Tour Packages
-            </Link>
-            <Link
-              to="/places"
+            </a>
+            <a
+              href="#places"
               className="text-gray-700 hover:text-emerald-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
               onClick={() => handleScrollTop("/places")}
             >
               Popular Places
-            </Link>
-            <Link
-              to="/about"
+            </a>
+            <a
+              href="#about"
               className="text-gray-700 hover:text-emerald-600 font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
               onClick={() => handleScrollTop("/about")}
             >
               About Us
-            </Link>
-            <Link
-              to="/contact"
+            </a>
+            <a
+              href="#contact"
               className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-600 transition-all duration-300 text-center mt-2"
               onClick={() => handleScrollTop("/contact")}
             >
               Contact
-            </Link>
+            </a>
           </div>
         </div>
       </div>

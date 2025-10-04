@@ -4,6 +4,7 @@ import TourPackages from "../components/HomePage/TourPackages";
 import PopularPlaces from "../components/HomePage/PopularPlaces";
 import WhyChooseUs from "../components/HomePage/WhyChooseUs";
 import FAQ from "../components/HomePage/FAQ";
+import AboutUsSection from "../components/common/AboutUsSection";
 import ContactSection from "./ContactPage";
 // import Footer from "../components/common/Footer";
 
@@ -16,6 +17,7 @@ const HomePage = () => {
         <PopularPlaces />
         <WhyChooseUs />
         <FAQ />
+        <AboutUsSection/>
         <ContactSection />
       </main>
     </div>
