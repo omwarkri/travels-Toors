@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/HomePage/Hero";
 import TourPackages from "../components/HomePage/TourPackages";
 import PopularPlaces from "../components/HomePage/PopularPlaces";
-import WhyChooseUs from "../components/HomePage/WhyChooseUs";
+// import WhyChooseUs from "../components/HomePage/WhyChooseUs";
 import FAQ from "../components/HomePage/FAQ";
 import AboutUsSection from "../components/common/AboutUsSection";
 import ContactSection from "./ContactPage";

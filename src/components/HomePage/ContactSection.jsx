@@ -1,5 +1,5 @@
 import React from "react";
-import SEOHead from "../components/common/SEOHead";
+// import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 
 const ContactPage = () => {
