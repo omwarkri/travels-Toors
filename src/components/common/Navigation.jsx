@@ -41,28 +41,28 @@ const Navigation = () => {
               Home
             </a>
             <a
-              href="#packages"
+              href="/#packages"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               // onClick={() => handleScrollTop("/packages")}
             >
               Tour Packages
             </a>
             <a
-              href="#places"
+              href="/#places"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               onClick={() => handleScrollTop("/places")}
             >
               Popular Places
             </a>
             <a
-              href="#about"
+              href="/#about"
               className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 text-sm lg:text-base"
               onClick={() => handleScrollTop("/about")}
             >
               About Us
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="bg-emerald-500 text-white px-4 py-2 lg:px-6 lg:py-2 rounded-lg font-medium hover:bg-emerald-600 transition-all duration-300 text-sm lg:text-base"
               onClick={() => handleScrollTop("/contact")}
             >
