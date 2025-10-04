@@ -15,7 +15,7 @@ const HomePage = () => {
       <main>
         <TourPackages />
         <PopularPlaces />
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
         <FAQ />
         <AboutUsSection/>
         <ContactSection />
