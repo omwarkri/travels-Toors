@@ -4,9 +4,40 @@ import SEOHead from "../common/SEOHead";
 
 const Hero = () => {
   const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Start with muted for better UX
 
- 
+  // Auto unmute on first user interaction
+  useEffect(() => {
+    const handleFirstInteraction = () => {
+      if (videoRef.current && isMuted) {
+        videoRef.current.muted = false;
+        videoRef.current.play().catch(() => {}); // Safe fallback
+        setIsMuted(false);
+      }
+      window.removeEventListener("click", handleFirstInteraction);
+      window.removeEventListener("scroll", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+    };
+
+    window.addEventListener("click", handleFirstInteraction);
+    window.addEventListener("scroll", handleFirstInteraction);
+    window.addEventListener("touchstart", handleFirstInteraction);
+
+    return () => {
+      window.removeEventListener("click", handleFirstInteraction);
+      window.removeEventListener("scroll", handleFirstInteraction);
+      window.removeEventListener("touchstart", handleFirstInteraction);
+    };
+  }, [isMuted]);
+
+  // Manual toggle
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+      videoRef.current.play().catch(() => {});
+    }
+  };
 
   return (
     <header className="relative h-screen overflow-hidden">
@@ -21,33 +52,30 @@ const Hero = () => {
         <video
           ref={videoRef}
           autoPlay
-          muted
+          muted={isMuted}
           loop
           playsInline
           className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
         >
-          <source src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" type="video/mp4" />
-        
+          <source 
+            src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" 
+            type="video/mp4" 
+          />
         </video>
 
         {/* Toggle Button */}
-        {/* <button
+        <button
           onClick={toggleMute}
-          className="absolute bottom-6 right-6 z-20 bg-black/50 text-white px-3 py-2 rounded-full shadow-md hover:bg-black/70 transition"
+          className="absolute bottom-6 right-6 z-20 bg-black/50 text-white px-3 py-2 rounded-full shadow-md hover:bg-black/70 transition backdrop-blur-sm"
           aria-label={isMuted ? "Unmute Video" : "Mute Video"}
         >
           {isMuted ? "🔇" : "🔊"}
-        </button> */}
+        </button>
       </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-24 text-center">
-          {/* Company Badge */}
-         
-
-         
-
           {/* Main Heading - Kerala Logo */}
           <div className="flex justify-center mb-4 sm:mb-6">
             <img 
@@ -58,9 +86,10 @@ const Hero = () => {
           </div>
 
           {/* Description */}
-  <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
-  Experience God's Own Country with Experts
-</h5>
+          <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
+            Experience God's Own Country with Experts
+          </h5>
+          
           {/* Buttons */}
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <Link

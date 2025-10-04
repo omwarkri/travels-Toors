@@ -12,48 +12,48 @@ import {
 
 const AboutUsSection = () => {
   return (
-    <div id="about" className="pt-20 bg-white text-gray-800">
+    <div id="about" className="pt-16 md:pt-20 bg-white text-gray-800">
       {/* Main Section */}
-      <section className="max-w-7xl mx-auto py-12 md:py-20 px-6">
+      <section className="max-w-7xl mx-auto py-8 md:py-12 lg:py-20 px-4 sm:px-6">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-4 tracking-wider uppercase">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">
             About Omkar Tour and Travels
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Your trusted travel partner in Kerala since 2010, crafting
-            unforgettable journeys across God’s Own Country.
+            unforgettable journeys across God's Own Country.
           </p>
         </div>
 
         {/* Our Story */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-20">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 md:mb-6">Our Story</h2>
+            <p className="text-gray-700 leading-relaxed mb-3 md:mb-4 text-sm sm:text-base">
               Since 2010, Omkar Tour and Travels has been dedicated to creating
               memorable travel experiences in Kerala. With over 13 years of
-              expertise and 5000+ happy travelers, we’ve built a reputation as
+              expertise and 5000+ happy travelers, we've built a reputation as
               one of the most reliable travel agencies in the region.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm sm:text-base">
               We combine local insight, strong partnerships with premium hotels,
               and personalized services to ensure your comfort and satisfaction
               every step of the way. For us, travel is not just about reaching a
-              destination — it’s about creating stories you’ll cherish forever.
+              destination — it's about creating stories you'll cherish forever.
             </p>
-            <div className="grid grid-cols-2 gap-6 mt-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">
+                <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-1">
                   13+
                 </div>
-                <p className="text-gray-600">Years of Experience</p>
+                <p className="text-gray-600 text-sm sm:text-base">Years of Experience</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-1">
+                <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-1">
                   5000+
                 </div>
-                <p className="text-gray-600">Happy Customers</p>
+                <p className="text-gray-600 text-sm sm:text-base">Happy Customers</p>
               </div>
             </div>
           </div>
@@ -61,27 +61,27 @@ const AboutUsSection = () => {
             <img
               src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=1200&q=80"
               alt="Omkar Tour and Travels team"
-              className="rounded-2xl shadow-lg w-full h-96 object-cover"
+              className="rounded-xl md:rounded-2xl shadow-lg w-full h-64 sm:h-80 md:h-96 object-cover"
             />
           </div>
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
-            <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
-            <p className="text-gray-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-20">
+          <div className="bg-emerald-50 p-6 md:p-8 rounded-xl md:rounded-2xl border border-emerald-100">
+            <div className="text-3xl md:text-4xl mb-3 md:mb-4">🎯</div>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Our Mission</h3>
+            <p className="text-gray-700 text-sm md:text-base">
               To deliver exceptional travel experiences in Kerala by blending
               local expertise with personalized care, making every journey a
               lifelong memory.
             </p>
           </div>
-          <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
-            <div className="text-4xl mb-4">👁️</div>
-            <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
-            <p className="text-gray-700">
-              To become Kerala’s most trusted and preferred travel partner,
+          <div className="bg-emerald-50 p-6 md:p-8 rounded-xl md:rounded-2xl border border-emerald-100">
+            <div className="text-3xl md:text-4xl mb-3 md:mb-4">👁️</div>
+            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Our Vision</h3>
+            <p className="text-gray-700 text-sm md:text-base">
+              To become Kerala's most trusted and preferred travel partner,
               recognized for our integrity, excellence, and customer-first
               approach.
             </p>
@@ -89,9 +89,9 @@ const AboutUsSection = () => {
         </div>
 
         {/* Why Us Section */}
-        <div className="bg-gray-50 py-12 rounded-2xl mb-20">
-          <h2 className="text-3xl font-bold text-center mb-10">Why Choose Us</h2>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+        <div className="bg-gray-50 py-8 md:py-12 rounded-xl md:rounded-2xl mb-12 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-10">Why Choose Us</h2>
+          <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-4">
             {[
               {
                 icon: BadgeCheck,
@@ -101,7 +101,7 @@ const AboutUsSection = () => {
               {
                 icon: MapPin,
                 title: "Local Expertise",
-                desc: "Deep understanding of Kerala’s destinations & culture.",
+                desc: "Deep understanding of Kerala's destinations & culture.",
               },
               {
                 icon: HeartHandshake,
@@ -116,22 +116,26 @@ const AboutUsSection = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="bg-white p-6 text-center rounded-xl shadow-sm hover:shadow-md transition"
+                className="bg-white p-3 sm:p-4 md:p-6 text-center rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition"
               >
-                <item.icon className="mx-auto text-emerald-600 mb-3" size={36} />
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <item.icon className="mx-auto text-emerald-600 mb-2 md:mb-3" size={24} />
+                <h4 className="font-semibold text-xs sm:text-sm md:text-lg mb-1 md:mb-2 leading-tight">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Why Book Online */}
-        <div className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-10">
+        <div className="py-8 md:py-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-10">
             Why Book <span className="text-emerald-600">Online</span> With Us
           </h2>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-4">
             {[
               {
                 title: "Save Time",
@@ -152,20 +156,22 @@ const AboutUsSection = () => {
             ].map((item, i) => (
               <div
                 key={i}
-                className="border-t-4 border-emerald-600 bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md"
+                className="border-t-4 border-emerald-600 bg-white p-3 sm:p-4 md:p-6 rounded-lg md:rounded-xl text-center shadow-sm hover:shadow-md"
               >
                 <CheckCircle
-                  className="mx-auto text-emerald-600 mb-3"
-                  size={32}
+                  className="mx-auto text-emerald-600 mb-2 md:mb-3"
+                  size={20}
                 />
-                <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h4 className="font-semibold text-xs sm:text-sm md:text-lg mb-1 md:mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
-
-     
       </section>
     </div>
   );
