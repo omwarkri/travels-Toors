@@ -48,20 +48,23 @@ const Hero = () => {
       />
 
       {/* Video Background */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <video
-          ref={videoRef}
-          autoPlay
-          muted={isMuted}
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
-        >
-          <source 
-            src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" 
-            type="video/mp4" 
-          />
-        </video>
+  ref={videoRef}
+  autoPlay
+  muted={isMuted}
+  loop
+  playsInline
+  preload="none" // Don’t auto-load video until user interaction
+  // poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+  className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
+>
+  <source 
+    src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" 
+    type="video/mp4" 
+  />
+</video>
+
 
         {/* Toggle Button */}
         <button
