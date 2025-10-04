@@ -438,7 +438,7 @@ const SinglePackagePage = () => {
         />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-          <div className="max-w-7xl mx-auto py-16">
+          <div className="max-w-7xl mx-auto py-8  md:py-16">
             <Link 
               to="/packages"
               className="inline-flex items-center text-white/80 hover:text-white mb-4 transition duration-200"

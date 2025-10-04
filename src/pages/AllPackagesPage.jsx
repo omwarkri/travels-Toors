@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 import TourPackageCard from "../components/packages/TourPackageCard";
-import { getAllPackages } from "../data/packagesData";
+// import { getAllPackages } from "../data/packagesData";
 
 const AllPackagesPage = () => {
     const allPackages = [
@@ -404,13 +404,13 @@ const AllPackagesPage = () => {
         keywords="Kerala tour packages, Kerala backwaters, Alleppey houseboat, Munnar tea estates, Kerala beaches, wildlife tours, cultural packages, honeymoon packages Kerala"
       />
       
-      <section className="max-w-7xl mx-auto py-16">
-        <div className="text-center mb-16">
+      <section className="max-w-7xl mx-auto py-8  md:py-16">
+        <div className="text-center mb-8 ">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
             🏆 {allPackages.length}+ Curated Packages
           </div>
-          <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">Kerala Tour Packages</h1>
-         <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">Kerala Tour Packages</h1>
+         <p className="text-md md:text-xl text-gray-500 max-w-3xl mx-auto">
   Your perfect Kerala awaits. From misty hills to serene backwaters - let us craft your dream vacation.
 </p>
         </div>

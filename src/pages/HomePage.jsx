@@ -5,7 +5,7 @@ import PopularPlaces from "../components/HomePage/PopularPlaces";
 import WhyChooseUs from "../components/HomePage/WhyChooseUs";
 import FAQ from "../components/HomePage/FAQ";
 import ContactSection from "./ContactPage";
-import Footer from "../components/common/Footer";
+// import Footer from "../components/common/Footer";
 
 const HomePage = () => {
   return (

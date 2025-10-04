@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Why Choose Omkar Tour and Travels?</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We go beyond just booking your trip - we create memories that last a lifetime

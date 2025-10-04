@@ -397,15 +397,15 @@ const TourPackages = ({ id = "packages" }) => {
   const packages = allPackages.slice(0, 6); // Get first 6 packages for the homepage
 
   return (
-    <section id={id} className="max-w-7xl mx-auto px-6 py-20">
-      <div className="text-center mb-16">
+    <section id={id} className="max-w-7xl mx-auto px-6 py-8 md:py-12">
+      <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🏆 Omkar Exclusive Packages
         </div>
-        <h1 className="text-3xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
           Curated Kerala Experiences
         </h1>
-    <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+    <p className="text-md md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
   Curated Kerala experiences with local insights, premium stays & personalized service.
 </p>
       </div>

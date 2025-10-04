@@ -135,12 +135,12 @@ const AllPlacesPage = () => {
       
       <section className="max-w-7xl mx-auto px-6 py-16">
         {/* Header Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
             🗺️ {places.length} Amazing Destinations
           </div>
-          <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">KERALA'S STUNNING WONDERS</h1>
-<p className="text-xl text-gray-500 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">KERALA'S STUNNING WONDERS</h1>
+<p className="text-md md:text-xl text-gray-500 max-w-3xl mx-auto">
   Kerala's diversity: hill stations, backwaters, beaches & rich culture for every traveler.
 </p>        </div>
 

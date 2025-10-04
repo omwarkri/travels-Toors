@@ -14,7 +14,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
             Contact Us
           </h1>
           <p className="text-xl sm:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
