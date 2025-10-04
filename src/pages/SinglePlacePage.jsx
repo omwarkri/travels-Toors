@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from 'react-router-dom';
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
 
 const SinglePlacePage = () => {
   const { placeId } = useParams();
+  const [selectedImage, setSelectedImage] = useState(0);
   
+  // Complete places data with all images from packages
   const allPlaces = [
     { 
       id: "munnar",
       name: "MUNNAR", 
       desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.", 
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_4_soxsj1.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476407/tea_5_xlgonr.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_6_wh8ied.jpg"
+      ],
       rating: "4.8",
       tours: "12",
       highlights: ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam", "Tea Museum"],
@@ -31,6 +41,15 @@ const SinglePlacePage = () => {
       name: "ALLEPPEY", 
       desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.", 
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg"
+      ],
       rating: "4.9",
       tours: "8",
       highlights: ["Houseboat Cruise", "Backwaters", "Alleppey Beach", "Vembanad Lake"],
@@ -50,6 +69,14 @@ const SinglePlacePage = () => {
       name: "KOVALAM", 
       desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.", 
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-3_wsmfvc.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-4_kddjkm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
+      ],
       rating: "4.7",
       tours: "6",
       highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage"],
@@ -69,6 +96,16 @@ const SinglePlacePage = () => {
       name: "THEKKADY", 
       desc: "Home to Periyar Wildlife Sanctuary, offering thrilling jungle experiences and spice plantations.", 
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487814/periyar_lake_2_ie3uwh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_4_dkm7qi.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_5_h2jvxj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_6_zc1hqa.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487817/periyar_lake_7_w0rwap.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487821/periyar_lake_8_xfdghv.jpg"
+      ],
       rating: "4.6",
       tours: "9",
       highlights: ["Periyar Wildlife Sanctuary", "Spice Plantations", "Bamboo Rafting", "Elephant Ride"],
@@ -88,6 +125,12 @@ const SinglePlacePage = () => {
       name: "KOCHI", 
       desc: "The commercial capital of Kerala blending Portuguese, Dutch, and British colonial influences.", 
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488071/padmanabha-swamy3_iikmub.jpg"
+      ],
       rating: "4.5",
       tours: "7",
       highlights: ["Fort Kochi", "Chinese Fishing Nets", "Jewish Synagogue", "Kathakali Dance"],
@@ -101,13 +144,60 @@ const SinglePlacePage = () => {
         { name: "Jewish Synagogue", description: "Oldest active synagogue in Commonwealth nations." },
         { name: "Kathakali Dance", description: "Traditional dance-drama performances." }
       ]
+    },
+    { 
+      id: "kumarakom",
+      name: "KUMARAKOM", 
+      desc: "A picturesque backwater destination with luxurious resorts and serene Vembanad Lake views.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg"
+      ],
+      rating: "4.8",
+      tours: "4",
+      highlights: ["Vembanad Lake", "Bird Sanctuary", "Luxury Resorts", "Houseboat Stays"],
+      bestSeason: "September to March",
+      packages: ["Kerala Backwaters & Beaches", "Luxury Kerala Experience"],
+      longDescription: "Kumarakom is a cluster of little islands on the Vembanad Lake, known for its luxurious resorts, houseboat stays, and the famous Kumarakom Bird Sanctuary. This serene backwater destination offers a perfect blend of luxury and natural beauty.",
+      climate: "Tropical climate with moderate temperatures",
+      attractions: [
+        { name: "Vembanad Lake", description: "Largest lake in Kerala, perfect for houseboat cruises." },
+        { name: "Bird Sanctuary", description: "Home to migratory birds and local species." },
+        { name: "Luxury Resorts", description: "World-class resorts with backwater views." },
+        { name: "Houseboat Stays", description: "Luxurious overnight houseboat experiences." }
+      ]
+    },
+    { 
+      id: "guruvayur",
+      name: "GURUVAYUR", 
+      desc: "One of the most sacred Hindu temples dedicated to Lord Krishna with exquisite Kerala-style architecture.", 
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_2_yf2hsn.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_3_snxhvj.jpg"
+      ],
+      rating: "4.8",
+      tours: "3",
+      highlights: ["Temple Darshan", "Traditional Architecture", "Spiritual Rituals", "Festivals"],
+      bestSeason: "Year Round",
+      packages: ["Kerala Temple Tour", "Cultural Heritage Tour"],
+      longDescription: "Guruvayur Temple is one of Kerala's most sacred Hindu temples dedicated to Lord Krishna. The temple's idol is believed to be over 5,000 years old and the temple is often called 'Bhooloka Vaikunta' - the earthly abode of Lord Vishnu.",
+      climate: "Tropical climate year-round",
+      attractions: [
+        { name: "Temple Darshan", description: "Sacred temple visit and spiritual experience." },
+        { name: "Traditional Architecture", description: "Exquisite Kerala-style temple architecture." },
+        { name: "Spiritual Rituals", description: "Witness traditional rituals and ceremonies." },
+        { name: "Festivals", description: "Experience vibrant temple festivals and celebrations." }
+      ]
     }
   ];
 
   // Find the place by ID
-  console.log(placeId,"placeId")
   const place = allPlaces.find(p => p.id === placeId) || allPlaces[0];
-   console.log(place,"place")
 
   // Sample package data
   const packageData = {
@@ -116,7 +206,9 @@ const SinglePlacePage = () => {
     "Kerala Honeymoon Special": { duration: "5 Days", price: "12,999" },
     "Kerala Backwaters & Beaches": { duration: "4 Days", price: "9,999" },
     "Kerala Wildlife Adventure": { duration: "4 Days", price: "10,999" },
-    "Kerala Cultural Heritage": { duration: "3 Days", price: "6,999" }
+    "Kerala Cultural Heritage": { duration: "3 Days", price: "6,999" },
+    "Luxury Kerala Experience": { duration: "5 Days", price: "15,999" },
+    "Kerala Temple Tour": { duration: "3 Days", price: "5,999" }
   };
 
   return (
@@ -130,7 +222,7 @@ const SinglePlacePage = () => {
       {/* Place Header */}
       <section className="relative h-96 bg-gray-900">
         <img
-          src={place.image}
+          src={place.images[selectedImage]}
           alt={`${place.name} - Kerala Tourism`}
           className="w-full h-full object-cover opacity-70"
         />
@@ -158,10 +250,46 @@ const SinglePlacePage = () => {
       </section>
 
       {/* Place Details */}
-      <section className="max-w-7xl mx-auto  py-8">
+      <section className="max-w-7xl mx-auto py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
+            {/* Image Gallery */}
+            {place.images && place.images.length > 1 && (
+              <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <div className="flex flex-col space-y-4">
+                  {/* Main Image */}
+                  <div className="rounded-xl overflow-hidden">
+                    <img
+                      src={place.images[selectedImage]}
+                      alt={`${place.name} view ${selectedImage + 1}`}
+                      className="w-full h-80 object-cover"
+                    />
+                  </div>
+                  
+                  {/* Thumbnail Gallery */}
+                  <div className="flex space-x-3 overflow-x-auto pb-2">
+                    {place.images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImage(index)}
+                        className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition duration-200 ${
+                          selectedImage === index ? 'border-emerald-500' : 'border-gray-200'
+                        }`}
+                      >
+                        <img
+                          src={image}
+                          alt={`${place.name} view ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Place Description */}
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold mb-6">About {place.name}</h2>
               <p className="text-gray-700 leading-relaxed mb-6">{place.longDescription}</p>

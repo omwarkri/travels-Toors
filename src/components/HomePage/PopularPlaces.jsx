@@ -3,112 +3,281 @@ import { Link } from 'react-router-dom';
 import PlaceCard from '../places/PlaceCard';
 
 const PopularPlaces = ({ id = "places" }) => {
-  const places = [
-    { 
-      id: "munnar",
-      name: "MUNNAR", 
-      desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
-      rating: "4.8",
-      tours: "12",
-      highlights: ["Tea Plantations", "Eravikulam National Park", "Mattupetty Dam", "Tea Museum"],
-      bestSeason: "September to May",
-      packages: ["Munnar Tea Plantations Tour", "Complete Kerala Experience", "Kerala Honeymoon Special"]
-    },
-    { 
-      id: "alleppey",
-      name: "ALLEPPEY", 
-      desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.", 
+  // Extract unique places from allPackages data with all images
+  const allPackages = [
+    {
+      id: "Alleppey Beach",
+      name: "Alleppey Beach",
+      duration: "04 Nights / 05 Days",
+      destination: "Alleppey, Kerala",
+      places: ["alleppey"],
+      bestSeason: "Sep - May",
+      price: 18999,
+      originalPrice: 22999,
+      discount: "17% Off",
+      rating: 4.8,
+      reviews: 67,
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
-      rating: "4.9",
-      tours: "8",
-      highlights: ["Houseboat Cruise", "Backwaters", "Alleppey Beach", "Vembanad Lake"],
-      bestSeason: "August to March",
-      packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"]
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg"
+      ],
+      description: "Alleppey Beach is famous for its long, beautiful coastline and the historic pier that extends over 137 years into the sea. Visitors love walking on the soft white sand and enjoying breathtaking sunset views.",
+      highlights: ["Historic Pier", "Water Sports", "Sunset Views", "Beach Park", "Local Cuisine"]
     },
-    { 
-      id: "kovalam",
-      name: "KOVALAM", 
-      desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.", 
+    {
+      id: "Backwaters",
+      name: "Backwaters",
+      duration: "03 Nights / 04 Days",
+      destination: "Alleppey, Kumarakom",
+      places: ["alleppey", "kumarakom"],
+      bestSeason: "Aug - Mar",
+      price: 16999,
+      originalPrice: 20999,
+      discount: "19% Off",
+      rating: 4.9,
+      reviews: 89,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg"
+      ],
+      description: "Kerala Backwaters are a network of rivers, lakes, and canals that flow alongside the Arabian Sea. Visitors enjoy peaceful houseboat cruises through green palm-lined waterways and traditional villages.",
+      highlights: ["Houseboat Cruise", "Backwaters", "Vembanad Lake", "Traditional Food", "Sunset Views"]
+    },
+    {
+      id: "Tea estate",
+      name: "Tea Estate Tour",
+      duration: "03 Nights / 04 Days",
+      destination: "Munnar, Thekkady",
+      places: ["munnar", "thekkady"],
+      bestSeason: "Sep - Mar",
+      price: 15999,
+      originalPrice: 19999,
+      discount: "20% Off",
+      rating: 4.7,
+      reviews: 56,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_4_soxsj1.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476407/tea_5_xlgonr.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_6_wh8ied.jpg"
+      ],
+      description: "Explore Kerala's famous tea estates in Munnar and Thekkady with lush green hills covered with neatly trimmed tea bushes. Learn about tea processing and enjoy fresh tea tastings.",
+      highlights: ["Tea Plantations", "Tea Factory Tour", "Tea Tasting", "Scenic Walks", "Mountain Views"]
+    },
+    {
+      id: "Periyar Lake Thekkady",
+      name: "Periyar Lake Thekkady",
+      duration: "04 Nights / 05 Days",
+      destination: "Thekkady, Periyar",
+      places: ["thekkady"],
+      bestSeason: "Nov - Apr",
+      price: 17999,
+      originalPrice: 21999,
+      discount: "18% Off",
+      rating: 4.6,
+      reviews: 72,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487814/periyar_lake_2_ie3uwh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_4_dkm7qi.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_5_h2jvxj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_6_zc1hqa.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487817/periyar_lake_7_w0rwap.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487821/periyar_lake_8_xfdghv.jpg"
+      ],
+      description: "Periyar Lake in Thekkady offers serene boat cruises through rich wildlife habitats surrounded by lush Periyar National Park. Spot elephants, deer, and various bird species.",
+      highlights: ["Periyar Wildlife Sanctuary", "Boat Cruise", "Bamboo Rafting", "Nature Walks", "Spice Plantations"]
+    },
+    {
+      id: "The Nehru Trophy Boat Race",
+      name: "The Nehru Trophy Boat Race",
+      duration: "03 Nights / 04 Days",
+      destination: "Alappuzha, Kerala",
+      places: ["alleppey"],
+      bestSeason: "Aug (Annual Event)",
+      price: 16999,
+      originalPrice: 20999,
+      discount: "19% Off",
+      rating: 4.5,
+      reviews: 92,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488541/boat_race_2_wp6u5y.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488542/boat_race_3_cmenpt.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488547/boat_race_4_rgquq4.jpg"
+      ],
+      description: "Witness the thrilling Nehru Trophy Boat Race featuring massive snake boats with over 100 oarsmen rowing in perfect rhythm on Punnamada Lake.",
+      highlights: ["Snake Boat Race", "Cultural Festival", "Traditional Music", "Vibrant Atmosphere", "Local Cuisine"]
+    },
+    {
+      id: "padmanabhaswamy-temple",
+      name: "Padmanabhaswamy Temple",
+      duration: "02 Nights / 03 Days",
+      destination: "Thiruvananthapuram, Kerala",
+      places: ["thiruvananthapuram"],
+      bestSeason: "Year Round",
+      price: 11999,
+      originalPrice: 14999,
+      discount: "20% Off",
+      rating: 4.6,
+      reviews: 28,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488071/padmanabha-swamy3_iikmub.jpg"
+      ],
+      description: "The Padmanabhaswamy Temple in Thiruvananthapuram is one of the richest and most revered temples in India, dedicated to Lord Vishnu in Anantha Shayana (reclining) posture.",
+      highlights: ["Dravidian Architecture", "Lord Vishnu in Anantha Shayana posture", "Richest Temple Treasures", "Grand Festivals", "Spiritual Rituals"]
+    },
+    {
+      id: "Kovalam Beach",
+      name: "Kovalam Beach",
+      duration: "03 Nights / 04 Days",
+      destination: "Kovalam, Thiruvananthapuram",
+      places: ["kovalam"],
+      bestSeason: "Sep - Mar",
+      price: 15999,
+      originalPrice: 19999,
+      discount: "20% Off",
+      rating: 4.7,
+      reviews: 48,
       image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
-      rating: "4.7",
-      tours: "6",
-      highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage"],
-      bestSeason: "September to March",
-      packages: ["Kerala Backwaters & Beaches", "Complete Kerala Experience", "Kerala Honeymoon Special"]
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-3_wsmfvc.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-4_kddjkm.jpg"
+      ],
+      description: "Kovalam Beach features three crescent-shaped beaches with sparkling sands, palm-lined shores, and clear waters perfect for swimming and water sports.",
+      highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage", "Local Seafood"]
     },
-    { 
-      id: "thekkady",
-      name: "THEKKADY", 
-      desc: "Home to Periyar Wildlife Sanctuary, offering thrilling jungle experiences and spice plantations.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg ",
-      rating: "4.6",
-      tours: "9",
-      highlights: ["Periyar Wildlife Sanctuary", "Spice Plantations", "Bamboo Rafting", "Elephant Ride"],
-      bestSeason: "November to April",
-      packages: ["Kerala Wildlife Adventure", "Complete Kerala Experience", "Munnar Tea Plantations Tour"]
-    },
-    { 
-      id: "kochi",
-      name: "KOCHI", 
-      desc: "The commercial capital of Kerala blending Portuguese, Dutch, and British colonial influences.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
-      rating: "4.5",
-      tours: "7",
-      highlights: ["Fort Kochi", "Chinese Fishing Nets", "Jewish Synagogue", "Kathakali Dance"],
+    {
+      id: "Guruvayur Temple",
+      name: "Guruvayur Temple",
+      duration: "02 Nights / 03 Days",
+      destination: "Guruvayur, Kerala",
+      places: ["guruvayur"],
       bestSeason: "Year Round",
-      packages: ["Kerala Cultural Heritage", "Complete Kerala Experience"]
+      price: 12999,
+      originalPrice: 15999,
+      discount: "19% Off",
+      rating: 4.8,
+      reviews: 34,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_2_yf2hsn.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_3_snxhvj.jpg"
+      ],
+      description: "Guruvayur Temple is one of the most sacred Hindu temples dedicated to Lord Krishna, known for its exquisite Kerala-style architecture and spiritual significance.",
+      highlights: ["Temple Darshan", "Traditional Architecture", "Spiritual Rituals", "Festivals", "Cultural Experience"]
     },
-    { 
-      id: "wayanad",
-      name: "WAYANAD", 
-      desc: "Lush green paradise with mist-clad mountains, waterfalls, and rich tribal heritage.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490597/Blue__Green___White_pqixgb.jpg",
-      rating: "4.7",
-      tours: "5",
-      highlights: ["Edakkal Caves", "Banasura Sagar Dam", "Chembra Peak", "Wildlife Sanctuary"],
-      bestSeason: "October to May",
-      packages: ["Kerala Wildlife Adventure", "Nature & Adventure Tour"]
-    },
-    { 
-      id: "kumarakom",
-      name: "KUMARAKOM", 
-      desc: "A picturesque backwater destination with luxurious resorts and serene Vembanad Lake views.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
-      rating: "4.8",
-      tours: "4",
-      highlights: ["Vembanad Lake", "Bird Sanctuary", "Luxury Resorts", "Houseboat Stays"],
-      bestSeason: "September to March",
-      packages: ["Kerala Backwaters & Beaches", "Luxury Kerala Experience"]
-    },
-    { 
-      id: "varkala",
-      name: "VARKALA", 
-      desc: "Cliff-side beach destination with mineral springs and stunning views of the Arabian Sea.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490719/Varkala_Beach__Varkala__Kerala_vuiq2z.jpg",
-      rating: "4.6",
-      tours: "3",
-      highlights: ["Varkala Beach", "Janardanaswamy Temple", "Mineral Springs", "Cliff Views"],
-      bestSeason: "August to March",
-      packages: ["Beach & Backwaters Tour", "Spiritual Kerala Tour"]
-    },
-    { 
-      id: "thrissur",
-      name: "THRISSUR", 
-      desc: "Cultural capital of Kerala known for Thrissur Pooram festival and ancient temples.", 
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490719/Varkala_Beach__Varkala__Kerala_vuiq2z.jpg",
-      rating: "4.4",
-      tours: "4",
-      highlights: ["Vadakkunnathan Temple", "Thrissur Pooram", "Archaeological Museum", "Athirapally Falls"],
+    {
+      id: "Ambalapuzha Krishna Temple",
+      name: "Ambalapuzha Krishna Temple",
+      duration: "02 Nights / 03 Days",
+      destination: "Ambalapuzha, Alleppey",
+      places: ["ambalapuzha"],
       bestSeason: "Year Round",
-      packages: ["Kerala Cultural Heritage", "Temple Tour Kerala"]
+      price: 11999,
+      originalPrice: 14999,
+      discount: "20% Off",
+      rating: 4.6,
+      reviews: 28,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/ambalapuzha-2_utnlzm.jpg"
+      ],
+      description: "Ambalapuzha Krishna Temple is famous for its traditional Kerala architecture, serene ambiance, and the legendary Palpayasam sweet offering to Lord Krishna.",
+      highlights: ["Temple Architecture", "Palpayasam Offering", "Colorful Murals", "Oil Lamp Rituals", "Cultural Festivals"]
+    },
+    {
+      id: "Boat Race",
+      name: "Kerala Boat Race Experience",
+      duration: "02 Nights / 03 Days",
+      destination: "Alappuzha, Kerala",
+      places: ["alappuzha"],
+      bestSeason: "August (Race Season) / Year Round",
+      price: 11999,
+      originalPrice: 14999,
+      discount: "20% Off",
+      rating: 4.6,
+      reviews: 28,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488541/boat_race_2_wp6u5y.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488542/boat_race_3_cmenpt.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488547/boat_race_4_rgquq4.jpg"
+      ],
+      description: "Experience the thrill of Kerala's famous snake boat races. Witness massive chundan vallams with 100+ oarsmen racing in perfect harmony on Punnamada Lake.",
+      highlights: ["Snake Boat Race Viewing", "Traditional Boat Songs", "Backwater Cruise", "Cultural Performances", "Local Cuisine"]
+    },
+    {
+      id: "Samudra Beach",
+      name: "Samudra Beach Retreat",
+      duration: "03 Nights / 04 Days",
+      destination: "Kovalam, Thiruvananthapuram",
+      places: ["kovalam"],
+      bestSeason: "Sep - Mar",
+      price: 15999,
+      originalPrice: 19999,
+      discount: "20% Off",
+      rating: 4.7,
+      reviews: 48,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
+      ],
+      description: "Discover the serene beauty of Samudra Beach, the largest and most tranquil of Kovalam's three crescent bays, known for its luxury resorts and peaceful atmosphere.",
+      highlights: ["Tranquil Beach Experience", "Luxury Beach Resorts", "Ayurvedic Wellness Treatments", "Sunset Views", "Fresh Seafood Dining"]
     }
   ];
 
+  // Create unique places from all packages
+  const uniquePlaces = {};
+  
+  allPackages.forEach(pkg => {
+    pkg.places.forEach(placeName => {
+      if (!uniquePlaces[placeName]) {
+        uniquePlaces[placeName] = {
+          id: placeName,
+          name: placeName.toUpperCase(),
+          desc: pkg.description,
+          image: pkg.image,
+          images: pkg.images, // Include all images
+          rating: pkg.rating.toString(),
+          tours: Math.floor(Math.random() * 10) + 3, // Random number of tours
+          highlights: pkg.highlights,
+          bestSeason: pkg.bestSeason,
+          packages: allPackages
+            .filter(p => p.places.includes(placeName))
+            .map(p => p.name)
+            .slice(0, 3) // Show max 3 packages
+        };
+      }
+    });
+  });
+
+  const places = Object.values(uniquePlaces);
   const popularPlaces = places.slice(0, 6); // Show first 6 places as popular
 
   return (
-    <section id="places" className="max-w-7xl mx-auto  py-8 md:py-32">
+    <section id="places" className="max-w-7xl mx-auto py-8 md:py-32">
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🌟 Top Destinations
