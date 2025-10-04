@@ -17,8 +17,8 @@ const TourPackages = ({ id = "packages" }) => {
       discount: "15% Off",
       rating: 4.7,
       reviews: 120,
-      image: "/images/essence-kerala.jpg",
-      images: ["/images/essence-kerala.jpg", "/images/essence-kerala-2.jpg", "/images/essence-kerala-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+      images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg", "/images/essence-kerala-2.jpg", "/images/essence-kerala-3.jpg"],
       description: "Experience the essence of Kerala through its culture, backwaters, and hill stations.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to hotel and leisure",
