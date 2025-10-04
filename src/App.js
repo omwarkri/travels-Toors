@@ -8,7 +8,7 @@ import AllPlacesPage from "./pages/AllPlacesPage";
 import SinglePlacePage from "./pages/SinglePlacePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
-import AdminPage from "./pages/AdminPage";
+// import AdminPage from "./pages/AdminPage";
 // ScrollToTop component that will scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -24,15 +24,15 @@ const ScrollToTop = () => {
 };
 
 // Alternative version with instant scroll (without smooth animation)
-const ScrollToTopInstant = () => {
-  const { pathname } = useLocation();
+// const ScrollToTopInstant = () => {
+//   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
 
-  return null;
-};
+//   return null;
+// };
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
           <Route path="/places" element={<AllPlacesPage />} />
           <Route path="/place/:placeId" element={<SinglePlacePage />} />
           <Route path="/about" element={<AboutUsPage />} />
-             <Route path="/admin" element={<AdminPage />} />
+             {/* <Route path="/admin" element={<AdminPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
