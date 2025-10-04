@@ -5,23 +5,7 @@ import Footer from "../components/common/Footer";
 const ContactPage = () => {
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-br from-gray-50 to-emerald-50">
-      <SEOHead 
-        title="Contact Omkar Tour and Travels | Kerala Tour Packages Booking"
-        description="Contact Omkar Tour and Travels for Kerala tour packages. Call +91-9028803309, WhatsApp, or email omkartours143@gmail.com. 24/7 customer support available."
-        keywords="contact Omkar Tour and Travels, Kerala tour booking, travel agency contact"
-      />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
-            Contact Us
-          </h1>
-          <p className="text-xl sm:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-            Ready to plan your Kerala adventure? Get in touch with our travel experts for personalized tour packages.
-          </p>
-        </div>
-      </section>
+     
 
       {/* Main Content - Centered Single Column */}
       <section id="contact" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 -mt-10 relative z-10">
