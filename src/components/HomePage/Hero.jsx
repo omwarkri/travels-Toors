@@ -55,7 +55,7 @@ const Hero = () => {
           loop
           playsInline
           preload="auto" // Load video immediately
-          poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759593120/Screenshot_2025-10-04_at_9.20.42_PM_xr2l9q.png"
+          // poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759593120/Screenshot_2025-10-04_at_9.20.42_PM_xr2l9q.png"
           className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
           style={{ transition: "none" }} // Disable any CSS transitions
         >
