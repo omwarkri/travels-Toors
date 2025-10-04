@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import TourPackageCard from './TourPackageCard';
+import TourPackageCard from '../packages/TourPackageCard';
 
 const TourPackages = ({ id = "packages" }) => {
   // All package data from the screenshots
@@ -224,123 +224,13 @@ const TourPackages = ({ id = "packages" }) => {
       ],
       inclusions: ["Bike rental", "Safety gear", "Meals", "Transfers", "Sightseeing"],
       exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-    },
-    {
-      id: "romantic-hills-backwaters",
-      name: "Romantic Hills & Backwaters Kerala Tour",
-      duration: "06 Nights / 07 Days",
-      destination: "Kochi, Munnar, Thekkady, Alleppey, Marari Beach",
-      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Marari Beach"],
-      bestSeason: "Sep - May",
-      price: 27999,
-      originalPrice: 31999,
-      discount: "12% Off",
-      rating: 4.9,
-      reviews: 130,
-      image: "/images/romantic-tour.jpg",
-      images: ["/images/romantic-tour.jpg", "/images/romantic-tour-2.jpg", "/images/romantic-tour-3.jpg"],
-      description: "A romantic getaway through Kerala's picturesque hills and serene backwaters.",
-      highlights: [
-        "Day 1: Arrival in Kochi - Transfer to Munnar and check-in",
-        "Day 2: Munnar Romance - Tea estates, Mattupetty Dam, Echo Point",
-        "Day 3: Scenic Ride to Thekkady - Enjoy scenic ride and spice garden visit",
-        "Day 4: Houseboat Experience - Thekkady to Alleppey, check-in to houseboat",
-        "Day 5: Backwaters Cruise - Houseboat cruise, sunset on the backwaters",
-        "Day 6: Beach Relaxation - Drive to Marari Beach, relax and enjoy coastal charm",
-        "Day 7: Departure - Transfer to Kochi for departure"
-      ],
-      itinerary: [
-        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar and check-in." },
-        { day: "Day 2", title: "Munnar Romance", description: "Tea estates, Mattupetty Dam, Echo Point." },
-        { day: "Day 3", title: "Scenic Ride to Thekkady", description: "Enjoy scenic ride and spice garden visit." },
-        { day: "Day 4", title: "Houseboat Experience", description: "Thekkady to Alleppey, check-in to houseboat." },
-        { day: "Day 5", title: "Backwaters Cruise", description: "Houseboat cruise, sunset on the backwaters." },
-        { day: "Day 6", title: "Beach Relaxation", description: "Drive to Marari Beach, relax and enjoy coastal charm." },
-        { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
-      ],
-      inclusions: ["Romantic stays", "Candlelight dinners", "Meals", "Transfers", "Houseboat Stay"],
-      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-    },
-    {
-      id: "spiritual-retreat",
-      name: "Spiritual Retreat in Kerala",
-      duration: "07 Nights / 08 Days",
-      destination: "Kochi, Munnar, Thekkady, Alleppey, Kovalam, Trivandrum",
-      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Kovalam", "Trivandrum"],
-      bestSeason: "Year Round",
-      price: 24999,
-      originalPrice: 28999,
-      discount: "14% Off",
-      rating: 4.8,
-      reviews: 100,
-      image: "/images/spiritual-retreat.jpg",
-      images: ["/images/spiritual-retreat.jpg", "/images/spiritual-retreat-2.jpg", "/images/spiritual-retreat-3.jpg"],
-      description: "A spiritual journey through Kerala's sacred sites and serene landscapes.",
-      highlights: [
-        "Day 1: Arrival in Kochi - Transfer to hotel and acclimatization",
-        "Day 2: Kochi Local Sightseeing - Fort Kochi, Mattancherry Palace, Chinese fishing nets",
-        "Day 3: Kochi to Munnar - Visit waterfalls en route",
-        "Day 4: Munnar Sightseeing - Tea Gardens, Eravikulam National Park",
-        "Day 5: Munnar to Thekkady - Periyar Wildlife Sanctuary visit",
-        "Day 6: Thekkady to Alleppey - Houseboat stay in backwaters",
-        "Day 7: Alleppey to Kovalam - Leisure at beach",
-        "Day 8: Departure - Transfer to Trivandrum for departure"
-      ],
-      itinerary: [
-        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to hotel and acclimatization." },
-        { day: "Day 2", title: "Kochi Local Sightseeing", description: "Fort Kochi, Mattancherry Palace, Chinese fishing nets." },
-        { day: "Day 3", title: "Kochi to Munnar", description: "Visit waterfalls en route." },
-        { day: "Day 4", title: "Munnar Sightseeing", description: "Tea Gardens, Eravikulam National Park." },
-        { day: "Day 5", title: "Munnar to Thekkady", description: "Periyar Wildlife Sanctuary visit." },
-        { day: "Day 6", title: "Thekkady to Alleppey", description: "Houseboat stay in backwaters." },
-        { day: "Day 7", title: "Alleppey to Kovalam", description: "Leisure at beach." },
-        { day: "Day 8", title: "Departure", description: "Transfer to Trivandrum for departure." }
-      ],
-      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
-      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-    },
-    {
-      id: "hidden-villages",
-      name: "Hidden Villages of Kerala Tour",
-      duration: "06 Nights / 07 Days",
-      destination: "Kochi, Kumbalangi, Kumarakom, Alleppey, Kovalam, Trivandrum",
-      places: ["Kochi", "Kumbalangi", "Kumarakom", "Alleppey", "Kovalam", "Trivandrum"],
-      bestSeason: "Sep - May",
-      price: 25999,
-      originalPrice: 29999,
-      discount: "13% Off",
-      rating: 4.7,
-      reviews: 75,
-      image: "/images/hidden-villages.jpg",
-      images: ["/images/hidden-villages.jpg", "/images/hidden-villages-2.jpg", "/images/hidden-villages-3.jpg"],
-      description: "Explore the authentic village life and hidden gems of Kerala.",
-      highlights: [
-        "Day 1: Arrival in Kochi - Acclimatization and local markets",
-        "Day 2: Kochi Sightseeing - Fort Kochi, Mattancherry Palace, Jewish Synagogue",
-        "Day 3: Kochi to Kumbalangi - Explore traditional village life",
-        "Day 4: Kumbalangi to Kumarakom - Enjoy backwater serenity",
-        "Day 5: Kumarakom to Alleppey - Houseboat cruise through villages",
-        "Day 6: Alleppey to Kovalam - En route visit temples and spice plantations",
-        "Day 7: Departure - Transfer to Trivandrum for departure"
-      ],
-      itinerary: [
-        { day: "Day 1", title: "Arrival in Kochi", description: "Acclimatization and local markets." },
-        { day: "Day 2", title: "Kochi Sightseeing", description: "Fort Kochi, Mattancherry Palace, Jewish Synagogue." },
-        { day: "Day 3", title: "Kochi to Kumbalangi", description: "Explore traditional village life." },
-        { day: "Day 4", title: "Kumbalangi to Kumarakom", description: "Enjoy backwater serenity." },
-        { day: "Day 5", title: "Kumarakom to Alleppey", description: "Houseboat cruise through villages." },
-        { day: "Day 6", title: "Alleppey to Kovalam", description: "En route visit temples and spice plantations." },
-        { day: "Day 7", title: "Departure", description: "Transfer to Trivandrum for departure." }
-      ],
-      inclusions: ["Village stays", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
-      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     }
   ];
 
   const packages = allPackages.slice(0, 6); // Get first 6 packages for the homepage
 
   return ( 
-    <section id={id} className="max-w-7xl mx-auto px-6 py-8 md:py-32">
+    <section id={id} className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-32">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🏆 Omkar Exclusive Packages 
@@ -348,12 +238,39 @@ const TourPackages = ({ id = "packages" }) => {
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
           Curated Kerala Experiences
         </h1>
-        <p className="text-md md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-md md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed px-4">
           Curated Kerala experiences with local insights, premium stays & personalized service.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Mobile Horizontal Scroll Container */}
+      <div className="lg:hidden">
+        <div className="flex overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex space-x-6">
+            {packages.map((pkg, index) => (
+              <div 
+                key={pkg.id} 
+                className="w-80 flex-shrink-0 snap-start" // Fixed width for mobile cards
+              >
+                <TourPackageCard pkg={pkg} />
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Scroll Indicator for Mobile */}
+        <div className="flex justify-center mt-4 space-x-2 lg:hidden">
+          {packages.map((_, index) => (
+            <div 
+              key={index}
+              className="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Grid Layout */}
+      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {packages.map((pkg, index) => (
           <TourPackageCard key={pkg.id} pkg={pkg} />
         ))}
@@ -363,17 +280,17 @@ const TourPackages = ({ id = "packages" }) => {
       <div className="text-center mt-12">
         <Link 
           to="/packages" 
-          className="inline-flex items-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 rounded-xl font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-emerald-500 text-emerald-600 rounded-xl font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base"
         >
           View All {allPackages.length}+ Packages
-          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
           </svg>
         </Link>
       </div>
 
       {/* Trust Indicators */}
-      <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
+      <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center px-4">
         <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-100">
           <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
             <span className="text-base sm:text-lg md:text-xl">⭐</span>
