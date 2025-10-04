@@ -402,7 +402,7 @@ const TourPackages = ({ id = "packages" }) => {
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🏆 Omkar Exclusive Packages
         </div>
-        <h1 className="text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
+        <h1 className="text-3xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
           Curated Kerala Experiences
         </h1>
     <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
