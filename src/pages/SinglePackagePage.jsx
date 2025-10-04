@@ -61,7 +61,7 @@ const SinglePackagePage = () => {
   ];
 
   // Direct package data (same structure as AllPackagesPage)
-   const packageData = [
+const packageData = [
     {
       id: "essence-of-kerala",
       name: "Essence of Kerala Tour",
@@ -74,8 +74,13 @@ const SinglePackagePage = () => {
       discount: "15% Off",
       rating: 4.7,
       reviews: 120,
-      image: "/images/essence-kerala.jpg",
-      images: ["/images/essence-kerala.jpg", "/images/essence-kerala-2.jpg", "/images/essence-kerala-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg"
+      ],
       description: "Experience the essence of Kerala through its culture, backwaters, and hill stations.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to hotel and leisure",
@@ -110,8 +115,14 @@ const SinglePackagePage = () => {
       discount: "13% Off",
       rating: 4.8,
       reviews: 150,
-      image: "/images/backwaters-beaches.jpg",
-      images: ["/images/backwaters-beaches.jpg", "/images/backwaters-beaches-2.jpg", "/images/backwaters-beaches-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg"
+      ],
       description: "A perfect blend of Kerala's backwaters, beaches, and hill stations.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to Munnar",
@@ -148,8 +159,14 @@ const SinglePackagePage = () => {
       discount: "14% Off",
       rating: 4.9,
       reviews: 180,
-      image: "/images/cultural-trails.jpg",
-      images: ["/images/cultural-trails.jpg", "/images/cultural-trails-2.jpg", "/images/cultural-trails-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488071/padmanabha-swamy3_iikmub.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg"
+      ],
       description: "Discover the cultural richness of Kerala with a visit to heritage sites and backwaters.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to hotel and relax",
@@ -186,8 +203,14 @@ const SinglePackagePage = () => {
       discount: "14% Off",
       rating: 4.8,
       reviews: 95,
-      image: "/images/family-getaway.jpg",
-      images: ["/images/family-getaway.jpg", "/images/family-getaway-2.jpg", "/images/family-getaway-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-3_wsmfvc.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-4_kddjkm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+      ],
       description: "Perfect family vacation with kid-friendly activities and comfortable stays.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to Munnar",
@@ -222,8 +245,17 @@ const SinglePackagePage = () => {
       discount: "13% Off",
       rating: 4.9,
       reviews: 110,
-      image: "/images/nature-photography.jpg",
-      images: ["/images/nature-photography.jpg", "/images/nature-photography-2.jpg", "/images/nature-photography-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_4_soxsj1.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476407/tea_5_xlgonr.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_6_wh8ied.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg"
+      ],
       description: "Capture the breathtaking beauty of Kerala's landscapes and wildlife.",
       highlights: [
         "Day 1: Arrival in Kochi - Transfer to Munnar",
@@ -258,8 +290,14 @@ const SinglePackagePage = () => {
       discount: "12% Off",
       rating: 4.7,
       reviews: 85,
-      image: "/images/biking-tour.jpg",
-      images: ["/images/biking-tour.jpg", "/images/biking-tour-2.jpg", "/images/biking-tour-3.jpg"],
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487814/periyar_lake_2_ie3uwh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg"
+      ],
       description: "An adventurous biking journey through Kerala's hills and backwaters.",
       highlights: [
         "Day 1: Arrival in Kochi - Bike orientation and leisure ride around Fort Kochi",
@@ -280,6 +318,132 @@ const SinglePackagePage = () => {
         { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
       ],
       inclusions: ["Bike rental", "Safety gear", "Meals", "Transfers", "Sightseeing"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "romantic-hills-backwaters",
+      name: "Romantic Hills & Backwaters Kerala Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Marari Beach",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Marari Beach"],
+      bestSeason: "Sep - May",
+      price: 27999,
+      originalPrice: 31999,
+      discount: "12% Off",
+      rating: 4.9,
+      reviews: 130,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg"
+      ],
+      description: "A romantic getaway through Kerala's picturesque hills and serene backwaters.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to Munnar and check-in",
+        "Day 2: Munnar Romance - Tea estates, Mattupetty Dam, Echo Point",
+        "Day 3: Scenic Ride to Thekkady - Enjoy scenic ride and spice garden visit",
+        "Day 4: Houseboat Experience - Thekkady to Alleppey, check-in to houseboat",
+        "Day 5: Backwaters Cruise - Houseboat cruise, sunset on the backwaters",
+        "Day 6: Beach Relaxation - Drive to Marari Beach, relax and enjoy coastal charm",
+        "Day 7: Departure - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar and check-in." },
+        { day: "Day 2", title: "Munnar Romance", description: "Tea estates, Mattupetty Dam, Echo Point." },
+        { day: "Day 3", title: "Scenic Ride to Thekkady", description: "Enjoy scenic ride and spice garden visit." },
+        { day: "Day 4", title: "Houseboat Experience", description: "Thekkady to Alleppey, check-in to houseboat." },
+        { day: "Day 5", title: "Backwaters Cruise", description: "Houseboat cruise, sunset on the backwaters." },
+        { day: "Day 6", title: "Beach Relaxation", description: "Drive to Marari Beach, relax and enjoy coastal charm." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Romantic stays", "Candlelight dinners", "Meals", "Transfers", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "spiritual-retreat",
+      name: "Spiritual Retreat in Kerala",
+      duration: "07 Nights / 08 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Year Round",
+      price: 24999,
+      originalPrice: 28999,
+      discount: "14% Off",
+      rating: 4.8,
+      reviews: 100,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_2_yf2hsn.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_3_snxhvj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg"
+      ],
+      description: "A spiritual journey through Kerala's sacred sites and serene landscapes.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to hotel and acclimatization",
+        "Day 2: Kochi Local Sightseeing - Fort Kochi, Mattancherry Palace, Chinese fishing nets",
+        "Day 3: Kochi to Munnar - Visit waterfalls en route",
+        "Day 4: Munnar Sightseeing - Tea Gardens, Eravikulam National Park",
+        "Day 5: Munnar to Thekkady - Periyar Wildlife Sanctuary visit",
+        "Day 6: Thekkady to Alleppey - Houseboat stay in backwaters",
+        "Day 7: Alleppey to Kovalam - Leisure at beach",
+        "Day 8: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to hotel and acclimatization." },
+        { day: "Day 2", title: "Kochi Local Sightseeing", description: "Fort Kochi, Mattancherry Palace, Chinese fishing nets." },
+        { day: "Day 3", title: "Kochi to Munnar", description: "Visit waterfalls en route." },
+        { day: "Day 4", title: "Munnar Sightseeing", description: "Tea Gardens, Eravikulam National Park." },
+        { day: "Day 5", title: "Munnar to Thekkady", description: "Periyar Wildlife Sanctuary visit." },
+        { day: "Day 6", title: "Thekkady to Alleppey", description: "Houseboat stay in backwaters." },
+        { day: "Day 7", title: "Alleppey to Kovalam", description: "Leisure at beach." },
+        { day: "Day 8", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "hidden-villages",
+      name: "Hidden Villages of Kerala Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Kumbalangi, Kumarakom, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Kumbalangi", "Kumarakom", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Sep - May",
+      price: 25999,
+      originalPrice: 29999,
+      discount: "13% Off",
+      rating: 4.7,
+      reviews: 75,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/ambalapuzha-2_utnlzm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+      ],
+      description: "Explore the authentic village life and hidden gems of Kerala.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Acclimatization and local markets",
+        "Day 2: Kochi Sightseeing - Fort Kochi, Mattancherry Palace, Jewish Synagogue",
+        "Day 3: Kochi to Kumbalangi - Explore traditional village life",
+        "Day 4: Kumbalangi to Kumarakom - Enjoy backwater serenity",
+        "Day 5: Kumarakom to Alleppey - Houseboat cruise through villages",
+        "Day 6: Alleppey to Kovalam - En route visit temples and spice plantations",
+        "Day 7: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Acclimatization and local markets." },
+        { day: "Day 2", title: "Kochi Sightseeing", description: "Fort Kochi, Mattancherry Palace, Jewish Synagogue." },
+        { day: "Day 3", title: "Kochi to Kumbalangi", description: "Explore traditional village life." },
+        { day: "Day 4", title: "Kumbalangi to Kumarakom", description: "Enjoy backwater serenity." },
+        { day: "Day 5", title: "Kumarakom to Alleppey", description: "Houseboat cruise through villages." },
+        { day: "Day 6", title: "Alleppey to Kovalam", description: "En route visit temples and spice plantations." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Village stays", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
       exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     }
   ];

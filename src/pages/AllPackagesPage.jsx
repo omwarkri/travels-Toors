@@ -6,394 +6,393 @@ import TourPackageCard from "../components/packages/TourPackageCard";
 // import { getAllPackages } from "../data/packagesData";
 
 const AllPackagesPage = () => {
-    const allPackages = [
-  {
-    id: "Alleppey Beach",
-    name: "Alleppey Beach",
-    duration: "04 Nights / 05 Days",
-    destination: "Alleppey, Kerala",
-    places: ["alleppey"],
-    bestSeason: "Sep - May",
-    price: 18999,
-    originalPrice: 22999,
-    discount: "17% Off",
-    rating: 4.8,
-    reviews: 67,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
-    images: [
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg"
-    ],
-    description: "Alleppey Beach is famous for its long, beautiful coastline and the historic pier that extends over 137 years into the sea. Visitors love walking on the soft white sand and enjoying breathtaking sunset views.",
-    detailedDescription: "Alleppey Beach offers a perfect blend of natural beauty and exciting activities. The beach features a historic pier extending into the sea, soft white sands, and spectacular sunset views. Enjoy thrilling water sports like motorboat rides, parasailing, and surfing. Nearby Vijaya Beach Park provides family-friendly entertainment, while local vendors offer fresh coconut water and delicious Kerala street food.",
-    highlights: ["Historic Pier", "Water Sports", "Sunset Views", "Beach Park", "Local Cuisine"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alleppey", description: "Arrive at Cochin Airport, transfer to Alleppey, check-in at beach resort." },
-      { day: "Day 2", title: "Beach Exploration", description: "Visit Alleppey Beach, historic pier, enjoy water sports and sunset views." },
-      { day: "Day 3", title: "Local Attractions", description: "Explore Vijaya Beach Park, local markets, and try street food." },
-      { day: "Day 4", title: "Backwaters Experience", description: "Optional backwater cruise or relax at beach." },
-      { day: "Day 5", title: "Departure", description: "Transfer to Cochin Airport for departure." }
-    ],
-    inclusions: ["Beach resort stay", "Daily breakfast", "AC vehicle", "Beach entry", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Water sports charges", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Backwaters",
-    name: "Backwaters",
-    duration: "03 Nights / 04 Days",
-    destination: "Alleppey, Kumarakom",
-    places: ["alleppey", "kumarakom"],
-    bestSeason: "Aug - Mar",
-    price: 16999,
-    originalPrice: 20999,
-    discount: "19% Off",
-    rating: 4.9,
-    reviews: 89,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
-    images: [
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
-      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg"
-    ],
-    description: "Kerala Backwaters are a network of rivers, lakes, and canals that flow alongside the Arabian Sea. Visitors enjoy peaceful houseboat cruises through green palm-lined waterways and traditional villages.",
-    detailedDescription: "Experience the serene beauty of Kerala's famous backwaters through peaceful houseboat cruises along palm-lined waterways. Explore traditional villages, witness rich wildlife, and admire scenic paddy fields. This journey offers perfect relaxation, excellent birdwatching opportunities, and deep immersion into Kerala's unique natural beauty and local culture.",
-    highlights: ["Houseboat Cruise", "Backwaters", "Vembanad Lake", "Traditional Food", "Sunset Views"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alleppey", description: "Check-in, evening walk at Alleppey Beach." },
-      { day: "Day 2", title: "Houseboat Cruise", description: "Full day backwater houseboat cruise with meals." },
-      { day: "Day 3", title: "Kumarakom Excursion", description: "Visit bird sanctuary and relax by Vembanad Lake." },
-      { day: "Day 4", title: "Departure", description: "Check-out and transfer to Cochin Airport." }
-    ],
-    inclusions: ["Houseboat stay", "Meals on houseboat", "AC vehicle", "All entry fees", "All taxes"],
-    exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Tea estate",
-    name: "Tea Estate Tour",
-    duration: "03 Nights / 04 Days",
-    destination: "Munnar, Thekkady",
-    places: ["munnar", "thekkady"],
-    bestSeason: "Sep - Mar",
-    price: 15999,
-    originalPrice: 19999,
-    discount: "20% Off",
-    rating: 4.7,
-    reviews: 56,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
-    images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_4_soxsj1.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476407/tea_5_xlgonr.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_6_wh8ied.jpg"],
-    description: "Explore Kerala's famous tea estates in Munnar and Thekkady with lush green hills covered with neatly trimmed tea bushes. Learn about tea processing and enjoy fresh tea tastings.",
-    detailedDescription: "Discover the enchanting world of Kerala's tea estates in Munnar and Thekkady. Walk through vast, lush green hills covered with perfectly manicured tea bushes. Visit tea factories to learn about tea processing from leaf to cup, and enjoy fresh tea tastings. The cool climate and misty mountains create a perfect setting for scenic walks and photography. Explore famous estates like Kannan Devan Hills and Kolukkumalai, combining natural beauty with rich tea cultivation history.",
-    highlights: ["Tea Plantations", "Tea Factory Tour", "Tea Tasting", "Scenic Walks", "Mountain Views"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Munnar", description: "Transfer to Munnar, check-in at plantation resort." },
-      { day: "Day 2", title: "Te Estate Exploration", description: "Visit tea plantations, factory, enjoy tea tasting session." },
-      { day: "Day 3", title: "Travel to Thekkady", description: "Transfer to Thekkady, visit spice gardens." },
-      { day: "Day 4", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Plantation resort", "Daily breakfast", "AC vehicle", "Tea factory tour", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Periyar Lake Thekkady",
-    name: "Periyar Lake Thekkady",
-    duration: "04 Nights / 05 Days",
-    destination: "Thekkady, Periyar",
-    places: ["thekkady"],
-    bestSeason: "Nov - Apr",
-    price: 17999,
-    originalPrice: 21999,
-    discount: "18% Off",
-    rating: 4.6,
-    reviews: 72,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
-    images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487814/periyar_lake_2_ie3uwh.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_4_dkm7qi.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_5_h2jvxj.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487816/periyar_lake_6_zc1hqa.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487817/periyar_lake_7_w0rwap.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487821/periyar_lake_8_xfdghv.jpg"],
-    description: "Periyar Lake in Thekkady offers serene boat cruises through rich wildlife habitats surrounded by lush Periyar National Park. Spot elephants, deer, and various bird species.",
-    detailedDescription: "Periyar Lake, located in Thekkady, is an artificial lake formed by the Mullaperiyar Dam, surrounded by the lush Periyar National Park. Enjoy serene boat cruises through rich wildlife habitats where you can spot elephants, deer, and various bird species along the lake's banks. Enhance your adventure with bamboo rafting and guided nature walks through the forest. This destination offers a perfect blend of natural beauty and wildlife exploration in Kerala's Western Ghats.",
-    highlights: ["Periyar Wildlife Sanctuary", "Boat Cruise", "Bamboo Rafting", "Nature Walks", "Spice Plantations"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Thekkady", description: "Check-in at jungle resort near Periyar Lake." },
-      { day: "Day 2", title: "Wildlife Experience", description: "Boat cruise on Periyar Lake, wildlife spotting." },
-      { day: "Day 3", title: "Adventure Day", description: "Bamboo rafting, nature walks, spice plantation visit." },
-      { day: "Day 4", title: "Leisure & Culture", description: "Relax at resort, evening cultural program." },
-      { day: "Day 5", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Jungle resort", "Boat cruise", "AC vehicle", "All entry tickets", "All taxes"],
-    exclusions: ["Flights", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "The Nehru Trophy Boat Race",
-    name: "The Nehru Trophy Boat Race",
-    duration: "03 Nights / 04 Days",
-    destination: "Alappuzha, Kerala",
-    places: ["alleppey"],
-    bestSeason: "Aug (Annual Event)",
-    price: 16999,
-    originalPrice: 20999,
-    discount: "19% Off",
-    rating: 4.5,
-    reviews: 92,
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
-  images: [
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488541/boat_race_2_wp6u5y.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488542/boat_race_3_cmenpt.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488547/boat_race_4_rgquq4.jpg"
-  ],
-    description: "Witness the thrilling Nehru Trophy Boat Race featuring massive snake boats with over 100 oarsmen rowing in perfect rhythm on Punnamada Lake.",
-    detailedDescription: "Experience the spectacular Nehru Trophy Boat Race, Kerala's most famous annual boat race held on Punnamada Lake near Alappuzha. Watch massive snake boats (chundan vallams), each manned by over 100 oarsmen rowing in perfect rhythm to traditional boat songs. Inaugurated in 1952 by India's first Prime Minister Jawaharlal Nehru, this vibrant cultural festival celebrates Kerala's heritage, unity, and sporting spirit. Join thousands of spectators for this thrilling event that showcases incredible teamwork and traditional Kerala culture.",
-    highlights: ["Snake Boat Race", "Cultural Festival", "Traditional Music", "Vibrant Atmosphere", "Local Cuisine"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Alappuzha", description: "Check-in, explore local area." },
-      { day: "Day 2", title: "Boat Race Day", description: "Full day at Nehru Trophy Boat Race event." },
-      { day: "Day 3", title: "Backwaters Relaxation", description: "Houseboat cruise or beach relaxation." },
-      { day: "Day 4", title: "Departure", description: "Transfer to airport for departure." }
-    ],
-    inclusions: ["Hotel accommodation", "Boat race tickets", "AC vehicle", "Guide services", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  },
-  {
-  id: "padmanabhaswamy-temple",
-  name: "Padmanabhaswamy Temple",
-  duration: "02 Nights / 03 Days",
-  destination: "Thiruvananthapuram, Kerala",
-  places: ["thiruvananthapuram"],
-  bestSeason: "Year Round",
-  price: 11999,
-  originalPrice: 14999,
-  discount: "20% Off",
-  rating: 4.6,
-  reviews: 28,
-  image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
-  images: [
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488071/padmanabha-swamy3_iikmub.jpg"
-  ],
-  description: "The Padmanabhaswamy Temple in Thiruvananthapuram is one of the richest and most revered temples in India, dedicated to Lord Vishnu in Anantha Shayana (reclining) posture.",
-  detailedDescription: "Located in Kerala's capital city, the Padmanabhaswamy Temple is a masterpiece of Dravidian architecture and one of the 108 Divya Desams of Lord Vishnu. The deity is enshrined in the Anantha Shayana posture, reclining on the serpent Adi Shesha. The temple is globally renowned for its immense hidden treasures, intricate stone carvings, and strict traditions. Devotees can witness the grandeur of rituals, majestic gopuram (tower), and experience divine spirituality. The annual Alpashy and Panguni festivals attract thousands of pilgrims, making it a cultural and spiritual hub.",
-  highlights: [
-    "Dravidian Architecture",
-    "Lord Vishnu in Anantha Shayana posture",
-    "Richest Temple Treasures",
-    "Grand Festivals",
-    "Spiritual Rituals"
-  ],
-  itinerary: [
-    { day: "Day 1", title: "Arrival in Thiruvananthapuram", description: "Check-in, evening darshan at the temple." },
-    { day: "Day 2", title: "Temple Exploration", description: "Attend morning rituals, explore temple architecture, visit nearby attractions like Napier Museum and Kovalam Beach." },
-    { day: "Day 3", title: "Departure", description: "Shopping for souvenirs, transfer to airport or railway station." }
-  ],
-  inclusions: ["Hotel stay", "Temple guidance", "AC vehicle", "Darshan assistance", "All taxes"],
-  exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-}
-,
-  {
-    id: "Kovalam Beach",
-    name: "Kovalam Beach",
-    duration: "03 Nights / 04 Days",
-    destination: "Kovalam, Thiruvananthapuram",
-    places: ["kovalam"],
-    bestSeason: "Sep - Mar",
-    price: 15999,
-    originalPrice: 19999,
-    discount: "20% Off",
-    rating: 4.7,
-    reviews: 48,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
-    images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-3_wsmfvc.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-4_kddjkm.jpg"],
-    description: "Kovalam Beach features three crescent-shaped beaches with sparkling sands, palm-lined shores, and clear waters perfect for swimming and water sports.",
-    detailedDescription: "Kovalam Beach is famous for its three beautiful crescent-shaped beaches: Lighthouse Beach, Hawa Beach, and Samudra Beach. Enjoy sparkling sands, palm-lined shores, and clear waters perfect for swimming, sunbathing, and exciting water sports like surfing and parasailing. Climb the iconic Vizhinjam Lighthouse for panoramic views of the Arabian Sea. Savor fresh local seafood at beach shacks and explore vibrant evening markets. Kovalam offers the perfect blend of relaxation, adventure, and cultural experiences in southern Kerala.",
-    highlights: ["Lighthouse Beach", "Hawa Beach", "Water Sports", "Ayurvedic Massage", "Local Seafood"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Kovalam", description: "Check-in at beach resort, evening beach walk." },
-      { day: "Day 2", title: "Beach Day", description: "Full day to relax, swim, and try water sports." },
-      { day: "Day 3", title: "Local Exploration", description: "Visit lighthouse, local markets, Ayurvedic center." },
-      { day: "Day 4", title: "Departure", description: "Transfer to Thiruvananthapuram airport." }
-    ],
-    inclusions: ["Beach resort", "Daily breakfast", "AC vehicle", "Lighthouse entry", "All taxes"],
-    exclusions: ["Flights", "Lunch/dinner", "Water sports", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Guruvayur Temple",
-    name: "Guruvayur Temple",
-    duration: "02 Nights / 03 Days",
-    destination: "Guruvayur, Kerala",
-    places: ["guruvayur"],
-    bestSeason: "Year Round",
-    price: 12999,
-    originalPrice: 15999,
-    discount: "19% Off",
-    rating: 4.8,
-    reviews: 34,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
-    images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_2_yf2hsn.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_3_snxhvj.jpg"],
-    description: "Guruvayur Temple is one of the most sacred Hindu temples dedicated to Lord Krishna, known for its exquisite Kerala-style architecture and spiritual significance.",
-    detailedDescription: "Guruvayur Temple is one of Kerala's most sacred Hindu temples dedicated to Lord Krishna (Guruvayurappan). The temple's idol is believed to be over 5,000 years old, originally from the ancient city of Dwarka. Renowned for its exquisite Kerala-style architecture, the temple attracts millions of devotees annually and is often called 'Bhooloka Vaikunta' - the earthly abode of Lord Vishnu. Experience the strong spiritual atmosphere, witness vibrant festivals, and participate in traditional rituals that have been preserved for centuries.",
-    highlights: ["Temple Darshan", "Traditional Architecture", "Spiritual Rituals", "Festivals", "Cultural Experience"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Guruvayur", description: "Check-in, evening temple visit." },
-      { day: "Day 2", title: "Temple Experience", description: "Morning rituals, temple darshan, explore temple complex." },
-      { day: "Day 3", title: "Departure", description: "Transfer to airport or next destination." }
-    ],
-    inclusions: ["Hotel accommodation", "Temple guidance", "AC vehicle", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  },
-  {
-    id: "Ambalapuzha Krishna Temple",
-    name: "Ambalapuzha Krishna Temple",
-    duration: "02 Nights / 03 Days",
-    destination: "Ambalapuzha, Alleppey",
-    places: ["ambalapuzha"],
-    bestSeason: "Year Round",
-    price: 11999,
-    originalPrice: 14999,
-    discount: "20% Off",
-    rating: 4.6,
-    reviews: 28,
-    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
-    images: ["https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg","https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/ambalapuzha-2_utnlzm.jpg",""],
-    description: "Ambalapuzha Krishna Temple is famous for its traditional Kerala architecture, serene ambiance, and the legendary Palpayasam sweet offering to Lord Krishna.",
-    detailedDescription: "Ambalapuzha Krishna Temple in Alappuzha district is a magnificent example of 15th-century traditional Kerala architecture. The temple is renowned for its serene ambiance and the legendary Palpayasam - a sweet milk-rice pudding offered daily to Lord Krishna. Historically significant, it served as the safe haven for Guruvayoor Temple's idol during Tipu Sultan's invasion. Admire the temple's colorful murals and experience the magical atmosphere during oil lamp-lit evenings. The temple also hosts annual festivals and boat races, adding vibrant cultural celebrations to your spiritual journey.",
-    highlights: ["Temple Architecture", "Palpayasam Offering", "Colorful Murals", "Oil Lamp Rituals", "Cultural Festivals"],
-    itinerary: [
-      { day: "Day 1", title: "Arrival in Ambalapuzha", description: "Check-in, evening temple visit." },
-      { day: "Day 2", title: "Temple Exploration", description: "Morning rituals, taste Palpayasam, explore temple art." },
-      { day: "Day 3", title: "Departure", description: "Transfer to airport or continue journey." }
-    ],
-    inclusions: ["Hotel stay", "Temple guidance", "AC vehicle", "Palpayasam tasting", "All taxes"],
-    exclusions: ["Flights", "Meals", "Personal expenses", "Travel insurance"]
-  },
-
-
-   {
-  id: "Boat Race",
-  name: "Kerala Boat Race Experience",
-  duration: "02 Nights / 03 Days",
-  destination: "Alappuzha, Kerala",
-  places: ["alappuzha"],
-  bestSeason: "August (Race Season) / Year Round",
-  price: 11999,
-  originalPrice: 14999,
-  discount: "20% Off",
-  rating: 4.6,
-  reviews: 28,
-  image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
-  images: [
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/boat_race_1_zqkzfd.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488541/boat_race_2_wp6u5y.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488542/boat_race_3_cmenpt.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488547/boat_race_4_rgquq4.jpg"
-  ],
-  description: "Experience the thrill of Kerala's famous snake boat races. Witness massive chundan vallams with 100+ oarsmen racing in perfect harmony on Punnamada Lake.",
-  detailedDescription: "Immerse yourself in Kerala's most exciting cultural spectacle - the traditional snake boat races. Watch majestic chundan vallams (snake boats), each manned by over 100 oarsmen rowing in perfect rhythm to traditional vanchipattu (boat songs). The Nehru Trophy Boat Race, held annually on Punnamada Lake in Alappuzha, is the most famous of these events. Experience the electric atmosphere as thousands of spectators cheer for their favorite teams. Beyond the races, explore the beautiful backwaters, visit historic temples, and enjoy Kerala's unique water culture. This package offers both race season excitement and year-round cultural experiences.",
-  highlights: [
-    "Snake Boat Race Viewing", 
-    "Traditional Boat Songs", 
-    "Backwater Cruise", 
-    "Cultural Performances", 
-    "Local Cuisine"
-  ],
-  itinerary: [
-    { 
-      day: "Day 1", 
-      title: "Arrival in Alappuzha", 
-      description: "Check into your hotel, orientation about boat race culture, evening backwater cruise." 
+const allPackages = [
+    {
+      id: "essence-of-kerala",
+      name: "Essence of Kerala Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey"],
+      bestSeason: "Sep - May",
+      price: 22999,
+      originalPrice: 26999,
+      discount: "15% Off",
+      rating: 4.7,
+      reviews: 120,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Alleppey_2_bmbow2.jpg"
+      ],
+      description: "Experience the essence of Kerala through its culture, backwaters, and hill stations.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to hotel and leisure",
+        "Day 2: Kochi Sightseeing - Fort Kochi, Chinese Fishing Nets, Jew Town",
+        "Day 3: Drive to Munnar - En route visit waterfalls",
+        "Day 4: Munnar Sightseeing - Tea Museum, Mattupetty Dam, Echo Point",
+        "Day 5: Proceed to Thekkady - Spice plantation visit and cultural show",
+        "Day 6: Houseboat cruise in Alleppey - Traditional Kerala meals onboard",
+        "Day 7: Departure from Kochi - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to hotel and leisure." },
+        { day: "Day 2", title: "Kochi Sightseeing", description: "Fort Kochi, Chinese Fishing Nets, Jew Town." },
+        { day: "Day 3", title: "Drive to Munnar", description: "En route visit waterfalls." },
+        { day: "Day 4", title: "Munnar Sightseeing", description: "Tea Museum, Mattupetty Dam, Echo Point." },
+        { day: "Day 5", title: "Proceed to Thekkady", description: "Spice plantation visit and cultural show." },
+        { day: "Day 6", title: "Houseboat cruise in Alleppey", description: "Traditional Kerala meals onboard." },
+        { day: "Day 7", title: "Departure from Kochi", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     },
-    { 
-      day: "Day 2", 
-      title: "Boat Race Experience", 
-      description: "Full day at the boat race event, witness various race categories, enjoy cultural programs and local food." 
+    {
+      id: "backwaters-and-beaches",
+      name: "Backwaters & Beaches of Kerala",
+      duration: "07 Nights / 08 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Sep - May",
+      price: 25999,
+      originalPrice: 29999,
+      discount: "13% Off",
+      rating: 4.8,
+      reviews: 150,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_3_xnhewv.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg"
+      ],
+      description: "A perfect blend of Kerala's backwaters, beaches, and hill stations.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to Munnar",
+        "Day 2: Munnar Sightseeing - Tea plantations, Eravikulam National Park",
+        "Day 3: Drive to Thekkady - Boat ride in Periyar Wildlife Sanctuary",
+        "Day 4: Spice Plantation Tour - Cultural program in Thekkady",
+        "Day 5: Houseboat Cruise in Alleppey - Enjoy traditional Kerala meals",
+        "Day 6: Visit Kovalam - Relax at the beach",
+        "Day 7: Explore Trivandrum - Visit Padmanabhaswamy Temple and Museum",
+        "Day 8: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar." },
+        { day: "Day 2", title: "Munnar Sightseeing", description: "Tea plantations, Eravikulam National Park." },
+        { day: "Day 3", title: "Drive to Thekkady", description: "Boat ride in Periyar Wildlife Sanctuary." },
+        { day: "Day 4", title: "Spice Plantation Tour", description: "Cultural program in Thekkady." },
+        { day: "Day 5", title: "Houseboat Cruise in Alleppey", description: "Enjoy traditional Kerala meals." },
+        { day: "Day 6", title: "Visit Kovalam", description: "Relax at the beach." },
+        { day: "Day 7", title: "Explore Trivandrum", description: "Visit Padmanabhaswamy Temple and Museum." },
+        { day: "Day 8", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Houseboat Stay", "Meals", "Transfers", "Sightseeing"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     },
-    { 
-      day: "Day 3", 
-      title: "Departure", 
-      description: "Visit local boat building yard, learn about traditional boat making, transfer to airport." 
+    {
+      id: "cultural-trails",
+      name: "Cultural Trails of Kerala",
+      duration: "07 Nights / 08 Days",
+      destination: "Kochi, Munnar, Thekkady, Kumarakom, Alleppey",
+      places: ["Kochi", "Munnar", "Thekkady", "Kumarakom", "Alleppey"],
+      bestSeason: "Sep - May",
+      price: 24999,
+      originalPrice: 28999,
+      discount: "14% Off",
+      rating: 4.9,
+      reviews: 180,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488071/padmanabha-swamy3_iikmub.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg"
+      ],
+      description: "Discover the cultural richness of Kerala with a visit to heritage sites and backwaters.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to hotel and relax",
+        "Day 2: Explore Kochi - Visit Fort Kochi, Mattancherry Palace, Kathakali show",
+        "Day 3: Drive to Munnar - En route visit Cheeyappara Waterfalls",
+        "Day 4: Munnar Sightseeing - Tea estates, Blossom Park, Top Station",
+        "Day 5: Proceed to Thekkady - Wildlife boat safari",
+        "Day 6: Visit Kumarakom - Explore backwaters and bird sanctuary",
+        "Day 7: Houseboat in Kumarakom - Relax on the houseboat",
+        "Day 8: Departure - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to hotel and relax." },
+        { day: "Day 2", title: "Explore Kochi", description: "Visit Fort Kochi, Mattancherry Palace, Kathakali show." },
+        { day: "Day 3", title: "Drive to Munnar", description: "En route visit Cheeyappara Waterfalls." },
+        { day: "Day 4", title: "Munnar Sightseeing", description: "Tea estates, Blossom Park, Top Station." },
+        { day: "Day 5", title: "Proceed to Thekkady", description: "Wildlife boat safari." },
+        { day: "Day 6", title: "Visit Kumarakom", description: "Explore backwaters and bird sanctuary." },
+        { day: "Day 7", title: "Houseboat in Kumarakom", description: "Relax on the houseboat." },
+        { day: "Day 8", title: "Departure", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Houseboat Stay", "Meals", "Transfers", "Sightseeing", "Wildlife Safari"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "family-getaway",
+      name: "Family Getaway to Kerala",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Sep - May",
+      price: 23999,
+      originalPrice: 27999,
+      discount: "14% Off",
+      rating: 4.8,
+      reviews: 95,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-3_wsmfvc.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488361/kovalam-4_kddjkm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+      ],
+      description: "Perfect family vacation with kid-friendly activities and comfortable stays.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to Munnar",
+        "Day 2: Munnar Sightseeing - Tea Museum, Rose Garden, Mattupetty Dam",
+        "Day 3: Drive to Thekkady - Enjoy boating in Periyar Lake",
+        "Day 4: Transfer to Alleppey - Overnight stay in houseboat",
+        "Day 5: Houseboat to Kovalam - Relax at beach",
+        "Day 6: Kovalam Exploration - Visit Lighthouse Beach and explore Trivandrum city",
+        "Day 7: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar." },
+        { day: "Day 2", title: "Munnar Sightseeing", description: "Tea Museum, Rose Garden, Mattupetty Dam." },
+        { day: "Day 3", title: "Drive to Thekkady", description: "Enjoy boating in Periyar Lake." },
+        { day: "Day 4", title: "Transfer to Alleppey", description: "Overnight stay in houseboat." },
+        { day: "Day 5", title: "Houseboat to Kovalam", description: "Relax at beach." },
+        { day: "Day 6", title: "Kovalam Exploration", description: "Visit Lighthouse Beach and explore Trivandrum city." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Family-friendly hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "nature-photography",
+      name: "Nature & Photography Tour of Kerala",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Marari Beach",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Marari Beach"],
+      bestSeason: "Sep - May",
+      price: 26999,
+      originalPrice: 30999,
+      discount: "13% Off",
+      rating: 4.9,
+      reviews: 110,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_4_soxsj1.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476407/tea_5_xlgonr.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476406/tea_6_wh8ied.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg"
+      ],
+      description: "Capture the breathtaking beauty of Kerala's landscapes and wildlife.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to Munnar",
+        "Day 2: Munnar Photography - Tea gardens, Echo Point, photo sessions",
+        "Day 3: Sunrise & Wildlife - Munnar sunrise view, drive to Thekkady for wildlife photography",
+        "Day 4: Cultural Photography - Spice plantation visit and traditional Kerala martial arts show",
+        "Day 5: Backwaters Sunset - Drive to Alleppey, board houseboat, enjoy sunset photography",
+        "Day 6: Beach Photography - Alleppey to Marari Beach, beach photography and leisure time",
+        "Day 7: Departure - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar." },
+        { day: "Day 2", title: "Munnar Photography", description: "Tea gardens, Echo Point, photo sessions." },
+        { day: "Day 3", title: "Sunrise & Wildlife", description: "Munnar sunrise view, drive to Thekkady for wildlife photography." },
+        { day: "Day 4", title: "Cultural Photography", description: "Spice plantation visit and traditional Kerala martial arts show." },
+        { day: "Day 5", title: "Backwaters Sunset", description: "Drive to Alleppey, board houseboat, enjoy sunset photography." },
+        { day: "Day 6", title: "Beach Photography", description: "Alleppey to Marari Beach, beach photography and leisure time." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Photography guidance", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Camera equipment", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "biking-tour",
+      name: "Kerala Backwaters & Hills Biking Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Athirappilly, Munnar, Thekkady, Alleppey",
+      places: ["Kochi", "Athirappilly", "Munnar", "Thekkady", "Alleppey"],
+      bestSeason: "Nov - Mar",
+      price: 28999,
+      originalPrice: 32999,
+      discount: "12% Off",
+      rating: 4.7,
+      reviews: 85,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487814/periyar_lake_2_ie3uwh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg"
+      ],
+      description: "An adventurous biking journey through Kerala's hills and backwaters.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Bike orientation and leisure ride around Fort Kochi",
+        "Day 2: Ride to Athirappilly - Explore Athirappilly Falls and surrounding forests",
+        "Day 3: Kochi to Munnar - Scenic bike ride through Western Ghats",
+        "Day 4: Munnar Exploration - Tea plantations and Eravikulam National Park",
+        "Day 5: Ride to Thekkady - Spice route trail and cultural activities",
+        "Day 6: Thekkady to Alleppey - Explore backwaters and relax",
+        "Day 7: Departure - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Bike orientation and leisure ride around Fort Kochi." },
+        { day: "Day 2", title: "Ride to Athirappilly", description: "Explore Athirappilly Falls and surrounding forests." },
+        { day: "Day 3", title: "Kochi to Munnar", description: "Scenic bike ride through Western Ghats." },
+        { day: "Day 4", title: "Munnar Exploration", description: "Tea plantations and Eravikulam National Park." },
+        { day: "Day 5", title: "Ride to Thekkady", description: "Spice route trail and cultural activities." },
+        { day: "Day 6", title: "Thekkady to Alleppey", description: "Explore backwaters and relax." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Bike rental", "Safety gear", "Meals", "Transfers", "Sightseeing"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "romantic-hills-backwaters",
+      name: "Romantic Hills & Backwaters Kerala Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Marari Beach",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Marari Beach"],
+      bestSeason: "Sep - May",
+      price: 27999,
+      originalPrice: 31999,
+      discount: "12% Off",
+      rating: 4.9,
+      reviews: 130,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg"
+      ],
+      description: "A romantic getaway through Kerala's picturesque hills and serene backwaters.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to Munnar and check-in",
+        "Day 2: Munnar Romance - Tea estates, Mattupetty Dam, Echo Point",
+        "Day 3: Scenic Ride to Thekkady - Enjoy scenic ride and spice garden visit",
+        "Day 4: Houseboat Experience - Thekkady to Alleppey, check-in to houseboat",
+        "Day 5: Backwaters Cruise - Houseboat cruise, sunset on the backwaters",
+        "Day 6: Beach Relaxation - Drive to Marari Beach, relax and enjoy coastal charm",
+        "Day 7: Departure - Transfer to Kochi for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to Munnar and check-in." },
+        { day: "Day 2", title: "Munnar Romance", description: "Tea estates, Mattupetty Dam, Echo Point." },
+        { day: "Day 3", title: "Scenic Ride to Thekkady", description: "Enjoy scenic ride and spice garden visit." },
+        { day: "Day 4", title: "Houseboat Experience", description: "Thekkady to Alleppey, check-in to houseboat." },
+        { day: "Day 5", title: "Backwaters Cruise", description: "Houseboat cruise, sunset on the backwaters." },
+        { day: "Day 6", title: "Beach Relaxation", description: "Drive to Marari Beach, relax and enjoy coastal charm." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Kochi for departure." }
+      ],
+      inclusions: ["Romantic stays", "Candlelight dinners", "Meals", "Transfers", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "spiritual-retreat",
+      name: "Spiritual Retreat in Kerala",
+      duration: "07 Nights / 08 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Year Round",
+      price: 24999,
+      originalPrice: 28999,
+      discount: "14% Off",
+      rating: 4.8,
+      reviews: 100,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_2_yf2hsn.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489126/Guruvayoor_Temple_3_snxhvj.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg"
+      ],
+      description: "A spiritual journey through Kerala's sacred sites and serene landscapes.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Transfer to hotel and acclimatization",
+        "Day 2: Kochi Local Sightseeing - Fort Kochi, Mattancherry Palace, Chinese fishing nets",
+        "Day 3: Kochi to Munnar - Visit waterfalls en route",
+        "Day 4: Munnar Sightseeing - Tea Gardens, Eravikulam National Park",
+        "Day 5: Munnar to Thekkady - Periyar Wildlife Sanctuary visit",
+        "Day 6: Thekkady to Alleppey - Houseboat stay in backwaters",
+        "Day 7: Alleppey to Kovalam - Leisure at beach",
+        "Day 8: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Transfer to hotel and acclimatization." },
+        { day: "Day 2", title: "Kochi Local Sightseeing", description: "Fort Kochi, Mattancherry Palace, Chinese fishing nets." },
+        { day: "Day 3", title: "Kochi to Munnar", description: "Visit waterfalls en route." },
+        { day: "Day 4", title: "Munnar Sightseeing", description: "Tea Gardens, Eravikulam National Park." },
+        { day: "Day 5", title: "Munnar to Thekkady", description: "Periyar Wildlife Sanctuary visit." },
+        { day: "Day 6", title: "Thekkady to Alleppey", description: "Houseboat stay in backwaters." },
+        { day: "Day 7", title: "Alleppey to Kovalam", description: "Leisure at beach." },
+        { day: "Day 8", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "hidden-villages",
+      name: "Hidden Villages of Kerala Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Kumbalangi, Kumarakom, Alleppey, Kovalam, Trivandrum",
+      places: ["Kochi", "Kumbalangi", "Kumarakom", "Alleppey", "Kovalam", "Trivandrum"],
+      bestSeason: "Sep - May",
+      price: 25999,
+      originalPrice: 29999,
+      discount: "13% Off",
+      rating: 4.7,
+      reviews: 75,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488539/ambalapuzha-1_nsjzfe.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488540/ambalapuzha-2_utnlzm.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+      ],
+      description: "Explore the authentic village life and hidden gems of Kerala.",
+      highlights: [
+        "Day 1: Arrival in Kochi - Acclimatization and local markets",
+        "Day 2: Kochi Sightseeing - Fort Kochi, Mattancherry Palace, Jewish Synagogue",
+        "Day 3: Kochi to Kumbalangi - Explore traditional village life",
+        "Day 4: Kumbalangi to Kumarakom - Enjoy backwater serenity",
+        "Day 5: Kumarakom to Alleppey - Houseboat cruise through villages",
+        "Day 6: Alleppey to Kovalam - En route visit temples and spice plantations",
+        "Day 7: Departure - Transfer to Trivandrum for departure"
+      ],
+      itinerary: [
+        { day: "Day 1", title: "Arrival in Kochi", description: "Acclimatization and local markets." },
+        { day: "Day 2", title: "Kochi Sightseeing", description: "Fort Kochi, Mattancherry Palace, Jewish Synagogue." },
+        { day: "Day 3", title: "Kochi to Kumbalangi", description: "Explore traditional village life." },
+        { day: "Day 4", title: "Kumbalangi to Kumarakom", description: "Enjoy backwater serenity." },
+        { day: "Day 5", title: "Kumarakom to Alleppey", description: "Houseboat cruise through villages." },
+        { day: "Day 6", title: "Alleppey to Kovalam", description: "En route visit temples and spice plantations." },
+        { day: "Day 7", title: "Departure", description: "Transfer to Trivandrum for departure." }
+      ],
+      inclusions: ["Village stays", "Meals", "Transfers", "Sightseeing", "Houseboat Stay"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     }
-  ],
-  inclusions: [
-    "Hotel accommodation", 
-    "Boat race tickets", 
-    "Backwater cruise", 
-    "Cultural show", 
-    "AC vehicle", 
-    "All taxes"
-  ],
-  exclusions: [
-    "Flights", 
-    "Meals not mentioned", 
-    "Personal expenses", 
-    "Travel insurance"
-  ]
-},
-{
-  id: "Samudra Beach",
-  name: "Samudra Beach Retreat",
-  duration: "03 Nights / 04 Days",
-  destination: "Kovalam, Thiruvananthapuram",
-  places: ["kovalam"],
-  bestSeason: "Sep - Mar",
-  price: 15999,
-  originalPrice: 19999,
-  discount: "20% Off",
-  rating: 4.7,
-  reviews: 48,
-  image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
-  images: [
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
-    "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg",
-  ],
-  description: "Discover the serene beauty of Samudra Beach, the largest and most tranquil of Kovalam's three crescent bays, known for its luxury resorts and peaceful atmosphere.",
-  detailedDescription: "Experience the ultimate beach getaway at Samudra Beach, the northernmost and most exclusive of Kovalam's three famous crescent-shaped beaches. Unlike its bustling neighbors, Samudra Beach offers a more tranquil and sophisticated atmosphere, lined with luxury resorts and Ayurvedic centers. Enjoy long, peaceful walks on the golden sands, witness spectacular sunsets over the Arabian Sea, and indulge in rejuvenating Ayurvedic treatments. The beach's calm waters are perfect for swimming and leisurely dips. Explore the nearby fishing village to witness traditional fishing techniques and savor the freshest seafood. Samudra Beach provides the perfect balance of luxury, wellness, and authentic coastal experiences.",
-  highlights: [
-    "Tranquil Beach Experience",
-    "Luxury Beach Resorts", 
-    "Ayurvedic Wellness Treatments",
-    "Sunset Views",
-    "Fresh Seafood Dining"
-  ],
-  itinerary: [
-    { 
-      day: "Day 1", 
-      title: "Arrival & Beach Relaxation", 
-      description: "Check into your beachfront resort, evening stroll along Samudra Beach, witness spectacular sunset." 
-    },
-    { 
-      day: "Day 2", 
-      title: "Beach Wellness Day", 
-      description: "Morning yoga session, Ayurvedic massage treatment, leisure time at the beach, seafood dinner." 
-    },
-    { 
-      day: "Day 3", 
-      title: "Coastal Exploration", 
-      description: "Visit Vizhinjam Lighthouse for panoramic views, explore local fishing village, evening cultural show." 
-    },
-    { 
-      day: "Day 4", 
-      title: "Departure", 
-      description: "Final beach relaxation, check-out and transfer to Thiruvananthapuram airport." 
-    }
-  ],
-  inclusions: [
-    "Beachfront resort accommodation",
-    "Daily breakfast", 
-    "Ayurvedic massage session",
-    "Yoga session",
-    "AC vehicle for transfers",
-    "Lighthouse entry tickets",
-    "All taxes"
-  ],
-  exclusions: [
-    "Flights", 
-    "Lunch and dinner", 
-    "Additional spa treatments",
-    "Water sports activities", 
-    "Personal expenses", 
-    "Travel insurance"
-  ]
-}
-
   ];
+
 
 
   return (
