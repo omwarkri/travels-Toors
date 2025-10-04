@@ -26,7 +26,7 @@ const Hero = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
         >
-          <source src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759579801/WhatsApp_Video_2025-09-30_at_5.00.24_PM_ybik0i.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" type="video/mp4" />
         
         </video>
 
