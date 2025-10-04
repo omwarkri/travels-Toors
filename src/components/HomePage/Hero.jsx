@@ -96,7 +96,7 @@ const Hero = () => {
               to="/packages"
               className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 rounded-lg font-bold text-base sm:text-lg text-white hover:bg-emerald-600 shadow-lg hover:scale-105 transform border-2 border-emerald-400 text-center"
             >
-              View Tour Packagess
+              View Tour Packages
             </Link>
             <Link
               to="/contact"
