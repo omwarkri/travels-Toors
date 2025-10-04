@@ -54,7 +54,7 @@ const Hero = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
         >
-          <source src="/herobg.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759578517/herobg_saoawu.mp4" type="video/mp4" />
           <img
             src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=80"
             alt="Kerala Tourism Background - Beautiful backwaters and landscapes of God's Own Country"
