@@ -48,16 +48,16 @@ const Hero = () => {
       />
 
       {/* Video Background */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
         <video
   ref={videoRef}
   autoPlay
-  muted={isMuted}
+  muted={true}
   loop
   playsInline
   preload="none" // Don’t auto-load video until user interaction
-  poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
-  className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
+  poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759593120/Screenshot_2025-10-04_at_9.20.42_PM_xr2l9q.png"
+  className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover transition-opacity duration-700"
 >
   <source 
     src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" 
