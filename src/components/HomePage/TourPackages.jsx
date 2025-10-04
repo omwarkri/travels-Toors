@@ -430,29 +430,29 @@ const TourPackages = ({ id = "packages" }) => {
       </div>
 
       {/* Trust Indicators */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-xl">⭐</span>
-          </div>
-          <h3 className="text-lg font-semibold mb-2">4.8/5 Rating</h3>
-          <p className="text-gray-600 text-sm">Rated excellent by 500+ travelers</p>
-        </div>
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-xl">🏆</span>
-          </div>
-          <h3 className="text-lg font-semibold mb-2">Best Price Guarantee</h3>
-          <p className="text-gray-600 text-sm">Get the best value for your money</p>
-        </div>
-        <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-xl">🔒</span>
-          </div>
-          <h3 className="text-lg font-semibold mb-2">24/7 Support</h3>
-          <p className="text-gray-600 text-sm">Dedicated travel support throughout</p>
-        </div>
-      </div>
+      <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
+  <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-100">
+    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
+      <span className="text-base sm:text-lg md:text-xl">⭐</span>
+    </div>
+    <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-1 sm:mb-2">4.8/5 Rating</h3>
+    <p className="text-gray-600 text-xs sm:text-sm">Rated excellent by 500+ travelers</p>
+  </div>
+  <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-100">
+    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
+      <span className="text-base sm:text-lg md:text-xl">🏆</span>
+    </div>
+    <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-1 sm:mb-2">Best Price Guarantee</h3>
+    <p className="text-gray-600 text-xs sm:text-sm">Get the best value for your money</p>
+  </div>
+  <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-md sm:shadow-lg border border-gray-100">
+    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
+      <span className="text-base sm:text-lg md:text-xl">🔒</span>
+    </div>
+    <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-1 sm:mb-2">24/7 Support</h3>
+    <p className="text-gray-600 text-xs sm:text-sm">Dedicated travel support throughout</p>
+  </div>
+</div>
     </section>
   );
 };
