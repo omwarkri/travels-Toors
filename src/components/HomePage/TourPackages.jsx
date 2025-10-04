@@ -397,7 +397,7 @@ const TourPackages = ({ id = "packages" }) => {
   const packages = allPackages.slice(0, 6); // Get first 6 packages for the homepage
 
   return (
-    <section id={id} className="max-w-7xl mx-auto px-6 py-8 md:py-12">
+    <section id={id} className="max-w-7xl mx-auto px-6 py-8 md:py-32">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🏆 Omkar Exclusive Packages

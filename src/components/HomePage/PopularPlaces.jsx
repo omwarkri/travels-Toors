@@ -108,12 +108,12 @@ const PopularPlaces = ({ id = "places" }) => {
   const popularPlaces = places.slice(0, 6); // Show first 6 places as popular
 
   return (
-    <section id="places" className="max-w-7xl mx-auto  py-8">
+    <section id="places" className="max-w-7xl mx-auto  py-8 md:py-32">
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           🌟 Top Destinations
         </div>
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">Most Popular Places to Visit</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">Most Popular Places to Visit</h2>
         <p className="text-gray-500 text-lg max-w-3xl mx-auto">
           Kerala is a rare place adorned with beautiful landscapes, hill stations, water bodies and everything a traveler would love to explore.
         </p>
