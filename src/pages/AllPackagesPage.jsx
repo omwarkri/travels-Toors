@@ -436,7 +436,7 @@ const AllPackagesPage = () => {
         </div>
 
         {/* Package Filters */}
-        <div className="flex flex-wrap gap-4 mb-12 justify-center">
+        {/* <div className="flex flex-wrap gap-4 mb-12 justify-center">
           <button className="px-6 py-3 bg-emerald-500 text-white rounded-full font-medium hover:bg-emerald-600 transition duration-300 shadow-md">
             All Packages
           </button>
@@ -455,7 +455,7 @@ const AllPackagesPage = () => {
           <button className="px-6 py-3 bg-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-300 transition duration-300">
             Cultural
           </button>
-        </div>
+        </div> */}
 
         {/* Package Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
