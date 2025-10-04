@@ -4,14 +4,14 @@ import SEOHead from "../common/SEOHead";
 
 const Hero = () => {
   const videoRef = useRef(null);
-  const [isMuted, setIsMuted] = useState(true); // Start with muted for better UX
+  const [isMuted, setIsMuted] = useState(true);
 
-  // Auto unmute on first user interaction
+  // Auto unmute on first interaction
   useEffect(() => {
     const handleFirstInteraction = () => {
       if (videoRef.current && isMuted) {
         videoRef.current.muted = false;
-        videoRef.current.play().catch(() => {}); // Safe fallback
+        videoRef.current.play().catch(() => {});
         setIsMuted(false);
       }
       window.removeEventListener("click", handleFirstInteraction);
@@ -30,7 +30,6 @@ const Hero = () => {
     };
   }, [isMuted]);
 
-  // Manual toggle
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;
@@ -47,29 +46,29 @@ const Hero = () => {
         keywords="Kerala tour packages, Kerala tourism, Munnar tour, Alleppey houseboat, Kerala travel agency"
       />
 
-      {/* Video Background */}
+      {/* 🔥 Video starts instantly - no fade, no preload delay */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
         <video
-  ref={videoRef}
-  autoPlay
-  muted={true}
-  loop
-  playsInline
-  preload="none" // Don’t auto-load video until user interaction
-  poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759593120/Screenshot_2025-10-04_at_9.20.42_PM_xr2l9q.png"
-  className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
->
-  <source 
-    src="https://res.cloudinary.com/dl2gcscfa/video/upload/v1759580524/herobg_2_xg5h2h.mp4" 
-    type="video/mp4" 
-  />
-</video>
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto" // Load video immediately
+          poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759593120/Screenshot_2025-10-04_at_9.20.42_PM_xr2l9q.png"
+          className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
+          style={{ transition: "none" }} // Disable any CSS transitions
+        >
+          <source
+            src="https://res.cloudinary.com/ddw1upvx3/video/upload/v1759594216/This_is_Kerala_-_God_s_Own_Country___Drone_shots___4K___online-video-cutter.com_b1ensd.mp4"
+            type="video/mp4"
+          />
+        </video>
 
-
-        {/* Toggle Button */}
+        {/* Mute / Unmute Button */}
         <button
           onClick={toggleMute}
-          className="absolute bottom-6 right-6 z-20 bg-black/50 text-white px-3 py-2 rounded-full shadow-md hover:bg-black/70 transition backdrop-blur-sm"
+          className="absolute bottom-6 right-6 z-20 bg-black/50 text-white px-3 py-2 rounded-full shadow-md hover:bg-black/70 backdrop-blur-sm"
           aria-label={isMuted ? "Unmute Video" : "Mute Video"}
         >
           {isMuted ? "🔇" : "🔊"}
@@ -79,25 +78,23 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-24 text-center">
-          {/* Main Heading - Kerala Logo */}
+          {/* Logo */}
           <div className="flex justify-center mb-4 sm:mb-6">
-            <img 
-              className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md border-b-[2px]" 
-              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578606/kerla-logo-2_hr5ydu.png" 
-              alt="Kerala - God's Own Country" 
+            <img
+              className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md border-b-[2px]"
+              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578606/kerla-logo-2_hr5ydu.png"
+              alt="Kerala - God's Own Country"
             />
           </div>
 
-          {/* Description */}
           <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
             Experience God's Own Country with Experts
           </h5>
-          
-          {/* Buttons */}
+
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <Link
               to="/packages"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 rounded-lg font-bold text-base sm:text-lg text-white hover:bg-emerald-600 transition duration-300 shadow-lg hover:scale-105 transform border-2 border-emerald-400 text-center"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 rounded-lg font-bold text-base sm:text-lg text-white hover:bg-emerald-600 shadow-lg hover:scale-105 transform border-2 border-emerald-400 text-center"
             >
               View Tour Packages
             </Link>
@@ -109,7 +106,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Stats */}
           <div className="mt-4 sm:mt-8 flex flex-wrap justify-center gap-1 sm:gap-4 md:gap-6 text-sm sm:text-base text-white font-medium px-2">
             <div className="flex items-center bg-white/20 px-1 py-1 rounded-full backdrop-blur-sm">
               <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
