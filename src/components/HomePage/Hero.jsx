@@ -56,7 +56,7 @@ const Hero = () => {
   loop
   playsInline
   preload="none" // Don’t auto-load video until user interaction
-  // poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
+  poster="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg"
   className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
 >
   <source 
