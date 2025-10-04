@@ -131,7 +131,7 @@ const AboutUsSection = () => {
         </div>
 
         {/* Why Book Online */}
-        <div className="py-8 md:py-12">
+        <div className="py-4 md:py-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 md:mb-10">
             Why Book <span className="text-emerald-600">Online</span> With Us
           </h2>
