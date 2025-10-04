@@ -84,7 +84,7 @@ const Hero = () => {
           <div className="flex justify-center mb-4 sm:mb-6">
             <img 
               className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md border-b-[2px]" 
-              src="/kerla-logo-2.png" 
+              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578606/kerla-logo-2_hr5ydu.png" 
               alt="Kerala - God's Own Country" 
             />
           </div>

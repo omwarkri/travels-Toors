@@ -24,7 +24,7 @@ const Navigation = () => {
           >
             <div>
               <img 
-                src="/logo.jpeg" 
+                src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578583/logo_dps0pd.jpg" 
                 className="w-32 sm:w-40 md:w-[200px] max-w-full" 
                 alt="Logo" 
               />
