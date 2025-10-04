@@ -6,35 +6,7 @@ const Hero = () => {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
 
-  // Auto unmute on first user interaction
-  useEffect(() => {
-    const handleFirstInteraction = () => {
-      if (videoRef.current && isMuted) {
-        videoRef.current.muted = false;
-        videoRef.current.play().catch(() => {}); // Safe fallback
-        setIsMuted(true);
-      }
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("scroll", handleFirstInteraction);
-    };
-
-    window.addEventListener("click", handleFirstInteraction);
-    window.addEventListener("scroll", handleFirstInteraction);
-
-    return () => {
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("scroll", handleFirstInteraction);
-    };
-  }, [isMuted]);
-
-  // Manual toggle
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-      videoRef.current.play().catch(() => {});
-    }
-  };
+ 
 
   return (
     <header className="relative h-screen overflow-hidden">
@@ -63,13 +35,13 @@ const Hero = () => {
         </video>
 
         {/* Toggle Button */}
-        <button
+        {/* <button
           onClick={toggleMute}
           className="absolute bottom-6 right-6 z-20 bg-black/50 text-white px-3 py-2 rounded-full shadow-md hover:bg-black/70 transition"
           aria-label={isMuted ? "Unmute Video" : "Mute Video"}
         >
           {isMuted ? "🔇" : "🔊"}
-        </button>
+        </button> */}
       </div>
 
       {/* Content */}
