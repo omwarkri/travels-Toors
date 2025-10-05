@@ -20,7 +20,7 @@ const FAQ = ({ id = "faq" }) => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id={id} className="max-w-4xl mx-auto px-6 py-16">
+    <section id={id} className="max-w-6xl mx-auto px-6 py-6 md:py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">
           Frequently Asked Questions

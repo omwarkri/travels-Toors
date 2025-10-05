@@ -35,7 +35,7 @@ const KeralaExperiences = ({ id = "experiences" }) => {
   ];
 
   return (
-    <section id={id} className="max-w-6xl mx-auto px-6 py-16">
+    <section id={id} className="max-w-6xl mx-auto px-6 py-6 md:py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">
           Kerala Experiences
@@ -61,7 +61,7 @@ const KeralaExperiences = ({ id = "experiences" }) => {
               </h3>
               <a
                 href={experiences[0].link}
-                className="inline-flex bg-red-200 text-white px-4 py-1 rounded-full text-sm border border-white hover:bg-white hover:text-black transition w-fit"
+                className="inline-flex text-white px-4 py-1 rounded-full text-sm border border-white hover:bg-white hover:text-black transition w-fit"
               >
                 Explore →
               </a>
