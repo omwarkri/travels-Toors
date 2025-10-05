@@ -3,9 +3,12 @@ import Hero from "../components/HomePage/Hero";
 import TourPackages from "../components/HomePage/TourPackages";
 import PopularPlaces from "../components/HomePage/PopularPlaces";
 // import WhyChooseUs from "../components/HomePage/WhyChooseUs";
+import KeralaExperiences from "../components/HomePage/KerlaExperiances";
 import FAQ from "../components/HomePage/FAQ";
+
 import AboutUsSection from "../components/common/AboutUsSection";
 import ContactSection from "./ContactPage";
+
 // import Footer from "../components/common/Footer";
 
 const HomePage = () => {
@@ -15,6 +18,7 @@ const HomePage = () => {
       <main>
         <TourPackages />
         <PopularPlaces />
+        <KeralaExperiences/>
         {/* <WhyChooseUs /> */}
         <FAQ />
         <AboutUsSection/>
