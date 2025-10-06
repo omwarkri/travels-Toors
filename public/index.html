@@ -25,6 +25,31 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    import { AwsRum, AwsRumConfig } from 'aws-rum-web';
+
+try {
+  const config: AwsRumConfig = {
+    sessionSampleRate: 1 ,
+    endpoint: "https://dataplane.rum.eu-north-1.amazonaws.com" ,
+    telemetries: ["performance","errors","http"] ,
+    allowCookies: true ,
+    enableXRay: false ,
+    signing: true // If you have a public resource policy and wish to send unsigned requests please set this to false
+  };
+
+  const APPLICATION_ID: string = '7aa26bf4-f193-4b8f-8856-96a84ddc65ce';
+  const APPLICATION_VERSION: string = '1.0.0';
+  const APPLICATION_REGION: string = 'eu-north-1';
+
+  const awsRum: AwsRum = new AwsRum(
+    APPLICATION_ID,
+    APPLICATION_VERSION,
+    APPLICATION_REGION,
+    config
+  );
+} catch (error) {
+  // Ignore errors thrown during CloudWatch RUM web client initialization
+}
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
