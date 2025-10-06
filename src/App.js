@@ -39,7 +39,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen font-sans text-gray-800 bg-white">
+      <div className="min-h-screen font-sans text-gray-800 bg-white pt-20">
         <ScrollToTop /> {/* Add this line */}
         <Navigation />
         <Routes>
