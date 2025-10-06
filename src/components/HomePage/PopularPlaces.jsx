@@ -307,36 +307,36 @@ const PopularPlaces = ({ id = "places" }) => {
       </div>
 
       {/* Destination Categories */}
-      <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-6 border border-emerald-100">
-          <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span className="text-white text-lg">🏔️</span>
-          </div>
-          <h3 className="font-semibold text-gray-800 mb-2">Hill Stations</h3>
-          <p className="text-sm text-gray-600">Munnar, Wayanad</p>
-        </div>
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
-          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span className="text-white text-lg">🚤</span>
-          </div>
-          <h3 className="font-semibold text-gray-800 mb-2">Backwaters</h3>
-          <p className="text-sm text-gray-600">Alleppey, Kumarakom</p>
-        </div>
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100">
-          <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span className="text-white text-lg">🏖️</span>
-          </div>
-          <h3 className="font-semibold text-gray-800 mb-2">Beaches</h3>
-          <p className="text-sm text-gray-600">Kovalam, Varkala</p>
-        </div>
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
-          <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
-            <span className="text-white text-lg">🕌</span>
-          </div>
-          <h3 className="font-semibold text-gray-800 mb-2">Culture</h3>
-          <p className="text-sm text-gray-600">Kochi, Thrissur</p>
-        </div>
-      </div>
+     <div className="mt-8 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 text-center">
+  <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-lg md:rounded-xl p-3 md:p-6 border border-emerald-100">
+    <div className="w-8 h-8 md:w-12 md:h-12 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
+      <span className="text-white text-sm md:text-lg">🏔️</span>
+    </div>
+    <h3 className="font-semibold text-gray-800 text-sm md:text-base mb-1 md:mb-2">Hill Stations</h3>
+    <p className="text-xs md:text-sm text-gray-600">Munnar, Wayanad</p>
+  </div>
+  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg md:rounded-xl p-3 md:p-6 border border-blue-100">
+    <div className="w-8 h-8 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
+      <span className="text-white text-sm md:text-lg">🚤</span>
+    </div>
+    <h3 className="font-semibold text-gray-800 text-sm md:text-base mb-1 md:mb-2">Backwaters</h3>
+    <p className="text-xs md:text-sm text-gray-600">Alleppey, Kumarakom</p>
+  </div>
+  <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg md:rounded-xl p-3 md:p-6 border border-amber-100">
+    <div className="w-8 h-8 md:w-12 md:h-12 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
+      <span className="text-white text-sm md:text-lg">🏖️</span>
+    </div>
+    <h3 className="font-semibold text-gray-800 text-sm md:text-base mb-1 md:mb-2">Beaches</h3>
+    <p className="text-xs md:text-sm text-gray-600">Kovalam, Varkala</p>
+  </div>
+  <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg md:rounded-xl p-3 md:p-6 border border-purple-100">
+    <div className="w-8 h-8 md:w-12 md:h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-3">
+      <span className="text-white text-sm md:text-lg">🕌</span>
+    </div>
+    <h3 className="font-semibold text-gray-800 text-sm md:text-base mb-1 md:mb-2">Culture</h3>
+    <p className="text-xs md:text-sm text-gray-600">Kochi, Thrissur</p>
+  </div>
+</div>
     </section>
   );
 };

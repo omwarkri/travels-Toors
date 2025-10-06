@@ -8,6 +8,8 @@ import AllPlacesPage from "./pages/AllPlacesPage";
 import SinglePlacePage from "./pages/SinglePlacePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
+import KeralaExperiences from "./components/HomePage/KerlaExperiances";
+import ExperienceDetailPage from "./pages/ExperienceDetailPage";
 // import AdminPage from "./pages/AdminPage";
 // ScrollToTop component that will scroll to top on route change
 const ScrollToTop = () => {
@@ -47,6 +49,9 @@ function App() {
           <Route path="/places" element={<AllPlacesPage />} />
           <Route path="/place/:placeId" element={<SinglePlacePage />} />
           <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/experiance" element={<KeralaExperiences />} />
+          <Route path="/experiences/:experienceId" element={<ExperienceDetailPage />} />
+
              {/* <Route path="/admin" element={<AdminPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

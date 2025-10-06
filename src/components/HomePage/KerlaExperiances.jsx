@@ -1,41 +1,54 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const KeralaExperiences = ({ id = "experiences" }) => {
+const KeralaExperiences = () => {
+  const navigate = useNavigate();
+
   const experiences = [
     {
+      id: "ayurveda",
       title: "Ayurveda",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fayurveda-1694598240_fe440a50c0f7683f980c.jpg&w=1920&q=75",
-      link: "#",
+      description: "Traditional healing and wellness treatments"
     },
     {
+      id: "events",
       title: "Events",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fevents-1723010610_81f769d481fd9baa79ac.webp&w=1920&q=75",
-      link: "#",
+      description: "Cultural festivals and celebrations"
     },
     {
+      id: "artforms",
       title: "Artforms",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fartforms-1722941328_979aba0cca7b5b49c626.webp&w=1920&q=75",
-      link: "#",
+      description: "Traditional arts and performances"
     },
     {
+      id: "photo-gallery",
       title: "Photo Gallery",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fphoto-gallery-1722942212_09b95872a144f6bc331f.webp&w=1920&q=75",
-      link: "#",
+      description: "Visual journey through Kerala"
     },
     {
+      id: "cuisine",
       title: "Cuisine",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fcuisine-1722941699_b85794f02a319683eb69.webp&w=1920&q=75",
-      link: "#",
+      description: "Authentic Kerala culinary delights"
     },
     {
+      id: "e-brochure",
       title: "E-brochure",
       img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fe-brochure-1694599797_526286c75b4c39a4fe13.jpg&w=1920&q=75",
-      link: "#",
+      description: "Digital travel guides and information"
     },
   ];
 
+  const handleExploreClick = (experienceId) => {
+    navigate(`/experiences/${experienceId}`);
+  };
+
   return (
-    <section id={id} className="max-w-6xl mx-auto px-6 py-6 md:py-16">
+    <section className="max-w-6xl mx-auto px-6 py-6 md:py-16">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">
           Kerala Experiences
@@ -59,12 +72,12 @@ const KeralaExperiences = ({ id = "experiences" }) => {
               <h3 className="text-white text-xl font-semibold mb-2">
                 {experiences[0].title}
               </h3>
-              <a
-                href={experiences[0].link}
+              <button
+                onClick={() => handleExploreClick(experiences[0].id)}
                 className="inline-flex text-white px-4 py-1 rounded-full text-sm border border-white hover:bg-white hover:text-black transition w-fit"
               >
                 Explore →
-              </a>
+              </button>
             </div>
           </div>
           
@@ -84,12 +97,12 @@ const KeralaExperiences = ({ id = "experiences" }) => {
                   <h3 className="text-white text-lg font-semibold mb-2">
                     {item.title}
                   </h3>
-                  <a
-                    href={item.link}
+                  <button
+                    onClick={() => handleExploreClick(item.id)}
                     className="inline-flex bg-white/20 text-white px-3 py-1 rounded-full text-xs border border-white hover:bg-white hover:text-black transition w-fit"
                   >
                     Explore →
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}
@@ -114,12 +127,12 @@ const KeralaExperiences = ({ id = "experiences" }) => {
                   <h3 className="text-white text-lg font-semibold mb-2">
                     {item.title}
                   </h3>
-                  <a
-                    href={item.link}
+                  <button
+                    onClick={() => handleExploreClick(item.id)}
                     className="inline-flex bg-white/20 text-white px-3 py-1 rounded-full text-xs border border-white hover:bg-white hover:text-black transition w-fit"
                   >
                     Explore →
-                  </a>
+                  </button>
                 </div>
               </div>
             ))}
@@ -136,12 +149,12 @@ const KeralaExperiences = ({ id = "experiences" }) => {
               <h3 className="text-white text-xl font-semibold mb-2">
                 {experiences[5].title}
               </h3>
-              <a
-                href={experiences[5].link}
+              <button
+                onClick={() => handleExploreClick(experiences[5].id)}
                 className="inline-flex bg-white/20 text-white px-4 py-1 rounded-full text-sm border border-white hover:bg-white hover:text-black transition w-fit"
               >
                 Explore →
-              </a>
+              </button>
             </div>
           </div>
         </div>
