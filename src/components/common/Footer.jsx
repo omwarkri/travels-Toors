@@ -12,16 +12,16 @@ const Footer = () => (
             expertly crafted tours, local insights, and personalized service that creates unforgettable memories.
           </p>
           <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
+            <a href="#products" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
               <span>f</span>
             </a>
-            <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
+            <a href="#products" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
               <span>t</span>
             </a>
-            <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
+            <a href="#products" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
               <span>in</span>
             </a>
-            <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
+            <a href="#products" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition duration-300">
               <span>✉️</span>
             </a>
           </div>

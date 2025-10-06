@@ -1,13 +1,12 @@
 import React from "react";
 import {
   CheckCircle,
-  Phone,
-  CreditCard,
+
   HeartHandshake,
   MapPin,
   BadgeCheck,
   Star,
-  ShieldCheck,
+
 } from "lucide-react";
 
 const AboutUsSection = () => {
