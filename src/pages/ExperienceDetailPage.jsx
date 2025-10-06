@@ -5,132 +5,294 @@ const ExperienceDetailPage = () => {
   const { experienceId } = useParams();
   const navigate = useNavigate();
 
+  // All images categorized properly
+  const categoryImages = {
+    ayurveda: [
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/udvartana_khwlq6.jpg",
+        title: "Udvartana Massage",
+        description: "Herbal powder massage for detoxification"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
+        title: "Shirodhara Treatment",
+        description: "Continuous oil flow for mental relaxation"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/pizhichil_rba8ox.png",
+        title: "Pizhichil Therapy",
+        description: "Warm oil bath for body rejuvenation"
+      }
+    ],
+    artforms: [
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
+        title: "Theyyam Ritual",
+        description: "Ancient ritual dance form"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770799/Theyyam_txgzaj.png",
+        title: "Theyyam Performance",
+        description: "Traditional folk art performance"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770798/Thiruvathirakkali_u12e97.jpg",
+        title: "Thiruvathirakkali",
+        description: "Graceful circular dance by women"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Pulikali_pzfhy3.jpg",
+        title: "Pulikali Tiger Dance",
+        description: "Colorful tiger dance during Onam"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Koodiyattam-featured-image_bnxlci.png",
+        title: "Koodiyattam",
+        description: "Ancient Sanskrit theatre tradition"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Margamkali_au4gup.jpg",
+        title: "Margamkali",
+        description: "Traditional Syrian Christian dance"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/960px-Ottamthullal_kerala_gskyz1.jpg",
+        title: "Ottamthullal",
+        description: "Satirical solo dance performance"
+      }
+    ],
+    events: [
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/vishu-celebration_pj21b6.png",
+        title: "Vishu Celebration",
+        description: "Kerala's New Year festival"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+        title: "Thrissur Pooram",
+        description: "Grand temple festival with elephants"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Snake_Boat_Races_Vallam_Kali_iko5qt.png",
+        title: "Snake Boat Race",
+        description: "Traditional boat race competition"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
+        title: "Onam Festival",
+        description: "Harvest festival with flower arrangements"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Makaravilakku_o763yr.png",
+        title: "Makaravilakku",
+        description: "Sabrimala temple festival"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770792/Christmas_k7z16s.jpg",
+        title: "Christmas Celebration",
+        description: "Festive celebrations in Kerala"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Attukal_Pongala_bws6he.jpg",
+        title: "Attukal Pongala",
+        description: "Women's festival in Thiruvananthapuram"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Karkidaka_Vavu_Bali_ndptqb.png",
+        title: "Karkidaka Vavu Bali",
+        description: "Ritual offering for ancestors"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/arattu_p3rb8i.png",
+        title: "Arattu Procession",
+        description: "Holy bath ceremony in temples"
+      }
+    ],
+    cuisine: [
+    
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thalassery_Biryani_m0jz6r.jpg",
+        title: "Thalassery Biryani",
+        description: "Traditional Malabar biryani"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770794/pepper-delight-ada-pradhaman-2_wkym90.jpg",
+        title: "Ada Pradhaman",
+        description: "Sweet payasam with rice flakes"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Puttu_and_Kadala_Curry_frdnyy.jpg",
+        title: "Puttu and Kadala Curry",
+        description: "Steamed rice cake with chickpea curry"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770794/malabar-paratha-165616695016x9_lenh3t.jpg",
+        title: "Malabar Paratha",
+        description: "Flaky layered flatbread"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Kappa_and_Meen_Curry_pzbfnx.png",
+        title: "Kappa and Meen Curry",
+        description: "Tapioca with fish curry"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770792/idli_nm5o8h.jpg",
+        title: "Idli",
+        description: "Steamed rice cakes"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/keralan_prawn_curry_45390_16x9_fzqql5.jpg",
+        title: "Kerala Prawn Curry",
+        description: "Spicy prawn preparation"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Appam_with_Stew_sl4yr6.png",
+        title: "Appam with Stew",
+        description: "Lacy rice pancakes with vegetable stew"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Karimeen_Pollichathu_xvrodi.jpg",
+        title: "Karimeen Pollichathu",
+        description: "Pearl spot fish in banana leaf"
+      }
+    ],
+    "photo-gallery": [
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Snake_Boat_Races_Vallam_Kali_iko5qt.png",
+        title: "Snake Boat Race",
+        description: "Traditional boat race on backwaters"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+        title: "Thrissur Pooram",
+        description: "Grand temple festival spectacle"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
+        title: "Theyyam Ritual",
+        description: "Ancient ritual performance"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
+        title: "Onam Pookalam",
+        description: "Colorful flower carpet"
+      }
+    ],
+    "e-brochure": [
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
+        title: "Festival Guide",
+        description: "Complete festival calendar and information"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+        title: "Cultural Events",
+        description: "Detailed event schedules and locations"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Puttu_and_Kadala_Curry_frdnyy.jpg",
+        title: "Culinary Guide",
+        description: "Traditional recipes and food tours"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
+        title: "Wellness Directory",
+        description: "Ayurvedic centers and treatments"
+      }
+    ]
+  };
+
   const experiencesData = {
     ayurveda: {
       title: "Ayurveda",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fayurveda-1694598240_fe440a50c0f7683f980c.jpg&w=1920&q=75",
-      description: "Experience the ancient healing science of Ayurveda in its birthplace",
-      highlights: [
-        "Traditional Panchakarma treatments",
-        "Authentic Ayurvedic massages",
-        "Yoga and meditation sessions",
-        "Herbal medicine consultations",
-        "Detoxification and rejuvenation programs"
+      subtitle: "The Ancient Healing Science",
+      heroImage: categoryImages.ayurveda[0].url,
+      description: "Experience the ancient healing science of Ayurveda in its birthplace - Kerala, where wellness meets tradition",
+      overview: "Ayurveda, the 5,000-year-old natural healing system of India, finds its most authentic expression in Kerala. This ancient science of life focuses on holistic wellness through natural treatments, herbal medicines, and lifestyle practices.",
+      images: categoryImages.ayurveda,
+      treatments: [
+        "Abhyangam - Full body massage with medicated oils",
+        "Nasyam - Nasal administration of herbal medicines",
+        "Virechanam - Purgation therapy for detoxification",
+        "Basti - Medicated enema for cleansing",
+        "Raktamoksham - Blood purification therapy"
       ],
-      bestTime: [
-        { period: "September - March", season: "Peak" },
-        { period: "April - June", season: "Good" },
-        { period: "July - August", season: "Moderate" }
-      ],
-      locations: [
-        { name: "Kottakkal", description: "Renowned Ayurvedic treatment center" },
-        { name: "Varkala", description: "Cliffside wellness retreats" },
-        { name: "Wayanad", description: "Nature-integrated healing centers" }
-      ]
-    },
-    events: {
-      title: "Events",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fevents-1723010610_81f769d481fd9baa79ac.webp&w=1920&q=75",
-      description: "Immerse yourself in Kerala's vibrant festivals and cultural events",
-      highlights: [
-        "Traditional temple festivals",
-        "Cultural performances and shows",
-        "Local fairs and markets",
-        "Seasonal celebrations",
-        "Art and craft exhibitions"
-      ],
-      bestTime: [
-        { period: "October - April", season: "Peak" },
-        { period: "May - September", season: "Good" }
-      ],
-      locations: [
-        { name: "Thrissur", description: "Famous for Pooram festival" },
-        { name: "Kochi", description: "Cultural events and art shows" },
-        { name: "Kozhikode", description: "Traditional local festivals" }
+      benefits: [
+        "Stress relief and mental relaxation",
+        "Detoxification and body purification",
+        "Improved immunity and vitality",
+        "Chronic disease management",
+        "Anti-aging and rejuvenation"
       ]
     },
     artforms: {
       title: "Artforms",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fartforms-1722941328_979aba0cca7b5b49c626.webp&w=1920&q=75",
-      description: "Discover Kerala's rich tradition of classical and folk arts",
+      subtitle: "Traditional Arts & Performances",
+      heroImage: categoryImages.artforms[0].url,
+      description: "Discover Kerala's rich tradition of classical and folk arts that have been preserved for centuries",
+      overview: "Kerala's cultural landscape is adorned with diverse art forms ranging from majestic classical dances to vibrant folk arts. Each performance tells a story of tradition, devotion, and artistic excellence.",
+      images: categoryImages.artforms,
       highlights: [
-        "Kathakali dance performances",
-        "Theyyam ritual arts",
-        "Traditional music concerts",
-        "Handicraft demonstrations",
-        "Folk art workshops"
-      ],
-      bestTime: [
-        { period: "October - March", season: "Peak" },
-        { period: "April - September", season: "Good" }
-      ],
-      locations: [
-        { name: "Kochi", description: "Cultural center with regular performances" },
-        { name: "Thrissur", description: "Hub of traditional arts" },
-        { name: "Kollam", description: "Folk art traditions" }
+        "Kathakali - Elaborate dance drama with vibrant makeup",
+        "Theyyam - Ritualistic worship through dance",
+        "Mohiniyattam - Graceful dance of the enchantress",
+        "Ottamthullal - Satirical solo performance"
       ]
     },
-    "photo-gallery": {
-      title: "Photo Gallery",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fphoto-gallery-1722942212_09b95872a144f6bc331f.webp&w=1920&q=75",
-      description: "Capture the breathtaking beauty of Kerala through your lens",
+    events: {
+      title: "Events & Festivals",
+      subtitle: "Cultural Celebrations",
+      heroImage: categoryImages.events[0].url,
+      description: "Immerse yourself in Kerala's vibrant festivals and cultural events throughout the year",
+      overview: "Kerala's festival calendar is packed with colorful celebrations that showcase the state's rich cultural heritage and religious harmony. From temple festivals to harvest celebrations, each event is a spectacle of tradition.",
+      images: categoryImages.events,
       highlights: [
-        "Stunning landscape photography",
-        "Cultural moment captures",
-        "Wildlife photography spots",
-        "Architectural photography",
-        "Sunset and sunrise locations"
-      ],
-      bestTime: [
-        { period: "October - March", season: "Peak" },
-        { period: "April - June", season: "Good" },
-        { period: "July - September", season: "Moderate" }
-      ],
-      locations: [
-        { name: "Munnar", description: "Tea gardens and misty mountains" },
-        { name: "Alleppey", description: "Backwaters and houseboats" },
-        { name: "Kovalam", description: "Beaches and lighthouse views" }
+        "Thrissur Pooram - Grandest temple festival",
+        "Onam - Harvest festival with flower carpets",
+        "Vishu - Malayali New Year celebration",
+        "Snake Boat Races - Traditional water sport"
       ]
     },
     cuisine: {
       title: "Cuisine",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fcuisine-1722941699_b85794f02a319683eb69.webp&w=1920&q=75",
+      subtitle: "Authentic Kerala Flavors",
+      heroImage: categoryImages.cuisine[0].url,
       description: "Savor the authentic flavors of Kerala's diverse culinary heritage",
+      overview: "Kerala cuisine is a delightful blend of flavors influenced by its geography and history. From spicy seafood to vegetarian delicacies, each dish tells a story of the land and its people.",
+      images: categoryImages.cuisine,
       highlights: [
-        "Traditional Sadya feast",
-        "Seafood cooking classes",
-        "Spice plantation tours",
-        "Local market food walks",
-        "Traditional cooking demonstrations"
-      ],
-      bestTime: [
-        { period: "September - March", season: "Peak" },
-        { period: "April - August", season: "Good" }
-      ],
-      locations: [
-        { name: "Kochi", description: "Multi-cuisine food capital" },
-        { name: "Kozhikode", description: "Famous for Malabar cuisine" },
-        { name: "Alleppey", description: "Fresh seafood specialties" }
+        "Sadya - Traditional vegetarian feast",
+        "Seafood specialties - Fresh catch from Arabian Sea",
+        "Appam and Stew - Breakfast delicacy",
+        "Payasam - Traditional sweet desserts"
+      ]
+    },
+    "photo-gallery": {
+      title: "Photo Gallery",
+      subtitle: "Visual Journey Through Kerala",
+      heroImage: categoryImages["photo-gallery"][0].url,
+      description: "Capture the breathtaking beauty of Kerala through stunning photography",
+      overview: "Kerala's diverse landscapes, vibrant culture, and rich traditions provide endless opportunities for photography. From misty hills to serene backwaters, every frame tells a story.",
+      images: categoryImages["photo-gallery"],
+      highlights: [
+        "Backwaters and houseboats",
+        "Tea plantations in Munnar",
+        "Traditional art forms",
+        "Festivals and celebrations"
       ]
     },
     "e-brochure": {
       title: "E-brochure",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fe-brochure-1694599797_526286c75b4c39a4fe13.jpg&w=1920&q=75",
-      description: "Access comprehensive digital guides for your Kerala journey",
+      subtitle: "Digital Travel Companion",
+      heroImage: categoryImages["e-brochure"][0].url,
+      description: "Access comprehensive digital guides for your perfect Kerala journey",
+      overview: "Our digital brochures provide everything you need to plan your Kerala adventure - from detailed itineraries to cultural insights and practical travel information.",
+      images: categoryImages["e-brochure"],
       highlights: [
-        "Digital travel guides",
-        "Interactive maps and routes",
+        "Interactive travel guides",
         "Seasonal event calendars",
-        "Accommodation listings",
+        "Accommodation recommendations",
         "Transportation information"
-      ],
-      bestTime: [
-        { period: "Year-round", season: "Available" }
-      ],
-      locations: [
-        { name: "Online Access", description: "Available digitally anytime" },
-        { name: "Tourist Centers", description: "Physical copies available" },
-        { name: "Mobile App", description: "Downloadable content" }
       ]
     }
   };
@@ -144,7 +306,7 @@ const ExperienceDetailPage = () => {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Experience Not Found</h1>
           <button
             onClick={() => navigate("/experiences")}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+            className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition"
           >
             Back to Experiences
           </button>
@@ -154,114 +316,164 @@ const ExperienceDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Back Button */}
-        <button
-          onClick={() => navigate("/experiences")}
-          className="flex items-center text-blue-600 hover:text-blue-800 mb-6 transition duration-200"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Back to Experiences
-        </button>
-
-        {/* Experience Header */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative h-96 bg-gradient-to-r from-emerald-900 to-teal-800">
+        <div className="absolute inset-0">
           <img
-            src={experience.img}
+            src={experience.heroImage}
             alt={experience.title}
-            className="w-full h-64 md:h-80 object-cover"
+            className="w-full h-full object-cover opacity-20"
           />
-          <div className="p-6 md:p-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              {experience.title}
-            </h1>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              {experience.description}
-            </p>
+        </div>
+        <div className="relative max-w-6xl mx-auto px-4 h-full flex items-center">
+          <div className="text-white">
+            <button
+              onClick={() => navigate("/experiences")}
+              className="flex items-center text-emerald-200 hover:text-white mb-6 transition"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back to Experiences
+            </button>
+            <h1 className="text-5xl font-bold mb-4">{experience.title}</h1>
+            <p className="text-xl text-emerald-100 mb-2">{experience.subtitle}</p>
+            <p className="text-lg text-emerald-50 max-w-2xl">{experience.description}</p>
           </div>
         </div>
+      </section>
 
-        {/* Experience Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Highlights */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Highlights</h2>
-            <ul className="space-y-3">
-              {experience.highlights.map((highlight, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span className="text-gray-700">{highlight}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Best Time to Visit */}
-          <div className="bg-white rounded-2xl shadow-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Best Time to Visit</h2>
-            <div className="space-y-4">
-              {experience.bestTime.map((time, index) => (
-                <div key={index} className="flex items-center justify-between">
-                  <span className="text-gray-700 font-medium">{time.period}</span>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    time.season === 'Peak' 
-                      ? 'bg-green-100 text-green-800'
-                      : time.season === 'Good'
-                      ? 'bg-blue-100 text-blue-800'
-                      : time.season === 'Available'
-                      ? 'bg-purple-100 text-purple-800'
-                      : 'bg-yellow-100 text-yellow-800'
-                  }`}>
-                    {time.season}
-                  </span>
+      {/* Overview Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">About {experience.title}</h2>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {experience.overview}
+              </p>
+              {experience.highlights && (
+                <div className="bg-emerald-50 rounded-lg p-6">
+                  <h3 className="font-semibold text-emerald-800 mb-3">Key Highlights</h3>
+                  <ul className="space-y-2">
+                    {experience.highlights.map((highlight, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="text-emerald-700">{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
+              )}
             </div>
-          </div>
-
-          {/* Popular Locations */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:col-span-2">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Popular Locations</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {experience.locations.map((location, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition duration-200">
-                  <h3 className="font-semibold text-gray-800 mb-2">{location.name}</h3>
-                  <p className="text-sm text-gray-600">{location.description}</p>
+            <div className="grid grid-cols-2 gap-4">
+              {experience.images.slice(0, 2).map((image, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
+                  <img
+                    src={image.url}
+                    alt={image.title}
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="p-4">
+                    <h4 className="font-semibold text-gray-800 mb-1">{image.title}</h4>
+                    <p className="text-sm text-gray-600">{image.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center mt-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Experience {experience.title}?
+      {/* Image Gallery Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Explore {experience.title}
           </h2>
-          <p className="text-blue-100 mb-6 text-lg">
-            Contact us to plan your perfect Kerala {experience.title.toLowerCase()} experience
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {experience.images.map((image, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-800 mb-2">{image.title}</h3>
+                  <p className="text-sm text-gray-600">{image.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Content Sections */}
+      {experienceId === 'ayurveda' && (
+        <>
+          <section className="py-16 bg-emerald-50">
+            <div className="max-w-6xl mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Popular Ayurvedic Treatments</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {experience.treatments.map((treatment, index) => (
+                  <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
+                      <span className="text-emerald-600 text-lg">🌿</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-800 mb-2">{treatment}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="py-16 bg-white">
+            <div className="max-w-6xl mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Health Benefits</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {experience.benefits.map((benefit, index) => (
+                  <div key={index} className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-2xl">✓</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-800">{benefit}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-emerald-600 to-teal-700">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Experience Authentic Kerala {experience.title}
+          </h2>
+          <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+            Let us help you plan your perfect Kerala experience with authentic local insights and personalized service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/919028803309"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition duration-200"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold transition duration-200 flex items-center justify-center"
             >
-              💬 WhatsApp Us
+              💬 Chat on WhatsApp
             </a>
             <a
               href="tel:+919028803309"
-              className="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-xl font-semibold transition duration-200"
+              className="bg-white hover:bg-gray-100 text-emerald-600 px-8 py-4 rounded-lg font-semibold transition duration-200 flex items-center justify-center"
             >
-              📞 Call Now
+              📞 Call for Consultation
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

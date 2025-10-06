@@ -8,37 +8,37 @@ const KeralaExperiences = () => {
     {
       id: "ayurveda",
       title: "Ayurveda",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fayurveda-1694598240_fe440a50c0f7683f980c.jpg&w=1920&q=75",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
       description: "Traditional healing and wellness treatments"
-    },
-    {
-      id: "events",
-      title: "Events",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fevents-1723010610_81f769d481fd9baa79ac.webp&w=1920&q=75",
-      description: "Cultural festivals and celebrations"
     },
     {
       id: "artforms",
       title: "Artforms",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fartforms-1722941328_979aba0cca7b5b49c626.webp&w=1920&q=75",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
       description: "Traditional arts and performances"
     },
     {
-      id: "photo-gallery",
-      title: "Photo Gallery",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fphoto-gallery-1722942212_09b95872a144f6bc331f.webp&w=1920&q=75",
-      description: "Visual journey through Kerala"
+      id: "events",
+      title: "Events",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+      description: "Cultural festivals and celebrations"
     },
     {
       id: "cuisine",
       title: "Cuisine",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Fvertical%2Fcuisine-1722941699_b85794f02a319683eb69.webp&w=1920&q=75",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Puttu_and_Kadala_Curry_frdnyy.jpg",
       description: "Authentic Kerala culinary delights"
+    },
+    {
+      id: "photo-gallery",
+      title: "Photo Gallery",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Snake_Boat_Races_Vallam_Kali_iko5qt.png",
+      description: "Visual journey through Kerala"
     },
     {
       id: "e-brochure",
       title: "E-brochure",
-      img: "https://www.keralatourism.org/_next/image/?url=http%3A%2F%2F127.0.0.1%2Fktadmin%2Fimg%2Fpages%2Flarge-desktop%2Fe-brochure-1694599797_526286c75b4c39a4fe13.jpg&w=1920&q=75",
+      img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
       description: "Digital travel guides and information"
     },
   ];
@@ -61,7 +61,7 @@ const KeralaExperiences = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
         {/* Left Section - Big image on top, two small images below */}
         <div className="space-y-3">
-          {/* Big image */}
+          {/* Big image - Ayurveda */}
           <div className="relative group overflow-hidden shadow-md hover:shadow-xl transition duration-300">
             <img
               src={experiences[0].img}
@@ -81,7 +81,7 @@ const KeralaExperiences = () => {
             </div>
           </div>
           
-          {/* Two small images below */}
+          {/* Two small images below - Artforms & Events */}
           <div className="grid grid-cols-2 gap-3">
             {experiences.slice(1, 3).map((item, index) => (
               <div
@@ -111,7 +111,7 @@ const KeralaExperiences = () => {
 
         {/* Right Section - Two small images on top, one big image below */}
         <div className="space-y-3">
-          {/* Two small images on top */}
+          {/* Two small images on top - Cuisine & Photo Gallery */}
           <div className="grid grid-cols-2 gap-3">
             {experiences.slice(3, 5).map((item, index) => (
               <div
@@ -138,7 +138,7 @@ const KeralaExperiences = () => {
             ))}
           </div>
           
-          {/* Big image at bottom */}
+          {/* Big image at bottom - E-brochure */}
           <div className="relative group overflow-hidden shadow-md hover:shadow-xl transition duration-300">
             <img
               src={experiences[5].img}
