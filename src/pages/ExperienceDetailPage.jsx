@@ -363,7 +363,7 @@ const ExperienceDetailPage = () => {
           <div className="relative max-w-6xl mx-auto px-4 h-full flex items-center">
             <div className="text-white">
               <button
-                onClick={() => navigate("/experiences")}
+                onClick={() => navigate("/")}
                 className="flex items-center text-emerald-200 hover:text-white mb-6 transition-all duration-300 group"
               >
                 <svg className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
