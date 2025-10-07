@@ -131,7 +131,7 @@ const KeralaExperiences = () => {
                     onClick={() => handleExploreClick(item.id)}
                     className="inline-flex bg-white/20 text-white px-3 py-1 rounded-full text-xs border border-white hover:bg-white hover:text-black transition w-fit"
                   >
-                    Explore →
+                    Exploree →
                   </button>
                 </div>
               </div>
