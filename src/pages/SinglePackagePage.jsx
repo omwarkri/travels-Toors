@@ -718,7 +718,7 @@ const packageData = [
                             </div>
                             
                             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                              {review.comment}s
+                              {review.comment}
                             </p>
                           </div>
                         </div>
