@@ -59,10 +59,10 @@ const FAQ = ({ id = "faq" }) => {
   return (
     <section id={id} className="max-w-6xl mx-auto px-6 py-6 md:py-16">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-600">
+        <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
           Everything you need to know about planning your Kerala trip with Omkar
           Tour and Travels
         </p>

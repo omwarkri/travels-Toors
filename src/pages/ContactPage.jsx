@@ -9,8 +9,8 @@ const ContactPage = () => {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16 -mt-8 relative z-10">
         <div className="bg-white rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl p-6 lg:p-12 border border-gray-100">
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-3 lg:mb-4">Get In Touch</h2>
-            <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">Get In Touch</h2>
+            <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
               We're here to help you plan the perfect Kerala experience. Reach out through any channel that's convenient for you.
             </p>
           </div>

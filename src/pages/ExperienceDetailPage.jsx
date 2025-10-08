@@ -345,7 +345,7 @@ const ExperienceDetailPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10 md:mt-20">
       {/* Hero Section */}
   
       {/* Hero Section */}

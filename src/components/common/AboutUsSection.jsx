@@ -19,7 +19,7 @@ const AboutUsSection = () => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">
             About Omkar Tour and Travels
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
             Your trusted travel partner in Kerala since 2010, crafting
             unforgettable journeys across God's Own Country.
           </p>
