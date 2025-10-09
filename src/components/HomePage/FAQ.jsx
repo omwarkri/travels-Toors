@@ -112,14 +112,14 @@ const FAQ = ({ id = "faq" }) => {
               href="https://wa.me/919028803309"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition duration-200 flex items-center justify-center text-xs md:text-sm"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 font-medium transition duration-200 flex items-center justify-center text-xs md:text-sm"
             >
               <span className="mr-2">💬</span>
               WhatsApp Us
             </a>
             <a
               href="tel:+919028803309"
-              className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium transition duration-200 flex items-center justify-center text-xs md:text-sm"
+              className="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2  font-medium transition duration-200 flex items-center justify-center text-xs md:text-sm"
             >
               <span className="mr-2">📞</span>
               Call Now

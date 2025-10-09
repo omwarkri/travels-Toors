@@ -294,10 +294,10 @@ const PopularPlaces = ({ id = "places" }) => {
         ))}
       </div>
 
-      <div className="text-center mt-12">
+      <div className="text-center mt-6">
         <Link 
           to="/places" 
-          className="inline-flex items-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 rounded-xl font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          className="inline-flex items-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
         >
           Explore All {places.length} Destinations
           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

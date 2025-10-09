@@ -131,7 +131,7 @@ const TourPackageCard = ({ pkg }) => (
       <div className="flex space-x-3 flex-shrink-0">
         <Link
           to={`/package/${pkg.id}`}
-          className="flex-1 bg-emerald-500 text-white py-3 rounded-xl font-semibold hover:bg-emerald-600 transition duration-300 text-center text-sm"
+          className="flex-1 bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 text-center text-sm"
         >
           View Details
         </Link>
@@ -139,7 +139,7 @@ const TourPackageCard = ({ pkg }) => (
           href="https://wa.me/919028803309"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition duration-300 text-center text-sm"
+          className="flex-1 bg-green-600 text-white py-2  font-semibold hover:bg-green-700 transition duration-300 text-center text-sm"
         >
           WhatsApp
         </a>

@@ -98,7 +98,7 @@ const ContactPage = () => {
               href="https://wa.me/919028803309"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-3 lg:py-4 px-4 lg:px-6 rounded-xl font-bold text-base lg:text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
+              className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white py-3 lg:py-4 px-4 lg:px-6 font-bold text-base lg:text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               <span className="mr-2 lg:mr-3 text-xl lg:text-2xl">💬</span>
               Chat on WhatsApp
@@ -106,7 +106,7 @@ const ContactPage = () => {
             </a>
             <a
               href="tel:+919028803309"
-              className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-3 lg:py-4 px-4 lg:px-6 rounded-xl font-bold text-base lg:text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
+              className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-3 lg:py-4 px-4 lg:px-6 font-bold text-base lg:text-lg transition-all duration-300 hover:scale-105 transform shadow-lg hover:shadow-xl flex items-center justify-center"
             >
               <span className="mr-2 lg:mr-3 text-xl lg:text-2xl">📞</span>
               Call Now
