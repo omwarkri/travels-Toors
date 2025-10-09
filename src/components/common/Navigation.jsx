@@ -164,7 +164,7 @@ const Navigation = () => {
             {/* Contact Button */}
             <a
               href="/#contact"
-              className="bg-emerald-500 text-white px-3 xl:px-4 2xl:px-6 py-1.5 xl:py-2 font-medium hover:bg-emerald-600 transition-all duration-300 text-sm xl:text-base rounded-lg"
+              className="bg-emerald-500 text-white px-3 xl:px-4 2xl:px-6 py-1.5 xl:py-2 font-medium hover:bg-emerald-600 transition-all duration-300 text-sm xl:text-base"
               onClick={() => handleScrollTop("/contact")}
             >
               Contact
