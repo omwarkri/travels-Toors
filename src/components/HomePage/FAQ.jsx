@@ -59,12 +59,12 @@ const FAQ = ({ id = "faq" }) => {
   return (
     <section 
       id={id} 
-      className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-14 md:py-20"
+      className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-24 md:py-20"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 ">
         {/* Header - Compact */}
-           <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-6 tracking-wider uppercase">
+           <div className="text-center mb-6 md:mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-1 md:mb-6 tracking-wider uppercase">
           Frequently Asked Questions
         </h2>
         <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
