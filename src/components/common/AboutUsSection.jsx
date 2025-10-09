@@ -13,7 +13,7 @@ const AboutUsSection = () => {
   return (
     <div id="about" className="pt-16 md:pt-20 bg-white text-gray-800">
       {/* Main Section */}
-      <section className="max-w-7xl mx-auto py-8 md:py-12 lg:py-20 px-4 sm:px-6 mb-16">
+      <section className="max-w-7xl mx-auto py-8 md:py-12 lg:py-20 px-4 sm:px-6 mb-20">
         {/* Heading */}
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">
