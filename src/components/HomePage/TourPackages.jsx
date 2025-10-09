@@ -394,7 +394,7 @@ const allPackages = [
   const packages = allPackages.slice(0, 6); // Get first 6 packages for the homepage
 
   return ( 
-    <section id={id} className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-16">
+    <section id={id} className="max-w-7xl mx-auto mt-6 px-4 sm:px-6 py-8 md:py-16">
       <div className="text-center mb-8">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           Omkar Exclusive Packages 
@@ -414,7 +414,7 @@ const allPackages = [
             {packages.map((pkg, index) => (
               <div 
                 key={pkg.id} 
-                className="w-80 flex-shrink-0 snap-start" // Fixed width for mobile cards
+                className="w-80 flex-shrink-0 snap-start h-full" // Added h-full for consistent height
               >
                 <TourPackageCard pkg={pkg} />
               </div>
@@ -433,10 +433,12 @@ const allPackages = [
         </div>
       </div>
 
-      {/* Desktop Grid Layout */}
-      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Desktop Grid Layout with Equal Height Cards */}
+      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr"> {/* Added auto-rows-fr */}
         {packages.map((pkg, index) => (
-          <TourPackageCard key={pkg.id} pkg={pkg} />
+          <div key={pkg.id} className="h-full flex"> {/* Added wrapper div with h-full and flex */}
+            <TourPackageCard pkg={pkg} />
+          </div>
         ))}
       </div>
 
@@ -454,35 +456,35 @@ const allPackages = [
       </div>
 
       {/* Trust Indicators */}
-<div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-center px-4">
-  <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
-    <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
-      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-      </svg>
-    </div>
-    <h3 className="text-xs sm:text-sm font-semibold mb-1">4.8/5 Rating</h3>
-    <p className="text-gray-600 text-xs">Rated excellent by 500+ travelers</p>
-  </div>
-  <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
-    <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
-      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-      </svg>
-    </div>
-    <h3 className="text-xs sm:text-sm font-semibold mb-1">Best Price Guarantee</h3>
-    <p className="text-gray-600 text-xs">Get the best value for your money</p>
-  </div>
-  <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 col-span-2 sm:col-span-1">
-    <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
-      <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-      </svg>
-    </div>
-    <h3 className="text-xs sm:text-sm font-semibold mb-1">24/7 Support</h3>
-    <p className="text-gray-600 text-xs">Dedicated travel support throughout</p>
-  </div>
-</div>
+      <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-center px-4">
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
+          <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          </div>
+          <h3 className="text-xs sm:text-sm font-semibold mb-1">4.8/5 Rating</h3>
+          <p className="text-gray-600 text-xs">Rated excellent by 500+ travelers</p>
+        </div>
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
+          <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 className="text-xs sm:text-sm font-semibold mb-1">Best Price Guarantee</h3>
+          <p className="text-gray-600 text-xs">Get the best value for your money</p>
+        </div>
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 col-span-2 sm:col-span-1">
+          <div className="w-6 h-6 sm:w-7 sm:h-7  rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <h3 className="text-xs sm:text-sm font-semibold mb-1">24/7 Support</h3>
+          <p className="text-gray-600 text-xs">Dedicated travel support throughout</p>
+        </div>
+      </div>
     </section>
   );
 };
