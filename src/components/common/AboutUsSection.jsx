@@ -15,7 +15,7 @@ const AboutUsSection = () => {
       {/* Main Section */}
       <section className="max-w-7xl mx-auto py-8 md:py-12 lg:py-20 px-4 sm:px-6 mb-20">
         {/* Heading */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-5 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">
             About Omkar Tour and Travels
           </h1>

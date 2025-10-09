@@ -396,10 +396,10 @@ const allPackages = [
   return ( 
     <section id={id} className="max-w-7xl mx-auto mt-6 px-4 sm:px-6 py-8 md:py-16">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
+        <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-2 md:mb-4">
           Omkar Exclusive Packages 
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-6 tracking-wider uppercase">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-1 md:mb-6 tracking-wider uppercase">
           Curated Kerala Experiences
         </h1>
         <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
@@ -409,12 +409,12 @@ const allPackages = [
 
       {/* Mobile Horizontal Scroll Container */}
       <div className="lg:hidden">
-        <div className="flex overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="flex space-x-6">
             {packages.map((pkg, index) => (
               <div 
                 key={pkg.id} 
-                className="w-80 flex-shrink-0 snap-start h-full" // Added h-full for consistent height
+                className="w-80 flex-shrink-0 snap-start h-full"
               >
                 <TourPackageCard pkg={pkg} />
               </div>
@@ -434,9 +434,9 @@ const allPackages = [
       </div>
 
       {/* Desktop Grid Layout with Equal Height Cards */}
-      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr"> {/* Added auto-rows-fr */}
+      <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
         {packages.map((pkg, index) => (
-          <div key={pkg.id} className="h-full flex"> {/* Added wrapper div with h-full and flex */}
+          <div key={pkg.id} className="h-full flex">
             <TourPackageCard pkg={pkg} />
           </div>
         ))}
