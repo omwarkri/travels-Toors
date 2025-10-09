@@ -443,7 +443,7 @@ const allPackages = [
       </div>
 
       {/* View All Packages CTA */}
-      <div className="text-center mt-6">
+      <div className="text-center mt-8">
         <Link 
           to="/packages" 
           className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base"

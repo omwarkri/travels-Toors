@@ -7,7 +7,7 @@ const ContactPage = () => {
     <div id="contact" className="pt-16 min-h-screen bg-gradient-to-br from-gray-50 to-emerald-50">
       {/* Main Content - Centered Single Column */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16 -mt-8 relative z-10">
-        <div className="bg-white rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl p-6 lg:p-12 border border-gray-100">
+        <div className="bg-white shadow-xl p-6 lg:p-12 border border-gray-100">
           <div className="text-center mb-8 lg:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-3 md:mb-4 tracking-wide uppercase">Get In Touch</h2>
             <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">

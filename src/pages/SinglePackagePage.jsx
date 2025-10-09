@@ -523,27 +523,27 @@ const packageData = [
       <div className="flex-1 min-w-0">
         {/* Badges */}
         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
-          <span className="bg-emerald-500 px-2 sm:px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">Best Seller</span>
-          <span className="bg-red-500 px-2 sm:px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">{pkg.discount}</span>
-          <span className="bg-blue-500 px-2 sm:px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">{pkg.bestSeason}</span>
+          <span className="bg-emerald-500 px-2 sm:px-3 py-1 text-xs font-medium whitespace-nowrap">Best Seller</span>
+          <span className="bg-red-500 px-2 sm:px-3 py-1 text-xs font-medium whitespace-nowrap">{pkg.discount}</span>
+          <span className="bg-blue-500 px-2 sm:px-3 py-1  text-xs font-medium whitespace-nowrap">{pkg.bestSeason}</span>
         </div>
         
         {/* Title */}
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 leading-tight break-words">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-white mb-6 tracking-wider uppercase">
           {pkg.name}
         </h1>
         
         {/* Package Info */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm">
-          <div className="flex items-center space-x-1 bg-white/20 px-2 py-1 rounded-full backdrop-blur-sm">
+          <div className="flex items-center space-x-1 bg-white/20 border-b-2 border-gray-400 px-2 py-1 backdrop-blur-sm">
             <span className="text-xs">📍</span>
             <span className="truncate max-w-[120px] sm:max-w-none">{pkg.destination}</span>
           </div>
-          <div className="flex items-center space-x-1 bg-white/20 px-2 py-1 rounded-full backdrop-blur-sm">
+          <div className="flex items-center space-x-1 bg-white/20 border-b-2 border-gray-400 px-2 py-1 backdrop-blur-sm">
             <span className="text-xs">⏱️</span>
             <span>{pkg.duration}</span>
           </div>
-          <div className="flex items-center space-x-1 bg-white/20 px-2 py-1 rounded-full backdrop-blur-sm">
+          <div className="flex items-center space-x-1 bg-white/20 border-b-2 border-gray-400 px-2 py-1 backdrop-blur-sm">
             <span className="text-xs">⭐</span>
             <span>{pkg.rating} ({pkg.reviews})</span>
           </div>
@@ -568,10 +568,10 @@ const packageData = [
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             {/* Image Gallery - Mobile Responsive */}
             {pkg.images && pkg.images.length > 1 && (
-              <div className="bg-white rounded-lg sm:rounded-xl shadow-sm border border-gray-100 p-3 sm:p-4">
+              <div className="bg-white  shadow-sm border border-gray-100 p-3 sm:p-4">
                 <div className="flex flex-col space-y-3 sm:space-y-4">
                   {/* Main Image */}
-                  <div className="rounded-lg overflow-hidden">
+                  <div className=" overflow-hidden">
                     <img
                       src={pkg.images[selectedImage]}
                       alt={pkg.name}
@@ -602,7 +602,7 @@ const packageData = [
             )}
 
             {/* Navigation Tabs - Mobile Responsive */}
-            <div className="bg-white rounded-lg sm:rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-white rounded-t-lg sm:rounded-t-xl shadow-sm border border-gray-100 overflow-hidden">
               <div className="flex overflow-x-auto border-b border-gray-100">
                 {['overview', 'itinerary', 'inclusions', 'reviews'].map((tab) => (
                   <button
@@ -757,7 +757,7 @@ const packageData = [
 
           {/* Sidebar - Booking Card - Mobile Responsive */}
           <div className="lg:col-span-1">
-            <div className="sticky top-20 bg-white rounded-lg sm:rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6">
+            <div className="sticky top-20 bg-white border-b-4 border-gray-800  shadow-lg p-4 sm:p-6">
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-xl sm:text-2xl font-bold text-gray-800">₹{pkg.price}</div>
                 <div className="text-xs sm:text-sm text-gray-500 line-through">₹{pkg.originalPrice}</div>
@@ -787,14 +787,14 @@ const packageData = [
                   href="https://wa.me/919028803309"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-green-600 text-white py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
+                  className="w-full bg-green-600 text-white py-2.5 sm:py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
                 >
                   <span className="mr-2">💬</span>
                   Book on WhatsApp
                 </a>
                 <a
                   href="tel:+919028803309"
-                  className="w-full bg-emerald-500 text-white py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
+                  className="w-full bg-emerald-500 text-white py-2.5 sm:py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
                 >
                   <span className="mr-2">📞</span>
                   Call Now
