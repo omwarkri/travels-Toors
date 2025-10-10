@@ -20,7 +20,7 @@ const AboutUsSection = () => {
             About Omkar Tour and Travels
           </h1>
           <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
-            Your trusted travel partner in Kerala since 2010, crafting
+            Your trusted travel partner in Kerala over 10 years, crafting
             unforgettable journeys across God's Own Country.
           </p>
         </div>
@@ -30,21 +30,24 @@ const AboutUsSection = () => {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 md:mb-6">Our Story</h2>
             <p className="text-gray-700 leading-relaxed mb-3 md:mb-4 text-sm sm:text-base">
-              Since 2010, Omkar Tour and Travels has been dedicated to creating
-              memorable travel experiences in Kerala. With over 13 years of
-              expertise and 5000+ happy travelers, we've built a reputation as
-              one of the most reliable travel agencies in the region.
+              Omkar Tour and Travels is a well-established travel company in India, recognized as one of
+the fastest-growing domestic and inbound tour operators with over ten years of experience.
+They specialize in designing personalized travel itineraries tailored to meet the unique tastes
+and preferences of each traveler. With extensive knowledge of Kerala’s rich culture, scenic
+landscapes, and major attractions, Omkar Tour and Travels expertly combines genuine local
+experiences with top-tier hospitality and high service standards.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4 md:mb-6 text-sm sm:text-base">
-              We combine local insight, strong partnerships with premium hotels,
-              and personalized services to ensure your comfort and satisfaction
-              every step of the way. For us, travel is not just about reaching a
-              destination — it's about creating stories you'll cherish forever.
+             Their team of experienced tourism professionals is committed to providing convenient,
+efficient, and dependable services, available 24/7 to assist clients throughout their entire
+journey. They offer affordable, reliable travel packages and have special options specifically
+crafted for honeymoon couples and group travelers, ensuring that every guest enjoys a
+memorable, smooth, and seamless travel experience from start to finish.
             </p>
             <div className="grid grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-emerald-600 mb-1">
-                  13+
+                  10+
                 </div>
                 <p className="text-gray-600 text-sm sm:text-base">Years of Experience</p>
               </div>
