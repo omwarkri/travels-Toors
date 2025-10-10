@@ -111,8 +111,8 @@ const Navigation = () => {
       </div>
 
       {/* Second Row - Logo and Navigation */}
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        <div className="flex justify-between items-center py-1 sm:py-2">
+      <div className="max-w-7xl mx-auto  sm:px-4 lg:px-6">
+        <div className="flex justify-between items-center py-3 sm:py-2">
           {/* Logo - Smaller */}
           <Link
             to="/"
@@ -122,7 +122,7 @@ const Navigation = () => {
             <div>
               <img 
                 src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578583/logo_dps0pd.jpg" 
-                className="w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 max-w-full h-auto" 
+                className="w-20 sm:w-28 md:w-28 lg:w-32 xl:w-36 max-w-full h-auto ml-2" 
                 alt="Logo" 
               />
             </div>
