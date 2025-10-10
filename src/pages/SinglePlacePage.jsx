@@ -241,9 +241,9 @@ const SinglePlacePage = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{place.name}</h1>
             <p className="text-xl max-w-3xl">{place.desc}</p>
             <div className="flex flex-wrap items-center gap-4 mt-4">
-              <span className="bg-white/20 px-3 py-1 rounded-full">⭐ {place.rating}</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">🚗 {place.tours} tours available</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">📅 Best: {place.bestSeason}</span>
+              <span className="bg-white/20 px-3 py-1">⭐ {place.rating}</span>
+              <span className="bg-white/20 px-3 py-1">🚗 {place.tours} tours available</span>
+              <span className="bg-white/20 px-3 py-1">📅 Best: {place.bestSeason}</span>
             </div>
           </div>
         </div>
@@ -256,10 +256,10 @@ const SinglePlacePage = () => {
           <div className="lg:col-span-2">
             {/* Image Gallery */}
             {place.images && place.images.length > 1 && (
-              <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
+              <div className="bg-white shadow-lg p-6 mb-8">
                 <div className="flex flex-col space-y-4">
                   {/* Main Image */}
-                  <div className="rounded-xl overflow-hidden">
+                  <div className="overflow-hidden">
                     <img
                       src={place.images[selectedImage]}
                       alt={`${place.name} view ${selectedImage + 1}`}
@@ -273,7 +273,7 @@ const SinglePlacePage = () => {
                       <button
                         key={index}
                         onClick={() => setSelectedImage(index)}
-                        className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition duration-200 ${
+                        className={`flex-shrink-0 w-20 h-20 overflow-hidden border-2 transition duration-200 ${
                           selectedImage === index ? 'border-emerald-500' : 'border-gray-200'
                         }`}
                       >
@@ -290,16 +290,16 @@ const SinglePlacePage = () => {
             )}
 
             {/* Place Description */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div className="bg-white shadow-lg p-8 mb-8">
               <h2 className="text-3xl font-bold mb-6">About {place.name}</h2>
               <p className="text-gray-700 leading-relaxed mb-6">{place.longDescription}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-emerald-50 p-6 rounded-lg">
+                <div className="bg-emerald-50 p-6">
                   <h3 className="text-lg font-semibold mb-2">🌤️ Best Time to Visit</h3>
                   <p className="text-gray-700">{place.bestSeason}</p>
                 </div>
-                <div className="bg-emerald-50 p-6 rounded-lg">
+                <div className="bg-emerald-50 p-6">
                   <h3 className="text-lg font-semibold mb-2">🌡️ Climate</h3>
                   <p className="text-gray-700">{place.climate}</p>
                 </div>
@@ -308,7 +308,7 @@ const SinglePlacePage = () => {
               <h3 className="text-2xl font-bold mb-4">Major Attractions</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {place.attractions.map((attraction, index) => (
-                  <div key={index} className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition duration-300">
+                  <div key={index} className="bg-gray-50 p-6 hover:shadow-md transition duration-300">
                     <h4 className="text-xl font-semibold mb-3 text-emerald-700">{attraction.name}</h4>
                     <p className="text-gray-600">{attraction.description}</p>
                   </div>
@@ -319,11 +319,11 @@ const SinglePlacePage = () => {
 
           {/* Sidebar - Packages */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+            <div className="sticky top-24 bg-white shadow-xl p-6 border border-gray-200">
               <h3 className="text-xl font-bold mb-6 text-center">Available Tour Packages</h3>
               <div className="space-y-4 mb-6">
                 {place.packages.map((pkg, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-emerald-500 transition duration-300">
+                  <div key={index} className="border border-gray-200 p-4 hover:border-emerald-500 transition duration-300">
                     <h4 className="font-semibold text-gray-800">{pkg}</h4>
                     <div className="flex justify-between items-center mt-2">
                       <span className="text-sm text-gray-600">{packageData[pkg]?.duration || "Custom"}</span>
@@ -333,7 +333,7 @@ const SinglePlacePage = () => {
                       href="https://wa.me/919028803309"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-emerald-500 text-white py-2 rounded-lg font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
+                      className="w-full bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
                     >
                       Book Now
                     </a>
@@ -346,13 +346,13 @@ const SinglePlacePage = () => {
                   href="https://wa.me/919028803309"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-green-600 text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
+                  className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
                 >
                   💬 Customize Your Trip
                 </a>
                 <a
                   href="tel:+919028803309"
-                  className="w-full bg-emerald-500 text-white py-3 rounded-xl font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
+                  className="w-full bg-emerald-500 text-white py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
                 >
                   📞 Call for Details
                 </a>
@@ -361,15 +361,15 @@ const SinglePlacePage = () => {
               {/* Quick Facts */}
               <div className="mt-6 space-y-3">
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-emerald-400 mr-3"></span>
                   Expert Local Guides
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-emerald-400 mr-3"></span>
                   Best Price Guarantee
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-emerald-400 mr-3"></span>
                   24/7 Customer Support
                 </div>
               </div>
