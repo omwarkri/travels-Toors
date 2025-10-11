@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import PlaceCard from '../places/PlaceCard';
 
 const PopularPlaces = ({ id = "places" }) => {
-  // Complete places data with all 24 destinations
+  // Complete places data with all 24 destinations and correct images
   const allPlaces = [
     {
       id: "munnar",
       name: "MUNNAR",
       desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munnar_mycc44.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munnar_mycc44.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
-        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg",
-        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_3_shjd5a.jpg"
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
       rating: "4.8",
       tours: "12",
@@ -28,10 +28,10 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "alleppey",
       name: "ALLEPPEY",
       desc: "The rare water world aptly called Venice of the East with beautiful green paddy pastures.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/alleppey_o4rtdm.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/alleppey_o4rtdm.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
-        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330511/Allappy_3_ktn290.jpg"
       ],
       rating: "4.9",
@@ -47,8 +47,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kochi",
       name: "KOCHI",
       desc: "The commercial capital of Kerala blending Portuguese, Dutch, and British colonial influences.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/kochi_wr3gbb.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/kochi_wr3gbb.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg"
       ],
@@ -65,8 +66,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "wayanad",
       name: "WAYANAD",
       desc: "Mystical wilderness and tribal heritage in the northern hills of Kerala.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/wayanad_wj1ce1.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/wayanad_wj1ce1.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
@@ -83,8 +85,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "thekkady",
       name: "THEKKADY",
       desc: "Home to Periyar Wildlife Sanctuary, offering thrilling jungle experiences and spice plantations.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/thekkady-tour-01_otzv8q.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/thekkady-tour-01_otzv8q.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
       ],
@@ -101,8 +104,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kumarakom",
       name: "KUMARAKOM",
       desc: "A picturesque backwater destination with luxurious resorts and serene Vembanad Lake views.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumarakom-Kumarakom-Bird-Sanctuary-2_tksq4a.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumarakom-Kumarakom-Bird-Sanctuary-2_tksq4a.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490668/Kumarkom_f7plnd.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg"
       ],
@@ -119,8 +123,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kovalam",
       name: "KOVALAM",
       desc: "Experience beach life with friendly tides, sun ups and sun downs - the best beach to unwind.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kovalam_tkrqfh.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kovalam_tkrqfh.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-2_vutkfm.jpg"
       ],
@@ -137,8 +142,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "vagamon",
       name: "VAGAMON",
       desc: "The Queen of Mist and Tranquility with rolling green meadows and pine forests.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193267/Vagamon_xgcm4m.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193267/Vagamon_xgcm4m.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
@@ -155,8 +161,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "athirappilly",
       name: "ATHIRAPPILLY",
       desc: "The Niagara of South India - Kerala's largest waterfall in lush tropical forests.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Athirappilly_Waterfalls__pnmbmo.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Athirappilly_Waterfalls__pnmbmo.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
       ],
@@ -173,8 +180,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "varkala",
       name: "VARKALA",
       desc: "Coastal cliffs and spiritual serenity with dramatic red sandstone cliffs overlooking the Arabian Sea.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/varkala_1_zcdenb.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/varkala_1_zcdenb.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
       ],
@@ -191,8 +199,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "palakkad",
       name: "PALAKKAD",
       desc: "The Gateway of Kerala's Natural and Cultural Heritage with vast paddy fields and ancient forts.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Palakkad_kava54.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Palakkad_kava54.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
@@ -209,8 +218,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "bekal",
       name: "BEKAL",
       desc: "Historic Fort and Seaside Serenity - Kerala's largest and best-preserved fort by the Arabian Sea.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/bekal3_nq1ce8.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/bekal3_nq1ce8.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
       ],
@@ -227,8 +237,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "thrissur",
       name: "THRISSUR",
       desc: "Kerala's Cultural Capital rich in heritage, festivals, temples, and natural beauty.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png"
       ],
@@ -245,8 +256,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "munroe-island",
       name: "MUNROE ISLAND",
       desc: "Tranquil Backwater Gem - cluster of eight small islands at the confluence of Ashtamudi Lake.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munroe-island-_j6vwln.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munroe-island-_j6vwln.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
       ],
@@ -263,8 +275,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "poovar",
       name: "POOVAR",
       desc: "Where River, Lake, and Sea Meet - golden sandy beaches and tranquil backwaters.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Poovar_gvqskq.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Poovar_gvqskq.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
       ],
@@ -281,8 +294,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "thiruvananthapuram",
       name: "TRIVANDRUM",
       desc: "Kerala's Capital of Culture and Nature blending ancient traditions with modern infrastructure.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Thiruvananthapuram_Trivandrum_sgwysg.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Thiruvananthapuram_Trivandrum_sgwysg.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png"
       ],
@@ -299,8 +313,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kannur",
       name: "KANNUR",
       desc: "The Land of Beaches, Forts, and Culture with pristine beaches and Theyyam festivals.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/Kannur_jy8wax.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/Kannur_jy8wax.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
       ],
@@ -317,8 +332,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kollam",
       name: "KOLLAM",
       desc: "Gateway to Kerala's Backwaters and Heritage with historic sites and Ashtamudi Lake.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/-kollam-_bsqsgx.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/-kollam-_bsqsgx.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
       ],
@@ -335,8 +351,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "idukki",
       name: "IDUKKI",
       desc: "Kerala's Mountainous Spice Garden and Wildlife Haven with highest peaks and dense forests.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Idukki_qn2nbg.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Idukki_qn2nbg.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
@@ -353,8 +370,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "chinnar",
       name: "CHINNAR",
       desc: "Kerala's Unique Dry Forest Reserve with endangered species and diverse wildlife.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Chinnar_Wildlife_Sanctuary_k2e4bb.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Chinnar_Wildlife_Sanctuary_k2e4bb.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
       ],
@@ -371,8 +389,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kalamassery",
       name: "KALAMASSERY",
       desc: "Industrial and Educational Hub of Kochi with urban infrastructure and academic excellence.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kalamassery_ltevtp.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kalamassery_ltevtp.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg"
       ],
       rating: "4.0",
@@ -388,8 +407,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "kumbalangi",
       name: "KUMBALANGI",
       desc: "India's First Model Fishing Village and Eco-Tourism Haven with sustainable tourism.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumbalangi-_vgkqik.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumbalangi-_vgkqik.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
       ],
@@ -406,8 +426,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "silent-valley",
       name: "SILENT VALLEY",
       desc: "The Last Undisturbed Rainforest of Kerala with pristine tropical evergreen forests.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/silentvalley-_chdrlb.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/silentvalley-_chdrlb.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
@@ -424,8 +445,9 @@ const PopularPlaces = ({ id = "places" }) => {
       id: "edakkal-caves",
       name: "EDAKKAL CAVES",
       desc: "Ancient Rock Art and Prehistoric Heritage with carvings dating back over 6,000 years.",
-      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Edakkal_Caves_scfq2n.jpg",
       images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Edakkal_Caves_scfq2n.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
         "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
       ],
