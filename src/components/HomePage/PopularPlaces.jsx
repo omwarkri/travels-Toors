@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import PlaceCard from '../places/PlaceCard';
 
 const PopularPlaces = ({ id = "places" }) => {
   // Complete places data with all 24 destinations and correct images
-  const allPlaces = [
+   const allPlaces = [
     {
       id: "munnar",
       name: "MUNNAR",
@@ -478,7 +477,38 @@ const PopularPlaces = ({ id = "places" }) => {
 
       <div className="grid grid-cols-1 p-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {popularPlaces.map((place) => (
-          <PlaceCard key={place.id} place={place} />
+          <div key={place.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            {/* Image */}
+            <div className="relative h-64 overflow-hidden">
+              <img 
+                src={place.image} 
+                alt={place.name}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
+                <span className="text-amber-500 text-sm">⭐</span>
+                <span className="text-gray-800 font-semibold text-sm">{place.rating}</span>
+              </div>
+            </div>
+            
+            {/* Info */}
+            <div className="p-6">
+              <h3 className="text-xl font-serif font-light text-gray-800 mb-2">{place.name}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">{place.desc}</p>
+              
+              <div className="flex justify-between items-center pt-4 border-t border-gray-100">
+                <span className="text-emerald-600 font-semibold text-sm">
+                  {place.tours} tours available
+                </span>
+                <Link 
+                  to={`/places/${place.id}`}
+                  className="text-emerald-600 hover:text-emerald-700 font-medium text-sm transition-colors duration-200"
+                >
+                  Explore →
+                </Link>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
 
