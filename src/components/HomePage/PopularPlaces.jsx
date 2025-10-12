@@ -501,7 +501,7 @@ const PopularPlaces = ({ id = "places" }) => {
                   {place.tours} tours available
                 </span>
                 <Link 
-                  to={`/places/${place.id}`}
+                  to={`/place/${place.id}`}
                   className="text-emerald-600 hover:text-emerald-700 font-medium text-sm transition-colors duration-200"
                 >
                   Explore →
