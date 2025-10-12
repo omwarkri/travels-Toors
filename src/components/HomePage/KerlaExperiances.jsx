@@ -48,7 +48,7 @@ const KeralaExperiences = () => {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-16 md:py-16 mb-14 md:mb-32">
+    <section className="max-w-6xl mx-auto px-6 py-20 md:py-28 md:pb-20 mb-14 md:mb-32">
       <div className="text-center mb-6 md:mb-12">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-1 md:mb-6 tracking-wider uppercase">
           Kerala Experiences
