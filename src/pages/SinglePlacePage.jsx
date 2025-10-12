@@ -673,10 +673,1583 @@ const SinglePlacePage = () => {
       
       climate: "Tropical coastal climate with temperatures between 24°C to 32°C"
     },
-    // Continue similarly for vagamon, athirappilly, varkala, palakkad, bekal, 
-    // thrissur, munroe-island, poovar, thiruvananthapuram, kannur, kollam, 
-    // idukki, chinnar, kalamassery, kumbalangi, silent-valley, edakkal-caves
-    // Each destination follows the exact same structure with all the detailed information
+    // Complete places data with all detailed information
+
+
+  {
+    id: "vagamon",
+    name: "VAGAMON",
+    desc: "The Queen of Mist and Tranquility - A tranquil hill station in the Idukki district renowned for its rolling green meadows, dense pine forests, tea gardens, and cool climate.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193267/Vagamon_xgcm4m.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193267/Vagamon_xgcm4m.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
+    ],
+    rating: "4.4",
+    tours: "3",
+    highlights: ["Pine Forest", "Vagamon Meadows", "Kurisumala Church", "Paragliding", "Thangal Para"],
+    bestSeason: "The best months to visit Vagamon are from September to March when the weather is pleasant, cool, and ideal for outdoor activities.",
+    distance: "100 km from Kochi",
+    packages: ["Vagamon Hill Retreat", "Adventure Kerala Tour"],
+    
+    overview: "Vagamon is a tranquil hill station located in the Idukki district of Kerala, renowned for its rolling green meadows, dense pine forests, tea gardens, and cool climate. It is often called the 'Queen of the Mist' because of its mist-covered hills and serene landscapes. Vagamon offers a peaceful retreat away from crowded tourist spots, making it ideal for nature lovers and adventure seekers.",
+    
+    keyAttractions: [
+      {
+        name: "Pine Forest Vagamon",
+        description: "An enchanting forest of symmetrical pine trees, frequently used for film shootings and nature walks."
+      },
+      {
+        name: "Vagamon Meadows",
+        description: "Expansive grassy slopes perfect for picnics, photography, and sunset views."
+      },
+      {
+        name: "Kurisumala Church",
+        description: "A Christian pilgrimage site situated atop a hill, surrounded by lush greenery."
+      },
+      {
+        name: "Thangal Para",
+        description: "A large rock cliff known for panoramic views and religious significance linked to Sufi saint Sheikh Fariduddin."
+      },
+      {
+        name: "Vagamon Lake",
+        description: "Calm lake ideal for boating and quiet relaxation."
+      },
+      {
+        name: "Maramala Waterfalls",
+        description: "A scenic waterfall accessible via a forest trek."
+      },
+      {
+        name: "Orchidarium and Floriculture Projects",
+        description: "Botanical garden showcasing diverse orchids and floriculture innovations."
+      },
+      {
+        name: "Karikadu Viewpoint (Echo Point)",
+        description: "Known for the echo phenomenon and captivating scenic views."
+      },
+      {
+        name: "Vagamon Adventure Park",
+        description: "Offers activities like zip-lining, paragliding, rope activities, and giant swings."
+      },
+      {
+        name: "Tea Garden Hills at Ulippuni",
+        description: "Vast tea estates surrounded by rolling hills."
+      }
+    ],
+    
+    topActivities: [
+      "Enjoy trekking, hiking, and nature walks in the meadows and forests",
+      "Boating and fishing at Vagamon Lake",
+      "Adventure sports including paragliding and rock climbing",
+      "Visiting temples and pilgrimage sites",
+      "Photography of scenic hill views and waterfalls"
+    ],
+    
+    localCuisine: "Experience simple and fresh Kerala cuisine featuring local vegetables, spices, and traditional preparations suited to the hill station climate.",
+    
+    festivalsCulture: [
+      "Local pilgrimage and religious festivals at Kurisumala Church and Thangal Para",
+      "Community events showcasing local traditions and music"
+    ],
+    
+    travelTips: [
+      "Carry warm clothing, especially for early mornings and evenings",
+      "Use sturdy footwear for trekking and walking on uneven terrain",
+      "Book adventure activities and local guides in advance for best experience",
+      "Respect wildlife and local customs during visits"
+    ],
+    
+    nearbyAttractions: [
+      "Idukki Arch Dam",
+      "Munnar tea gardens",
+      "Other hill stations in the Western Ghats"
+    ],
+    
+    howToReach: {
+      air: "Nearest airports: Cochin International Airport (about 110 km) and Kannur International Airport (about 110 km)",
+      rail: "Nearby railway stations: Ernakulam and Mysore railway stations",
+      road: "Well connected by road with taxis and buses from major cities"
+    },
+    
+    climate: "Cool climate with temperatures ranging from 10°C to 25°C"
+  },
+  {
+    id: "athirappilly",
+    name: "ATHIRAPPILLY WATERFALLS",
+    desc: "The Niagara of South India - Kerala's largest waterfall standing at about 80 feet high, located in the Thrissur district on the Chalakudy River.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Athirappilly_Waterfalls__pnmbmo.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Athirappilly_Waterfalls__pnmbmo.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
+    ],
+    rating: "4.6",
+    tours: "5",
+    highlights: ["Athirappilly Waterfalls", "Vazhachal Waterfalls", "Butterfly Garden", "Sholayar Dam", "Wildlife Spotting"],
+    bestSeason: "The best time to visit is from October to May for pleasant weather and good water flow. Monsoon months (June to September) bring high water volume making the falls more spectacular but also slippery and less accessible.",
+    distance: "78 km from Kochi",
+    packages: ["Waterfall Adventure Tour", "Nature & Wildlife Kerala"],
+    
+    overview: "Athirappilly Waterfalls is the largest waterfall in Kerala, standing at about 80 feet high, located in the Thrissur district on the Chalakudy River. Nestled amid lush tropical forests at the entry of the Sholayar ranges, it is a breathtaking natural spectacle often called the 'Niagara of South India.' The area around the falls is rich in biodiversity, offering a peaceful and rejuvenating experience for nature lovers and adventure enthusiasts alike.",
+    
+    keyAttractions: [
+      {
+        name: "Athirappilly Waterfalls",
+        description: "Majestic three-tiered cascades surrounded by evergreen forests and wildlife. The falls create a misty, mesmerizing atmosphere ideal for photography and relaxation."
+      },
+      {
+        name: "Vazhachal Waterfalls",
+        description: "Located just 7 km from Athirappilly, this waterfall is equally stunning with a steep drop of over 300 feet and is part of the Chalakudy River."
+      },
+      {
+        name: "Thumboormuzhy Butterfly Garden",
+        description: "A landscaped garden near Chalakudy River, home to more than 140 species of butterflies, providing a colorful and peaceful retreat."
+      },
+      {
+        name: "Charpa Waterfall",
+        description: "A seven-step waterfall located between Athirappilly and Vazhachal, accessible from the roadside."
+      },
+      {
+        name: "Sholayar Dam",
+        description: "Asia's second-largest rock-filled dam, surrounded by green hills, about 53 km from Athirappilly."
+      },
+      {
+        name: "Peechi Dam and Wildlife Sanctuary",
+        description: "Located 22 km away, known for boating and rich flora and fauna."
+      },
+      {
+        name: "Medicinal Herb Garden",
+        description: "Close to Vazhachal Waterfalls featuring many plants with therapeutic properties."
+      }
+    ],
+    
+    topActivities: [
+      "Enjoying the panoramic views and photography at various viewpoints",
+      "Trekking and nature walks in the surrounding forests",
+      "Visiting nearby waterfalls and butterfly gardens",
+      "Bird watching and wildlife spotting in the Sholayar forest range",
+      "Boating and sightseeing at distant dams and reservoirs nearby"
+    ],
+    
+    localCuisine: "Enjoy traditional Kerala hill cuisine featuring locally sourced vegetables, freshwater fish curry, and coconut-based delicacies. Refresh yourself with fresh fruit juices and homemade snacks available at local eateries near the waterfall.",
+    
+    festivalsCulture: [
+      "Local tribal festivals and seasonal fairs celebrate the region's natural heritage and culture",
+      "Many temples in the region are associated with annual festivals attended by local communities"
+    ],
+    
+    travelTips: [
+      "Wear sturdy footwear suitable for slippery pathways and trekking",
+      "Carry rain gear and be cautious during the monsoon season",
+      "Maintain a safe distance from the water edges and follow park guidelines",
+      "Visit early morning or late afternoon for best light and solitude",
+      "Respect the environment and avoid littering"
+    ],
+    
+    nearbyAttractions: [
+      "Vazhachal Waterfalls, Thumboormuzhy Butterfly Garden, Charpa Waterfall",
+      "Sholayar and Peechi Dams for scenic nature trips",
+      "Chalakudy town for cultural experiences and local shopping"
+    ],
+    
+    howToReach: {
+      air: "Cochin International Airport (about 78 km)",
+      rail: "Chalakudy railway station is the closest railhead (22 km)",
+      road: "Well connected by roads and regular transport from major cities like Kochi and Thrissur"
+    },
+    
+    climate: "Tropical climate with moderate temperatures"
+  },
+  {
+    id: "varkala",
+    name: "VARKALA",
+    desc: "Coastal Cliffs and Spiritual Serenity - A charming coastal town in Kerala known for its dramatic red sandstone cliffs overlooking the Arabian Sea.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/varkala_1_zcdenb.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193266/varkala_1_zcdenb.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490719/Varkala_Beach__Varkala__Kerala_vuiq2z.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg"
+    ],
+    rating: "4.5",
+    tours: "4",
+    highlights: ["Varkala Beach", "Janardhana Swamy Temple", "Varkala Cliff", "Kappil Lake", "Ayurvedic Treatments"],
+    bestSeason: "October to March provides the best weather for beach activities, sightseeing, and outdoor adventures with pleasant temperatures and low rainfall.",
+    distance: "180 km from Kochi",
+    packages: ["Beach & Culture Tour", "Kerala Coastal Experience"],
+    
+    overview: "Varkala is a charming coastal town in Kerala known for its dramatic red sandstone cliffs overlooking the Arabian Sea. The town's unique geography combines beautiful beaches with spiritual sites, making it a popular destination for relaxation, pilgrimage, and adventure. Varkala is appreciated for its laid-back vibe, yoga centers, Ayurvedic spas, and vibrant beachside cafes.",
+    
+    keyAttractions: [
+      {
+        name: "Varkala Beach (Papanasam Beach)",
+        description: "A long sandy beach famous for its red cliffs, natural springs believed to have healing properties, and picturesque sunsets. It is popular for both pilgrims and tourists seeking calm and rejuvenation."
+      },
+      {
+        name: "Janardhana Swamy Temple",
+        description: "An ancient temple dedicated to Lord Vishnu, revered by devotees and visited by thousands during festivals."
+      },
+      {
+        name: "Varkala Cliff",
+        description: "A scenic stretch lined with cafes, shops, and restaurants offering spectacular views of the sea."
+      },
+      {
+        name: "Kappil Lake",
+        description: "A serene freshwater lake near Varkala ideal for boating and bird watching."
+      },
+      {
+        name: "Anjengo Fort",
+        description: "Historical fort ruins located nearby, reflecting colonial history."
+      },
+      {
+        name: "Varkala Lighthouse",
+        description: "Offers panoramic views of the coastline and town."
+      },
+      {
+        name: "Varkala Aquarium",
+        description: "Showcases marine life native to Kerala's coasts."
+      },
+      {
+        name: "Black Sand Beach",
+        description: "A quieter alternative beach known for its unique black sand and surfing opportunities."
+      },
+      {
+        name: "Sree Janardhana Swamy Temple",
+        description: "Important Hindu pilgrimage spot."
+      },
+      {
+        name: "Jatayu Earth Center",
+        description: "Though a bit farther (35 km), a giant bird sculpture and adventure park popular with visitors."
+      }
+    ],
+    
+    topActivities: [
+      "Walking along the cliffs and beaches, soaking in the scenic views",
+      "Participating in or observing Hindu pilgrimage rituals and ceremonies",
+      "Yoga and wellness retreats offered by numerous centers on the cliffs",
+      "Water sports including surfing, parasailing, jet skiing, and stand-up paddleboarding",
+      "Exploring local markets, cafes, and fresh seafood restaurants",
+      "Boat rides on Kappil Lake and nearby backwaters"
+    ],
+    
+    localCuisine: "Enjoy fresh seafood, spicy Kerala curries, coconut-based dishes, and healthy vegetarian options at beachside shacks and restaurants. Sampling local sweets and tropical fruits is a must.",
+    
+    festivalsCulture: [
+      "Hindu temple festivals, especially in Janardhana Swamy Temple",
+      "Seasonal cultural events and yoga retreats attracting international visitors"
+    ],
+    
+    travelTips: [
+      "Dress modestly near temples and during religious ceremonies",
+      "Morning and late afternoon offer the best light for photography and comfortable beach visits",
+      "Respect local rituals and privacy during ceremonies on the beach",
+      "Book wellness and yoga sessions in advance during high season"
+    ],
+    
+    nearbyAttractions: [
+      "Munroe Island for tranquil backwater experiences",
+      "Trivandrum city with Sree Padmanabhaswamy Temple and museums",
+      "Anjengo Fort and Varkala Lighthouse for history buffs"
+    ],
+    
+    howToReach: {
+      air: "Trivandrum International Airport, about 50 km away",
+      rail: "Varkala Railway Station connects to major cities and towns",
+      road: "Regular bus and taxi services connect Varkala with nearby cities and towns"
+    },
+    
+    climate: "Tropical coastal climate"
+  },
+  {
+    id: "palakkad",
+    name: "PALAKKAD",
+    desc: "The Gateway of Kerala's Natural and Cultural Heritage - A vibrant district located at the foothills of the Western Ghats known as the 'Granary of Kerala' due to its vast paddy fields.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Palakkad_kava54.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Palakkad_kava54.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
+    ],
+    rating: "4.3",
+    tours: "5",
+    highlights: ["Malampuzha Dam", "Palakkad Fort", "Parambikulam Sanctuary", "Silent Valley", "Nelliyampathy Hills"],
+    bestSeason: "The best time to visit Palakkad is from November to February when the weather is cool and dry, ideal for sightseeing and outdoor activities. The monsoon season (June-September) brings heavy rains that enhance the greenery but can disrupt travel plans.",
+    distance: "100 km from Kochi",
+    packages: ["Nature & Heritage Tour", "Complete Kerala Experience"],
+    
+    overview: "Palakkad, also known as Palghat, is a vibrant district located at the foothills of the Western Ghats. Known as the 'Granary of Kerala' due to its vast paddy fields, Palakkad combines lush green landscapes, ancient forts, hill stations, and rich biodiversity. It is a peaceful destination offering nature, history, and cultural experiences.",
+    
+    keyAttractions: [
+      {
+        name: "Malampuzha Dam and Gardens",
+        description: "A scenic reservoir surrounded by beautifully landscaped gardens, a snake park, freshwater aquarium, Japanese garden, hanging bridge, ropeway, and children's park. The ropeway is a unique attraction offering panoramic views."
+      },
+      {
+        name: "Palakkad Fort",
+        description: "A historic fortress in the heart of Palakkad town built in 1766 by Hyder Ali with massive stone walls. The fort houses the Jainimedu Jain Temple nearby and children's park outside."
+      },
+      {
+        name: "Parambikulam Wildlife Sanctuary",
+        description: "Sprawling sanctuary known for rich flora and fauna, including tigers, elephants, and many bird species. It offers wildlife safaris, boating, and trekking."
+      },
+      {
+        name: "Silent Valley National Park",
+        description: "A pristine and biodiverse evergreen forest sanctuary home to endangered species, laid out with trekking trails and nature exploration facilities."
+      },
+      {
+        name: "Chulannur Peacock Sanctuary",
+        description: "A protected area dedicated to preserving peacocks and natural forests."
+      },
+      {
+        name: "Seetharkundu Viewpoint (Nelliampathy Hills)",
+        description: "Offers breathtaking scenic views, tea estates, and waterfalls like Meenkara falls believed to be where Sita bathed during exile."
+      },
+      {
+        name: "Meenkara Dam",
+        description: "Known for its natural beauty, fish ponds, and quiet surroundings."
+      },
+      {
+        name: "Siruvani Dam",
+        description: "Positioned on the border of Kerala and Tamil Nadu, famous for crystal-clear water and scenic views."
+      },
+      {
+        name: "Kollengode Palace",
+        description: "An architectural marvel showcasing traditional Kerala style and heritage."
+      }
+    ],
+    
+    topActivities: [
+      "Boating and ropeway rides at Malampuzha Dam",
+      "Wildlife safaris and trekking in Parambikulam and Silent Valley",
+      "Exploring historic forts and temples",
+      "Nature photography and bird watching",
+      "Visiting tea plantations and scenic hills"
+    ],
+    
+    localCuisine: "Experience Kerala's traditional food with a focus on rice-based dishes, spicy curries, and fresh vegetables. Palakkad is also known for unique snacks and sweets influenced by Tamil and Kerala culinary traditions.",
+    
+    festivalsCulture: [
+      "Local temple festivals with rituals and cultural performances",
+      "Wildlife and nature festivals promoting conservation awareness",
+      "Traditional dance and music events in town"
+    ],
+    
+    travelTips: [
+      "Wear comfortable shoes for exploring forts, hills, and wildlife sanctuaries",
+      "Carry rain gear if visiting during monsoon",
+      "Book wildlife safaris and permits in advance",
+      "Respect local customs and protected natural areas"
+    ],
+    
+    nearbyAttractions: [
+      "Nelliyampathy Hills for trekking and scenic beauty",
+      "Dhoni Waterfalls near Palakkad town",
+      "Jainimedu Jain Temple in Palakkad",
+      "Malampuzha Fantasy Park for family entertainment"
+    ],
+    
+    howToReach: {
+      air: "Coimbatore Airport (nearby Tamil Nadu) about 56 km away or Cochin International Airport about 100 km away",
+      rail: "Palakkad Junction railway station is well connected to major Indian cities",
+      road: "Good connectivity via buses and taxis from neighboring towns and cities"
+    },
+    
+    climate: "Pleasant climate with moderate temperatures"
+  },
+  {
+    id: "bekal",
+    name: "BEKAL",
+    desc: "Historic Fort and Seaside Serenity - A charming town in the Kasaragod district best known for its majestic Bekal Fort—the largest and best-preserved fort in Kerala.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/bekal3_nq1ce8.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/bekal3_nq1ce8.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
+    ],
+    rating: "4.4",
+    tours: "3",
+    highlights: ["Bekal Fort", "Bekal Beach", "Kappil Beach", "Kodi Cliff", "Theyyam Performances"],
+    bestSeason: "October to March is the best period to visit Bekal, with cool weather and minimal rainfall, perfect for exploring the fort, beaches, and nearby attractions.",
+    distance: "350 km from Kochi",
+    packages: ["Historic Kerala Tour", "Coastal Heritage Experience"],
+    
+    overview: "Bekal is a charming town in the Kasaragod district of Kerala, best known for its majestic Bekal Fort—the largest and best-preserved fort in Kerala. The fort rises dramatically by the Arabian Sea, showcasing a blend of military architecture and scenic beauty. Bekal combines historical significance, coastal tranquillity, and cultural richness, making it a unique tourist destination.",
+    
+    keyAttractions: [
+      {
+        name: "Bekal Fort",
+        description: "Constructed in 1650 AD by Shivappa Nayaka of Keladi, this grand laterite fort is shaped uniquely like a keyhole and spans over 40 acres. It features massive walls, bastions, secret tunnels, a water tank, an observation tower built by Tipu Sultan, and panoramic views of the Arabian Sea."
+      },
+      {
+        name: "Bekal Beach",
+        description: "A serene beach adjacent to the fort, lined with palm trees, ideal for long walks and relaxation."
+      },
+      {
+        name: "Mukhyaprana Temple",
+        description: "Dedicated to Hanuman, located near the fort entrance."
+      },
+      {
+        name: "Anjaneya Temple",
+        description: "Another significant temple close to Bekal Fort, known for its architecture and spiritual importance."
+      },
+      {
+        name: "Kappil Beach",
+        description: "Approximately 7 km from Bekal, famed for its calm waters and tranquil setting."
+      },
+      {
+        name: "Kodi Cliff",
+        description: "Offers spectacular views of the coastline and a perfect spot for trekking."
+      },
+      {
+        name: "Hosdurg and Chandragiri Forts",
+        description: "Nearby forts that add to the historical richness of the region."
+      },
+      {
+        name: "Bekal Waterfalls and Backwaters",
+        description: "Picturesque natural spots ideal for a day trip."
+      }
+    ],
+    
+    topActivities: [
+      "Exploring the vast Bekal Fort and walking its ramparts",
+      "Relaxing and swimming at Bekal and Kappil beaches",
+      "Trekking to Kodi Cliff and enjoying coastal views",
+      "Visiting temples and understanding local culture and rituals",
+      "Bird watching and boating in nearby backwaters",
+      "Photography of fort architecture and sunset over the Arabian Sea"
+    ],
+    
+    localCuisine: "Savor traditional Malabar cuisine with seafood specialties including freshly caught fish, prawn curry, and spicy chicken. Local snacks such as banana chips and halwa are popular.",
+    
+    festivalsCulture: [
+      "Traditional Theyyam performances, a ritual dance form of North Kerala",
+      "Local temple festivals celebrated with fervor and enthusiasm",
+      "The fort area occasionally hosts cultural events and fairs"
+    ],
+    
+    travelTips: [
+      "Wear comfortable walking shoes for exploring the fort's uneven terrain",
+      "Carry water and sun protection gear for daytime visits",
+      "Respect local customs at temples and beaches",
+      "Visit early morning or late afternoon for pleasant weather and beautiful light"
+    ],
+    
+    nearbyAttractions: [
+      "Kasaragod town",
+      "Other historic forts in the region",
+      "Northern Kerala backwaters"
+    ],
+    
+    howToReach: {
+      air: "Mangalore International Airport (approximately 65 km) and Kannur International Airport (about 110 km)",
+      rail: "Bekal Fort railway station has good connections to major cities",
+      road: "Well-connected by highway and local transport from Kasaragod and Kasaragod town"
+    },
+    
+    climate: "Coastal climate with pleasant temperatures"
+  },
+  {
+    id: "thrissur",
+    name: "THRISSUR",
+    desc: "Kerala's Cultural Capital - Rich in heritage, festivals, temples, and natural beauty. Famous for its grand religious celebrations, classical arts, historic architecture, and scenic waterfalls.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png"
+    ],
+    rating: "4.5",
+    tours: "6",
+    highlights: ["Vadakkunnathan Temple", "Athirappilly Waterfalls", "Guruvayur Temple", "Thrissur Pooram", "Kerala Kalamandalam"],
+    bestSeason: "October to March is the ideal time for visiting Thrissur due to pleasant weather and several festivals taking place during this period, including the world-famous Thrissur Pooram.",
+    distance: "50 km from Kochi",
+    packages: ["Cultural Kerala Tour", "Temple Trail Experience"],
+    
+    overview: "Thrissur, known as the cultural capital of Kerala, is rich in heritage, festivals, temples, and natural beauty. It is famous for its grand religious celebrations, classical arts, historic architecture, and scenic waterfalls. The city is a vibrant blend of spirituality, tradition, and modern cultural expressions.",
+    
+    keyAttractions: [
+      {
+        name: "Vadakkunnathan Temple",
+        description: "An ancient and monumental Shiva temple in the heart of Thrissur city, classified as a UNESCO heritage site. Known for its traditional Kerala architecture and murals."
+      },
+      {
+        name: "Athirappilly Waterfalls",
+        description: "Often called the 'Niagara of India,' this majestic waterfall set in the midst of lush forests is a top nature attraction near Thrissur."
+      },
+      {
+        name: "Guruvayur Temple",
+        description: "One of Kerala's most famous temples dedicated to Lord Krishna, drawing pilgrims from across India."
+      },
+      {
+        name: "Punnathur Kotta",
+        description: "The elephant sanctuary near Guruvayur where temple elephants are cared for. Visitors can watch these majestic animals up close."
+      },
+      {
+        name: "Shakthan Thampuran Palace",
+        description: "A historic palace turned museum showcasing art, weaponry, and the rich heritage of the region."
+      },
+      {
+        name: "Kerala Kalamandalam",
+        description: "Renowned center for classical performing arts like Kathakali and Mohiniyattam."
+      },
+      {
+        name: "Thrissur Zoo and State Museum",
+        description: "Offers a mix of wildlife and cultural history exhibits."
+      },
+      {
+        name: "Vilangan Kunnu",
+        description: "Thrissur's largest hill, offering panoramic views and picnic spots."
+      },
+      {
+        name: "Snehatheeram Beach",
+        description: "A nearby beautiful beach ideal for relaxation and sunset views."
+      }
+    ],
+    
+    topActivities: [
+      "Witness cultural performances like Kathakali, Kalaripayattu, and traditional music",
+      "Explore historic temples, churches, and palaces",
+      "Visit wildlife sanctuaries and waterfalls",
+      "Take part in or observe the vibrant Thrissur Pooram festival if visiting during festival season",
+      "Enjoy local crafts and shopping in bustling markets"
+    ],
+    
+    localCuisine: "Sample authentic Kerala cuisine with dishes like Malabar biryani, Kerala Sadya, seafood specialties, and street foods such as banana chips and sweet snacks.",
+    
+    festivalsCulture: [
+      "Thrissur Pooram: The grand temple festival featuring spectacular elephant processions, traditional music, and fireworks",
+      "Various temple festivals and classical art events held year-round"
+    ],
+    
+    travelTips: [
+      "Plan visits during festivals for a unique cultural experience",
+      "Carry comfortable walking shoes for temple visits and hill trekking",
+      "Respect temple protocols and dress codes",
+      "Try local delicacies at small eateries for authentic taste"
+    ],
+    
+    nearbyAttractions: [
+      "Athirappilly and Vazhachal Waterfalls for nature lovers",
+      "Kodungallur Bhagavathy Temple for spiritual visits",
+      "Nearby hill stations and wildlife sanctuaries"
+    ],
+    
+    howToReach: {
+      air: "Cochin International Airport, approximately 50 km from Thrissur city",
+      rail: "Thrissur railway station with regular connectivity to major cities",
+      road: "Well connected by buses and taxis"
+    },
+    
+    climate: "Tropical climate with moderate temperatures"
+  },
+  {
+    id: "munroe-island",
+    name: "MUNROE ISLAND",
+    desc: "Tranquil Backwater Gem of Kerala - A cluster of eight small inland islands located at the confluence of Ashtamudi Lake and the Kallada River in Kollam district.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munroe-island-_j6vwln.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munroe-island-_j6vwln.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
+    ],
+    rating: "4.3",
+    tours: "2",
+    highlights: ["Backwater Canals", "Coir Making Units", "Village Life", "Dutch Church", "Bird Watching"],
+    bestSeason: "October to February is ideal with cool, dry weather perfect for boating, exploring villages, and birdwatching.",
+    distance: "25 km from Kollam",
+    packages: ["Backwater Village Experience", "Eco-Tourism Kerala"],
+    
+    overview: "Munroe Island, locally known as Mundrothuruthu, is a cluster of eight small inland islands located at the confluence of Ashtamudi Lake and the Kallada River in Kollam district, Kerala. Named after Colonel John Munro, a British Resident who played a key role in land reclamation during the Travancore era, the island is a picturesque blend of peaceful backwaters, lush greenery, and traditional village life. It is often called the 'Sinking Island of Kerala' due to gradual subsidence but remains a serene destination rich in nature and culture.",
+    
+    keyAttractions: [
+      {
+        name: "Backwater Canals and Lagoons",
+        description: "Narrow waterways perfect for canoe rides, kayaking, and boat cruises, offering intimate views of village life and nature."
+      },
+      {
+        name: "Coir Making Units",
+        description: "Traditional coir retting and weaving factories where visitors can observe and experience authentic craftsmanship."
+      },
+      {
+        name: "Village Life",
+        description: "Witness daily activities such as fishing, prawn feeding, coconut farming, and local markets."
+      },
+      {
+        name: "Dutch Church",
+        description: "An ancient church built by the Dutch in 1878 showcasing distinctive Dutch-Kerala architecture on the lakeshore."
+      },
+      {
+        name: "Pathupara Islands",
+        description: "Tiny islets surrounding Munroe Island, known for bird watching and scenic beauty."
+      },
+      {
+        name: "Kallada Boat Race",
+        description: "Held during the Onam festival, this famous snake boat race is a spirited cultural event nearby."
+      }
+    ],
+    
+    topActivities: [
+      "Canoe and boat tours through calming backwaters and mangroves",
+      "Exploring rural villages and engaging with local culture",
+      "Observing traditional coir industry and fishing techniques",
+      "Bird watching with migratory and native bird species",
+      "Enjoying local cuisine and fresh seafood at village eateries"
+    ],
+    
+    localCuisine: "Local dishes centered around fresh fish, coconut-rich curries, rice, and tropical fruits are specialties here. Homestays and small restaurants serve authentic Kerala meals with a village touch.",
+    
+    festivalsCulture: [
+      "Onam Festivals: The annual harvest festival celebrated with cultural shows, boat races, and feasts",
+      "Church and temple festivals drawing pilgrims from various parts of Kerala and beyond"
+    ],
+    
+    travelTips: [
+      "Carry mosquito repellent and sun protection for outdoor activities",
+      "Respect local customs and privacy while visiting villages",
+      "Bring a change of clothes if planning canoe or kayaking tours",
+      "Avoid littering to preserve the fragile ecosystem",
+      "Best visited during daylight hours for safety and enjoyment"
+    ],
+    
+    nearbyAttractions: [
+      "Ashtamudi Lake for larger backwater cruises",
+      "Kollam city with historic sites and bustling markets",
+      "Palaruvi Waterfalls and Thenmala Eco-tourism site for nature excursions"
+    ],
+    
+    howToReach: {
+      air: "Thiruvananthapuram International Airport is about 80 km away",
+      rail: "Munroe Thuruthu Railway Station is the nearest railhead",
+      road: "Easily accessible by taxi or public transport from Kollam city and nearby towns"
+    },
+    
+    climate: "Tropical climate with high humidity"
+  },
+  {
+    id: "poovar",
+    name: "POOVAR",
+    desc: "Where River, Lake, and Sea Meet - A picturesque fishing village and eco-tourism destination in the Thiruvananthapuram district featuring the confluence of the Arabian Sea, the Neyyar River, and backwaters.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Poovar_gvqskq.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Poovar_gvqskq.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
+    ],
+    rating: "4.4",
+    tours: "3",
+    highlights: ["Poovar Beach", "Backwaters", "Mangrove Forests", "Poovar Island", "Sunset Cruises"],
+    bestSeason: "August to March is the best time to visit Poovar when the climate is cool and pleasant, perfect for beach activities, boating, and exploring natural beauty.",
+    distance: "35 km from Trivandrum",
+    packages: ["Beach & Backwater Tour", "Kerala Coastal Retreat"],
+    
+    overview: "Poovar is a picturesque fishing village and eco-tourism destination in the Thiruvananthapuram district of Kerala. Poovar uniquely features the confluence of the Arabian Sea, the Neyyar River, and backwaters, creating a delightful natural estuary. Known as the 'Stream of Flowers,' the village offers golden sandy beaches, mangrove forests, tranquil backwaters, and a peaceful retreat away from bustling tourist spots.",
+    
+    keyAttractions: [
+      {
+        name: "Poovar Beach",
+        description: "A pristine stretch of golden sands bordered by palm groves on one side and calm backwaters on the other, offering a serene atmosphere."
+      },
+      {
+        name: "Poovar Backwaters and Mangroves",
+        description: "Explore the lush mangrove forests by boat, rich with flora and fauna including water birds, crabs, and other wildlife."
+      },
+      {
+        name: "Poovar Island",
+        description: "Situated near the estuary, this small island is famous for its idyllic landscapes and quiet surroundings."
+      },
+      {
+        name: "Vizhinjam Marine Aquarium",
+        description: "Located nearby, showcasing marine life from the region's coastal waters."
+      },
+      {
+        name: "Pulinkudi Azhimala Shiva Temple",
+        description: "Perched atop cliffs overlooking the sea, this temple offers spiritual solace with stunning views."
+      },
+      {
+        name: "Neyyar River Estuary",
+        description: "The unique hotspot where freshwater meets the sea, creating a diverse ecosystem."
+      },
+      {
+        name: "Fishing Village Experience",
+        description: "Observe and interact with the local fishermen who maintain traditional methods and a simple lifestyle."
+      },
+      {
+        name: "Sunset Cruises",
+        description: "Evening boat rides on the backwaters, offering picturesque sunsets and serene views."
+      }
+    ],
+    
+    topActivities: [
+      "Leisurely boat rides through the backwaters and mangrove forests",
+      "Relaxing on quiet golden-sand beaches",
+      "Birdwatching, especially spotting water birds in the estuary and backwaters",
+      "Visiting local temples and experiencing village culture",
+      "Sunset cruises offering stunning natural panoramas",
+      "Indulging in Ayurvedic spa and wellness treatments nearby"
+    ],
+    
+    localCuisine: "Taste fresh seafood, traditional Kerala meals, and tropical fruits. Local eateries serve simple but flavorful dishes highlighting the bounty of the sea and land.",
+    
+    festivalsCulture: [
+      "Local festivals at temples including vibrant rituals at Pulinkudi Azhimala Shiva Temple",
+      "Cultural performances like Kathakali and traditional music offered at local venues",
+      "Fishing festivals and community events showcasing the coastal lifestyle"
+    ],
+    
+    travelTips: [
+      "Carry sun protection, hats, and light clothing for daytime outdoor activities",
+      "Respect the natural environment, especially the mangrove ecosystem",
+      "Use local guides for boat trips to safely explore dense mangrove areas",
+      "Visit early mornings or late afternoons for the best light and cooler temperatures"
+    ],
+    
+    nearbyAttractions: [
+      "Kovalam Beach for water sports and nightlife",
+      "Varkala Cliff and Beach for scenic beauty",
+      "Neyyar Wildlife Sanctuary and Dam for nature enthusiasts"
+    ],
+    
+    howToReach: {
+      air: "Thiruvananthapuram International Airport, around 35 km away",
+      rail: "Thiruvananthapuram Central and Varkala Railway Stations",
+      road: "Well connected through local taxis and buses from nearby cities"
+    },
+    
+    climate: "Tropical coastal climate"
+  },
+  {
+    id: "thiruvananthapuram",
+    name: "TRIVANDRUM",
+    desc: "Kerala's Capital of Culture and Nature - Kerala's bustling capital city blending ancient traditions, modern infrastructure, and rich cultural heritage.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Thiruvananthapuram_Trivandrum_sgwysg.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/Thiruvananthapuram_Trivandrum_sgwysg.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488067/padmanabha-swamy2_bgsb1c.png"
+    ],
+    rating: "4.5",
+    tours: "8",
+    highlights: ["Padmanabhaswamy Temple", "Napier Museum", "Kovalam Beach", "Neyyar Sanctuary", "Agasthyarkoodam"],
+    bestSeason: "October to March is the best season, with pleasant weather ideal for sightseeing, beach activities, and trekking. The monsoon months bring greenery but may limit outdoor plans.",
+    distance: "200 km from Kochi",
+    packages: ["Capital City Tour", "Cultural Heritage Experience"],
+    
+    overview: "Thiruvananthapuram, commonly known as Trivandrum, is Kerala's bustling capital city blending ancient traditions, modern infrastructure, and rich cultural heritage. It is known for its beautiful coastline, historic temples, lush greenery, and vibrant arts scene. The city is also the gateway to many natural attractions and hill stations in southern Kerala.",
+    
+    keyAttractions: [
+      {
+        name: "Sree Padmanabhaswamy Temple",
+        description: "One of the richest and most famous temples dedicated to Lord Vishnu, known for its intricate Dravidian architecture and extensive treasures."
+      },
+      {
+        name: "Napier Museum",
+        description: "A 19th-century Indo-Saracenic art and natural history museum showcasing Kerala's cultural artifacts, ancient art, and weaponry."
+      },
+      {
+        name: "Kanakakkunnu Palace",
+        description: "A historic palace and cultural venue with sprawling grounds, hosting festivals and exhibitions."
+      },
+      {
+        name: "Kuthiramalika Palace Museum",
+        description: "Built by King Swathi Thirunal with unique wooden carvings and architecture, famous for its collection of artifacts and paintings."
+      },
+      {
+        name: "Vizhinjam Rock-cut Temple",
+        description: "An ancient 8th-century rock-cut temple with intricate sculptures and religious significance."
+      },
+      {
+        name: "Thiruvananthapuram Zoo and Museum",
+        description: "The oldest zoo in India with a variety of animals and adjoining natural history museum."
+      },
+      {
+        name: "Attukal Bhagavathy Temple",
+        description: "Known for the famous annual Attukal Pongala festival attracting millions of women pilgrims."
+      },
+      {
+        name: "Kovalam Beach",
+        description: "Iconic beach resort town near the city, known for its crescent beaches and lighthouse."
+      },
+      {
+        name: "Poovar Island",
+        description: "A scenic estuary where backwaters meet the sea, popular for boat trips and peaceful surroundings."
+      },
+      {
+        name: "Neyyar Wildlife Sanctuary",
+        description: "A wildlife reserve offering boating, elephant rides, and nature treks."
+      },
+      {
+        name: "Agasthyarkoodam",
+        description: "The second highest peak in Kerala, situated within the Agasthyamalai Biosphere Reserve, popular among trekkers and nature lovers."
+      }
+    ],
+    
+    topActivities: [
+      "Exploring the architectural and cultural landmarks in the city",
+      "Attending traditional festivals and cultural programs",
+      "Relaxing at nearby beaches like Kovalam and Shangumugham",
+      "Trekking in Agasthyarkoodam and visiting wildlife sanctuaries",
+      "Experiencing Ayurvedic spa and wellness treatments"
+    ],
+    
+    localCuisine: "Thiruvananthapuram offers a rich culinary scene with fresh seafood, spicy vegetable curries, appam with stew, puttu and kadala curry, and vegetarian and non-vegetarian Onam Sadya (traditional feast).",
+    
+    festivalsCulture: [
+      "Attukal Pongala: A unique women's festival involving an offering of sweet pongal at the Attukal Bhagavathy Temple",
+      "Onam: The vibrant harvest festival marked by elaborate feasts, boat races, and cultural programs",
+      "Various temple festivals celebrating Kerala's religious diversity and cultural heritage"
+    ],
+    
+    travelTips: [
+      "Dress modestly when visiting temples and religious sites",
+      "Best to explore heritage sites in the morning or late afternoon to avoid heat",
+      "Use local transport or hire taxis for convenient city commuting",
+      "Plan visits to natural sites with a guide for trekking and wildlife safaris"
+    ],
+    
+    nearbyAttractions: [
+      "Kovalam Beach for sun and sea relaxation",
+      "Poovar Island and Veli Tourist Village for backwaters and boating",
+      "Ponmudi hill station for cool climate and trekking"
+    ],
+    
+    howToReach: {
+      air: "Trivandrum International Airport, connecting well with major Indian and international cities",
+      rail: "Trivandrum Central Railway Station, a major rail hub",
+      road: "Well connected by highways, taxis, and buses"
+    },
+    
+    climate: "Tropical climate with coastal influence"
+  },
+  {
+    id: "kannur",
+    name: "KANNUR",
+    desc: "The Land of Beaches, Forts, and Culture - Renowned for its pristine beaches, historic forts, rich cultural festivals like Theyyam, and lush mangrove forests.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/Kannur_jy8wax.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/Kannur_jy8wax.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_1_pq79i9.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488545/Samudra-Beach_2_jzvrhh.jpg"
+    ],
+    rating: "4.4",
+    tours: "4",
+    highlights: ["St. Angelo Fort", "Muzhappilangad Beach", "Arakkal Museum", "Theyyam Festival", "Kavvayi Backwaters"],
+    bestSeason: "October to March offers the most pleasant weather for sightseeing, beach activities, and festivals.",
+    distance: "250 km from Kochi",
+    packages: ["Northern Kerala Tour", "Cultural & Beach Experience"],
+    
+    overview: "Kannur, located in the northern part of Kerala, is renowned for its pristine beaches, historic forts, rich cultural festivals like Theyyam, and lush mangrove forests. The region offers a blend of natural beauty, historical significance, and vibrant traditions, making it a perfect destination for travelers seeking diverse experiences.",
+    
+    keyAttractions: [
+      {
+        name: "St. Angelo Fort",
+        description: "A historic Portuguese fortress built in the 16th century on an island, offering spectacular views of the Arabian Sea and a glimpse into Kerala's colonial past."
+      },
+      {
+        name: "Muzhappilangad Drive-in Beach",
+        description: "Asia's longest drive-in beach, where visitors can drive along the shoreline and enjoy the scenic ocean."
+      },
+      {
+        name: "Arakkal Museum",
+        description: "Dedicated to the Arakkal royal family, the only Muslim royal family of Kerala, showcasing their history and artefacts."
+      },
+      {
+        name: "Parassini Madappura Sree Muthappan Temple",
+        description: "A famous temple known for its lively rituals and festivals."
+      },
+      {
+        name: "Ezhimala Hill & Beach",
+        description: "The hillock offers panoramic views and is famous for Ezhimala Naval Academy. The nearby beach is scenic and less crowded."
+      },
+      {
+        name: "Bekal Fort",
+        description: "A nearby historic seaside fort in Kasaragod, known for its architecture and expansive views of the coast."
+      },
+      {
+        name: "Kavvayi Backwaters",
+        description: "An extensive network of lakes and rivers perfect for kayaking, houseboat rides, and birdwatching."
+      },
+      {
+        name: "Pazhassi Dam",
+        description: "A scenic dam surrounded by lush forests, ideal for picnics and nature walks."
+      },
+      {
+        name: "Valapattanam River",
+        description: "Known for its mangrove forests and boat rides showcasing Kerala's natural ecosystem."
+      },
+      {
+        name: "Theyyam Festival",
+        description: "A ritual dance performance unique to North Kerala, celebrated with vibrant processions and performances."
+      }
+    ],
+    
+    topActivities: [
+      "Exploring forts, temples, and historical sites",
+      "Enjoying drive-in beaches and relaxing on the pristine sands",
+      "Engaging in water sports at Muzhappilangad Beach",
+      "Participating in or watching Theyyam festivals and cultural performances",
+      "Cruising through the backwaters of Kavvayi or Valapattanam",
+      "Trekking and bird watching in nearby hills and forests"
+    ],
+    
+    localCuisine: "Savor Malabar cuisine with spicy seafood curries, appams, puttu, and toddy, along with local snacks like banana chips and pathiri.",
+    
+    festivalsCulture: [
+      "Theyyam: The spectacular ritual dance with elaborate costumes and fiery performances during festival seasons",
+      "Local temple festivals, celebrating deities with processions, music, and dance"
+    ],
+    
+    travelTips: [
+      "Carry sun protection and adequate water for outdoor excursions",
+      "Respect local customs, especially during festivals and temple visits",
+      "Book boat rides and cultural tours in advance during peak seasons",
+      "Early morning visits provide excellent sights and fewer crowds"
+    ],
+    
+    nearbyAttractions: [
+      "Ezhimala Naval Academy and beaches",
+      "Bekal Fort in Kasaragod",
+      "Wayanad hills and tea plantations nearby for a mix of hill station experiences",
+      "Kizhunna Beach and Thalassery for more coastal adventures"
+    ],
+    
+    howToReach: {
+      air: "Kannur International Airport, about 26 km from the city",
+      rail: "Kannur Railway Station is well-connected to major Indian cities",
+      road: "Extensive bus network and taxis link Kannur to other parts of Kerala and neighboring states"
+    },
+    
+    climate: "Tropical coastal climate"
+  },
+  {
+    id: "kollam",
+    name: "KOLLAM",
+    desc: "Gateway to Kerala's Backwaters and Heritage - A coastal city and district recognized for its role in ancient trade, especially in spices and cashew.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/-kollam-_bsqsgx.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193261/-kollam-_bsqsgx.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
+    ],
+    rating: "4.3",
+    tours: "5",
+    highlights: ["Ashtamudi Lake", "Jatayu Earth Center", "Thangassery Lighthouse", "Palaruvi Waterfalls", "Thenmala Eco-tourism"],
+    bestSeason: "October to March is the best time to explore Kollam and its surroundings due to pleasant weather and minimal rainfall.",
+    distance: "150 km from Kochi",
+    packages: ["Backwater Gateway Tour", "Eco-Tourism Experience"],
+    
+    overview: "Kollam, historically known as Quilon, is a coastal city and district in Kerala recognized for its role in ancient trade, especially in spices and cashew. Nestled beside the Arabian Sea and blessed with intricate backwaters like Ashtamudi Lake, Kollam offers a mix of natural beauty, historic sites, and vibrant local culture. It is a key entry point to Kerala's famous backwater network and eco-tourism destinations.",
+    
+    keyAttractions: [
+      {
+        name: "Ashtamudi Lake",
+        description: "The largest lake in Kerala with eight prominent channels, offering scenic houseboat cruises and lush tropical landscapes."
+      },
+      {
+        name: "Jatayu Earth Center",
+        description: "Home to the world's largest bird sculpture, Jatayu, and offers adventure activities like rock climbing, zip-lining, and trekking. Recognized by the Guinness Book of World Records."
+      },
+      {
+        name: "Thangassery Lighthouse",
+        description: "A historic lighthouse standing 144 feet tall on the coast, built in 1902, offering panoramic views of the Arabian Sea."
+      },
+      {
+        name: "Palaruvi Waterfalls",
+        description: "Known as the 'Stream of Milk,' this 300-foot waterfall cascades down the Western Ghats amidst lush forests."
+      },
+      {
+        name: "Thenmala Eco-tourism",
+        description: "India's first planned eco-tourism destination featuring boating, trekking, a suspension rope bridge, and a musical fountain."
+      },
+      {
+        name: "Kollam Beach and Thirumullavaram Beach",
+        description: "Beautiful sandy beaches ideal for relaxing, swimming, and enjoying sunsets."
+      },
+      {
+        name: "Punalur Suspension Bridge",
+        description: "Historic suspension bridge known as the 'London Bridge of Kerala,' an architectural marvel built in 1877."
+      },
+      {
+        name: "Shenduruny Wildlife Sanctuary",
+        description: "Part of the Agasthyamalai Biosphere Reserve, home to diverse flora and fauna including elephants and rare primates."
+      },
+      {
+        name: "Thevally Palace",
+        description: "A heritage site near Ashtamudi Lake with historical significance."
+      },
+      {
+        name: "Munroe Island",
+        description: "Nearby islands with serene backwaters, traditional coir-making, and village life."
+      }
+    ],
+    
+    topActivities: [
+      "Houseboat cruises through Ashtamudi Lake and Munroe Island backwaters",
+      "Adventure sports and trekking at Jatayu Earth Center and Thenmala",
+      "Beach activities and relaxing on sandy shores",
+      "Visiting historic forts, lighthouses, and heritage sites",
+      "Exploring waterfalls and wildlife sanctuaries",
+      "Sampling local cuisine and exploring traditional markets"
+    ],
+    
+    localCuisine: "Fresh seafood, traditional Kerala curries, homemade pickles, and snacks like banana chips and tapioca are highlights. Local eateries offer authentic meals made with fresh regional ingredients.",
+    
+    festivalsCulture: [
+      "Thriving local festivals at temples and churches",
+      "Cultural events at Thenmala and Jatayu Earth Center with performances and exhibitions",
+      "Cashew and spice trade fairs emphasizing Kollam's commercial prominence"
+    ],
+    
+    travelTips: [
+      "Plan houseboat cruises in advance, especially during peak season",
+      "Use comfortable footwear for trekking and adventure activities",
+      "Respect wildlife and adhere to guidelines in sanctuaries",
+      "Carry sun protection and insect repellents for outdoor excursions"
+    ],
+    
+    nearbyAttractions: [
+      "Ashtamudi Lake backwaters",
+      "Munroe Island for village experiences",
+      "Thenmala eco-tourism destination",
+      "Sasthamkotta freshwater lake"
+    ],
+    
+    howToReach: {
+      air: "Trivandrum International Airport (about 70 km)",
+      rail: "Kollam Junction is a major railway station connecting to major Indian cities",
+      road: "Well connected by national highways and buses"
+    },
+    
+    climate: "Tropical coastal climate"
+  },
+  {
+    id: "idukki",
+    name: "IDUKKI",
+    desc: "Kerala's Mountainous Spice Garden and Wildlife Haven - A picturesque district renowned for its mountainous terrain, dense forests, spice plantations, and serene hill stations.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Idukki_qn2nbg.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Idukki_qn2nbg.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
+    ],
+    rating: "4.6",
+    tours: "7",
+    highlights: ["Idukki Arch Dam", "Periyar Sanctuary", "Meesapulimala", "Anamudi Peak", "Spice Plantations"],
+    bestSeason: "October to May is the best time to visit Idukki, with cool, pleasant weather ideal for sightseeing, trekking, and wildlife safaris. Monsoon season (June to September) can be rainy but transforms the forests into lush landscapes.",
+    distance: "120 km from Kochi",
+    packages: ["Mountain Adventure Tour", "Wildlife & Spice Experience"],
+    
+    overview: "Idukki is a picturesque district in Kerala, renowned for its mountainous terrain, dense forests, spice plantations, and serene hill stations. It is part of the Western Ghats and home to some of the highest peaks in South India including Anamudi and Meesapulimala. Known as Kerala's 'Spice Garden,' Idukki offers rich biodiversity, tranquil lakes, lush valleys, and vibrant wildlife sanctuaries, making it a prime destination for nature lovers and adventure seekers.",
+    
+    keyAttractions: [
+      {
+        name: "Idukki Arch Dam",
+        description: "Asia's largest arch dam across the Periyar River, set between two granite hills (Kuravanmala and Kurathimala). It is a marvel of engineering and offers breathtaking views."
+      },
+      {
+        name: "Periyar Wildlife Sanctuary (Thekkady)",
+        description: "Famous for its elephant-populated forests and tiger reserve, it offers boat safaris on Periyar Lake, jungle trekking, and wildlife watching."
+      },
+      {
+        name: "Munnar",
+        description: "A famous hill station with sprawling tea estates, Eravikulam National Park, waterfalls, and scenic viewpoints."
+      },
+      {
+        name: "Meesapulimala",
+        description: "The second highest peak in the Western Ghats, popular among trekkers for its challenging trails and panoramic views."
+      },
+      {
+        name: "Anamudi Peak",
+        description: "The highest peak in South India situated within Eravikulam National Park, accessible to trekkers with permits."
+      },
+      {
+        name: "Cheruthoni and Kulamavu Dams",
+        description: "Part of the Idukki Hydroelectric Project with scenic reservoirs and viewpoints."
+      },
+      {
+        name: "Ramakkalmedu",
+        description: "Known for its wind energy parks and panoramic views covering neighboring Tamil Nadu."
+      },
+      {
+        name: "Hill View Park",
+        description: "A popular viewpoint near Painavu offering expansive views of the hills and reservoirs."
+      },
+      {
+        name: "Sita Devi Lake",
+        description: "A tranquil lake near Idukki surrounded by hills and tea plantations."
+      },
+      {
+        name: "Gavi",
+        description: "An eco-tourism hotspot with trekking, boating, and rich flora and fauna."
+      }
+    ],
+    
+    topActivities: [
+      "Trekking to peaks like Anamudi and Meesapulimala",
+      "Wildlife safaris and boat rides in Periyar Wildlife Sanctuary",
+      "Exploring tea plantations and visiting spice gardens",
+      "Sightseeing at dams, reservoirs, and scenic viewpoints",
+      "Adventure activities at Ramakkalmedu and eco-tourism sites like Gavi"
+    ],
+    
+    localCuisine: "Savor Kerala's hill cuisine featuring fresh spices such as cardamom and pepper. Local dishes include traditional Kerala meals, with an emphasis on vegetarian food, tapioca, and fresh fish delicacies.",
+    
+    festivalsCulture: [
+      "Traditional temple festivals in the region",
+      "Cultural events promoting local arts and traditions linked with the tribal communities and plantation culture"
+    ],
+    
+    travelTips: [
+      "Book trekking and wildlife tours in advance with proper permits",
+      "Carry warm clothing, especially for higher altitude areas",
+      "Use guided tours for forest safaris and trekking routes",
+      "Respect wildlife guidelines and safety protocols"
+    ],
+    
+    nearbyAttractions: [
+      "Thekkady Tiger Reserve",
+      "Munnar hill station and Eravikulam National Park",
+      "Vattavada and Kattapana for nature and tea estates"
+    ],
+    
+    howToReach: {
+      air: "Cochin International Airport (around 110 km from Munnar)",
+      rail: "Aluva and Ernakulam railway stations are the nearest major railheads",
+      road: "Well connected with buses, taxis, and private vehicles from major cities"
+    },
+    
+    climate: "Cool mountain climate"
+  },
+  {
+    id: "chinnar",
+    name: "CHINNAR WILDLIFE SANCTUARY",
+    desc: "Kerala's Unique Dry Forest Reserve - Located 18 km north of Marayoor in the Devikulam taluk of Idukki district, featuring dry thorn scrub forests and rich biodiversity.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Chinnar_Wildlife_Sanctuary_k2e4bb.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Chinnar_Wildlife_Sanctuary_k2e4bb.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487813/periyar_lake_1_flz8vu.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487815/periyar_lake_3_ojjgtd.jpg"
+    ],
+    rating: "4.2",
+    tours: "2",
+    highlights: ["Grizzled Giant Squirrel", "Thoovanam Waterfalls", "Wildlife Safaris", "Bird Watching", "Trekking"],
+    bestSeason: "October to November offers the most pleasant climate for trekking, wildlife viewing, and outdoor activities. The sanctuary is open all year round; avoid monsoon months (June-September) due to slippery trails and heavy rain.",
+    distance: "150 km from Kochi",
+    packages: ["Wildlife Sanctuary Tour", "Nature & Adventure"],
+    
+    overview: "Chinnar Wildlife Sanctuary is located 18 km north of Marayoor in the Devikulam taluk of Idukki district, Kerala. Established in 1984, it spans approximately 91 sq. km in the rain shadow region of the Western Ghats. The sanctuary features dry thorn scrub forests, dry deciduous, shola grasslands, and riparian forests. It borders the Eravikulam National Park in the south and the Indira Gandhi Wildlife Sanctuary in the north, creating a contiguous biodiversity zone.",
+    
+    keyAttractions: [
+      {
+        name: "Grizzled Giant Squirrel and Indian Star Tortoise",
+        description: "Home to the endangered Grizzled Giant Squirrel and Indian star tortoise, with a unique rehabilitation center for the latter."
+      },
+      {
+        name: "Thoovanam Waterfalls",
+        description: "A popular trekking spot deep inside the sanctuary."
+      },
+      {
+        name: "Rare Flora",
+        description: "Including sandalwood, teak, acacia, and over 1,000 species of flowering plants."
+      },
+      {
+        name: "Diverse Fauna",
+        description: "Elephants, tigers, panthers, gaur, spotted deer, sambar, Hanuman monkeys, bonnet macaques, slender loris."
+      },
+      {
+        name: "Bird Species",
+        description: "Over 225 species including black eagle, yellow-throated bulbul, serpent eagle, greys heron."
+      },
+      {
+        name: "Trekking Routes",
+        description: "Several trekking routes with scenic views, nature trails, and cultural sites."
+      }
+    ],
+    
+    topActivities: [
+      "Guided jeep and elephant safaris for wildlife spotting",
+      "Trekking to Thoovanam Waterfalls and other cultural sites",
+      "Birdwatching and nature walks",
+      "Visiting the Indian star tortoise rehabilitation center",
+      "Eco-tourism activities including overnight stays in treehouses and eco-lodges"
+    ],
+    
+    localCuisine: "Traditional Kerala dishes centered around rice, tapioca, and locally sourced fish. Tribal culinary influences introduce wild greens, roots, and meat preparations flavored with native spices like cardamom and black pepper.",
+    
+    festivalsCulture: [
+      "Celebrates major Kerala festivals such as Onam and Vishu with traditional rituals and feasts",
+      "Local tribal festivals featuring folk dances, music, and rituals showcasing rich cultural heritage"
+    ],
+    
+    travelTips: [
+      "Wear sturdy shoes and carry mosquito repellent and sunscreen",
+      "Book safaris and guided tours in advance for guaranteed entry",
+      "Maintain silence during tours for better wildlife encounters",
+      "Carry water, binoculars, and a camera for an enhanced experience",
+      "Travel early morning or late afternoon to maximize wildlife sighting opportunities"
+    ],
+    
+    nearbyAttractions: [
+      "Thoovanam Waterfalls (within sanctuary)",
+      "Marayoor Sandalwood Forests and ancient dolmens",
+      "Lakkam and Attukal Waterfalls near Munnar",
+      "Aliyar Dam and Monkey Falls (near Tamil Nadu border)",
+      "Amaravathi Dam and crocodile sanctuary",
+      "Topslip and Parambikulam Tiger Reserve",
+      "Ramakkalmedu wind farms and viewpoints",
+      "Pothamedu Viewpoint near Munnar for panoramic tea estate views"
+    ],
+    
+    howToReach: {
+      air: "Cochin International Airport is about 150 km away",
+      rail: "Pollachi railway station is approximately 60 km from the sanctuary",
+      road: "Accessible from Cochin, Pollachi, and Munnar via road networks; taxis and private vehicles allowed with Forest Department registration"
+    },
+    
+    climate: "Dry forest climate"
+  },
+  {
+    id: "kalamassery",
+    name: "KALAMASSERY",
+    desc: "Industrial and Educational Hub of Kochi - A prominent industrial and residential locality in the Kochi metropolitan area, known for its blend of urban infrastructure and academic excellence.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kalamassery_ltevtp.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193263/Kalamassery_ltevtp.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759490476/premium_photo-1697729597066-7b3d09b6dab7_oxwkpb.jpg"
+    ],
+    rating: "4.0",
+    tours: "1",
+    highlights: ["CUSAT University", "FACT Industries", "Kochi Metro", "Educational Institutions", "Urban Development"],
+    bestSeason: "Year Round",
+    distance: "9 km from Kochi",
+    packages: ["Educational Tour", "Industrial Visit"],
+    
+    overview: "Kalamassery is a prominent industrial and residential locality in the Kochi metropolitan area, located about 9 km northeast of Kochi city center. It is a key center for Kerala's industrial development, hosting major companies and institutions, and known for its blend of urban infrastructure and academic excellence.",
+    
+    keyAttractions: [
+      {
+        name: "FACT Industrial Complex",
+        description: "Home to the Fertilizers and Chemicals Travancore (FACT) industrial complex, one of India's largest fertilizer producers established in 1943."
+      },
+      {
+        name: "Major Industries",
+        description: "Hosts industries like Apollo Tyres, Hindustan Machine Tools (HMT), Carborundum, Merchem, and others. Many vehicle service centers for leading automobile brands are located here."
+      },
+      {
+        name: "IT and Startup Hubs",
+        description: "Important IT and startup hubs including Kerala Startup Village and Kochi Science City are in Kalamassery."
+      },
+      {
+        name: "Educational Institutions",
+        description: "Hosts several prestigious institutions such as Cochin University of Science and Technology (CUSAT), Government Medical College Ernakulam, National University of Advanced Legal Studies (NUALS), Rajagiri College of Social Sciences, Model Engineering College, and many others."
+      },
+      {
+        name: "Infrastructure",
+        description: "Well connected through NH 66 and Kochi Metro, with 3 metro stations servicing the area (Kalamassery Town, CUSAT, Pathadipalam). Home to the largest shopping mall in India, Lulu International Shopping Mall, located at nearby Edapally toll."
+      },
+      {
+        name: "Healthcare Facilities",
+        description: "Significant healthcare facilities include Government Medical College and KIMS hospital."
+      },
+      {
+        name: "Local Amenities",
+        description: "Various schools, colleges, and polytechnic institutions serving the population. Social and religious diversity with temples, churches, mosques, and community centers."
+      }
+    ],
+    
+    topActivities: [
+      "Educational campus tours",
+      "Industrial visits to major companies",
+      "Shopping at Lulu Mall",
+      "Exploring urban infrastructure and development",
+      "Visiting educational and research institutions"
+    ],
+    
+    localCuisine: "Urban Kerala cuisine with a mix of traditional and modern food options. Various restaurants and eateries offering local and international cuisine.",
+    
+    festivalsCulture: [
+      "Cultural events at educational institutions",
+      "Urban festivals and community events",
+      "Religious festivals across diverse communities"
+    ],
+    
+    travelTips: [
+      "Use metro for convenient transportation",
+      "Plan visits during weekdays for educational and industrial tours",
+      "Carry identification for institutional visits",
+      "Respect institutional guidelines and protocols"
+    ],
+    
+    nearbyAttractions: [
+      "Lulu International Shopping Mall",
+      "Cochin University campus",
+      "Kochi city center and Fort Kochi",
+      "Marine Drive and other Kochi attractions"
+    ],
+    
+    howToReach: {
+      air: "Cochin International Airport is well connected",
+      rail: "Ernakulam railway stations serve the area",
+      road: "Excellent road connectivity with national highways and metro rail"
+    },
+    
+    climate: "Urban tropical climate"
+  },
+  {
+    id: "kumbalangi",
+    name: "KUMBALANGI",
+    desc: "India's First Model Fishing Village and Eco-Tourism Haven - A picturesque fishing village known as India's first model eco-tourism village, surrounded by tranquil backwaters and lush mangrove forests.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumbalangi-_vgkqik.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/Kumbalangi-_vgkqik.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_1_b007co.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759487637/backwater_2_sfyek2.jpg"
+    ],
+    rating: "4.3",
+    tours: "2",
+    highlights: ["Chinese Fishing Nets", "Mangrove Forests", "Sea Sparkle", "Crab Catching", "Village Life"],
+    bestSeason: "The months from November to February are cooler and pleasant for exploring. Sea sparkle phenomenon is best witnessed in September-October and again in March-April.",
+    distance: "15 km from Kochi",
+    packages: ["Village Tourism", "Eco-Tourism Experience"],
+    
+    overview: "Kumbalangi, located about 15 km from Kochi city, is a picturesque fishing village known as India's first model eco-tourism village. Surrounded by tranquil backwaters and lush mangrove forests, the village showcases sustainable tourism alongside traditional fishing lifestyles. Plastic bags are banned here to preserve the natural ecosystem, and no commercial resorts are built, maintaining its authentic charm.",
+    
+    keyAttractions: [
+      {
+        name: "Chinese Fishing Nets",
+        description: "More than 100 distinctive fishing nets dot the tranquil backwaters, operated by locals using traditional methods."
+      },
+      {
+        name: "Kumbalangi Integrated Tourism Village",
+        description: "A government-supported initiative providing guided tours explaining the village's lifestyle, craft demonstrations, and sustainable fishing techniques."
+      },
+      {
+        name: "Mangrove Forests",
+        description: "Explore winding canals bordered by mangroves, a safe breeding ground for prawns, crabs, and oysters, through relaxing boat rides."
+      },
+      {
+        name: "Sea Sparkle (Kavaru)",
+        description: "A natural bioluminescence phenomenon visible during certain months (September-October and March-April) where water glows under moonlight, caused by micro-plankton."
+      },
+      {
+        name: "Kalagraamam",
+        description: "An artist village displaying handicrafts and fishing equipment reflecting local culture."
+      },
+      {
+        name: "Toddy Tapping Demonstrations",
+        description: "Witness traditional toddy extraction from coconut palms by skilled locals, a centuries-old craft."
+      },
+      {
+        name: "Crab Catching",
+        description: "Join fishermen during low tide to catch crabs in this natural habitat, an engaging experience for visitors."
+      },
+      {
+        name: "Village Life Experiences",
+        description: "Stays in homestays offering authentic local seafood cuisine such as prawn curry, fish fry, and crab masala."
+      }
+    ],
+    
+    topActivities: [
+      "Guided backwater boat tours through the scenic canals",
+      "Observing traditional fishing and coir-making activities",
+      "Exploring mangrove ecosystems rich in biodiversity",
+      "Enjoying fresh seafood at local homestays and eateries",
+      "Participating in cultural activities and festivals"
+    ],
+    
+    localCuisine: "Fresh seafood dominates the culinary scene, including prawn curry, crab masala, fish moilee, and fried fish, all flavored with rich Kerala spices and coconut milk.",
+    
+    festivalsCulture: [
+      "Local temple festivals and Onam celebrations with folk art and boat races",
+      "Preservation of traditional fishing culture and eco-friendly practices"
+    ],
+    
+    travelTips: [
+      "Book homestays in advance during peak seasons for an authentic village experience",
+      "Carry insect repellent and sun protection for outdoors",
+      "Respect local customs and ecological guidelines to help maintain the village's pristine environment"
+    ],
+    
+    nearbyAttractions: [
+      "Kochi city and Fort Kochi",
+      "Cherai Beach",
+      "Other backwater destinations in Kochi"
+    ],
+    
+    howToReach: {
+      rail: "Ernakulam railway station is the nearest, about 14 km away",
+      air: "Cochin International Airport is approximately 46 km from Kumbalangi",
+      road: "Well connected by local transport services and taxis from Kochi"
+    },
+    
+    climate: "Coastal tropical climate"
+  },
+  {
+    id: "silent-valley",
+    name: "SILENT VALLEY NATIONAL PARK",
+    desc: "The Last Undisturbed Rainforest of Kerala - Located in the Nilgiri Hills of Palakkad district, renowned for its pristine tropical evergreen rainforest and rich biodiversity.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/silentvalley-_chdrlb.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/silentvalley-_chdrlb.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
+    ],
+    rating: "4.5",
+    tours: "2",
+    highlights: ["Lion-tailed Macaque", "Watchtower", "Kunthi River", "Evergreen Forests", "Wildlife Safari"],
+    bestSeason: "December to April is the best period, with pleasant weather ideal for trekking, safari, and wildlife viewing. The park is generally closed on Fridays for maintenance.",
+    distance: "75 km from Palakkad",
+    packages: ["Rainforest Adventure", "Wildlife Conservation Tour"],
+    
+    overview: "Silent Valley National Park is located in the Nilgiri Hills of Palakkad district, Kerala, spanning an area of 89.52 sq km as part of the Nilgiri Biosphere Reserve. It is renowned for its pristine tropical evergreen rainforest, rich biodiversity, and as one of the last substantial tracts of virgin rainforest in the Western Ghats. This park is a biodiversity hotspot, hosting endangered species and endemic flora and fauna.",
+    
+    keyAttractions: [
+      {
+        name: "Lion-tailed Macaque",
+        description: "Home to the largest population of this endangered primate."
+      },
+      {
+        name: "Watchtower at Sairandhri",
+        description: "A 150-meter high tower offering panoramic views of the forest canopy, Kunthi River, and surrounding peaks like Anginda and Poochipara."
+      },
+      {
+        name: "Kunthi River",
+        description: "A pristine freshwater river flowing through the park with a hanging bridge providing stunning views."
+      },
+      {
+        name: "Dense Evergreen Forests",
+        description: "Towering ancient trees, orchids, mosses, and a rich canopy that limits sunlight reaching the forest floor."
+      },
+      {
+        name: "Wildlife",
+        description: "Includes Nilgiri tahr, Malabar giant squirrel, Nilgiri langur, elephants, gaur, spotted deer, leopards, tigers, and a broad variety of bird species like the Malabar Whistling Thrush and Racket-tailed Drongo."
+      },
+      {
+        name: "Museum at Watchtower",
+        description: "Displays information about the park's flora, fauna, and bird sounds with interactive exhibits."
+      }
+    ],
+    
+    topActivities: [
+      "Guided jeep safari and nature walks within the park",
+      "Trekking to watchtower and Kunthi River route for wildlife and bird watching",
+      "Photography of rare and endemic species and scenic forests",
+      "Exploring the hanging bridge over Kunthi River",
+      "Visiting the museum for wildlife education"
+    ],
+    
+    localCuisine: "The cuisine in surrounding areas features traditional Kerala dishes with rice, tapioca, and local vegetables. Freshwater fish and game meat might be available in local tribal cuisine nearby, enhanced with local spices and coconut.",
+    
+    festivalsCulture: [
+      "The park area is influenced by local tribal communities with unique cultural festivals connected to nature and forest life",
+      "Ecotourism and conservation awareness programs often coincide with cultural exhibitions and traditional rituals"
+    ],
+    
+    travelTips: [
+      "Book safari and trekking permits in advance",
+      "Carry mosquito repellent, comfortable walking shoes, binoculars, and water",
+      "Follow park guidelines strictly; avoid littering and disturbing wildlife",
+      "The trek to the watchtower involves stairs and uneven trails, so prepare accordingly",
+      "Avoid visits during heavy rain and peak summer for a better experience"
+    ],
+    
+    nearbyAttractions: [
+      "Silent Valley Watchtower and Museum",
+      "Kunthi River and Hanging Bridge",
+      "Sispara Peak",
+      "Anginda Peak",
+      "Protected forest tracts adjoining the Nilgiri Biosphere Reserve"
+    ],
+    
+    howToReach: {
+      air: "Peelamamedu Airport, Coimbatore (117 km)",
+      rail: "Palakkad Junction, Palghat (75 km)",
+      road: "Well connected by regular bus services from Coimbatore, Palakkad, and other major cities. Mukkali is the main gateway to the park."
+    },
+    
+    climate: "Rainforest climate"
+  },
+  {
+    id: "edakkal-caves",
+    name: "EDAKKAL CAVES",
+    desc: "Ancient Rock Art and Prehistoric Heritage in Wayanad - Two natural rock shelters located on the Ambukuthi Hills near Sulthan Bathery, famous for ancient petroglyphs dating back over 6,000 years.",
+    image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Edakkal_Caves_scfq2n.jpg",
+    images: [
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193262/Edakkal_Caves_scfq2n.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_1_jrixag.jpg",
+      "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759476405/tea_2_rmqxfj.jpg"
+    ],
+    rating: "4.4",
+    tours: "3",
+    highlights: ["Prehistoric Carvings", "Rock Shelters", "Ancient Petroglyphs", "Trekking", "Historical Exploration"],
+    bestSeason: "October to May is ideal to visit Edakkal Caves, offering pleasant weather for trekking and exploration. Avoid monsoon months due to slippery trails.",
+    distance: "10 km from Sulthan Bathery",
+    packages: ["Historical Tour", "Archaeological Experience"],
+    
+    overview: "Edakkal Caves are two natural rock shelters located on the Ambukuthi Hills near Sulthan Bathery in Wayanad district. Despite the name, these are not typical caves but formed by huge boulders wedged together creating a sheltered space. Situated at around 1,200 meters above sea level, Edakkal Caves provide one of the earliest evidences of human civilization in Kerala with pictorial writings and carvings dating back over 6,000 years, to the Neolithic period.",
+    
+    keyAttractions: [
+      {
+        name: "Prehistoric Carvings and Petroglyphs",
+        description: "Ancient rock engravings and paintings dating back over 6,000 years to the Neolithic period, depicting human figures, animals, tools, symbols, and scripts."
+      },
+      {
+        name: "Rock Shelters",
+        description: "Natural caves formed by large boulders wedged together, creating two main chambers: the lower chamber (smaller) and the larger upper chamber adorned with over 400 identifiable petroglyphs."
+      },
+      {
+        name: "Historical Significance",
+        description: "The caves were discovered in 1890 by Fred Fawcett, the then Superintendent of Police for Malabar. The carvings span different eras, from the Neolithic (6000 BCE) to the Iron Age (up to 1000 BCE), with some showing possible links to the Indus Valley civilization."
+      },
+      {
+        name: "Mythological Association",
+        description: "Myths associate the cave's formation with the arrows shot by Lava and Kusha, sons of Lord Rama, cleaving the rock. The name 'Edakkal' means 'a stone in between' referencing the boulder structure."
+      },
+      {
+        name: "Archaeological Importance",
+        description: "Provides one of the earliest evidences of human civilization in Kerala, indicating prehistoric human settlement or frequent use."
+      }
+    ],
+    
+    topActivities: [
+      "Trekking through scenic Ambukuthi hills with panoramic views",
+      "Observing some of the oldest examples of rock art in India",
+      "Learning about ancient cultures, tools, and symbolic representation through the carvings",
+      "Photography of ancient carvings and scenic landscapes",
+      "Historical and archaeological exploration"
+    ],
+    
+    localCuisine: "Traditional Wayanad cuisine featuring local tribal and Malabar dishes. Enjoy traditional meals with local herbs, bamboo rice, and fresh vegetables from the hills.",
+    
+    festivalsCulture: [
+      "Local tribal festivals showcasing ancient traditions",
+      "Archaeological and historical exhibitions",
+      "Cultural events celebrating the region's prehistoric heritage"
+    ],
+    
+    travelTips: [
+      "Wear comfortable trekking shoes for the 45-minute uphill trek",
+      "Carry water and light snacks for the climb",
+      "Hire local guides for better understanding of the carvings",
+      "Visit early morning to avoid crowds and heat",
+      "Respect the archaeological site and avoid touching the carvings"
+    ],
+    
+    nearbyAttractions: [
+      "Sulthan Bathery town",
+      "Wayanad Wildlife Sanctuary",
+      "Other historical sites in Wayanad",
+      "Tea and coffee plantations in the region"
+    ],
+    
+    howToReach: {
+      air: "Kozhikode International Airport (approximately 100 km) and Kannur International Airport (around 110 km)",
+      rail: "Kozhikode and Mysore railway stations",
+      road: "Edakkal Caves are about 10 km from Sulthan Bathery town. Visitors trek roughly 45 minutes uphill via steps and forest path to reach the caves. Jeep services are available for part of the ascent from local tourism offices."
+    },
+    
+    climate: "Hill station climate"
+  }
+
   ];
 
   // Find the place by ID
