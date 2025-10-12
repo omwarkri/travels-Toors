@@ -122,7 +122,7 @@ const Navigation = () => {
           >
             <img
               src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578583/logo_dps0pd.jpg"
-              className="w-28 sm:w-28 h-auto ml-2"
+              className="w-32 md:w-44 h-auto ml-2"
               alt="Logo"
             />
           </Link>
