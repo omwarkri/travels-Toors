@@ -113,7 +113,7 @@ const Navigation = () => {
       </div>
 
       {/* Main Nav */}
-      <div className="max-w-7xl mx-auto sm:px-4 lg:px-6">
+      <div className="max-w-7xl mx-auto  sm:px-2 lg:px-3">
         <div className="flex justify-between items-center py-3 sm:py-2">
           <Link
             to="/"
