@@ -203,7 +203,7 @@ const Hero = () => {
           <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
             Explore Kerla's Most Beutiful Destinations
           </h5>
-          <h6 className="bg-red-200 text-white">Affordable and Memorable Tour Packages for Families and Freinds </h6>
+          <h6 className="bg-red-200 text-black">Affordable and Memorable Tour Packages for Families and Freinds </h6>
 
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
             <Link
