@@ -28,7 +28,7 @@ const TourPackageCard = ({ pkg }) => (
       {/* Header Section */}
       <div className="mb-4 flex-shrink-0">
         <Link to={`/package/${pkg.id}`}>
-          <h3 className="text-xl font-bold text-gray-800 mb-2 hover:text-emerald-600 transition duration-300 line-clamp-2 min-h-[3.5rem]">
+          <h3 className="text-xl font-bold text-gray-800  hover:text-emerald-600 transition duration-300 line-clamp-2 min-h-[1.5rem]">
             {pkg.name}
           </h3>
         </Link>
