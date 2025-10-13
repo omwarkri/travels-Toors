@@ -304,17 +304,30 @@ const TourPackages = ({ id = "packages" }) => {
       </div>
 
       {/* View All Packages CTA */}
-      <div className="text-center mt-8">
-        <Link 
-          to="/packages" 
-          className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base"
-        >
-          View All {allPackages.length}+ Packages
-          <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </Link>
-      </div>
+    {allPackages.length > 6 && (
+  <div className="text-center mt-8">
+    <Link 
+      to="/packages" 
+      className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base"
+    >
+      View All {allPackages.length}+ Packages
+      <svg 
+        className="w-4 h-4 sm:w-5 sm:h-5 ml-2" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          d="M19 9l-7 7-7-7" 
+        />
+      </svg>
+    </Link>
+  </div>
+)}
+
 
       {/* Trust Indicators */}
       <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-center px-4">
