@@ -68,27 +68,7 @@ memorable, smooth, and seamless travel experience from start to finish.
           </div>
         </div>
 
-        {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12 md:mb-20">
-          <div className="bg-emerald-50 p-6 md:p-8 rounded-xl md:rounded-2xl border border-emerald-100">
-            <div className="text-3xl md:text-4xl mb-3 md:mb-4">🎯</div>
-            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Our Mission</h3>
-            <p className="text-gray-700 text-sm md:text-base">
-              To deliver exceptional travel experiences in Kerala by blending
-              local expertise with personalized care, making every journey a
-              lifelong memory.
-            </p>
-          </div>
-          <div className="bg-emerald-50 p-6 md:p-8 rounded-xl md:rounded-2xl border border-emerald-100">
-            <div className="text-3xl md:text-4xl mb-3 md:mb-4">👁️</div>
-            <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">Our Vision</h3>
-            <p className="text-gray-700 text-sm md:text-base">
-              To become Kerala's most trusted and preferred travel partner,
-              recognized for our integrity, excellence, and customer-first
-              approach.
-            </p>
-          </div>
-        </div>
+      
 
         {/* Why Us Section */}
         <div className="bg-gray-50 py-8 md:py-12 rounded-xl md:rounded-2xl mb-10 md:mb-0">
