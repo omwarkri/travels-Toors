@@ -86,15 +86,26 @@ const Navigation = () => {
       <div className="bg-emerald-600 text-white py-1">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 flex justify-between items-center">
           <a
-            href="tel:+919028803309"
-            className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200"
-          >
-            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z" />
-              <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2z" />
-            </svg>
-            <span className="text-xs font-medium">+91 90288 03309</span>
-          </a>
+  href="tel:+919028803309"
+  className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.55a1 1 0 01-.272 1.03l-2.12 2.12a16.001 16.001 0 006.586 6.586l2.12-2.12a1 1 0 011.03-.272l4.55 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.716 24 0 14.284 0 3V2a2 2 0 012-2h1z"
+    />
+  </svg>
+  <span className="text-xs font-medium">+91 90288 03309</span>
+</a>
+
 
           <div className="flex items-center space-x-2">
             {socialLinks.map((social) => (
