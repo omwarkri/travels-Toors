@@ -98,6 +98,52 @@ const TourPackageCard = ({ pkg }) => (
             </li>
           ))}
         </ul>
+        
+        {/* Additional Information Section */}
+        <div className="mt-4 p-3 bg-gray-50 rounded-lg border border-gray-200">
+          <div className="grid grid-cols-2 gap-3 text-xs">
+            <div className="flex items-center">
+              <svg className="w-3 h-3 mr-2 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+              </svg>
+              <span className="text-gray-700">Free Cancellation</span>
+            </div>
+            <div className="flex items-center">
+              <svg className="w-3 h-3 mr-2 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-gray-700">Expert Guide</span>
+            </div>
+            <div className="flex items-center">
+              <svg className="w-3 h-3 mr-2 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-gray-700">24/7 Support</span>
+            </div>
+            <div className="flex items-center">
+              <svg className="w-3 h-3 mr-2 text-emerald-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-gray-700">Best Price</span>
+            </div>
+          </div>
+          
+          {/* Quick Stats */}
+          <div className="flex justify-between mt-3 pt-3 border-t border-gray-200">
+            <div className="text-center">
+              <div className="text-sm font-bold text-emerald-600">{pkg.groupSize || "4-12"}</div>
+              <div className="text-xs text-gray-500">Group Size</div>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-bold text-emerald-600">{pkg.difficulty || "Easy"}</div>
+              <div className="text-xs text-gray-500">Difficulty</div>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-bold text-emerald-600">{pkg.ageRange || "12-65"}</div>
+              <div className="text-xs text-gray-500">Age Range</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Price and Rating Section - Fixed Height */}
