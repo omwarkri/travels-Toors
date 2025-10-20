@@ -184,7 +184,7 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-32">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-       <h1 className="text-1xl md:text-3xl lg:text-4xl font-serif font-light text-white -mb-1 leading-tight tracking-widest uppercase">
+       <h1 className="text-1xl md:text-3xl lg:-mb-10 lg:text-4xl font-serif font-light text-white -mb-1 leading-tight tracking-widest uppercase">
   Discover the Magic of
   <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-2 font-normal">
     God's Own Country
