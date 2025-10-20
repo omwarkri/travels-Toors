@@ -10,18 +10,38 @@ const ExperienceDetailPage = () => {
     ayurveda: [
       {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/udvartana_khwlq6.jpg",
-        title: "Udvartana Massage",
+        title: "Udvartana",
         description: "Herbal powder massage for detoxification and rejuvenation"
       },
       {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
-        title: "Shirodhara Treatment",
+        title: "Shirodhara",
         description: "Continuous oil flow therapy for deep mental relaxation"
       },
       {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/pizhichil_rba8ox.png",
-        title: "Pizhichil Therapy",
+        title: "Pizhichil",
         description: "Royal treatment with warm oil bath for complete body rejuvenation"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/udvartana_khwlq6.jpg",
+        title: "Kizhi",
+        description: "Warm herbal poultice massage for pain relief and muscle relaxation"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
+        title: "Nasya",
+        description: "Nasal administration of herbal medicines for sinus and respiratory health"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/pizhichil_rba8ox.png",
+        title: "Kati Basti",
+        description: "Specialized lower back treatment with warm medicated oil"
+      },
+      {
+        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/udvartana_khwlq6.jpg",
+        title: "Marma Massage",
+        description: "Energy point stimulation for holistic healing and balance"
       }
     ],
     artforms: [
@@ -96,16 +116,6 @@ const ExperienceDetailPage = () => {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Attukal_Pongala_bws6he.jpg",
         title: "Attukal Pongala",
         description: "Women's festival creating world's largest gathering"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Karkidaka_Vavu_Bali_ndptqb.png",
-        title: "Karkidaka Vavu Bali",
-        description: "Ritual offerings for ancestors at beaches"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/arattu_p3rb8i.png",
-        title: "Arattu Procession",
-        description: "Holy bath ceremony in ancient temples"
       }
     ],
     cuisine: [
@@ -136,67 +146,221 @@ const ExperienceDetailPage = () => {
       },
       {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770792/idli_nm5o8h.jpg",
-        title: "Idli",
-        description: "Soft steamed rice cakes with chutney"
+        title: "Idli Sambar",
+        description: "Soft steamed rice cakes with lentil stew"
       },
       {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/keralan_prawn_curry_45390_16x9_fzqql5.jpg",
         title: "Kerala Prawn Curry",
         description: "Spicy prawn preparation in coconut gravy"
+      }
+    ]
+  };
+
+  // Detailed content for each category
+  const detailedContent = {
+    ayurveda: [
+      {
+        title: "Abhyanga",
+        description: "Abhyanga is a traditional Ayurvedic full-body massage using warm, herbal oils applied with gentle, rhythmic strokes. It deeply nourishes the skin, improves blood circulation, and induces a sense of relaxation by calming the nervous system. This massage supports detoxification through lymphatic drainage and helps to balance the body's doshas (bio-energies).",
+        benefits: ["Stress relief and muscle relaxation", "Improved blood circulation", "Lymphatic drainage and detoxification", "Dosha balancing and rejuvenation"],
+        duration: "60-90 minutes",
+        bestFor: "Overall wellness and stress management"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Appam_with_Stew_sl4yr6.png",
-        title: "Appam with Stew",
-        description: "Lacy rice pancakes with vegetable stew"
+        title: "Shirodhara",
+        description: "Shirodhara is a relaxing Ayurvedic therapy where warm herbal oil is gently poured in a steady stream over the forehead, particularly on the 'third eye' area. This treatment calms the mind, relieves stress, anxiety, and insomnia, and promotes mental clarity. It also helps balance the nervous system and enhances overall brain function.",
+        benefits: ["Mental relaxation and stress relief", "Improved sleep quality", "Enhanced mental clarity", "Nervous system balance"],
+        duration: "45-60 minutes",
+        bestFor: "Stress, anxiety, and mental wellness"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Karimeen_Pollichathu_xvrodi.jpg",
-        title: "Karimeen Pollichathu",
-        description: "Pearl spot fish marinated and grilled in banana leaf"
+        title: "Pizhichil",
+        description: "Pizhichil is a unique Kerala Ayurvedic therapy where warm, medicated herbal oil is continuously poured over the entire body while gentle massage is given. This treatment deeply relaxes the muscles, nourishes the skin, and helps relieve joint and nerve pain. Often called the 'oil bath,' Pizhichil is a signature rejuvenation treatment.",
+        benefits: ["Muscle and joint pain relief", "Deep tissue nourishment", "Neurological disorder management", "Complete body rejuvenation"],
+        duration: "60-90 minutes",
+        bestFor: "Arthritis, muscle stiffness, and rejuvenation"
+      },
+      {
+        title: "Udvartana",
+        description: "Udvartana is a traditional Ayurvedic massage where the body is vigorously massaged with herbal powders or pastes, using upward strokes. This therapy is known for detoxifying the skin, stimulating the lymphatic system, and improving circulation. Especially recommended for weight loss and cellulite reduction.",
+        benefits: ["Weight management", "Skin detoxification", "Improved circulation", "Cellulite reduction"],
+        duration: "45-60 minutes",
+        bestFor: "Weight loss and skin revitalization"
+      },
+      {
+        title: "Kizhi",
+        description: "Kizhi is a traditional Ayurvedic massage therapy that involves the use of warm herbal poultices or bundles. These bundles, filled with medicinal herbs, are heated and gently pressed over the body to relieve pain, inflammation, and muscle stiffness. Different types include Elakizhi and Njavarakizhi.",
+        benefits: ["Pain and inflammation relief", "Improved circulation", "Muscle relaxation", "Tissue detoxification"],
+        duration: "60-75 minutes",
+        bestFor: "Chronic pain and muscular disorders"
+      },
+      {
+        title: "Nasya",
+        description: "Nasya is an ancient Ayurvedic therapy that involves administering medicinal oils or herbal extracts through the nostrils. It targets the head, sinuses, and respiratory system by cleansing, purifying, and nourishing these areas. Effective for sinus congestion and neurological issues.",
+        benefits: ["Sinus and respiratory health", "Headache and migraine relief", "Mental clarity", "Scalp and hair health"],
+        duration: "30-45 minutes",
+        bestFor: "Respiratory issues and mental wellness"
+      },
+      {
+        title: "Kati Basti",
+        description: "Kati Basti is a specialized Ayurvedic therapy focused on treating the lower back region. It involves creating a dough ring on the lower back, which is filled with warm, medicated herbal oil. Highly effective for chronic lower back pain and spinal conditions.",
+        benefits: ["Lower back pain relief", "Spinal health improvement", "Muscle relaxation", "Enhanced flexibility"],
+        duration: "45-60 minutes",
+        bestFor: "Chronic back pain and spinal issues"
       }
     ],
-    "photo-gallery": [
+    artforms: [
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Snake_Boat_Races_Vallam_Kali_iko5qt.png",
-        title: "Snake Boat Race",
-        description: "Traditional boat race on serene backwaters"
+        title: "Kathakali",
+        description: "Kathakali is a classical dance-drama from Kerala, known for its vibrant costumes, elaborate face makeup, and expressive hand gestures. It combines dance, music, and acting to tell stories from Indian epics like the Ramayana and Mahabharata. Performers use intricate facial expressions and body movements to convey emotions without speaking.",
+        features: ["Vibrant costumes and makeup", "Expressive hand gestures", "Traditional percussion music", "Epic mythological stories"],
+        duration: "2-4 hours",
+        significance: "Cultural symbol of Kerala's temple traditions"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
+        title: "Theyyam",
+        description: "Theyyam is a vibrant ritual art form from North Kerala, blending dance, music, and mysticism. Performers in striking costumes represent gods, goddesses, and legendary heroes, becoming living embodiments of the divine during the ritual. Over 400 types of Theyyam exist, each with unique stories and symbolism.",
+        features: ["Divine embodiment", "Elaborate costumes", "Ritualistic performance", "Tribal heritage"],
+        duration: "Varies by type",
+        significance: "Bridge between human and spiritual worlds"
+      },
+      {
+        title: "Mohiniyattam",
+        description: "Mohiniyattam is a classical dance form from Kerala, known as the 'dance of the enchantress.' It features graceful, swaying movements and subtle facial expressions, emphasizing feminine beauty and lasya style. Traditionally performed by women, it tells stories of love and devotion.",
+        features: ["Graceful movements", "Feminine expression", "White and gold costumes", "Sopanam music style"],
+        duration: "1-2 hours",
+        significance: "Elegant representation of Kerala's classical arts"
+      },
+      {
+        title: "Kalaripayattu",
+        description: "Kalaripayattu is one of the oldest martial arts in the world, originating in Kerala over 3,000 years ago. It includes strikes, kicks, grappling, weaponry, and healing techniques. Known for graceful, animal-inspired movements and the use of weapons like swords and the flexible Urumi.",
+        features: ["Ancient martial techniques", "Weapon training", "Healing methods", "Animal-inspired movements"],
+        duration: "Training programs vary",
+        significance: "Oldest surviving martial art system"
+      },
+      {
+        title: "Ottamthullal",
+        description: "Ottamthullal is a traditional performing art form created in the 18th century by poet Kunchan Nambiar. It combines dance, recitation, and humor to present stories, often satirizing social issues. Known as the 'poor man's Kathakali,' it remains popular at temple festivals.",
+        features: ["Social satire", "Solo performance", "Colorful costumes", "Malayalam narration"],
+        duration: "30-60 minutes",
+        significance: "Social commentary through art"
+      },
+      {
+        title: "Thiruvathirakali",
+        description: "Thiruvathirakali, also known as Kaikottikali, is a traditional group dance performed by women in Kerala, especially during Onam. Dancers form a circle around a lit lamp, clapping hands rhythmically with songs praising deities. The dance promotes marital bliss and community bonding.",
+        features: ["Circular formation", "Group synchronization", "Traditional attire", "Devotional themes"],
+        duration: "1-2 hours",
+        significance: "Celebration of feminine grace and energy"
+      },
+      {
+        title: "Pulikali",
+        description: "Pulikali, also known as the Tiger Dance, is a vibrant folk art practiced during Onam. Performers paint their bodies with tiger-like stripes and dance to rhythmic beats. The dance symbolizes courage and bravery, reflecting Kerala's cultural heritage.",
+        features: ["Tiger body painting", "Energetic movements", "Percussion accompaniment", "Festive celebration"],
+        duration: "2-3 hours",
+        significance: "Expression of courage and community spirit"
+      }
+    ],
+    events: [
+      {
+        title: "Onam",
+        description: "Onam is Kerala's most celebrated harvest festival marking the legendary homecoming of King Mahabali. The festival spans ten days with colorful activities like boat races, floral arrangements called Pookkalam, traditional dances, and grand feasts (Onam Sadhya). Celebrated with great enthusiasm by all communities.",
+        highlights: ["Pookkalam flower carpets", "Snake boat races", "Onam Sadhya feast", "Traditional dances"],
+        duration: "10 days",
+        time: "August-September"
+      },
+      {
         title: "Thrissur Pooram",
-        description: "Grand temple festival spectacle"
+        description: "Thrissur Pooram is Kerala's grandest temple festival held at Vadakkunnathan Temple. Celebrated in April-May, it features spectacular displays of decorated elephants, lively percussion ensembles, and vibrant Kudamattam ritual. Attracts over a million visitors with its magnificent fireworks display.",
+        highlights: ["Decorated elephants", "Percussion ensembles", "Kudamattam ritual", "Fireworks display"],
+        duration: "1 day main event",
+        time: "April-May"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
-        title: "Theyyam Ritual",
-        description: "Ancient ritual performance in vibrant colors"
+        title: "Vishu",
+        description: "Vishu is Kerala's traditional New Year festival celebrated with hope for prosperity. The highlight is Vishu Kani - an auspicious arrangement seen first thing in the morning. Features Vishu Kaineettam (gifting), grand feast, prayers, and firecrackers.",
+        highlights: ["Vishu Kani arrangement", "Vishu Kaineettam", "Traditional feast", "Family gatherings"],
+        duration: "1 day",
+        time: "April"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
-        title: "Onam Pookalam",
-        description: "Colorful flower carpet artistry"
+        title: "Snake Boat Races",
+        description: "Snake Boat Races (Vallam Kali) are traditional boat races held in Kerala's backwaters during Onam season. Featuring Chundan Vallam boats up to 40 meters long with 128 paddlers rowing in unison. Major events include Nehru Trophy and Aranmula races.",
+        highlights: ["Chundan Vallam boats", "Synchronized rowing", "Traditional boat songs", "Community participation"],
+        duration: "Race day events",
+        time: "July-September"
+      },
+      {
+        title: "Attukal Pongala",
+        description: "Attukal Pongala is famous for being the largest gathering of women for a religious purpose. Millions cook Pongala sweet dish as offering to goddess Attukalamma. The festival symbolizes feminine power, devotion, and unity across communities.",
+        highlights: ["Women's gathering", "Pongala offering", "Community harmony", "Spiritual devotion"],
+        duration: "10 days",
+        time: "February-March"
+      },
+      {
+        title: "Christmas",
+        description: "Christmas in Kerala is celebrated with unique blend of religious and cultural traditions. Homes and churches adorned with stars and lights, midnight Mass, carol singing, and grand feasts featuring appam, stew, and plum cake.",
+        highlights: ["Church decorations", "Midnight Mass", "Traditional feast", "Community celebrations"],
+        duration: "Christmas week",
+        time: "December"
+      },
+      {
+        title: "Makaravilakku",
+        description: "Makaravilakku at Sabarimala Ayyappa Temple marks the culmination of 41-day pilgrimage. Famous for the divine Makara Jyothi light and sacred Thiruvabharanam procession. Symbolizes faith and spiritual renewal for millions of devotees.",
+        highlights: ["Makara Jyothi", "Pilgrimage completion", "Sacred procession", "Spiritual devotion"],
+        duration: "Festival day",
+        time: "January"
       }
     ],
-    "e-brochure": [
+    cuisine: [
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
-        title: "Festival Guide",
-        description: "Complete festival calendar with dates and locations"
+        title: "Puttu and Kadala Curry",
+        description: "Puttu and Kadala Curry is a beloved traditional breakfast in Kerala. Puttu is made by steaming layers of coarsely ground rice flour and grated coconut. Kadala Curry is a spicy, flavorful curry made with black chickpeas cooked in rich blend of spices and coconut.",
+        ingredients: ["Rice flour", "Grated coconut", "Black chickpeas", "Kerala spices"],
+        serving: "Breakfast",
+        taste: "Mild puttu with spicy curry"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
-        title: "Cultural Events",
-        description: "Detailed event schedules and cultural insights"
+        title: "Appam with Stew",
+        description: "Appam with Stew is a classic Kerala breakfast loved for its perfect blend. Appam is a soft, lacy pancake from fermented rice batter and coconut milk. The vegetable stew is mildly spiced curry in rich coconut milk base with fragrant spices.",
+        ingredients: ["Rice batter", "Coconut milk", "Mixed vegetables", "Mild spices"],
+        serving: "Breakfast",
+        taste: "Soft appam with creamy stew"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Puttu_and_Kadala_Curry_frdnyy.jpg",
-        title: "Culinary Guide",
-        description: "Traditional recipes and food tour recommendations"
+        title: "Karimeen Pollichathu",
+        description: "Karimeen Pollichathu is a popular Kerala dish featuring pearl spot fish marinated with spices, wrapped in banana leaves and grilled. The banana leaves infuse unique smoky aroma while keeping the fish tender and flavorful.",
+        ingredients: ["Pearl spot fish", "Banana leaves", "Spice blend", "Coconut oil"],
+        serving: "Lunch/Dinner",
+        taste: "Spicy and aromatic"
       },
       {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
-        title: "Wellness Directory",
-        description: "Authentic Ayurvedic centers and treatment options"
+        title: "Malabar Parotta with Beef Curry",
+        description: "Malabar Parotta with Beef Curry is a beloved Kerala dish from Malabar region. Parotta is flaky, layered flatbread while beef curry is spicy, aromatic preparation with local spices and sometimes coconut milk.",
+        ingredients: ["Refined flour", "Beef", "Malabar spices", "Coconut oil"],
+        serving: "Lunch/Dinner",
+        taste: "Flaky bread with spicy curry"
+      },
+      {
+        title: "Kerala Prawn Curry",
+        description: "Kerala Prawn Curry is flavorful, aromatic dish made with fresh prawns in spiced coconut milk gravy. Marinated prawns cooked with traditional spices, tamarind for tanginess, and creamy coconut milk for richness.",
+        ingredients: ["Fresh prawns", "Coconut milk", "Tamarind", "Kerala spices"],
+        serving: "Lunch/Dinner",
+        taste: "Spicy, tangy, and creamy"
+      },
+      {
+        title: "Thalassery Biryani",
+        description: "Thalassery Biryani is signature rice dish from Malabar region using Jeerakasala rice with unique aroma. Features mild yet flavorful chicken masala layered and cooked using dum method with cashews and raisins.",
+        ingredients: ["Jeerakasala rice", "Chicken", "Malabar spices", "Cashews & raisins"],
+        serving: "Lunch/Dinner",
+        taste: "Aromatic and flavorful"
+      },
+      {
+        title: "Ada Pradhaman",
+        description: "Ada Pradhaman is rich and creamy Kerala dessert made from rice ada, jaggery, and coconut milk. Rice flakes sautéed with nuts, cooked in jaggery syrup and coconut milk, flavored with cardamom.",
+        ingredients: ["Rice ada", "Jaggery", "Coconut milk", "Cardamom"],
+        serving: "Dessert",
+        taste: "Sweet and creamy"
       }
     ]
   };
@@ -209,22 +373,7 @@ const ExperienceDetailPage = () => {
       description: "Experience the ancient healing science of Ayurveda in its birthplace - Kerala, where wellness meets tradition",
       overview: "Ayurveda, the 5,000-year-old natural healing system of India, finds its most authentic expression in Kerala. This ancient science of life focuses on holistic wellness through natural treatments, herbal medicines, and lifestyle practices that harmonize body, mind, and spirit.",
       images: categoryImages.ayurveda,
-      treatments: [
-        "Abhyangam - Full body massage with medicated oils",
-        "Nasyam - Nasal administration of herbal medicines",
-        "Virechanam - Purgation therapy for detoxification",
-        "Basti - Medicated enema for internal cleansing",
-        "Raktamoksham - Blood purification therapy"
-      ],
-      benefits: [
-        "Stress relief and mental relaxation",
-        "Complete body detoxification",
-        "Improved immunity and vitality",
-        "Chronic disease management",
-        "Anti-aging and rejuvenation"
-      ],
-      duration: "7-21 days recommended for optimal results",
-      bestTime: "Monsoon season (June-August) for maximum benefits"
+      detailedContent: detailedContent.ayurveda
     },
     artforms: {
       title: "Artforms",
@@ -233,17 +382,7 @@ const ExperienceDetailPage = () => {
       description: "Discover Kerala's rich tradition of classical and folk arts preserved through centuries of cultural heritage",
       overview: "Kerala's cultural landscape is adorned with diverse art forms ranging from majestic classical dances to vibrant folk arts. Each performance tells a story of tradition, devotion, and artistic excellence that has been passed down through generations.",
       images: categoryImages.artforms,
-      highlights: [
-        "Kathakali - Elaborate dance drama with vibrant makeup and costumes",
-        "Theyyam - Ritualistic worship through divine dance forms",
-        "Mohiniyattam - Graceful dance of the enchantress",
-        "Ottamthullal - Satirical solo performance with social commentary"
-      ],
-      venues: [
-        "Kerala Kalamandalam - Premier institution for arts",
-        "Temple festivals and cultural centers",
-        "Traditional kalaris and performance spaces"
-      ]
+      detailedContent: detailedContent.artforms
     },
     events: {
       title: "Events & Festivals",
@@ -252,73 +391,16 @@ const ExperienceDetailPage = () => {
       description: "Immerse yourself in Kerala's vibrant festivals and cultural events that showcase the state's rich heritage",
       overview: "Kerala's festival calendar is packed with colorful celebrations that showcase the state's rich cultural heritage and religious harmony. From grand temple festivals to harvest celebrations, each event is a spectacular display of tradition, music, and community spirit.",
       images: categoryImages.events,
-      highlights: [
-        "Thrissur Pooram - The grandest temple festival with elephant procession",
-        "Onam - Harvest festival with flower carpets and traditional feast",
-        "Vishu - Malayali New Year celebration with Vishukkani",
-        "Snake Boat Races - Traditional water sport competition"
-      ],
-      calendar: "Year-round celebrations with peak season from September to March"
+      detailedContent: detailedContent.events
     },
     cuisine: {
       title: "Cuisine",
       subtitle: "Authentic Kerala Flavors & Culinary Heritage",
       heroImage: categoryImages.cuisine[0].url,
       description: "Savor the authentic flavors of Kerala's diverse culinary heritage influenced by its geography and history",
-      overview: "Kerala cuisine is a delightful blend of flavors influenced by its coastal geography, spice trade history, and cultural diversity. From spicy seafood to vegetarian delicacies, each dish tells a story of the land and its people, using fresh local ingredients and traditional cooking methods.",
+      overview: "Kerala cuisine is a delightful blend of flavors influenced by its coastal geography, spice trade history, and cultural diversity. From spicy seafood to vegetarian delicacies, each dish tells a story of the land and its people.",
       images: categoryImages.cuisine,
-      highlights: [
-        "Sadya - Traditional vegetarian feast served on banana leaf",
-        "Seafood specialties - Fresh catch from Arabian Sea",
-        "Appam and Stew - Breakfast delicacy loved by all",
-        "Payasam - Traditional sweet desserts for celebrations"
-      ],
-      specialties: [
-        "Use of coconut in various forms",
-        "Distinct Malabar Muslim cuisine",
-        "Syrian Christian culinary traditions",
-        "Traditional vegetarian Brahmin recipes"
-      ]
-    },
-    "photo-gallery": {
-      title: "Photo Gallery",
-      subtitle: "Visual Journey Through God's Own Country",
-      heroImage: categoryImages["photo-gallery"][0].url,
-      description: "Capture the breathtaking beauty of Kerala through stunning photography that tells a thousand stories",
-      overview: "Kerala's diverse landscapes, vibrant culture, and rich traditions provide endless opportunities for photography. From misty hills to serene backwaters, ancient temples to modern cities, every frame captures the essence of this beautiful state.",
-      images: categoryImages["photo-gallery"],
-      highlights: [
-        "Backwaters and traditional houseboats",
-        "Tea plantations in misty Munnar hills",
-        "Traditional art forms and performances",
-        "Festivals and cultural celebrations"
-      ],
-      bestSpots: [
-        "Alleppey backwaters at sunrise",
-        "Munnar tea gardens",
-        "Fort Kochi heritage sites",
-        "Theyyam performances in temples"
-      ]
-    },
-    "e-brochure": {
-      title: "E-brochure",
-      subtitle: "Your Digital Travel Companion",
-      heroImage: categoryImages["e-brochure"][0].url,
-      description: "Access comprehensive digital guides for your perfect Kerala journey with detailed information and insights",
-      overview: "Our digital brochures provide everything you need to plan your Kerala adventure - from detailed itineraries to cultural insights and practical travel information. These carefully curated guides help you make the most of your visit to God's Own Country.",
-      images: categoryImages["e-brochure"],
-      highlights: [
-        "Interactive travel guides with maps",
-        "Seasonal event calendars and festivals",
-        "Accommodation and dining recommendations",
-        "Transportation and local travel tips"
-      ],
-      features: [
-        "Downloadable PDF formats",
-        "Mobile-friendly digital versions",
-        "Regular updates and new editions",
-        "Expert-curated content"
-      ]
+      detailedContent: detailedContent.cuisine
     }
   };
 
@@ -347,10 +429,8 @@ const ExperienceDetailPage = () => {
   return (
     <div className="min-h-screen bg-white mt-10 md:mt-20">
       {/* Hero Section */}
-  
-      {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-emerald-900 via-teal-800 to-blue-900 overflow-hidden">
-        <div className="pt-20 pb-16"> {/* Added padding instead of fixed height */}
+        <div className="pt-20 pb-16">
           <div className="absolute inset-0">
             <img
               src={experience.heroImage}
@@ -389,7 +469,6 @@ const ExperienceDetailPage = () => {
         </div>
       </section>
 
-
       {/* Overview Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -401,41 +480,6 @@ const ExperienceDetailPage = () => {
                   {experience.overview}
                 </p>
               </div>
-              
-              {experience.highlights && (
-                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-100">
-                  <h3 className="font-semibold text-emerald-800 mb-4 text-lg flex items-center">
-                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
-                    Key Highlights
-                  </h3>
-                  <ul className="space-y-3">
-                    {experience.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start group">
-                        <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-emerald-600 transition-colors"></span>
-                        <span className="text-emerald-700 group-hover:text-emerald-900 transition-colors">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Additional Info */}
-              {(experience.duration || experience.bestTime || experience.venues) && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {experience.duration && (
-                    <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-800 mb-1">Recommended Duration</h4>
-                      <p className="text-gray-600 text-sm">{experience.duration}</p>
-                    </div>
-                  )}
-                  {experience.bestTime && (
-                    <div className="bg-gray-50 rounded-xl p-4">
-                      <h4 className="font-semibold text-gray-800 mb-1">Best Time</h4>
-                      <p className="text-gray-600 text-sm">{experience.bestTime}</p>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
 
             {/* Preview Images */}
@@ -465,7 +509,7 @@ const ExperienceDetailPage = () => {
         </div>
       </section>
 
-      {/* Image Gallery Section */}
+      {/* Detailed Content Section with Alternating Layout */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-emerald-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -473,31 +517,133 @@ const ExperienceDetailPage = () => {
               Discover {experience.title}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore the vibrant visuals that capture the essence of this unique Kerala experience
+              Explore the comprehensive details of each aspect with authentic information and visuals
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {experience.images.map((image, index) => (
+          <div className="space-y-16">
+            {experience.detailedContent.map((item, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group"
+                className={`bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 ${
+                  index % 2 === 0 ? '' : 'lg:flex-row-reverse'
+                } lg:flex`}
               >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
+                {/* Image Section */}
+                <div className="lg:w-1/2">
+                  <div className="relative h-64 lg:h-full overflow-hidden">
+                    <img
+                      src={experience.images[index]?.url || experience.images[0].url}
+                      alt={item.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-black/10 hover:bg-black/5 transition-all duration-300"></div>
+                  </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-emerald-700 transition-colors">
-                    {image.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {image.description}
-                  </p>
+
+                {/* Content Section */}
+                <div className="lg:w-1/2 p-8">
+                  <div className="h-full flex flex-col justify-center">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed mb-6">{item.description}</p>
+                    
+                    {/* Dynamic content based on category */}
+                    {item.benefits && (
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-emerald-700 mb-3">Key Benefits:</h4>
+                        <ul className="space-y-2">
+                          {item.benefits.map((benefit, i) => (
+                            <li key={i} className="flex items-center text-gray-600">
+                              <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.features && (
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-emerald-700 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {item.features.map((feature, i) => (
+                            <li key={i} className="flex items-center text-gray-600">
+                              <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.highlights && (
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-emerald-700 mb-3">Highlights:</h4>
+                        <ul className="space-y-2">
+                          {item.highlights.map((highlight, i) => (
+                            <li key={i} className="flex items-center text-gray-600">
+                              <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                              {highlight}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.ingredients && (
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-emerald-700 mb-3">Main Ingredients:</h4>
+                        <ul className="space-y-2">
+                          {item.ingredients.map((ingredient, i) => (
+                            <li key={i} className="flex items-center text-gray-600">
+                              <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                              {ingredient}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Additional Info */}
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                      {item.duration && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Duration</h4>
+                          <p className="text-gray-600">{item.duration}</p>
+                        </div>
+                      )}
+                      {item.bestFor && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Best For</h4>
+                          <p className="text-gray-600">{item.bestFor}</p>
+                        </div>
+                      )}
+                      {item.time && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Time</h4>
+                          <p className="text-gray-600">{item.time}</p>
+                        </div>
+                      )}
+                      {item.serving && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Serving</h4>
+                          <p className="text-gray-600">{item.serving}</p>
+                        </div>
+                      )}
+                      {item.taste && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Taste Profile</h4>
+                          <p className="text-gray-600">{item.taste}</p>
+                        </div>
+                      )}
+                      {item.significance && (
+                        <div>
+                          <h4 className="font-semibold text-gray-700 text-sm">Significance</h4>
+                          <p className="text-gray-600">{item.significance}</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -505,120 +651,38 @@ const ExperienceDetailPage = () => {
         </div>
       </section>
 
-      {/* Additional Content Sections */}
-      {experienceId === 'ayurveda' && (
-        <>
-          {/* Treatments Section */}
-       <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="text-center mb-10 md:mb-12">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Ayurvedic Treatments</h2>
-      <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
-        Experience authentic healing therapies rooted in 5,000 years of traditional wisdom
-      </p>
-    </div>
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-      {experience.treatments.map((treatment, index) => (
-        <div key={index} className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg md:rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <span className="text-white text-sm md:text-lg">🌿</span>
-            </div>
-            <h3 className="font-semibold text-gray-800 group-hover:text-emerald-600 transition-colors text-xs md:text-base mb-2 leading-tight">
-              {treatment.split(' - ')[0]}
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
-              {treatment.split(' - ')[1]}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-          {/* Benefits Section */}
-         <section className="py-8 md:py-16 bg-gradient-to-br from-amber-50 to-orange-50">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="text-center mb-6 md:mb-12">
-      <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-2 md:mb-3">Health Benefits</h2>
-      <p className="text-sm md:text-base text-gray-600 max-w-md mx-auto">
-        Transform your wellbeing with time-tested Ayurvedic wisdom
-      </p>
-    </div>
-    <div className="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-6">
-      {experience.benefits.map((benefit, index) => (
-        <div key={index} className="bg-white rounded-lg p-3 md:p-4 shadow-sm hover:shadow-md transition-all duration-300 group">
-          <div className="flex items-center space-x-2 md:space-x-3">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white text-xs md:text-sm">✓</span>
-            </div>
-            <h3 className="font-semibold text-gray-800 group-hover:text-amber-600 transition-colors text-xs md:text-sm leading-tight flex-1">
-              {benefit}
-            </h3>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-        </>
-      )}
-
-      {/* Specialized Sections for Other Categories */}
-      {(experienceId === 'artforms' || experienceId === 'events' || experienceId === 'cuisine') && experience.specialties && (
-        <section className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-3">Unique Features</h2>
-              <p className="text-gray-600">What makes this experience truly special</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {experience.specialties.map((specialty, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors">
-                    <span className="text-emerald-600 text-xl">⭐</span>
-                  </div>
-                  <h3 className="font-semibold text-gray-800 text-sm">{specialty}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* CTA Section */}
-   <section className="py-12 md:py-16 bg-white border-t border-gray-100">
-  <div className="max-w-2xl mx-auto px-4 text-center">
-    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
-      Experience Kerala's {experience.title}
-    </h2>
-    <p className="text-gray-600 mb-8 leading-relaxed">
-      Let our experts craft your perfect journey with authentic local insights.
-    </p>
-    <div className="flex flex-col sm:flex-row gap-3 justify-center">
-      <a
-        href="https://wa.me/919028803309"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-      >
-        <span className="mr-2">💬</span>
-        WhatsApp
-      </a>
-      <a
-        href="tel:+919028803309"
-        className="border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-      >
-        <span className="mr-2">📞</span>
-        Call Now
-      </a>
-    </div>
-    <p className="text-gray-500 text-sm mt-6">
-      24/7 available for queries
-    </p>
-  </div>
-</section>
+      <section className="py-12 md:py-16 bg-white border-t border-gray-100">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
+            Experience Kerala's {experience.title}
+          </h2>
+          <p className="text-gray-600 mb-8 leading-relaxed">
+            Let our experts craft your perfect journey with authentic local insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://wa.me/919028803309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+            >
+              <span className="mr-2">💬</span>
+              WhatsApp
+            </a>
+            <a
+              href="tel:+919028803309"
+              className="border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+            >
+              <span className="mr-2">📞</span>
+              Call Now
+            </a>
+          </div>
+          <p className="text-gray-500 text-sm mt-6">
+            24/7 available for queries
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

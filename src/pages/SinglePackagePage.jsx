@@ -7,7 +7,46 @@ const SinglePackagePage = () => {
   const { packageId } = useParams();
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
+  const [showCallModal, setShowCallModal] = useState(false);
   
+  // WhatsApp numbers
+  const whatsappNumbers = [
+    "919028803309",
+    "919146385636"
+  ];
+
+  // Phone numbers for calls
+  const phoneNumbers = [
+    "919028803309",
+    "919146385636"
+  ];
+
+  const handleWhatsAppClick = () => {
+    setShowWhatsAppModal(true);
+  };
+
+  const handleCallClick = () => {
+    setShowCallModal(true);
+  };
+
+  const handleNumberSelect = (phoneNumber, isWhatsApp = false) => {
+    if (isWhatsApp) {
+      const message = `Hi, I'm interested in the ${pkg.name} (${pkg.duration}). Please share more details.`;
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      setShowWhatsAppModal(false);
+    } else {
+      window.location.href = `tel:${phoneNumber}`;
+      setShowCallModal(false);
+    }
+  };
+
+  const closeModal = () => {
+    setShowWhatsAppModal(false);
+    setShowCallModal(false);
+  };
+
   // Sample reviews data
   const sampleReviews = [
     {
@@ -28,9 +67,9 @@ const SinglePackagePage = () => {
     }
   ];
 
-  // All 9 packages with exact content as provided
+  // All packages data (truncated for brevity - include your full package data here)
   const packageData = [
-    {
+      {
       id: "kerala-classic",
       name: "Kerala Classic Tour",
       duration: "04 Nights / 05 Days",
@@ -963,22 +1002,20 @@ const SinglePackagePage = () => {
 
               {/* Action Buttons */}
               <div className="space-y-2 sm:space-y-3">
-                <a
-                  href="https://wa.me/919028803309"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={handleWhatsAppClick}
                   className="w-full bg-green-600 text-white py-2.5 sm:py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
                 >
                   <span className="mr-2">💬</span>
                   Book on WhatsApp
-                </a>
-                <a
-                  href="tel:+919028803309"
+                </button>
+                <button
+                  onClick={handleCallClick}
                   className="w-full bg-emerald-500 text-white py-2.5 sm:py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center text-xs sm:text-sm shadow-md hover:shadow-lg"
                 >
                   <span className="mr-2">📞</span>
                   Call Now
-                </a>
+                </button>
               </div>
 
               {/* Quick Info */}
@@ -1023,6 +1060,66 @@ const SinglePackagePage = () => {
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Modal */}
+      {showWhatsAppModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-xs w-full">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800">Choose a number</h3>
+            </div>
+            <div className="p-4 space-y-3">
+              {whatsappNumbers.map((number, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleNumberSelect(number, true)}
+                  className="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition duration-200 font-medium"
+                >
+                  +91 {number.slice(2)}
+                </button>
+              ))}
+            </div>
+            <div className="p-4 border-t border-gray-200">
+              <button
+                onClick={closeModal}
+                className="w-full text-gray-600 hover:text-gray-800 py-2 transition duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Call Modal */}
+      {showCallModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-xs w-full">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800">Choose a number</h3>
+            </div>
+            <div className="p-4 space-y-3">
+              {phoneNumbers.map((number, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleNumberSelect(number, false)}
+                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200 font-medium"
+                >
+                  +91 {number.slice(2)}
+                </button>
+              ))}
+            </div>
+            <div className="p-4 border-t border-gray-200">
+              <button
+                onClick={closeModal}
+                className="w-full text-gray-600 hover:text-gray-800 py-2 transition duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

@@ -27,8 +27,8 @@ const ContactPage = () => {
                 <a href="tel:+919028803309" className="block text-gray-700 hover:text-blue-600 transition-colors">
                   +91-9028803309
                 </a>
-                <a href="tel:+919028803309" className="block text-gray-700 hover:text-blue-600 transition-colors">
-                  +91-9028803309
+                <a href="tel:+919146385636" className="block text-gray-700 hover:text-blue-600 transition-colors">
+                  +91-9146385636
                 </a>
               </div>
             </div>
@@ -47,6 +47,14 @@ const ContactPage = () => {
                   className="block text-gray-700 hover:text-green-600 transition-colors"
                 >
                   +91-9028803309
+                </a>
+                <a 
+                  href="https://wa.me/919146385636" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-gray-700 hover:text-green-600 transition-colors"
+                >
+                  +91-9146385636
                 </a>
                 <p className="text-sm text-green-600 mt-1">24/7 Available</p>
               </div>

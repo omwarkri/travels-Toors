@@ -184,10 +184,10 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-32">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-    <h1 className="text-2xl md:text-4xl lg:text-6xl font-black text-white -mb-1 leading-tight tracking-widest uppercase">
-  DISCOVER THE MAGIC OF
-  <span className="block bg-gradient-to-r from-emerald-300 via-cyan-400 to-emerald-300 bg-clip-text text-transparent mt-3 font-black animate-pulse">
-    GOD'S OWN COUNTRY
+    <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-white -mb-1 leading-tight tracking-widest uppercase">
+  DISCOVER THE MAGIC OF 
+  <span className="text-white pl-2 ">
+     GOD'S OWN COUNTRY
   </span>
 </h1>
 
@@ -195,7 +195,7 @@ const Hero = () => {
         {/* Logo */}
 <div className="mb-3 transform hover:scale-105 transition-transform duration-500">
   <img
-    className="w-32 md:w-48 lg:w-56 border-b border-white mx-auto drop-shadow-2xl"
+    className="w-32 md:w-48 lg:w-[300px] border-b border-white mx-auto drop-shadow-2xl"
     src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
     alt="Kerala - God's Own Country"
   />
@@ -208,13 +208,13 @@ const Hero = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-            <Link
-              to="/packages"
+            <a
+              href="/#packages"
               className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl font-bold text-lg text-white hover:from-emerald-600 hover:to-cyan-600 shadow-2xl hover:shadow-emerald-500/25 transform hover:scale-105 border-2 border-emerald-400/50 transition-all duration-300 flex items-center justify-center min-w-[200px]"
             >
               View Tour Packages
               <span className="ml-2">→</span>
-            </Link>
+            </a>
             
          
           </div>
