@@ -184,26 +184,26 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-32">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-3xl  lg:text-4xl font-bold text-white mb-6 leading-tight">
-            Discover the Magic of
-            <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-2">
-              God's Own Country
-            </span>
-          </h1>
+       <h1 className="text-1xl md:text-3xl lg:text-4xl font-serif font-light text-white -mb-1 leading-tight tracking-widest uppercase">
+  Discover the Magic of
+  <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-2 font-normal">
+    God's Own Country
+  </span>
+</h1>
 
           {/* Logo */}
           <div className="mb-3 border-b border-white transform hover:scale-105 transition-transform duration-500">
             <img
-              className="w-full max-w-md mx-auto drop-shadow-2xl"
+              className="w-full border-b border-white m-2 mx-auto drop-shadow-2xl"
               src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
               alt="Kerala - God's Own Country"
             />
           </div>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl lg:text-2xl mt-6 text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto font-light">
-            A journey through rich culture and living traditions. From green hills and peaceful tea gardens to calm backwaters and sandy beaches, Kerala is full of natural beauty and colorful art.
-          </p>
+          <p className="text-lg md:text-xl lg:text-2xl mt-6 text-amber-50 mb-8 leading-relaxed max-w-3xl mx-auto font-serif italic tracking-wide drop-shadow-md">
+  A journey through rich culture and living traditions. From green hills and peaceful tea gardens to calm backwaters and sandy beaches, Kerala is full of natural beauty and colorful art.
+</p>
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
