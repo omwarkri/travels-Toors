@@ -106,15 +106,36 @@ const Navigation = () => {
   <span className="text-xs font-medium">+91 90288 03309</span>
 </a>
 
+   <a
+  href="tel:+919146385636"
+  className="flex items-center space-x-1 hover:text-blue-200 transition-colors duration-200"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-4 h-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.55a1 1 0 01-.272 1.03l-2.12 2.12a16.001 16.001 0 006.586 6.586l2.12-2.12a1 1 0 011.03-.272l4.55 1.518A1 1 0 0121 18.72V22a2 2 0 01-2 2h-1C9.716 24 0 14.284 0 3V2a2 2 0 012-2h1z"
+    />
+  </svg>
+  <span className="text-xs font-medium">+91 9146385636</span>
+</a>
 
-          <div className="flex items-center space-x-2">
+
+          <div className="flex items-center space-x-1">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-gray-200 p-0.5 rounded hover:bg-emerald-700"
+                className="text-white hover:text-gray-200 p-0.2 rounded hover:bg-emerald-700"
               >
                 {social.icon}
               </a>

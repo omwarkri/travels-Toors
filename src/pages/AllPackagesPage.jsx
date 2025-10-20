@@ -60,6 +60,200 @@ const AllPackagesPage = () => {
   // Direct package data (same structure as AllPackagesPage)
   const allPackages = [
     {
+      id: "kerala-kanyakumari-explorer",
+      name: "Kerala & Kanyakumari Explorer Tour",
+      duration: "03 Nights / 04 Days",
+      destination: "Trivandrum, Kovalam, Kanyakumari",
+      places: ["Trivandrum", "Kovalam", "Kanyakumari"],
+      bestSeason: "Year Round",
+      price: 15999,
+      originalPrice: 18999,
+      discount: "16% Off",
+      rating: 4.6,
+      reviews: 85,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg"
+      ],
+      description: "Explore the spiritual and coastal beauty of Trivandrum and Kanyakumari.",
+      highlights: [
+        "Arrive in Trivandrum at 6:05 PM, transfer to hotel and relax for the evening",
+        "Visit Padmanabhaswamy Temple, Raja Ravi Varma Palace and move to kovalam beach",
+        "Check in at hotel in Kanyakumari - Kanyakumari Devi Temple, Sunrise/Sunset, Triveni Sangam, Vivekananda Rock via boat, Gandhi Mandapam, Raja Thiruvallur statue, enjoy shopping",
+        "Departure from Trivandrum"
+      ],
+      itinerary: [
+        { 
+          day: "Day 1", 
+          title: "Arrival in Trivandrum", 
+          description: "Arrive in Trivandrum at 6:05 PM, transfer to your hotel, and unwind after travel. Spend a relaxing evening at the hotel or explore some calm local spots nearby to get a feel for the city's serene atmosphere." 
+        },
+        { 
+          day: "Day 2", 
+          title: "Trivandrum Spiritual & Coastal", 
+          description: "Visit Sree Padmanabhaswamy Temple, open from 3:15 AM to 12 PM and again from 5 PM to 7:20 PM, allowing time for peaceful darshan. Then explore Raja Ravi Varma Palace, showcasing exquisite art and heritage. End your day relaxing at scenic Kovalam Beach, enjoying the sunset and tranquil atmosphere. This plan offers a fulfilling blend of spirituality, culture, and leisure." 
+        },
+        { 
+          day: "Day 3", 
+          title: "Kanyakumari Experience", 
+          description: "Check in at your hotel in Kanyakumari, then visit the Kanyakumari Devi Temple and enjoy the sunrise or sunset at the beach. Explore the Triveni Sangam, followed by a boat trip to the Vivekananda Rock Memorial and the nearby Raja Thiruvalluvar Statue. End the day with a visit to Gandhi Mandapam and enjoy local shopping." 
+        },
+        { 
+          day: "Day 4", 
+          title: "Departure", 
+          description: "Check out from your hotel and transfer to Trivandrum International Airport (TRV) or Trivandrum Central Railway Station." 
+        }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Boat Ride"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "kerala-tamilnadu-spiritual",
+      name: "Kerala & Tamil Nadu Spiritual Journey",
+      duration: "07 Nights / 08 Days",
+      destination: "Madurai, Thoothukudi, Tirunelveli, Kanyakumari, Trivandrum, Kochi",
+      places: ["Madurai", "Thoothukudi", "Tirunelveli", "Kanyakumari", "Trivandrum", "Kochi"],
+      bestSeason: "Year Round",
+      price: 32999,
+      originalPrice: 37999,
+      discount: "13% Off",
+      rating: 4.8,
+      reviews: 95,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759489125/Guruvayoor_Temple_1_ofddy3.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488068/padmanabha-swamy1_kebsa2.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759488360/kovalam-1_trhrck.jpg"
+      ],
+      description: "Comprehensive spiritual journey through Tamil Nadu and Kerala's sacred sites.",
+      highlights: [
+        "Arrive in Madurai at 6:35 PM, transfer to hotel and relax for the evening",
+        "Explore Madurai's rich culture - Meenakshi Temple, Thirumalai Nayak Palace, Gandhi Memorial Museum, Alagar Koil Temple, and Thiruparankundram Murugan Temple",
+        "Transfer to Thoothukudi (150 km/2.5 hrs), visit Our Lady of Snows Basilica and Thiruchendur Murugan Temple, enjoy evening shopping",
+        "Proceed to Tirunelveli, visit Arulmigu Nellaiyappar Temple, Arulmigu Sri Venkatachalapathi Temple Krishnapuram, Rajagopalaswamy Temple, Mela Thiruvenkatanathapuram Temple, Keezha Thiruvenkatanathapuram Temple",
+        "Check in at hotel in Kanyakumari - Vivekananda Rock via boat, Gandhi Mandapam, Kanyakumari Devi Temple & enjoy shopping",
+        "Transfer to Thiruvananthapuram, Sree Padmanabhaswamy Temple, Attukal Bhagavathy Temple, Pazhavangadi Maha Ganapathy temple, Karikkakom Sree Chamundi Temple, Sree Udiyanoor Devi Temple",
+        "Travel to Kochi en route visiting Ambalappuzha Sree Krishna Swamy Temple, then explore Mattancherry Palace (Dutch Palace), Jew Town, St. Francis Church",
+        "Departure from Kochi"
+      ],
+      itinerary: [
+        { 
+          day: "Day 1", 
+          title: "Madurai Arrival", 
+          description: "On Day 1, arrive in Madurai by 6:35 PM and proceed to your hotel for a restful evening. Take this time to relax and acclimatize after your journey. Prepare for the exciting experiences awaiting you in the city on the following day." 
+        },
+        { 
+          day: "Day 2", 
+          title: "Madurai Heritage", 
+          description: "Day 2 includes visits to the Meenakshi Temple, Thirumalai Nayak Palace, Gandhi Memorial Museum, Alagar Koil Temple, and Thiruparankundram Murugan Temple. These sites showcase Madurai's rich cultural and religious history. The Gandhi Memorial Museum highlights India's freedom struggle. The day offers a deep dive into local heritage and spirituality." 
+        },
+        { 
+          day: "Day 3", 
+          title: "Thoothukudi Spiritual", 
+          description: "Day 3 begins with a transfer to Thoothukudi, covering about 150 km. Visit the famous Our Lady of Snows Basilica and the revered Thiruchendur Murugan Temple. End your day with some leisurely evening shopping in Thoothukudi. This day blends cultural exploration with local experiences." 
+        },
+        { 
+          day: "Day 4", 
+          title: "Tirunelveli Temples", 
+          description: "Day 4 begins with a transfer to Tirunelveli. Visit the Arulmigu Nellaiyappar Temple, known for its Dravidian architecture and spiritual significance. Explore the Arulmigu Sri Venkatachalapathi Temple Krishnapuram, a historic Vishnu temple. Also visit the Rajagopalaswamy Temple, famous for its ancient heritage, along with Mela Thiruvenkatanathapuram Temple and Keezha Thiruvenkatanathapuram Temple. This day offers a deep cultural and religious experience in Tirunelveli." 
+        },
+        { 
+          day: "Day 5", 
+          title: "Kanyakumari Coastal", 
+          description: "Day 5 includes check-in at your hotel in Kanyakumari. Visit the iconic Vivekananda Rock via boat, open from 8 AM to 4 PM. Explore the Gandhi Mandapam and Kanyakumari Devi Temple. End your day with shopping in the local markets, enjoying the vibrant atmosphere of the coastal town." 
+        },
+        { 
+          day: "Day 6", 
+          title: "Trivandrum Temple Tour", 
+          description: "Day 6 involves transfer to Thiruvananthapuram with visits to the famous Sree Padmanabhaswamy Temple, a historic and architecturally unique temple dedicated to Lord Vishnu. Also visit Attukal Bhagavathy Temple, Pazhavangadi Maha Ganapathy Temple, Karikkakom Sree Chamundi Temple, and Sree Udiyanoor Devi Temple. This day offers a rich spiritual and cultural experience in Kerala's capital city." 
+        },
+        { 
+          day: "Day 7", 
+          title: "Kochi Heritage", 
+          description: "Day 7 includes visiting Ambalappuzha Sree Krishna Swamy Temple en route to Kochi. In Kochi, explore the historic Mattancherry Palace featuring Kerala-style architecture and vibrant murals. Visit Jew Town, known for its unique cultural heritage. End the day with a visit to St. Francis Church, one of India's oldest European churches." 
+        },
+        { 
+          day: "Day 8", 
+          title: "Departure", 
+          description: "Day 8: Departure from Kochi with transfer to the airport or railway station as per your travel schedule. Wishing a safe and pleasant journey from Kochi! May your travels be smooth and memories from Kerala & Tamil Nadu stay with you forever." 
+        }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Boat Rides", "Temple Entries"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    {
+      id: "kerala-honeymoon-tour",
+      name: "Kerala Honeymoon Tour",
+      duration: "06 Nights / 07 Days",
+      destination: "Kochi, Munnar, Thekkady, Alleppey",
+      places: ["Kochi", "Munnar", "Thekkady", "Alleppey"],
+      bestSeason: "Sep - May",
+      price: 26999,
+      originalPrice: 30999,
+      discount: "13% Off",
+      rating: 4.9,
+      reviews: 200,
+      image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+      images: [
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_1_qziygx.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193264/munnar_mycc44.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1760193265/thekkady-tour-01_otzv8q.jpg",
+        "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759330510/Allappy_4_ruiygh.jpg"
+      ],
+      description: "Romantic Kerala getaway perfect for honeymooners and couples.",
+      highlights: [
+        "After arriving in Kochi and settling in, you can visit Fort Kochi, Chinese Fishing Nets, and enjoy the Kathakali show in the evening",
+        "Explore Kochi's charm – Mattancherry Palace (Dutch Palace), Jew Town, St. Francis Church, Marine Drive",
+        "Journey to Munnar with stops at scenic waterfalls en route",
+        "Full day in Munnar – discover the Tea Museum, cruising Mattupetty Dam, and the echo-filled Echo Point",
+        "Head to Thekkady – explore fragrant spice plantations and enjoy a traditional cultural show",
+        "Relax with a houseboat cruise through Alleppey's backwaters, complete with authentic Kerala meals",
+        "Departure from Kochi"
+      ],
+      itinerary: [
+        { 
+          day: "Day 1", 
+          title: "Kochi Romantic Start", 
+          description: "After arriving in Kochi and settling in, explore the historic Fort Kochi area with its colonial architecture and quaint streets. Visit the iconic Chinese Fishing Nets along the waterfront for an unforgettable photo opportunity. Spend the evening watching a traditional Kathakali dance performance, immersing yourself in Kerala's rich cultural heritage. This plan offers a perfect blend of sightseeing and cultural experience to start your trip." 
+        },
+        { 
+          day: "Day 2", 
+          title: "Kochi Heritage", 
+          description: "Discover Kochi's heritage by visiting Mattancherry Palace, also known as the Dutch Palace, famous for its Kerala murals and traditional architecture. Wander through Jew Town, exploring vibrant markets and the Paradesi Synagogue. Visit St. Francis Church, India's oldest European church, rich in history. End the day with a relaxing stroll along Marine Drive, enjoying scenic backwaters and sunset views." 
+        },
+        { 
+          day: "Day 3", 
+          title: "Scenic Munnar Journey", 
+          description: "Drive to Munnar from Kochi, approximately 127 km taking around 3.5 to 4 hours. En route, visit the picturesque Cheeyappara and Valara waterfalls, enjoying the serene cascades and lush greenery before continuing to the cool hill station of Munnar for arrival and overnight stay." 
+        },
+        { 
+          day: "Day 4", 
+          title: "Munnar Nature", 
+          description: "Explore Munnar's beautiful attractions starting with the Rose Garden and Tea Museum. Visit the Honey Bee Park and Botanical Garden to experience nature's wonders. Enjoy scenic views at Mattupetty Dam and Echo Point. End the day with a visit to Eravikulam National Park, tea gardens, and Blossom Hydel Park for a perfect blend of nature and tranquility." 
+        },
+        { 
+          day: "Day 5", 
+          title: "Thekkady Spice & Culture", 
+          description: "Travel to Thekkady and visit a spice plantation to experience the rich aroma and variety of local spices. Enjoy a boat cruise on Periyar Lake to spot wildlife and soak in the tranquil surroundings. Opt for adventurous activities like off-road jeep safari and thrilling zipline rides. End the day with a cultural show showcasing traditional Kerala arts and dance." 
+        },
+        { 
+          day: "Day 6", 
+          title: "Alleppey Backwaters", 
+          description: "Enjoy a serene houseboat cruise in Alleppey, drifting through the tranquil backwaters. Savor traditional Kerala meals prepared onboard, featuring local delicacies. Experience the peaceful ride while taking in the lush landscapes. Optionally, explore Alleppey beach and gardens during your visit." 
+        },
+        { 
+          day: "Day 7", 
+          title: "Departure", 
+          description: "Departure from Kochi with transfer to the airport or railway station as per your travel schedule. Wishing a safe and pleasant journey from Kochi! May your travels be smooth and memories from Kerala stay with you forever." 
+        }
+      ],
+      inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay", "Cultural Shows", "Romantic Decorations"],
+      exclusions: ["Flights", "Personal expenses", "Travel insurance"]
+    },
+    // ... (your existing packages remain the same below)
+    {
       id: "kerala-classic",
       name: "Kerala Classic Tour",
       duration: "04 Nights / 05 Days",
@@ -304,6 +498,8 @@ const AllPackagesPage = () => {
       inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Boat Rides"],
       exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     }
+
+
   ];
 
 

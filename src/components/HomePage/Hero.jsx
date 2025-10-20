@@ -86,11 +86,6 @@ const Hero = () => {
     };
   }, [showAudioControls]);
 
-  // Debug: Log mute state changes
-  useEffect(() => {
-    console.log("Mute state changed:", isMuted);
-  }, [isMuted]);
-
   return (
     <header className="relative h-screen overflow-hidden">
       <SEOHead
@@ -99,7 +94,7 @@ const Hero = () => {
         keywords="Kerala tour packages, Kerala tourism, Munnar tour, Alleppey houseboat, Kerala travel agency"
       />
 
-      {/* Video Background */}
+      {/* Video Background with Overlay */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden bg-black">
         <video
           ref={videoRef}
@@ -109,7 +104,7 @@ const Hero = () => {
           playsInline
           preload="auto"
           poster="https://res.cloudinary.com/ddw1upvx3/image/upload/v1759595324/my_uploads_food/Screenshot_2025-10-04_at_9.57.38_PM_o93eru.png"
-          className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover"
+          className="absolute top-0 left-0 w-full h-[calc(100%+50px)] object-cover scale-105"
           style={{ transition: "none" }}
         >
           <source
@@ -119,134 +114,117 @@ const Hero = () => {
           Your browser does not support the video tag.
         </video>
 
-        {/* Audio Controls */}
-        <div className="audio-controls-container absolute bottom-6 right-6 z-20 flex flex-col items-end space-y-2">
-          {/* Main Audio Toggle Button */}
-          <button
-            onClick={toggleMute}
-            className="bg-black/70 text-white p-3 rounded-full shadow-lg hover:bg-black/90 backdrop-blur-sm transition duration-200 border border-white/20"
-            aria-label={isMuted ? "Unmute video" : "Mute video"}
-          >
-            {isMuted ? (
-              <span className="text-lg">🔇</span>
-            ) : (
-              <span className="text-lg">🔊</span>
-            )}
-          </button>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/30"></div>
+      </div>
 
-          {/* Extended Audio Controls */}
-          {showAudioControls && (
-            <div className="bg-black/80 backdrop-blur-md rounded-lg p-4 shadow-2xl border border-white/20">
-              <div className="flex flex-col space-y-3">
-                <div className="text-white text-sm font-medium mb-2 text-center">Audio</div>
-                
-                <button
-                  onClick={handleSoundOn}
-                  className={`flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition duration-200 min-w-[120px] ${
-                    !isMuted 
-                      ? 'bg-emerald-600 text-white shadow-lg' 
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
-                >
-                  <span className="text-base">🔊</span>
-                  <span className="text-sm">On</span>
-                </button>
-
-                <button
-                  onClick={handleMute}
-                  className={`flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition duration-200 min-w-[120px] ${
-                    isMuted 
-                      ? 'bg-red-600 text-white shadow-lg' 
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
-                >
-                  <span className="text-base">🔇</span>
-                  <span className="text-sm">Off</span>
-                </button>
-
-                <div className="border-t border-white/20 pt-2 mt-2">
-                  <button
-                    onClick={() => setShowAudioControls(false)}
-                    className="w-full text-center text-white/70 hover:text-white text-xs py-1 transition duration-200"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
+      {/* Audio Controls */}
+      <div className="audio-controls-container absolute bottom-6 right-6 z-20 flex flex-col items-end space-y-2">
+        {/* Main Audio Toggle Button */}
+        <button
+          onClick={toggleMute}
+          className="bg-black/70 text-white p-3 rounded-full shadow-lg hover:bg-black/90 backdrop-blur-sm transition-all duration-300 border border-white/20 hover:scale-110 hover:border-white/40"
+          aria-label={isMuted ? "Unmute video" : "Mute video"}
+        >
+          {isMuted ? (
+            <span className="text-lg">🔇</span>
+          ) : (
+            <span className="text-lg">🔊</span>
           )}
-        </div>
+        </button>
 
-        {/* Audio Status Indicator */}
-        {!isMuted && (
-          <div className="absolute top-6 right-6 z-20">
-            <div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm flex items-center space-x-2 border border-emerald-400">
-              <span className="text-xs">🔊</span>
-              <span>Sound On</span>
+        {/* Extended Audio Controls */}
+        {showAudioControls && (
+          <div className="bg-black/80 backdrop-blur-md rounded-2xl p-4 shadow-2xl border border-white/20 animate-fade-in">
+            <div className="flex flex-col space-y-3">
+              <div className="text-white text-sm font-semibold mb-2 text-center border-b border-white/20 pb-2">
+                Audio Settings
+              </div>
+              
+              <button
+                onClick={handleSoundOn}
+                className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 min-w-[140px] ${
+                  !isMuted 
+                    ? 'bg-emerald-600 text-white shadow-lg scale-105' 
+                    : 'bg-white/10 text-white hover:bg-white/20 hover:scale-105'
+                }`}
+              >
+                <span className="text-base">🔊</span>
+                <span className="text-sm font-medium">Sound On</span>
+              </button>
+
+              <button
+                onClick={handleMute}
+                className={`flex items-center justify-center space-x-2 px-4 py-3 rounded-xl transition-all duration-300 min-w-[140px] ${
+                  isMuted 
+                    ? 'bg-rose-600 text-white shadow-lg scale-105' 
+                    : 'bg-white/10 text-white hover:bg-white/20 hover:scale-105'
+                }`}
+              >
+                <span className="text-base">🔇</span>
+                <span className="text-sm font-medium">Mute</span>
+              </button>
             </div>
           </div>
         )}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 md:py-24 text-center">
+      {/* Audio Status Indicator */}
+      {!isMuted && (
+        <div className="absolute top-6 right-6 z-20 animate-pulse">
+          <div className="bg-emerald-600/90 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm flex items-center space-x-2 border border-emerald-400/50 shadow-lg">
+            <span className="text-sm">🔊</span>
+            <span>Sound On</span>
+          </div>
+        </div>
+      )}
+
+      {/* Content - Moved down using pt-32 (or adjust as needed) */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-32">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Main Heading */}
+          <h1 className="text-4xl md:text-3xl  lg:text-4xl font-bold text-white mb-6 leading-tight">
+            Discover the Magic of
+            <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-2">
+              God's Own Country
+            </span>
+          </h1>
+
           {/* Logo */}
-          <div className="flex justify-center mb-4 sm:mb-6">
+          <div className="mb-3 border-b border-white transform hover:scale-105 transition-transform duration-500">
             <img
-              className="w-[100%] sm:w-[50%] md:w-[40%] lg:w-[65%] max-w-md border-b-[2px]"
-              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1759578606/kerla-logo-2_hr5ydu.png"
+              className="w-full max-w-md mx-auto drop-shadow-2xl"
+              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
               alt="Kerala - God's Own Country"
             />
           </div>
 
-         <div className="flex flex-col">
-           <h5 className="text-lg text-white bg-[#7a4c4c] border-[1px] leading-relaxed font-serif font-semibold italic inline-block px-4 py-2">
-            Explore Kerla's Most Beutiful Destinations
-          </h5>
-          <h6 className="bg-red-200 text-sm  text-gray-800 inline-block">Affordable and Memorable Tour Packages for Families and Freinds </h6>
-         </div>
+          {/* Subheading */}
+          <p className="text-lg md:text-xl lg:text-2xl mt-6 text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto font-light">
+            A journey through rich culture and living traditions. From green hills and peaceful tea gardens to calm backwaters and sandy beaches, Kerala is full of natural beauty and colorful art.
+          </p>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
+          {/* CTA Button */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
             <Link
               to="/packages"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 rounded-lg font-bold text-base sm:text-lg text-white hover:bg-emerald-600 shadow-lg hover:scale-105 transform border-2 border-emerald-400 text-center transition duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl font-bold text-lg text-white hover:from-emerald-600 hover:to-cyan-600 shadow-2xl hover:shadow-emerald-500/25 transform hover:scale-105 border-2 border-emerald-400/50 transition-all duration-300 flex items-center justify-center min-w-[200px]"
             >
               View Tour Packages
+              <span className="ml-2">→</span>
             </Link>
-            <Link
-              to="/contact"
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white rounded-lg font-bold text-base sm:text-lg text-white hover:bg-white hover:text-emerald-900 transition duration-300 hover:scale-105 transform text-center"
-            >
-              Get Custom Quote
-            </Link>
-          </div>
-
-          <div className="mt-4 sm:mt-8 flex flex-wrap justify-center gap-1 sm:gap-4 md:gap-6 text-sm sm:text-base text-white font-medium px-2">
-            <div className="flex items-center bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm border border-white/30">
-              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
-              5000+ Happy Customers
-            </div>
-            <div className="flex items-center bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm border border-white/30">
-              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
-              Best Price Guarantee
-            </div>
-            <div className="flex items-center bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm border border-white/30">
-              <span className="w-2 h-2 sm:w-3 sm:h-3 bg-emerald-400 rounded-full mr-2 sm:mr-3"></span>
-              24/7 Customer Support
-            </div>
+            
+         
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
-          </div>
-        </div>
-      </div>
+     
+
+      {/* Bottom Gradient */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
     </header>
   );
 };

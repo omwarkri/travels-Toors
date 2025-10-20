@@ -36,8 +36,8 @@ const KeralaExperiences = () => {
       description: "Visual journey through Kerala"
     },
     {
-      id: "e-brochure",
-      title: "E-brochure",
+      id: "people-experiances",
+      title: "People Experiances",
       img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/onam_12_n17zjz.png",
       description: "Digital travel guides and information"
     },
@@ -51,7 +51,7 @@ const KeralaExperiences = () => {
     <section className="max-w-6xl mx-auto px-6 py-20 md:py-28 md:pb-20 mb-14 md:mb-32">
       <div className="text-center mb-6 md:mb-12">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-1 md:mb-6 tracking-wider uppercase">
-          Kerala Experiences
+          Kerala Roots
         </h2>
         <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
           Discover the diverse experiences that make Kerala truly unique
