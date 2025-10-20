@@ -184,21 +184,22 @@ const Hero = () => {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 pt-32">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Heading */}
-       <h1 className="text-1xl md:text-3xl lg:-mb-10 lg:text-4xl font-serif font-light text-white -mb-1 leading-tight tracking-widest uppercase">
-  Discover the Magic of
-  <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent mt-2 font-normal">
-    God's Own Country
+    <h1 className="text-2xl md:text-4xl lg:text-6xl font-black text-white -mb-1 leading-tight tracking-widest uppercase">
+  DISCOVER THE MAGIC OF
+  <span className="block bg-gradient-to-r from-emerald-300 via-cyan-400 to-emerald-300 bg-clip-text text-transparent mt-3 font-black animate-pulse">
+    GOD'S OWN COUNTRY
   </span>
 </h1>
 
           {/* Logo */}
-          <div className="mb-3 border-b border-white transform hover:scale-105 transition-transform duration-500">
-            <img
-              className="w-full border-b border-white m-2 mx-auto drop-shadow-2xl"
-              src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
-              alt="Kerala - God's Own Country"
-            />
-          </div>
+        {/* Logo */}
+<div className="mb-3 transform hover:scale-105 transition-transform duration-500">
+  <img
+    className="w-32 md:w-48 lg:w-56 border-b border-white mx-auto drop-shadow-2xl"
+    src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
+    alt="Kerala - God's Own Country"
+  />
+</div>
 
           {/* Subheading */}
           <p className="text-lg md:text-xl lg:text-2xl mt-6 text-amber-50 mb-8 leading-relaxed max-w-3xl mx-auto font-serif italic tracking-wide drop-shadow-md">
