@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 const PopularPlaces = ({ id = "places" }) => {
+  const [showAll, setShowAll] = useState(false);
+  
   // Complete places data with all 24 destinations and correct images
-   const allPlaces = [
-    {
+  const allPlaces = [
+     {
       id: "munnar",
       name: "MUNNAR",
       desc: "Arguably the best hill station in South India with tea-clad hill tops and valleys.",
@@ -461,22 +463,25 @@ const PopularPlaces = ({ id = "places" }) => {
     }
   ];
 
-  const popularPlaces = allPlaces.slice(0, 6); // Show first 6 places as popular
+  const placesToShow = showAll ? allPlaces : allPlaces.slice(0, 6);
 
   return (
-    <section id="places" className="max-w-7xl mx-auto py-8 md:py-16">
+    <section id="places" className="max-w-7xl mx-auto py-8 md:py-16 px-4 sm:px-6">
       <div className="text-center mb-5 md:mb-12">
         <div className="inline-flex items-center px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4">
           Top Destinations
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-1 md:mb-6 tracking-wider uppercase">Most Popular Places</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-800 mb-1 md:mb-6 tracking-wider uppercase">
+          {showAll ? 'All Kerala Destinations' : 'Most Popular Places'}
+        </h2>
         <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed px-4">
           Kerala is a rare place adorned with beautiful landscapes, hill stations, water bodies and everything a traveler would love to explore.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 p-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {popularPlaces.map((place) => (
+      {/* Places Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {placesToShow.map((place) => (
           <div key={place.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             {/* Image */}
             <div className="relative h-64 overflow-hidden">
@@ -512,17 +517,25 @@ const PopularPlaces = ({ id = "places" }) => {
         ))}
       </div>
 
-      <div className="text-center mt-6">
-        <Link 
-          to="/places" 
-          className="inline-flex items-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
-        >
-          Explore All {allPlaces.length} Destinations
-          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </Link>
-      </div>
+      {/* View All / Show Less Button */}
+      {allPlaces.length > 6 && (
+        <div className="text-center mt-8 md:mt-12">
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center px-8 py-4 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          >
+            {showAll ? 'Show Less' : `Explore All ${allPlaces.length} Destinations`}
+            <svg 
+              className={`w-5 h-5 ml-2 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      )}
 
       {/* Destination Categories */}
       <div className="mt-8 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 text-center">
@@ -555,6 +568,9 @@ const PopularPlaces = ({ id = "places" }) => {
           <p className="text-xs md:text-sm text-gray-600">Kochi, Thrissur, Trivandrum</p>
         </div>
       </div>
+
+      {/* Stats Section */}
+  
     </section>
   );
 };
