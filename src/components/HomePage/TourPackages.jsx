@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import TourPackageCard from '../packages/TourPackageCard';
 
 const TourPackages = ({ id = "packages" }) => {
   const [showAll, setShowAll] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isScrolledToEnd, setIsScrolledToEnd] = useState(false);
+  const scrollContainerRef = useRef(null);
 
   const allPackages = [
-     {
+    {
       id: "kerala-classic",
       name: "Kerala Classic Tour",
       duration: "04 Nights / 05 Days",
@@ -607,21 +608,52 @@ const TourPackages = ({ id = "packages" }) => {
       inclusions: ["Hotels", "Meals", "Transfers", "Sightseeing", "Houseboat Stay", "Cultural Shows", "Romantic Decorations"],
       exclusions: ["Flights", "Personal expenses", "Travel insurance"]
     }
-
   ];
 
   const handleToggleView = () => {
-    setIsAnimating(true);
-    setShowAll(!showAll);
+    const newShowAllState = !showAll;
+    setShowAll(newShowAllState);
     
-    // Reset animation state after transition completes
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 500);
+    // Scroll to the 7th product when showing all packages
+    if (newShowAllState && scrollContainerRef.current) {
+      setTimeout(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+          // Calculate scroll position to show the 7th product (index 6)
+          const scrollPosition = 6 * 320; // 320px per card (w-80 = 320px)
+          container.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
   };
 
   const packagesToShow = showAll ? allPackages : allPackages.slice(0, 6);
-  const hiddenPackagesCount = allPackages.length - 6;
+
+  // Check if scroll container is scrolled to the end
+  const checkScrollPosition = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+      const isAtEnd = Math.abs(scrollWidth - clientWidth - scrollLeft) < 10;
+      setIsScrolledToEnd(isAtEnd);
+    }
+  };
+
+  // Add scroll event listener
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScrollPosition);
+      checkScrollPosition();
+      
+      return () => {
+        container.removeEventListener('scroll', checkScrollPosition);
+      };
+    }
+  }, [showAll]);
 
   return ( 
     <section id={id} className="max-w-7xl mx-auto mt-6 px-4 sm:px-6 py-8 md:py-16">
@@ -637,89 +669,125 @@ const TourPackages = ({ id = "packages" }) => {
         </p>
       </div>
 
-      {/* Mobile Horizontal Scroll Container */}
+      {/* Mobile Horizontal Scroll Container with Button on Right */}
       <div className="lg:hidden">
-        <div className="flex overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          <div className="flex space-x-6">
-            {packagesToShow.map((pkg, index) => (
-              <div 
-                key={pkg.id} 
-                className="w-80 flex-shrink-0 snap-start h-full"
-              >
-                <TourPackageCard pkg={pkg} />
-              </div>
-            ))}
+        <div className="relative">
+          <div 
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
+            <div className="flex space-x-6">
+              {packagesToShow.map((pkg, index) => (
+                <div 
+                  key={pkg.id} 
+                  className="w-80 flex-shrink-0 snap-start h-full"
+                  data-index={index}
+                >
+                  <TourPackageCard pkg={pkg} />
+                </div>
+              ))}
+              
+              {/* View All Button Container - Positioned as last item in scroll */}
+              {allPackages.length > 6 && !showAll && (
+                <div className="w-80 flex-shrink-0 snap-start h-full flex items-center justify-center">
+                  <div className="bg-white rounded-lg border-2 border-dashed border-emerald-200 p-6 text-center w-full h-full flex flex-col items-center justify-center">
+                    <button 
+                      onClick={handleToggleView}
+                      className="inline-flex items-center px-6 py-3 border-2 border-emerald-500 text-emerald-600 font-semibold hover:bg-emerald-500 hover:text-white text-sm bg-transparent transition-colors duration-200"
+                    >
+                      <span className="flex items-center justify-center">
+                        View All {allPackages.length}
+                        <svg 
+                          className="w-4 h-4 ml-2"
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth="2" 
+                            d="M19 9l-7 7-7-7" 
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <p className="text-xs text-gray-500 mt-2">
+                      {packagesToShow.length} of {allPackages.length} packages
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Show Less Button - Only shown when viewing all packages */}
+              {showAll && (
+                <div className="w-80 flex-shrink-0 snap-start h-full flex items-center justify-center">
+                  <div className="bg-white rounded-lg border-2 border-dashed border-emerald-200 p-6 text-center w-full h-full flex flex-col items-center justify-center">
+                    <button 
+                      onClick={handleToggleView}
+                      className="inline-flex items-center px-6 py-3 border-2 border-emerald-500 bg-emerald-500 text-white font-semibold hover:bg-emerald-600 text-sm transition-colors duration-200"
+                    >
+                      <span className="flex items-center justify-center">
+                        Show Less
+                        <svg 
+                          className="w-4 h-4 ml-2 rotate-180"
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth="2" 
+                            d="M19 9l-7 7-7-7" 
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <p className="text-xs text-gray-500 mt-2">
+                      Showing all {allPackages.length} packages
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-        
-        {/* Scroll Indicator for Mobile */}
-        <div className="flex justify-center mt-1 space-x-2 lg:hidden">
-          {packagesToShow.map((_, index) => (
-            <div 
-              key={index}
-              className="w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"
-            />
-          ))}
+          
+          {/* Scroll Indicator */}
+          <div className="flex justify-center items-center mt-4 space-x-2">
+            <div className="text-xs text-gray-500">
+              {showAll ? 'Scroll to see all packages' : 'Scroll to see more packages →'}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Desktop Grid Layout with Smooth Animation */}
+      {/* Desktop Grid Layout */}
       <div className="hidden lg:block">
-        <div className={`
-          grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr
-          transition-all duration-500 ease-in-out
-          ${isAnimating ? 'opacity-70' : 'opacity-100'}
-        `}>
-          {packagesToShow.map((pkg, index) => (
-            <div 
-              key={pkg.id} 
-              className="h-full flex"
-              style={{
-                animation: !isAnimating ? 'fadeInUp 0.6s ease-out forwards' : 'none',
-                animationDelay: `${index * 0.1}s`,
-                opacity: isAnimating ? 0.7 : 1
-              }}
-            >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+          {packagesToShow.map((pkg) => (
+            <div key={pkg.id} className="h-full flex">
               <TourPackageCard pkg={pkg} />
             </div>
           ))}
         </div>
-      </div>
 
-      {/* View All Packages CTA with Enhanced Animation */}
-      {allPackages.length > 6 && (
-        <div className="text-center mt-8 md:mt-12">
-          <button 
-            onClick={handleToggleView}
-            disabled={isAnimating}
-            className={`
-              inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 
-              border-2 border-emerald-500 text-emerald-600 font-semibold 
-              hover:bg-emerald-500 hover:text-white 
-              transition-all duration-500 ease-in-out
-              transform hover:-translate-y-1 
-              shadow-lg hover:shadow-xl 
-              text-sm sm:text-base
-              disabled:opacity-50 disabled:cursor-not-allowed
-              ${showAll ? 'bg-emerald-500 text-white' : 'bg-transparent'}
-              relative overflow-hidden
-            `}
-          >
-            {/* Animated background */}
-            <span className={`
-              absolute inset-0 bg-emerald-500 transform origin-left transition-transform duration-500 ease-in-out
-              ${showAll ? 'scale-x-100' : 'scale-x-0'}
-            `}></span>
-            
-            {/* Button content */}
-            <span className="relative z-10 flex items-center">
+        {/* View All Packages CTA for Desktop */}
+        {allPackages.length > 6 && (
+          <div className="text-center mt-8 md:mt-12">
+            <button 
+              onClick={handleToggleView}
+              className={`
+                inline-flex items-center px-8 py-4 
+                border-2 border-emerald-500 text-emerald-600 font-semibold 
+                hover:bg-emerald-500 hover:text-white 
+                text-base
+                ${showAll ? 'bg-emerald-500 text-white' : 'bg-transparent'}
+              `}
+            >
               {showAll ? 'Show Less' : `View All ${allPackages.length} Packages`}
               <svg 
-                className={`
-                  w-4 h-4 sm:w-5 sm:h-5 ml-2 transition-transform duration-500 ease-in-out
-                  ${showAll ? 'rotate-180' : ''}
-                  ${isAnimating ? 'scale-110' : 'scale-100'}
-                `}
+                className={`w-5 h-5 ml-2 ${showAll ? 'rotate-180' : ''}`}
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -731,26 +799,19 @@ const TourPackages = ({ id = "packages" }) => {
                   d="M19 9l-7 7-7-7" 
                 />
               </svg>
-            </span>
-          </button>
+            </button>
 
-          {/* Package Count Indicator */}
-          <div className={`
-            mt-4 text-sm text-gray-500 transition-all duration-500 ease-in-out
-            ${showAll ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}
-          `}>
-            Showing {packagesToShow.length} of {allPackages.length} packages
+            {/* Package Count Indicator for Desktop */}
+            <div className="mt-4 text-sm text-gray-500">
+              Showing {packagesToShow.length} of {allPackages.length} packages
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Trust Indicators */}
-      <div className={`
-        mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-center px-4
-        transition-all duration-500 ease-in-out
-        ${showAll ? 'opacity-100 translate-y-0' : 'opacity-100'}
-      `}>
-        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+      <div className="mt-6 sm:mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 text-center px-4">
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
           <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 bg-emerald-50">
             <svg className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
@@ -759,7 +820,7 @@ const TourPackages = ({ id = "packages" }) => {
           <h3 className="text-xs sm:text-sm font-semibold mb-1">4.8/5 Rating</h3>
           <p className="text-gray-600 text-xs">Rated excellent by 500+ travelers</p>
         </div>
-        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100">
           <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 bg-emerald-50">
             <svg className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -768,7 +829,7 @@ const TourPackages = ({ id = "packages" }) => {
           <h3 className="text-xs sm:text-sm font-semibold mb-1">Best Price Guarantee</h3>
           <p className="text-gray-600 text-xs">Get the best value for your money</p>
         </div>
-        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 col-span-2 sm:col-span-1">
+        <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm border border-gray-100 col-span-2 sm:col-span-1">
           <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2 bg-emerald-50">
             <svg className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
@@ -778,20 +839,6 @@ const TourPackages = ({ id = "packages" }) => {
           <p className="text-gray-600 text-xs">Dedicated travel support throughout</p>
         </div>
       </div>
-
-      {/* Add CSS animations */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };
