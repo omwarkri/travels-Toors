@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/common/Footer";
 
 const ContactPage = () => {
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
+  const [showCallModal, setShowCallModal] = useState(false);
+
+  // WhatsApp numbers
+  const whatsappNumbers = [
+    "919028803309",
+    "919146385636"
+  ];
+
+  // Phone numbers for calls
+  const phoneNumbers = [
+    "919028803309",
+    "919146385636"
+  ];
+
+  const handleWhatsAppClick = () => {
+    setShowWhatsAppModal(true);
+  };
+
+  const handleCallClick = () => {
+    setShowCallModal(true);
+  };
+
+  const handleNumberSelect = (phoneNumber, isWhatsApp = false) => {
+    if (isWhatsApp) {
+      const message = "Hi, I'm interested in Kerala tour packages. Please share more details.";
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      setShowWhatsAppModal(false);
+    } else {
+      window.location.href = `tel:${phoneNumber}`;
+      setShowCallModal(false);
+    }
+  };
+
+  const closeModal = () => {
+    setShowWhatsAppModal(false);
+    setShowCallModal(false);
+  };
+
   return (
     <div id="contact" className="pt-0 min-h-screen bg-gray-50">
       {/* Main Content */}
@@ -89,29 +129,84 @@ const ContactPage = () => {
 
           {/* Quick Action Buttons */}
           <div className="space-y-4 max-w-sm mx-auto">
-            <a
-              href="https://wa.me/919028803309"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleWhatsAppClick}
               className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 font-semibold rounded-lg transition-colors flex items-center justify-center shadow-sm"
             >
               <span className="mr-2">💬</span>
               Chat on WhatsApp
-            </a>
-            <a
-              href="tel:+919028803309"
+            </button>
+            <button
+              onClick={handleCallClick}
               className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 font-semibold rounded-lg transition-colors flex items-center justify-center shadow-sm"
             >
               <span className="mr-2">📞</span>
               Call Now
-            </a>
+            </button>
           </div>
-
-         
         </div>
-
-      
       </section>
+
+      {/* WhatsApp Modal */}
+      {showWhatsAppModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-xs w-full">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800">Choose a number</h3>
+            </div>
+            <div className="p-4 space-y-3">
+              {whatsappNumbers.map((number, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleNumberSelect(number, true)}
+                  className="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition duration-200 font-medium"
+                >
+                  +91 {number.slice(2)}
+                </button>
+              ))}
+            </div>
+            <div className="p-4 border-t border-gray-200">
+              <button
+                onClick={closeModal}
+                className="w-full text-gray-600 hover:text-gray-800 py-2 transition duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Call Modal */}
+      {showCallModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-xs w-full">
+            <div className="p-4 border-b border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800">Choose a number</h3>
+            </div>
+            <div className="p-4 space-y-3">
+              {phoneNumbers.map((number, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleNumberSelect(number, false)}
+                  className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200 font-medium"
+                >
+                  +91 {number.slice(2)}
+                </button>
+              ))}
+            </div>
+            <div className="p-4 border-t border-gray-200">
+              <button
+                onClick={closeModal}
+                className="w-full text-gray-600 hover:text-gray-800 py-2 transition duration-200"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </div>
   );

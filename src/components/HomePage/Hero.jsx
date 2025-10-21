@@ -210,7 +210,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
             <a
               href="/#packages"
-              className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl font-bold text-lg text-white hover:from-emerald-600 hover:to-cyan-600 shadow-2xl hover:shadow-emerald-500/25 transform hover:scale-105 border-2 border-emerald-400/50 transition-all duration-300 flex items-center justify-center min-w-[200px]"
+              className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:from-emerald-600 hover:to-cyan-600 shadow-2xl hover:shadow-emerald-500/25 transform hover:scale-105 border-2 border-emerald-400/50 transition-all duration-300 flex items-center justify-center min-w-[200px]"
             >
               View Tour Packages
               <span className="ml-2">→</span>
