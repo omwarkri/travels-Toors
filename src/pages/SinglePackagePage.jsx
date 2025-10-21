@@ -729,7 +729,7 @@ const SinglePackagePage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/80 to-teal-800/80"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 mt-12 md:mt-10">
           {/* Breadcrumb */}
           <div className="flex items-center space-x-1 text-xs sm:text-sm text-white/80 mb-3 sm:mb-4">
             <Link to="/" className="hover:text-white transition">Home</Link>
