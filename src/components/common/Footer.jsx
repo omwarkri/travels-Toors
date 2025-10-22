@@ -152,13 +152,13 @@ const Footer = () => {
               Your trusted travel partner since 2010. Experience Kerala with expertly crafted tours and personalized service.
             </p>
             <div className="flex space-x-3">
-              <a href="#facebook" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://www.facebook.com/share/17W2P32GJD/" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <span className="text-white text-sm font-semibold">f</span>
               </a>
-              <a href="#twitter" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
-                <span className="text-white text-sm font-semibold">t</span>
+              <a href="#youtube" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+                <span className="text-white text-sm font-semibold">y</span>
               </a>
-              <a href="#instagram" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://www.instagram.com/omkartours143/" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <span className="text-white text-sm">📷</span>
               </a>
             </div>
@@ -169,16 +169,16 @@ const Footer = () => {
             <h4 className="font-semibold mb-3 text-white">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>
-                <Link to="/packages" className="hover:text-emerald-400 transition-colors">Tour Packages</Link>
+                <a href="/#packages" className="hover:text-emerald-400 transition-colors">Tour Packages</a>
               </li>
               <li>
-                <Link to="/places" className="hover:text-emerald-400 transition-colors">Popular Places</Link>
+                <a href="/#places" className="hover:text-emerald-400 transition-colors">Popular Places</a>
               </li>
               <li>
-                <Link to="/about" className="hover:text-emerald-400 transition-colors">About Us</Link>
+                <a href="/#about" className="hover:text-emerald-400 transition-colors">About Us</a>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-emerald-400 transition-colors">Contact</Link>
+                <a href="/#contact" className="hover:text-emerald-400 transition-colors">Contact</a>
               </li>
             </ul>
           </div>
