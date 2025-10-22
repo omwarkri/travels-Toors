@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { useParams, Link } from 'react-router-dom';
 import SEOHead from "../components/common/SEOHead";
 import Footer from "../components/common/Footer";
+import { X, Phone, MessageCircle } from "lucide-react";
 
 const SinglePlacePage = () => {
   const { placeId } = useParams();
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
-  const [showNumbers, setShowNumbers] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [modalType, setModalType] = useState(''); // 'book', 'customize', 'call'
   
   // Complete places data with all detailed information
-  // Complete places data with all detailed information
-  const allPlaces = [
+    const allPlaces = [
     {
       id: "munnar",
       name: "MUNNAR",
@@ -2255,6 +2256,8 @@ const SinglePlacePage = () => {
 
   ];
 
+
+
   // Find the place by ID
   const place = allPlaces.find(p => p.id === placeId) || allPlaces[0];
 
@@ -2289,12 +2292,59 @@ const SinglePlacePage = () => {
 
   // Phone numbers
   const phoneNumbers = [
-    "+91 9028803309",
-    "+91 9897656789"
+    { number: "+919028803309", display: "+91 9028803309" },
+    { number: "+919146385636", display: "+91 9146385636" }
   ];
 
-  const toggleNumbers = () => {
-    setShowNumbers(!showNumbers);
+  const openContactModal = (type) => {
+    setModalType(type);
+    setShowContactModal(true);
+  };
+
+  const closeContactModal = () => {
+    setShowContactModal(false);
+    setModalType('');
+  };
+
+  const makeCall = (phoneNumber) => {
+    window.open(`tel:${phoneNumber}`, '_self');
+    closeContactModal();
+  };
+
+  const openWhatsApp = (phoneNumber) => {
+    const message = `Hello! I'm interested in ${modalType === 'book' ? 'booking a tour package' : modalType === 'customize' ? 'customizing a trip' : 'getting more information'} for ${place.name}. Could you please provide more details?`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+    closeContactModal();
+  };
+
+  // Get modal title based on type
+  const getModalTitle = () => {
+    switch (modalType) {
+      case 'book':
+        return 'Book Your Tour';
+      case 'customize':
+        return 'Customize Your Trip';
+      case 'call':
+        return 'Call for Details';
+      default:
+        return 'Contact Us';
+    }
+  };
+
+  // Get modal description based on type
+  const getModalDescription = () => {
+    switch (modalType) {
+      case 'book':
+        return 'Choose your preferred contact method to book this amazing tour package:';
+      case 'customize':
+        return 'Let us create your perfect itinerary. Contact us to customize your trip:';
+      case 'call':
+        return 'Get detailed information about this destination. Contact us:';
+      default:
+        return 'Choose your preferred contact method:';
+    }
   };
 
   // Tab content renderer
@@ -2446,6 +2496,68 @@ const SinglePlacePage = () => {
         description={`Visit ${place.name} - ${place.desc}. Book ${place.tours}+ tour packages starting from ₹4,999. Best time to visit: ${place.bestSeason}`}
         keywords={`${place.name}, ${place.name} Kerala, ${place.name} tour packages, ${place.name} tourism`}
       />
+
+      {/* Contact Modal */}
+      {showContactModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl max-w-md w-full p-6 border border-emerald-500/30 shadow-2xl">
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-xl font-bold text-gray-800">{getModalTitle()}</h3>
+              <button 
+                onClick={closeContactModal}
+                className="text-gray-400 hover:text-gray-600 transition-colors p-1"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <p className="text-gray-600 text-sm mb-6">
+              {getModalDescription()}
+            </p>
+            
+            <div className="space-y-4">
+              {phoneNumbers.map((item, index) => (
+                <div key={index} className="border border-gray-200 rounded-lg p-4 hover:border-emerald-400 transition-colors">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="font-semibold text-gray-800">{item.display}</span>
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => makeCall(item.number)}
+                        className="bg-emerald-500 text-white p-2 rounded-lg hover:bg-emerald-600 transition-colors flex items-center justify-center"
+                        title="Call"
+                      >
+                        <Phone className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={() => openWhatsApp(item.number)}
+                        className="bg-green-500 text-white p-2 rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center"
+                        title="WhatsApp"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    Available on Call & WhatsApp
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500 mb-3">
+                We'll help you plan your perfect {place.name} experience
+              </p>
+              <button
+                onClick={closeContactModal}
+                className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg transition-colors font-medium"
+              >
+                Maybe Later
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       
       {/* Place Header */}
       <section className="relative h-96 bg-gray-900">
@@ -2557,7 +2669,7 @@ const SinglePlacePage = () => {
                       <span className="text-emerald-600 font-bold">₹{packageData[pkg]?.price || "Custom"}</span>
                     </div>
                     <button
-                      onClick={toggleNumbers}
+                      onClick={() => openContactModal('book')}
                       className="w-full bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
                     >
                       Book Now
@@ -2568,44 +2680,18 @@ const SinglePlacePage = () => {
 
               <div className="text-center space-y-3">
                 <button
-                  onClick={toggleNumbers}
+                  onClick={() => openContactModal('customize')}
                   className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
                 >
                   💬 Customize Your Trip
                 </button>
                 <button
-                  onClick={toggleNumbers}
+                  onClick={() => openContactModal('call')}
                   className="w-full bg-emerald-500 text-white py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
                 >
                   📞 Call for Details
                 </button>
               </div>
-
-              {/* Phone Numbers Display */}
-              {showNumbers && (
-                <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-center mb-3">Contact Numbers</h4>
-                  <div className="space-y-2">
-                    {phoneNumbers.map((number, index) => (
-                      <div key={index} className="flex justify-between items-center">
-                        <span className="text-gray-700">{number}</span>
-                        <a
-                          href={`tel:${number}`}
-                          className="bg-emerald-500 text-white px-3 py-1 rounded text-sm hover:bg-emerald-600 transition duration-200"
-                        >
-                          Call
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={toggleNumbers}
-                    className="w-full mt-3 text-gray-500 text-sm hover:text-gray-700"
-                  >
-                    Hide Numbers
-                  </button>
-                </div>
-              )}
 
               {/* Quick Facts */}
               <div className="mt-6 space-y-3">
