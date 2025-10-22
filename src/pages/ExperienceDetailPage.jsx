@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const ExperienceDetailPage = () => {
   const { experienceId } = useParams();
   const navigate = useNavigate();
+  const [showNumbers, setShowNumbers] = useState(false);
 
   // Updated images with proper categorization
   const categoryImages = {
@@ -757,7 +758,7 @@ const ExperienceDetailPage = () => {
         </div>
       </section>
 
-      {/* Updated CTA Section with Multiple Contact Options */}
+      {/* Updated CTA Section with Interactive Contact Options */}
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
@@ -768,33 +769,75 @@ const ExperienceDetailPage = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Call Now Section */}
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-800 mb-3">📞 Call Us</h3>
-              <div className="space-y-2">
-                <a href="tel:+919028803309" className="block text-blue-600 hover:text-blue-800 font-medium">
-                  +91 90288 03309
-                </a>
-                <a href="tel:+919048403309" className="block text-blue-600 hover:text-blue-800 font-medium">
-                  +91 90484 03309
-                </a>
-              </div>
-              <p className="text-sm text-gray-500 mt-3">Available 24/7 for queries and bookings</p>
+              <h3 className="font-semibold text-gray-800 mb-3"> Call Now</h3>
+              <p className="text-gray-600 mb-4">Speak directly with our experts</p>
+              
+              {!showNumbers ? (
+                <button
+                  onClick={() => setShowNumbers(true)}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                >
+                  <span className="mr-2">Call Now</span>
+                </button>
+              ) : (
+                <div className="space-y-3">
+                  <div className="flex flex-col space-y-2">
+                    <a 
+                      href="tel:+919028803309" 
+                      className="bg-white border border-blue-200 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                    >
+                    
+                      +91 90288 03309
+                    </a>
+                    <a 
+                      href="tel:+919048403309" 
+                      className="bg-white border border-blue-200 text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                    >
+                   
+                      +91 90484 03309
+                    </a>
+                  </div>
+                  <p className="text-sm text-gray-500">Available 24/7 for queries and bookings</p>
+                </div>
+              )}
             </div>
             
+            {/* WhatsApp Section */}
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold text-gray-800 mb-3">💬 WhatsApp</h3>
+              <h3 className="font-semibold text-gray-800 mb-3"> WhatsApp</h3>
               <p className="text-gray-600 mb-4">Quick responses and instant support</p>
-              <a
-                href="https://wa.me/919028803309?text=Hi! I'm interested in experiencing Kerala's culture and would like more information."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-              >
-                <span className="mr-2">WhatsApp Now</span>
-              </a>
+              
+              <div className="space-y-3">
+                <a
+                  href="https://wa.me/919028803309?text=Hi! I'm interested in experiencing Kerala's culture and would like more information."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                >
+                  <span className="mr-2">WhatsApp +91 90288 03309</span>
+                </a>
+                <a
+                  href="https://wa.me/919048403309?text=Hi! I'm interested in experiencing Kerala's culture and would like more information."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                >
+                  <span className="mr-2">WhatsApp +91 91463 85636</span>
+                </a>
+              </div>
             </div>
           </div>
 
+          <div className="text-center">
+            <p className="text-gray-500 text-sm">
+              Prefer email? Contact us at{" "}
+              <a href="mailto:info@keralaculture.com" className="text-blue-600 hover:text-blue-800 font-medium">
+                info@keralaculture.com
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </div>
