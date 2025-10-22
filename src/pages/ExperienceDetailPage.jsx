@@ -799,7 +799,7 @@ const ExperienceDetailPage = () => {
                       +91 90484 03309
                     </a>
                   </div>
-                  <p className="text-sm text-gray-500">Available 24/7 for queries and bookings</p>
+           
                 </div>
               )}
             </div>
