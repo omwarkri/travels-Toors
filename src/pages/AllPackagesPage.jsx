@@ -386,6 +386,7 @@ const AllPackagesPage = () => {
           title: "Coastal Journey", 
           description: "Head to Alleppey with en route stops at Varkala Beach, known for its dramatic red cliffs, serene sandy stretches, and spiritual atmosphere. Visit the Ambalappuzha Temple, famous for its traditional Kerala architecture and the sweet palpayasam offering. Continue the journey to Alleppey for an overnight stay." 
         },
+        
         { 
           day: "Day 8", 
           title: "Alleppey Experience", 

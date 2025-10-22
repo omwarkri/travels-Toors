@@ -16,6 +16,7 @@ const HomePage = () => {
     <div className="min-h-screen font-sans text-gray-800 bg-white">
       <Hero />
       <main>
+        
         <TourPackages />
         <PopularPlaces />
         <KeralaExperiences/>

@@ -8,6 +8,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto px-6 mb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
+        
         {/* PAYMENT OPTIONS */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
           <h3 className="text-emerald-400 font-bold text-sm mb-3 uppercase tracking-wide">

@@ -17,6 +17,7 @@ const KeralaExperiences = () => {
       img: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
       description: "Traditional arts and performances"
     },
+    
     {
       id: "events",
       title: "Events",

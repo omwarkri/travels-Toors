@@ -137,6 +137,7 @@ const Navigation = () => {
   {/* Show all icons on desktop, only first 3 on mobile */}
   {socialLinks.slice(0, typeof window !== 'undefined' && window.innerWidth < 768 ? 3 : socialLinks.length).map((social) => (
     <a
+    
       key={social.name}
       href={social.url}
       target="_blank"

@@ -841,6 +841,7 @@ const SinglePlacePage = () => {
       "Many temples in the region are associated with annual festivals attended by local communities"
     ],
     
+    
     travelTips: [
       "Wear sturdy footwear suitable for slippery pathways and trekking",
       "Carry rain gear and be cautious during the monsoon season",

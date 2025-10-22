@@ -12,6 +12,7 @@ const WhyChooseUs = () => {
       title: "Best Price Guarantee",
       description: "We promise the best rates for the same quality of service"
     },
+    
     {
       icon: "🛡️",
       title: "24/7 Support",

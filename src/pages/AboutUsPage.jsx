@@ -20,6 +20,7 @@ const AboutUsPage = () => {
             Your trusted travel partner in Kerala, creating unforgettable experiences in God's Own Country.
           </p>
         </div>
+        
 
         {/* Inserted About Us section */}
         <div className="max-w-4xl mx-auto mb-16">

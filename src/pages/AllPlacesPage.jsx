@@ -314,6 +314,7 @@ const AllPlacesPage = () => {
           </p>
         </div>
 
+
         {/* Quick Stats */}
         <div className="bg-white shadow-lg p-8 mb-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">

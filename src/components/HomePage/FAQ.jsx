@@ -54,6 +54,7 @@ const FAQ = ({ id = "faq" }) => {
     },
   ];
 
+  
   const [openIndex, setOpenIndex] = useState(0);
 
   return (

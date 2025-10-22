@@ -432,6 +432,7 @@ const ExperienceDetailPage = () => {
         serving: "Lunch/Dinner",
         taste: "Spicy, tangy, and creamy"
       },
+      
           {
         title: "Puttu and Kadala Curry",
         description: "Puttu and Kadala Curry is a beloved traditional breakfast in Kerala. Puttu is made by steaming layers of coarsely ground rice flour and grated coconut in a cylindrical mold, resulting in soft and aromatic rice cakes. Kadala Curry is a spicy, flavorful curry made with black chickpeas cooked in a rich blend of spices, onions, tomatoes, garlic, and coconut, often tempered with mustard seeds and curry leaves in coconut oil.",

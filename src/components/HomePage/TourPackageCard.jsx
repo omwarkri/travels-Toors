@@ -21,6 +21,7 @@ const TourPackageCard = ({ pkg }) => {
           {pkg.discount}
         </div>
       </div>
+      
 
       {/* Content */}
       <div className="p-4 sm:p-6">

@@ -199,6 +199,7 @@ const Hero = () => {
     src="https://res.cloudinary.com/dl2gcscfa/image/upload/v1760938190/kerla-logo-2__1_-removebg-preview_qgevi3.png"
     alt="Kerala - God's Own Country"
   />
+  
 </div>
 
           {/* Subheading */}

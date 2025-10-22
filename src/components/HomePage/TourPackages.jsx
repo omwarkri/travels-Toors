@@ -599,6 +599,7 @@ const TourPackages = ({ id = "packages" }) => {
           title: "Alleppey Backwaters", 
           description: "Enjoy a serene houseboat cruise in Alleppey, drifting through the tranquil backwaters. Savor traditional Kerala meals prepared onboard, featuring local delicacies. Experience the peaceful ride while taking in the lush landscapes. Optionally, explore Alleppey beach and gardens during your visit." 
         },
+        
         { 
           day: "Day 7", 
           title: "Departure", 

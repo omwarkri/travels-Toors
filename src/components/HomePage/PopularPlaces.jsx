@@ -569,6 +569,7 @@ const PopularPlaces = ({ id = "places" }) => {
         </div>
       </div>
 
+
       {/* Stats Section */}
   
     </section>
