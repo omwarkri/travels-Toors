@@ -66,25 +66,32 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
           {/* PAYMENT OPTIONS */}
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
-            <h3 className="text-emerald-400 font-bold text-sm mb-3 uppercase tracking-wide">
-              Secure Payments
-            </h3>
-            <div className="flex justify-center space-x-3">
-              <div className="bg-white p-1 rounded">
-                <span className="text-blue-600 font-bold text-xs">VISA</span>
-              </div>
-              <div className="bg-white p-1 rounded">
-                <span className="text-red-500 font-bold text-xs">MC</span>
-              </div>
-              <div className="bg-yellow-400 p-1 rounded">
-                <span className="text-blue-600 font-bold text-xs">Pay</span>
-              </div>
-              <div className="bg-blue-600 p-1 rounded">
-                <span className="text-white font-bold text-xs">PP</span>
-              </div>
-            </div>
-          </div>
+   <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
+  <h3 className="text-emerald-400 font-bold text-sm mb-3 uppercase tracking-wide">
+    Secure Payments
+  </h3>
+  <div className="flex justify-center flex-wrap gap-3">
+    <div className="px-3 py-2 bg-white border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-20 text-center hover:bg-white/20 transition">
+      <img src="https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png" alt="" />
+    </div>
+    <div className="px-3 py-2 bg-white border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-20 text-center hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/330px-Mastercard-logo.svg.png" alt="" />
+    </div>
+    <div className="px-3 py-2 bg-white border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-20 text-center hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/500px-PayPal.svg.png" alt="" />
+    </div>
+    <div className="px-3 py-2 bg-white border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-24 text-center hover:bg-white/20 transition">
+      <img src="https://www.aexp-static.com/cdaas/one/statics/axp-static-assets/1.8.0/package/dist/img/logos/dls-logo-bluebox-solid.svg" alt="" />
+    </div>
+    <div className="px-3 py-2 bg-white border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-20 text-center hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Maestro_2016.svg/500px-Maestro_2016.svg.png" alt="" />
+    </div>
+    <div className="px-3 py-2 bg-blue-600 border border-white/20 rounded-md text-white text-xs font-semibold uppercase tracking-wide w-24 text-center hover:bg-white/20 transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Visa_Electron.svg/640px-Visa_Electron.svg.png" alt="" />
+    </div>
+  </div>
+</div>
+
 
           {/* APPROVED BY */}
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">
@@ -93,17 +100,29 @@ const Footer = () => {
             </h3>
             <div className="flex justify-center space-x-4 items-center">
               <div className="text-center">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center mx-auto mb-1">
+                <div className="w-10 h-10 bg-white p-[1px]  flex items-center justify-center mx-auto mb-1">
                   <span className="text-orange-500 font-bold text-sm">🇮🇳</span>
                 </div>
                 <span className="text-white text-xs">Incredible India</span>
               </div>
               <div className="text-center">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-1">
-                  <span className="text-white font-bold text-xs">IATO</span>
+                <div className="w-10 h-10 bg-white p-[1px]  flex items-center justify-center mx-auto mb-1">
+                  <span className="text-black font-bold text-xs">IATO</span>
                 </div>
                 <span className="text-white text-xs">IATO</span>
               </div>
+                             <div className="text-center">
+                <img className="w-10 h-10 bg-white p-[1px]  flex items-center justify-center mx-auto mb-1" src="https://images.squarespace-cdn.com/content/v1/5f24290fd0d0910ecab2b02e/1596245893901-GZ6ICWAPMR8QOY8MXDM3/0PATA-Logo-transparency_BLACK.png?format=1500w" alt="" />
+                <span className="text-white text-xs">PATA</span>
+              </div>
+                   <div className="text-center">
+                <img className="w-10 h-10 bg-white p-[1px]  flex items-center justify-center mx-auto mb-1" src="https://www.atoai.org/public/upload/atoai/images/logo.png" alt="" />
+                <span className="text-white text-xs">ATOAI</span>
+              </div>
+
+
+
+              
             </div>
           </div>
 
