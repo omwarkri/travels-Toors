@@ -8,11 +8,17 @@ const SinglePlacePage = () => {
   const { placeId } = useParams();
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
+<<<<<<< HEAD
   const [showContactModal, setShowContactModal] = useState(false);
   const [modalType, setModalType] = useState(''); // 'book', 'customize', 'call'
   
   // Complete places data with all detailed information
     const allPlaces = [
+=======
+  
+  // Complete places data with all detailed information
+  const allPlaces = [
+>>>>>>> origin/main
     {
       id: "munnar",
       name: "MUNNAR",
@@ -2290,6 +2296,7 @@ const SinglePlacePage = () => {
     "Historical Tour": { duration: "2 Days", price: "4,999" }
   };
 
+<<<<<<< HEAD
   // Phone numbers
   const phoneNumbers = [
     { number: "+919028803309", display: "+91 9028803309" },
@@ -2347,6 +2354,8 @@ const SinglePlacePage = () => {
     }
   };
 
+=======
+>>>>>>> origin/main
   // Tab content renderer
   const renderTabContent = () => {
     switch (activeTab) {
@@ -2668,17 +2677,25 @@ const SinglePlacePage = () => {
                       <span className="text-sm text-gray-600">{packageData[pkg]?.duration || "Custom"}</span>
                       <span className="text-emerald-600 font-bold">₹{packageData[pkg]?.price || "Custom"}</span>
                     </div>
+<<<<<<< HEAD
                     <button
                       onClick={() => openContactModal('book')}
+=======
+                    <a
+                      href="https://wa.me/919028803309"
+                      target="_blank"
+                      rel="noopener noreferrer"
+>>>>>>> origin/main
                       className="w-full bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
                     >
                       Book Now
-                    </button>
+                    </a>
                   </div>
                 ))}
               </div>
 
               <div className="text-center space-y-3">
+<<<<<<< HEAD
                 <button
                   onClick={() => openContactModal('customize')}
                   className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
@@ -2687,10 +2704,22 @@ const SinglePlacePage = () => {
                 </button>
                 <button
                   onClick={() => openContactModal('call')}
+=======
+                <a
+                  href="https://wa.me/919028803309"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
+                >
+                  💬 Customize Your Trip
+                </a>
+                <a
+                  href="tel:+919028803309"
+>>>>>>> origin/main
                   className="w-full bg-emerald-500 text-white py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
                 >
                   📞 Call for Details
-                </button>
+                </a>
               </div>
 
               {/* Quick Facts */}

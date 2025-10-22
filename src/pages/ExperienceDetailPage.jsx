@@ -6,7 +6,7 @@ const ExperienceDetailPage = () => {
   const navigate = useNavigate();
   const [showNumbers, setShowNumbers] = useState(false);
 
-  // Updated images with proper categorization
+  // All images categorized properly
   const categoryImages = {
     ayurveda: [
       {
@@ -43,11 +43,6 @@ const ExperienceDetailPage = () => {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770797/udvartana_khwlq6.jpg",
         title: "Marma Massage",
         description: "Energy point stimulation for holistic healing and balance"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/shirodhara_t8shj8.jpg",
-        title: "Abhyanga",
-        description: "Traditional full-body massage with warm herbal oils"
       }
     ],
     artforms: [
@@ -85,16 +80,6 @@ const ExperienceDetailPage = () => {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/960px-Ottamthullal_kerala_gskyz1.jpg",
         title: "Ottamthullal",
         description: "Satirical solo performance with social commentary"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Koodiyattam-featured-image_bnxlci.png",
-        title: "Kutiyattam",
-        description: "Ancient Sanskrit theatre, UNESCO heritage art form"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770795/Pulikali_pzfhy3.jpg",
-        title: "Padayani",
-        description: "Ritual folk dance with colorful masks and vibrant energy"
       }
     ],
     events: [
@@ -132,21 +117,6 @@ const ExperienceDetailPage = () => {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Attukal_Pongala_bws6he.jpg",
         title: "Attukal Pongala",
         description: "Women's festival creating world's largest gathering"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770809/theyyam_fnnirr.jpg",
-        title: "Theyyam Festival",
-        description: "Ritual dance festival in North Kerala temples"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770796/Thrissur_Pooram_e8qjxs.jpg",
-        title: "Arattu Festival",
-        description: "Sacred bath festival at major Kerala temples"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/Makaravilakku_o763yr.png",
-        title: "Karkidaka Vavu Bali",
-        description: "Ancestral ritual during monsoon season"
       }
     ],
     cuisine: [
@@ -184,255 +154,202 @@ const ExperienceDetailPage = () => {
         url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/keralan_prawn_curry_45390_16x9_fzqql5.jpg",
         title: "Kerala Prawn Curry",
         description: "Spicy prawn preparation in coconut gravy"
-      },
-      {
-        url: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770794/pepper-delight-ada-pradhaman-2_wkym90.jpg",
-        title: "Erissery",
-        description: "Pumpkin and black-eyed peas curry with coconut"
       }
     ]
   };
 
-  // Updated detailed content with all missing information
+  // Detailed content for each category
   const detailedContent = {
     ayurveda: [
       {
         title: "Abhyanga",
-        description: "Abhyanga is a traditional Ayurvedic full-body massage using warm, herbal oils applied with gentle, rhythmic strokes. It deeply nourishes the skin, improves blood circulation, and induces a sense of relaxation by calming the nervous system. This massage supports detoxification through lymphatic drainage and helps to balance the body's doshas (bio-energies). Abhyanga is often recommended for stress relief, muscle relaxation, and maintaining overall health and wellness.",
-        benefits: ["Stress relief and muscle relaxation", "Improved blood circulation", "Lymphatic drainage and detoxification", "Dosha balancing and rejuvenation", "Enhanced skin health and glow"],
+        description: "Abhyanga is a traditional Ayurvedic full-body massage using warm, herbal oils applied with gentle, rhythmic strokes. It deeply nourishes the skin, improves blood circulation, and induces a sense of relaxation by calming the nervous system. This massage supports detoxification through lymphatic drainage and helps to balance the body's doshas (bio-energies).",
+        benefits: ["Stress relief and muscle relaxation", "Improved blood circulation", "Lymphatic drainage and detoxification", "Dosha balancing and rejuvenation"],
         duration: "60-90 minutes",
         bestFor: "Overall wellness and stress management"
       },
       {
         title: "Shirodhara",
-        description: "Shirodhara is a relaxing Ayurvedic therapy where warm herbal oil is gently poured in a steady stream over the forehead, particularly on the 'third eye' area. This treatment calms the mind, relieves stress, anxiety, and insomnia, and promotes mental clarity. It also helps balance the nervous system and enhances overall brain function. Shirodhara is often used in conjunction with other Ayurvedic therapies to support emotional well-being and rejuvenation.",
-        benefits: ["Mental relaxation and stress relief", "Improved sleep quality", "Enhanced mental clarity", "Nervous system balance", "Emotional well-being"],
+        description: "Shirodhara is a relaxing Ayurvedic therapy where warm herbal oil is gently poured in a steady stream over the forehead, particularly on the 'third eye' area. This treatment calms the mind, relieves stress, anxiety, and insomnia, and promotes mental clarity. It also helps balance the nervous system and enhances overall brain function.",
+        benefits: ["Mental relaxation and stress relief", "Improved sleep quality", "Enhanced mental clarity", "Nervous system balance"],
         duration: "45-60 minutes",
         bestFor: "Stress, anxiety, and mental wellness"
       },
       {
         title: "Pizhichil",
-        description: "Pizhichil is a unique Kerala Ayurvedic therapy where warm, medicated herbal oil is continuously poured over the entire body while gentle massage is given. This treatment deeply relaxes the muscles, nourishes the skin, and helps relieve joint and nerve pain. Pizhichil is especially effective for conditions like arthritis, muscle stiffness, and neurological disorders. It enhances circulation and aids in detoxifying the body through the skin. Often called the 'oil bath,' Pizhichil is a signature rejuvenation treatment.",
-        benefits: ["Muscle and joint pain relief", "Deep tissue nourishment", "Neurological disorder management", "Complete body rejuvenation", "Improved circulation"],
+        description: "Pizhichil is a unique Kerala Ayurvedic therapy where warm, medicated herbal oil is continuously poured over the entire body while gentle massage is given. This treatment deeply relaxes the muscles, nourishes the skin, and helps relieve joint and nerve pain. Often called the 'oil bath,' Pizhichil is a signature rejuvenation treatment.",
+        benefits: ["Muscle and joint pain relief", "Deep tissue nourishment", "Neurological disorder management", "Complete body rejuvenation"],
         duration: "60-90 minutes",
         bestFor: "Arthritis, muscle stiffness, and rejuvenation"
       },
       {
         title: "Udvartana",
-        description: "Udvartana is a traditional Ayurvedic massage where the body is vigorously massaged with herbal powders or pastes, using upward strokes. This therapy is known for detoxifying the skin, stimulating the lymphatic system, and improving circulation. Udvartana is especially recommended for those seeking weight loss, cellulite reduction, skin exfoliation, and enhanced muscle tone. The procedure helps in removing toxins, revitalizing the senses, and promoting a glowing complexion.",
-        benefits: ["Weight management", "Skin detoxification", "Improved circulation", "Cellulite reduction", "Muscle toning"],
+        description: "Udvartana is a traditional Ayurvedic massage where the body is vigorously massaged with herbal powders or pastes, using upward strokes. This therapy is known for detoxifying the skin, stimulating the lymphatic system, and improving circulation. Especially recommended for weight loss and cellulite reduction.",
+        benefits: ["Weight management", "Skin detoxification", "Improved circulation", "Cellulite reduction"],
         duration: "45-60 minutes",
         bestFor: "Weight loss and skin revitalization"
       },
       {
         title: "Kizhi",
-        description: "Kizhi is a traditional Ayurvedic massage therapy from Kerala that involves the use of warm herbal poultices or bundles. These bundles, filled with medicinal herbs, are heated and gently pressed or massaged over the body to relieve pain, inflammation, and muscle stiffness. There are different types of Kizhi, such as Elakizhi (herbal leaves) and Njavarakizhi (medicated rice), each providing unique therapeutic benefits.",
-        benefits: ["Pain and inflammation relief", "Improved circulation", "Muscle relaxation", "Tissue detoxification", "Chronic condition management"],
+        description: "Kizhi is a traditional Ayurvedic massage therapy that involves the use of warm herbal poultices or bundles. These bundles, filled with medicinal herbs, are heated and gently pressed over the body to relieve pain, inflammation, and muscle stiffness. Different types include Elakizhi and Njavarakizhi.",
+        benefits: ["Pain and inflammation relief", "Improved circulation", "Muscle relaxation", "Tissue detoxification"],
         duration: "60-75 minutes",
         bestFor: "Chronic pain and muscular disorders"
       },
       {
         title: "Nasya",
-        description: "Nasya is an ancient Ayurvedic therapy that involves administering medicinal oils or herbal extracts through the nostrils. It targets the head, sinuses, and respiratory system by cleansing, purifying, and nourishing these areas. Nasya is effective in relieving sinus congestion, headaches, migraines, and neurological issues. It also promotes mental clarity, reduces stress and anxiety, and supports healthy hair growth by improving scalp circulation.",
-        benefits: ["Sinus and respiratory health", "Headache and migraine relief", "Mental clarity", "Scalp and hair health", "Stress reduction"],
+        description: "Nasya is an ancient Ayurvedic therapy that involves administering medicinal oils or herbal extracts through the nostrils. It targets the head, sinuses, and respiratory system by cleansing, purifying, and nourishing these areas. Effective for sinus congestion and neurological issues.",
+        benefits: ["Sinus and respiratory health", "Headache and migraine relief", "Mental clarity", "Scalp and hair health"],
         duration: "30-45 minutes",
         bestFor: "Respiratory issues and mental wellness"
       },
       {
         title: "Kati Basti",
-        description: "Kati Basti is a specialized Ayurvedic therapy focused on treating the lower back region. It involves creating a dough ring on the lower back, which is filled with warm, medicated herbal oil. The oil is retained within this ring for 30 to 40 minutes, allowing deep penetration to soothe muscles, reduce pain, and relieve stiffness. This therapy is highly effective in treating chronic lower back pain, muscle spasms, sciatica, and degenerative spinal conditions.",
-        benefits: ["Lower back pain relief", "Spinal health improvement", "Muscle relaxation", "Enhanced flexibility", "Nerve soothing"],
+        description: "Kati Basti is a specialized Ayurvedic therapy focused on treating the lower back region. It involves creating a dough ring on the lower back, which is filled with warm, medicated herbal oil. Highly effective for chronic lower back pain and spinal conditions.",
+        benefits: ["Lower back pain relief", "Spinal health improvement", "Muscle relaxation", "Enhanced flexibility"],
         duration: "45-60 minutes",
         bestFor: "Chronic back pain and spinal issues"
-      },
-      {
-        title: "Marma Massage",
-        description: "Marma Massage is an ancient Ayurvedic therapy that focuses on stimulating specific vital energy points in the body called Marma points. These 107 points are junctions where muscles, nerves, bones, and vessels converge and are considered crucial for the flow of life energy or prana. By gently massaging these points, Marma Massage helps to unblock energy pathways, promote healing, reduce pain, and restore physical and mental balance.",
-        benefits: ["Energy pathway unblocking", "Pain reduction", "Stress relief", "Improved circulation", "Emotional balance"],
-        duration: "60-90 minutes",
-        bestFor: "Energy balancing and holistic healing"
       }
     ],
     artforms: [
       {
         title: "Kathakali",
-        description: "Kathakali is a classical dance-drama from Kerala, known for its vibrant costumes, elaborate face makeup, and expressive hand gestures. It combines dance, music, and acting to tell stories from Indian epics like the Ramayana and Mahabharata. Performers use intricate facial expressions and body movements to convey emotions and narratives without speaking. The dance is traditionally performed by men, even for female roles, with each character's costume and makeup symbolizing their nature.",
-        features: ["Vibrant costumes and makeup", "Expressive hand gestures", "Traditional percussion music", "Epic mythological stories", "Male performers only"],
+        description: "Kathakali is a classical dance-drama from Kerala, known for its vibrant costumes, elaborate face makeup, and expressive hand gestures. It combines dance, music, and acting to tell stories from Indian epics like the Ramayana and Mahabharata. Performers use intricate facial expressions and body movements to convey emotions without speaking.",
+        features: ["Vibrant costumes and makeup", "Expressive hand gestures", "Traditional percussion music", "Epic mythological stories"],
         duration: "2-4 hours",
         significance: "Cultural symbol of Kerala's temple traditions"
       },
       {
-        title: "Mohiniyattam",
-        description: "Mohiniyattam is a classical dance form from Kerala, known as the 'dance of the enchantress.' It features graceful, swaying movements and subtle facial expressions, emphasizing feminine beauty and lasya style. Traditionally performed by women, it tells stories of love and devotion, often inspired by Hindu mythology. The dancer wears a white costume with golden borders, symbolizing simplicity and elegance.",
-        features: ["Graceful movements", "Feminine expression", "White and gold costumes", "Sopanam music style", "Devotional themes"],
-        duration: "1-2 hours",
-        significance: "Elegant representation of Kerala's classical arts"
-      },
-      {
         title: "Theyyam",
-        description: "Theyyam is a vibrant ritual art form from North Kerala, blending dance, music, and mysticism. Performers in striking costumes and elaborate makeup represent gods, goddesses, and legendary heroes, becoming living embodiments of the divine during the ritual. The performance, accompanied by rhythmic drumming and invocation songs, often takes place in village shrines and sacred groves.",
-        features: ["Divine embodiment", "Elaborate costumes", "Ritualistic performance", "Tribal heritage", "Trance states"],
+        description: "Theyyam is a vibrant ritual art form from North Kerala, blending dance, music, and mysticism. Performers in striking costumes represent gods, goddesses, and legendary heroes, becoming living embodiments of the divine during the ritual. Over 400 types of Theyyam exist, each with unique stories and symbolism.",
+        features: ["Divine embodiment", "Elaborate costumes", "Ritualistic performance", "Tribal heritage"],
         duration: "Varies by type",
         significance: "Bridge between human and spiritual worlds"
       },
       {
+        title: "Mohiniyattam",
+        description: "Mohiniyattam is a classical dance form from Kerala, known as the 'dance of the enchantress.' It features graceful, swaying movements and subtle facial expressions, emphasizing feminine beauty and lasya style. Traditionally performed by women, it tells stories of love and devotion.",
+        features: ["Graceful movements", "Feminine expression", "White and gold costumes", "Sopanam music style"],
+        duration: "1-2 hours",
+        significance: "Elegant representation of Kerala's classical arts"
+      },
+      {
         title: "Kalaripayattu",
-        description: "Kalaripayattu is one of the oldest martial arts in the world, originating in Kerala over 3,000 years ago. It is a scientifically structured discipline that includes strikes, kicks, grappling, weaponry, and healing techniques. The word 'Kalari' means training space, and 'Payattu' means fight or practice. According to legend, Sage Parashurama, the creator of Kerala, established Kalaripayattu to help locals defend themselves.",
-        features: ["Ancient martial techniques", "Weapon training", "Healing methods", "Animal-inspired movements", "Combat and therapy"],
+        description: "Kalaripayattu is one of the oldest martial arts in the world, originating in Kerala over 3,000 years ago. It includes strikes, kicks, grappling, weaponry, and healing techniques. Known for graceful, animal-inspired movements and the use of weapons like swords and the flexible Urumi.",
+        features: ["Ancient martial techniques", "Weapon training", "Healing methods", "Animal-inspired movements"],
         duration: "Training programs vary",
         significance: "Oldest surviving martial art system"
       },
       {
-        title: "Kutiyattam",
-        description: "Kutiyattam is one of the oldest classical Sanskrit theatre forms, originating in Kerala over 2,000 years ago. It combines ancient Sanskrit drama with local theatrical traditions and is recognized by UNESCO as a Masterpiece of the Oral and Intangible Heritage of Humanity. Kutiyattam performances are traditionally held in temple theatres called Koothambalams, featuring elaborately choreographed gestures, facial expressions, and stylized acting.",
-        features: ["Sanskrit theatre", "UNESCO heritage", "Temple performances", "Elaborate expressions", "Ancient traditions"],
-        duration: "Can last up to 40 days",
-        significance: "World's oldest surviving theatre form"
-      },
-      {
         title: "Ottamthullal",
-        description: "Ottamthullal is a traditional performing art form from Kerala, created in the 18th century by the famous poet Kunchan Nambiar. It combines dance, recitation, and humor to present stories, often satirizing social issues and human foibles. The performer wears colorful costumes and green face makeup, similar to Kathakali but simpler and more approachable.",
-        features: ["Social satire", "Solo performance", "Colorful costumes", "Malayalam narration", "Humorous commentary"],
+        description: "Ottamthullal is a traditional performing art form created in the 18th century by poet Kunchan Nambiar. It combines dance, recitation, and humor to present stories, often satirizing social issues. Known as the 'poor man's Kathakali,' it remains popular at temple festivals.",
+        features: ["Social satire", "Solo performance", "Colorful costumes", "Malayalam narration"],
         duration: "30-60 minutes",
         significance: "Social commentary through art"
       },
       {
-        title: "Padayani",
-        description: "Padayani is a traditional ritualistic folk dance form performed in temples of central Kerala, dedicated to Goddess Bhadrakali. It is a vibrant combination of music, dance, theatre, satire, elaborate masks, and paintings. The name Padayani means 'row of warriors,' and the dance is believed to have roots in ancient martial arts, symbolizing a warrior's formation.",
-        features: ["Ritual masks", "Warrior symbolism", "Vibrant colors", "Community participation", "Religious devotion"],
-        duration: "Evening performances",
-        significance: "Purification and community devotion"
-      },
-      {
         title: "Thiruvathirakali",
-        description: "Thiruvathirakali, also known as Kaikottikali, is a traditional group dance performed by women in Kerala, especially during the festival of Onam and the Thiruvathira celebration. Dancers form a circle around a lit lamp, clapping their hands rhythmically in coordination with songs that often praise deities like Lord Shiva, Parvati, Ganesha, and Saraswati.",
-        features: ["Circular formation", "Group synchronization", "Traditional attire", "Devotional themes", "Feminine energy"],
+        description: "Thiruvathirakali, also known as Kaikottikali, is a traditional group dance performed by women in Kerala, especially during Onam. Dancers form a circle around a lit lamp, clapping hands rhythmically with songs praising deities. The dance promotes marital bliss and community bonding.",
+        features: ["Circular formation", "Group synchronization", "Traditional attire", "Devotional themes"],
         duration: "1-2 hours",
         significance: "Celebration of feminine grace and energy"
       },
       {
         title: "Pulikali",
-        description: "Pulikali, also known as the Tiger Dance, is a vibrant folk art form from Kerala practiced mainly during the Onam festival. Performers paint their bodies with tiger-like stripes in shades of yellow, red, and black, creating a striking visual effect. They dance to the rhythmic beats of traditional percussion instruments such as the thakil and chenda.",
-        features: ["Tiger body painting", "Energetic movements", "Percussion accompaniment", "Festive celebration", "Community spirit"],
+        description: "Pulikali, also known as the Tiger Dance, is a vibrant folk art practiced during Onam. Performers paint their bodies with tiger-like stripes and dance to rhythmic beats. The dance symbolizes courage and bravery, reflecting Kerala's cultural heritage.",
+        features: ["Tiger body painting", "Energetic movements", "Percussion accompaniment", "Festive celebration"],
         duration: "2-3 hours",
         significance: "Expression of courage and community spirit"
-      },
-      {
-        title: "Margamkali",
-        description: "Margamkali is a traditional Christian folk dance from Kerala, practiced mainly by the Syrian Christian community, especially the Knanaya subgroup. It commemorates the life and missionary work of St. Thomas the Apostle, who is believed to have brought Christianity to Kerala. The dance involves about twelve performers who form a circle around a traditional lamp called Nilavilakku, symbolizing Christ and his disciples.",
-        features: ["Christian tradition", "Circular formation", "White attire", "Cymbal accompaniment", "Religious themes"],
-        duration: "30-45 minutes",
-        significance: "Syrian Christian cultural heritage"
       }
     ],
     events: [
       {
         title: "Onam",
-        description: "Onam is Kerala's most celebrated and vibrant harvest festival. It marks the legendary homecoming of King Mahabali, a symbol of prosperity, equality, and cultural unity. The festival spans ten days, filled with colorful activities like boat races, floral arrangements called Pookkalam, traditional dances, and grand feasts (Onam Sadhya). It is celebrated with great enthusiasm by people of all communities, showcasing Kerala's rich cultural heritage.",
-        highlights: ["Pookkalam flower carpets", "Snake boat races", "Onam Sadhya feast", "Traditional dances", "Cultural unity"],
+        description: "Onam is Kerala's most celebrated harvest festival marking the legendary homecoming of King Mahabali. The festival spans ten days with colorful activities like boat races, floral arrangements called Pookkalam, traditional dances, and grand feasts (Onam Sadhya). Celebrated with great enthusiasm by all communities.",
+        highlights: ["Pookkalam flower carpets", "Snake boat races", "Onam Sadhya feast", "Traditional dances"],
         duration: "10 days",
         time: "August-September"
       },
       {
         title: "Thrissur Pooram",
-        description: "Thrissur Pooram is Kerala's grandest and most spectacular temple festival, held annually at the Vadakkunnathan Temple in Thrissur. Celebrated in the Malayalam month of Medam (April-May), it brings together ten temples in a magnificent cultural procession. The festival is renowned for its striking display of decorated elephants, lively traditional percussion ensembles like Ilanjithara Melam, and the vibrant Kudamattam ritual.",
-        highlights: ["Decorated elephants", "Percussion ensembles", "Kudamattam ritual", "Fireworks display", "Cultural procession"],
+        description: "Thrissur Pooram is Kerala's grandest temple festival held at Vadakkunnathan Temple. Celebrated in April-May, it features spectacular displays of decorated elephants, lively percussion ensembles, and vibrant Kudamattam ritual. Attracts over a million visitors with its magnificent fireworks display.",
+        highlights: ["Decorated elephants", "Percussion ensembles", "Kudamattam ritual", "Fireworks display"],
         duration: "1 day main event",
         time: "April-May"
       },
       {
         title: "Vishu",
-        description: "Vishu is Kerala's traditional New Year festival, celebrated with joy and hope for prosperity. It marks the beginning of the Malayalam month of Medam and the start of the harvest season. The highlight is the Vishu Kani, an auspicious arrangement of items like rice, fruits, gold coins, and the bright yellow Konna flowers, set for the first sight on the festival morning.",
-        highlights: ["Vishu Kani arrangement", "Vishu Kaineettam", "Traditional feast", "Family gatherings", "New beginnings"],
+        description: "Vishu is Kerala's traditional New Year festival celebrated with hope for prosperity. The highlight is Vishu Kani - an auspicious arrangement seen first thing in the morning. Features Vishu Kaineettam (gifting), grand feast, prayers, and firecrackers.",
+        highlights: ["Vishu Kani arrangement", "Vishu Kaineettam", "Traditional feast", "Family gatherings"],
         duration: "1 day",
         time: "April"
       },
       {
-        title: "Theyyam Festival",
-        description: "Theyyam is not just an art form but also a major festival in North Kerala, where various forms of Theyyam are performed in temples and sacred groves. These ritual performances occur between December and April, with each Theyyam having unique stories, costumes, and significance. The festival attracts devotees and tourists alike, offering a glimpse into Kerala's ancient spiritual traditions.",
-        highlights: ["Ritual performances", "Divine embodiment", "Traditional costumes", "Spiritual significance", "Cultural heritage"],
-        duration: "December to April",
-        time: "Winter season"
-      },
-      {
-        title: "Attukal Pongala",
-        description: "Attukal Pongala is an annual 10-day festival celebrated at the Attukal Bhagavathi Temple in Thiruvananthapuram, Kerala. It is famous for being the largest gathering of women for a religious purpose in the world. On the ninth day, millions of women from diverse communities cook a special sweet dish called Pongala in earthen pots as an offering to the goddess Attukalamma.",
-        highlights: ["Women's gathering", "Pongala offering", "Community harmony", "Spiritual devotion", "World record"],
-        duration: "10 days",
-        time: "February-March"
-      },
-      {
-        title: "Makaravilakku",
-        description: "Makaravilakku is a significant annual festival celebrated at the Sabarimala Ayyappa Temple in Kerala. It coincides with Makara Sankranti and marks the culmination of a 41-day pilgrimage by millions of devotees. The festival is renowned for the divine light called Makara Jyothi, seen thrice on the Ponnambalamedu hill near the temple.",
-        highlights: ["Makara Jyothi", "Pilgrimage completion", "Sacred procession", "Spiritual devotion", "Mass gathering"],
-        duration: "Festival day",
-        time: "January"
-      },
-      {
-        title: "Arattu Festival",
-        description: "Arattu Festival is a significant religious festival celebrated in Kerala, especially at the Sree Padmanabhaswamy Temple in Thiruvananthapuram and Janardhan Swami Temple in Varkala. The word 'Arattu' means a holy bath, marking the ceremonial bathing of the deity's idol in a sacred water body like a river or sea. The festival usually lasts for ten days and is held twice a year.",
-        highlights: ["Holy bath ritual", "Temple processions", "Cultural performances", "Royal participation", "Religious significance"],
-        duration: "10 days",
-        time: "March-April & October-November"
-      },
-      {
-        title: "Karkidaka Vavu Bali",
-        description: "Karkidaka Vavu Bali is a sacred Hindu ritual observed in Kerala during the new moon day of the Malayalam month Karkidakam (July-August). It is performed to honor and remember deceased ancestors, seeking peace and liberation (moksha) for their souls. Devotees gather at riverbanks, temple ponds, and beaches early in the morning to perform the Bali Tharpanam ritual.",
-        highlights: ["Ancestral rituals", "Riverbank ceremonies", "Family traditions", "Spiritual continuity", "Monsoon season"],
-        duration: "1 day",
-        time: "July-August"
-      },
-      {
         title: "Snake Boat Races",
-        description: "Snake Boat Races (Vallam Kali) are traditional boat races held in Kerala's backwaters, especially during the Onam festival season from July to September. The highlight of Vallam Kali is the race of the Chundan Vallam or snake boats, which are long, slender boats around 30 to 40 meters in length, with up to 128 paddlers rowing in unison.",
-        highlights: ["Chundan Vallam boats", "Synchronized rowing", "Traditional boat songs", "Community participation", "Competitive spirit"],
+        description: "Snake Boat Races (Vallam Kali) are traditional boat races held in Kerala's backwaters during Onam season. Featuring Chundan Vallam boats up to 40 meters long with 128 paddlers rowing in unison. Major events include Nehru Trophy and Aranmula races.",
+        highlights: ["Chundan Vallam boats", "Synchronized rowing", "Traditional boat songs", "Community participation"],
         duration: "Race day events",
         time: "July-September"
       },
       {
+        title: "Attukal Pongala",
+        description: "Attukal Pongala is famous for being the largest gathering of women for a religious purpose. Millions cook Pongala sweet dish as offering to goddess Attukalamma. The festival symbolizes feminine power, devotion, and unity across communities.",
+        highlights: ["Women's gathering", "Pongala offering", "Community harmony", "Spiritual devotion"],
+        duration: "10 days",
+        time: "February-March"
+      },
+      {
         title: "Christmas",
-        description: "Christmas in Kerala is a joyous festival celebrated with a unique blend of religious and cultural traditions. Homes, churches, and streets are adorned with bright stars, twinkling lights, and nativity cribs depicting the birth of Jesus Christ. Families gather for midnight Mass, singing carols and participating in festive prayers.",
-        highlights: ["Church decorations", "Midnight Mass", "Traditional feast", "Community celebrations", "Cultural blend"],
+        description: "Christmas in Kerala is celebrated with unique blend of religious and cultural traditions. Homes and churches adorned with stars and lights, midnight Mass, carol singing, and grand feasts featuring appam, stew, and plum cake.",
+        highlights: ["Church decorations", "Midnight Mass", "Traditional feast", "Community celebrations"],
         duration: "Christmas week",
         time: "December"
+      },
+      {
+        title: "Makaravilakku",
+        description: "Makaravilakku at Sabarimala Ayyappa Temple marks the culmination of 41-day pilgrimage. Famous for the divine Makara Jyothi light and sacred Thiruvabharanam procession. Symbolizes faith and spiritual renewal for millions of devotees.",
+        highlights: ["Makara Jyothi", "Pilgrimage completion", "Sacred procession", "Spiritual devotion"],
+        duration: "Festival day",
+        time: "January"
       }
     ],
     cuisine: [
-          {
-        title: "Thalassery Biryani",
-        description: "Thalassery Biryani is a signature rice dish from the Malabar region of Kerala, known for its distinct aroma and delicate flavor. It is made using Jeerakasala or Kaima rice, which has a unique aroma and fluffy texture. The biryani incorporates a mild yet flavorful chicken masala cooked with onions, ginger, garlic, green chilies, tomatoes, and a blend of traditional Malabar spices.",
-        ingredients: ["Jeerakasala rice", "Chicken", "Malabar spices", "Cashews & raisins", "Yogurt"],
-        serving: "Lunch/Dinner",
-        taste: "Aromatic and flavorful"
+      {
+        title: "Puttu and Kadala Curry",
+        description: "Puttu and Kadala Curry is a beloved traditional breakfast in Kerala. Puttu is made by steaming layers of coarsely ground rice flour and grated coconut. Kadala Curry is a spicy, flavorful curry made with black chickpeas cooked in rich blend of spices and coconut.",
+        ingredients: ["Rice flour", "Grated coconut", "Black chickpeas", "Kerala spices"],
+        serving: "Breakfast",
+        taste: "Mild puttu with spicy curry"
       },
       {
         title: "Appam with Stew",
-        description: "Appam with Stew is a classic Kerala breakfast loved for its perfect blend of flavors and textures. Appam is a soft, lacy pancake made from fermented rice batter and coconut milk, featuring a fluffy center and crispy edges. The vegetable stew, also called Ishtu, is a mildly spiced curry cooked in a rich coconut milk base with vegetables like potatoes, carrots, and beans.",
-        ingredients: ["Rice batter", "Coconut milk", "Mixed vegetables", "Mild spices", "Cinnamon & cardamom"],
+        description: "Appam with Stew is a classic Kerala breakfast loved for its perfect blend. Appam is a soft, lacy pancake from fermented rice batter and coconut milk. The vegetable stew is mildly spiced curry in rich coconut milk base with fragrant spices.",
+        ingredients: ["Rice batter", "Coconut milk", "Mixed vegetables", "Mild spices"],
         serving: "Breakfast",
         taste: "Soft appam with creamy stew"
       },
       {
         title: "Karimeen Pollichathu",
-        description: "Karimeen Pollichathu is a popular Kerala dish featuring pearl spot fish marinated with a blend of spices. The fish is coated with a masala made from onions, tomatoes, ginger, garlic, and coconut milk, giving it a rich and aromatic flavor. It is then wrapped in banana leaves, which infuse the fish with a unique, smoky aroma during cooking.",
-        ingredients: ["Pearl spot fish", "Banana leaves", "Spice blend", "Coconut oil", "Coconut milk"],
+        description: "Karimeen Pollichathu is a popular Kerala dish featuring pearl spot fish marinated with spices, wrapped in banana leaves and grilled. The banana leaves infuse unique smoky aroma while keeping the fish tender and flavorful.",
+        ingredients: ["Pearl spot fish", "Banana leaves", "Spice blend", "Coconut oil"],
         serving: "Lunch/Dinner",
         taste: "Spicy and aromatic"
       },
       {
         title: "Malabar Parotta with Beef Curry",
-        description: "Malabar Parotta with Beef Curry is a beloved Kerala dish known for its rich flavors and textures. Malabar Parotta is a flaky, layered flatbread made from refined flour, kneaded to a soft dough, and cooked on a hot griddle until golden and crisp. Beef Curry from Kerala is a spicy, aromatic preparation cooked with a blend of local spices, coconut oil, onions, tomatoes, and sometimes coconut milk.",
-        ingredients: ["Refined flour", "Beef", "Malabar spices", "Coconut oil", "Coconut milk"],
+        description: "Malabar Parotta with Beef Curry is a beloved Kerala dish from Malabar region. Parotta is flaky, layered flatbread while beef curry is spicy, aromatic preparation with local spices and sometimes coconut milk.",
+        ingredients: ["Refined flour", "Beef", "Malabar spices", "Coconut oil"],
         serving: "Lunch/Dinner",
         taste: "Flaky bread with spicy curry"
       },
       {
         title: "Kerala Prawn Curry",
-        description: "Kerala Prawn Curry is a flavorful, aromatic dish made with fresh prawns cooked in a spiced coconut milk gravy. The prawns are first marinated with turmeric, garlic, and ginger for enhanced taste. The curry base is prepared by sautéing mustard seeds, curry leaves, onions, and spices like red chili powder and coriander.",
-        ingredients: ["Fresh prawns", "Coconut milk", "Tamarind", "Kerala spices", "Coconut oil"],
+        description: "Kerala Prawn Curry is flavorful, aromatic dish made with fresh prawns in spiced coconut milk gravy. Marinated prawns cooked with traditional spices, tamarind for tanginess, and creamy coconut milk for richness.",
+        ingredients: ["Fresh prawns", "Coconut milk", "Tamarind", "Kerala spices"],
         serving: "Lunch/Dinner",
         taste: "Spicy, tangy, and creamy"
       },
+<<<<<<< HEAD
       
           {
         title: "Puttu and Kadala Curry",
@@ -441,33 +358,21 @@ const ExperienceDetailPage = () => {
         serving: "Breakfast",
         taste: "Mild puttu with spicy curry"
       },
+=======
+>>>>>>> origin/main
       {
-        title: "Erissery",
-        description: "Erissery is a traditional Kerala dish made with yellow pumpkin, black-eyed peas, coconut, and spices. The pumpkin is peeled, cubed, and cooked with soaked cowpeas until both are soft. A ground coconut mixture with cumin, green chilies, and turmeric is prepared and added to the cooked pumpkin and beans. The dish is seasoned with a tempering of mustard seeds, red chilies, curry leaves, and coconut oil.",
-        ingredients: ["Yellow pumpkin", "Black-eyed peas", "Coconut", "Spices", "Coconut oil"],
+        title: "Thalassery Biryani",
+        description: "Thalassery Biryani is signature rice dish from Malabar region using Jeerakasala rice with unique aroma. Features mild yet flavorful chicken masala layered and cooked using dum method with cashews and raisins.",
+        ingredients: ["Jeerakasala rice", "Chicken", "Malabar spices", "Cashews & raisins"],
         serving: "Lunch/Dinner",
-        taste: "Mildly spiced and slightly sweet"
-      },
-      {
-        title: "Idli Sambar",
-        description: "Idli Sambar is a popular South Indian breakfast combination, especially favored in Kerala. Idli are soft, steamed rice cakes made from fermented rice and urad dal batter. Sambar is a lentil-based vegetable stew flavored with tamarind, mustard seeds, curry leaves, and a special blend of spices called sambar powder.",
-        ingredients: ["Rice batter", "Urad dal", "Mixed vegetables", "Sambar spices", "Tamarind"],
-        serving: "Breakfast",
-        taste: "Soft idli with tangy sambar"
+        taste: "Aromatic and flavorful"
       },
       {
         title: "Ada Pradhaman",
-        description: "Ada Pradhaman is a rich and creamy Kerala dessert made from rice ada (rice flakes), jaggery, and coconut milk. The rice ada is soaked, then sautéed in ghee with cashews, raisins, and coconut pieces. Jaggery syrup is added to the cooked ada and simmered until thickened. Coconut milk—both thick and thin—is poured in during cooking to give a silky texture.",
-        ingredients: ["Rice ada", "Jaggery", "Coconut milk", "Cardamom", "Cashews & raisins"],
+        description: "Ada Pradhaman is rich and creamy Kerala dessert made from rice ada, jaggery, and coconut milk. Rice flakes sautéed with nuts, cooked in jaggery syrup and coconut milk, flavored with cardamom.",
+        ingredients: ["Rice ada", "Jaggery", "Coconut milk", "Cardamom"],
         serving: "Dessert",
         taste: "Sweet and creamy"
-      },
-      {
-        title: "Kappa and Meen Curry",
-        description: "Kappa and Meen Curry is a classic Kerala combination of boiled tapioca (kappa) and spicy fish curry (meen curry). Tapioca is peeled, cut, and boiled until soft, then mashed and mixed with grated coconut, turmeric, cumin, and curry leaves for added flavor. The fish curry is made with fresh fish cooked in a tangy and spicy gravy using tamarind, chili powder, mustard seeds, fenugreek, curry leaves, and sometimes coconut milk.",
-        ingredients: ["Tapioca", "Fresh fish", "Coconut", "Tamarind", "Kerala spices"],
-        serving: "Lunch/Dinner",
-        taste: "Starchy tapioca with spicy fish curry"
       }
     ]
   };
@@ -758,15 +663,20 @@ const ExperienceDetailPage = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Updated CTA Section with Interactive Contact Options */}
+=======
+      {/* CTA Section */}
+>>>>>>> origin/main
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
             Experience Kerala's {experience.title}
           </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Let our experts craft your perfect journey with authentic local insights. Contact us for personalized experiences and bookings.
+          <p className="text-gray-600 mb-8 leading-relaxed">
+            Let our experts craft your perfect journey with authentic local insights.
           </p>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Call Now Section */}
@@ -830,6 +740,29 @@ const ExperienceDetailPage = () => {
             </div>
           </div>
 
+=======
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="https://wa.me/919028803309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 hover:bg-black text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+            >
+              <span className="mr-2">💬</span>
+              WhatsApp
+            </a>
+            <a
+              href="tel:+919028803309"
+              className="border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+            >
+              <span className="mr-2">📞</span>
+              Call Now
+            </a>
+          </div>
+          <p className="text-gray-500 text-sm mt-6">
+            24/7 available for queries
+          </p>
+>>>>>>> origin/main
         </div>
       </section>
     </div>
