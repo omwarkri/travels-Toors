@@ -7,9 +7,7 @@ const SinglePlacePage = () => {
   const { placeId } = useParams();
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
-  const [showNumbers, setShowNumbers] = useState(false);
   
-  // Complete places data with all detailed information
   // Complete places data with all detailed information
   const allPlaces = [
     {
@@ -2286,16 +2284,6 @@ const SinglePlacePage = () => {
     "Historical Tour": { duration: "2 Days", price: "4,999" }
   };
 
-  // Phone numbers
-  const phoneNumbers = [
-    "+91 9028803309",
-    "+91 9897656789"
-  ];
-
-  const toggleNumbers = () => {
-    setShowNumbers(!showNumbers);
-  };
-
   // Tab content renderer
   const renderTabContent = () => {
     switch (activeTab) {
@@ -2555,56 +2543,34 @@ const SinglePlacePage = () => {
                       <span className="text-sm text-gray-600">{packageData[pkg]?.duration || "Custom"}</span>
                       <span className="text-emerald-600 font-bold">₹{packageData[pkg]?.price || "Custom"}</span>
                     </div>
-                    <button
-                      onClick={toggleNumbers}
+                    <a
+                      href="https://wa.me/919028803309"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
                     >
                       Book Now
-                    </button>
+                    </a>
                   </div>
                 ))}
               </div>
 
               <div className="text-center space-y-3">
-                <button
-                  onClick={toggleNumbers}
+                <a
+                  href="https://wa.me/919028803309"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
                 >
                   💬 Customize Your Trip
-                </button>
-                <button
-                  onClick={toggleNumbers}
+                </a>
+                <a
+                  href="tel:+919028803309"
                   className="w-full bg-emerald-500 text-white py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
                 >
                   📞 Call for Details
-                </button>
+                </a>
               </div>
-
-              {/* Phone Numbers Display */}
-              {showNumbers && (
-                <div className="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg">
-                  <h4 className="font-semibold text-center mb-3">Contact Numbers</h4>
-                  <div className="space-y-2">
-                    {phoneNumbers.map((number, index) => (
-                      <div key={index} className="flex justify-between items-center">
-                        <span className="text-gray-700">{number}</span>
-                        <a
-                          href={`tel:${number}`}
-                          className="bg-emerald-500 text-white px-3 py-1 rounded text-sm hover:bg-emerald-600 transition duration-200"
-                        >
-                          Call
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={toggleNumbers}
-                    className="w-full mt-3 text-gray-500 text-sm hover:text-gray-700"
-                  >
-                    Hide Numbers
-                  </button>
-                </div>
-              )}
 
               {/* Quick Facts */}
               <div className="mt-6 space-y-3">
