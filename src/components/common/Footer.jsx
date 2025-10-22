@@ -107,7 +107,7 @@ const Footer = () => {
               </div>
               <div className="text-center">
                 <div className="w-10 h-10 bg-white p-[1px]  flex items-center justify-center mx-auto mb-1">
-                  <span className="text-black font-bold text-xs">IATO</span>
+                  <img src="https://www.traveltrendstoday.in/storage/posts/iato-logo-1.jpg" alt="" />
                 </div>
                 <span className="text-white text-xs">IATO</span>
               </div>
