@@ -830,14 +830,6 @@ const ExperienceDetailPage = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-gray-500 text-sm">
-              Prefer email? Contact us at{" "}
-              <a href="mailto:info@keralaculture.com" className="text-blue-600 hover:text-blue-800 font-medium">
-                info@keralaculture.com
-              </a>
-            </p>
-          </div>
         </div>
       </section>
     </div>
