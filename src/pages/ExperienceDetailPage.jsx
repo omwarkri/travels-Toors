@@ -329,7 +329,7 @@ const ExperienceDetailPage = () => {
         {
           title: "Appam with Stew",
           description: "Appam with Stew is a classic Kerala breakfast loved for its perfect blend of flavors and textures. Appam is a soft, lacy pancake made from fermented rice batter and coconut milk, featuring a fluffy center and crispy edges. The vegetable stew, also called Ishtu, is a mildly spiced curry cooked in a rich coconut milk base with vegetables like potatoes, carrots, and beans. The stew is flavored with fragrant spices such as cinnamon, cloves, cardamom, and curry leaves, tempered in coconut oil for an authentic aroma. This combination offers a balance of creamy and delicate tastes, with the stew complementing the lightness of appam beautifully. It's traditionally enjoyed during festivals and special occasions but is also a popular everyday meal. Appam and Stew provide a wholesome, comforting, and nourishing experience reflecting Kerala's culinary heritage. The dish is often served hot and paired with fried bananas or chutneys for added taste.",
-          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770792/idli_nm5o8h.jpg",
+          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770791/Appam_with_Stew_sl4yr6.png",
           imageTitle: "Appam with Stew",
           imageDescription: "Lacy rice pancakes with vegetable stew",
           ingredients: ["Rice batter", "Coconut milk", "Mixed vegetables", "Mild spices", "Coconut oil"],
@@ -339,7 +339,7 @@ const ExperienceDetailPage = () => {
         {
           title: "Karimeen Pollichathu",
           description: "Karimeen Pollichathu is a popular Kerala dish featuring pearl spot fish marinated with a blend of spices. The fish is coated with a masala made from onions, tomatoes, ginger, garlic, and coconut milk, giving it a rich and aromatic flavor. It is then wrapped in banana leaves, which infuse the fish with a unique, smoky aroma during cooking. The wrapped fish is pan-fried or grilled until tender and infused with the spices. Traditionally, coconut oil is used in the cooking process to enhance the authentic taste. This dish is a favorite in Kerala's cuisine, known for its delicate balance of spicy, tangy, and creamy textures. It is often served with rice or as a special delicacy during festive occasions and gatherings.",
-          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770793/keralan_prawn_curry_45390_16x9_fzqql5.jpg",
+          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1761289736/Karimeen_Pollichathu_1_nvp0ii.jpg",
           imageTitle: "Karimeen Pollichathu",
           imageDescription: "Pearl spot fish grilled in banana leaves",
           ingredients: ["Pearl spot fish", "Banana leaves", "Spice blend", "Coconut oil", "Coconut milk"],
@@ -379,7 +379,7 @@ const ExperienceDetailPage = () => {
         {
           title: "Erissery",
           description: "Erissery is a traditional Kerala dish made with yellow pumpkin, black-eyed peas, coconut, and spices. The pumpkin is peeled, cubed, and cooked with soaked cowpeas until both are soft. A ground coconut mixture with cumin, green chilies, and turmeric is prepared and added to the cooked pumpkin and beans. The dish is seasoned with a tempering of mustard seeds, red chilies, curry leaves, and coconut oil, which is then poured over the curry. It's a mildly spiced, slightly sweet, and aromatic curry, often served as part of a festive meal or on special occasions. Erissery is known for its wholesome taste and balanced flavors, perfect with rice. It is a popular dish during Onam and other traditional Kerala feasts.",
-          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770794/pepper-delight-ada-pradhaman-2_wkym90.jpg",
+          image: "https://res.cloudinary.com/dl2gcscfa/image/upload/v1759770792/Erissery_djbvcj.jpg",
           imageTitle: "Erissery",
           imageDescription: "Pumpkin and bean curry with coconut",
           ingredients: ["Yellow pumpkin", "Black-eyed peas", "Coconut", "Spices", "Coconut oil"],
