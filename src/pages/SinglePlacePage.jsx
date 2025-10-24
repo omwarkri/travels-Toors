@@ -8,17 +8,12 @@ const SinglePlacePage = () => {
   const { placeId } = useParams();
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState('overview');
-<<<<<<< HEAD
   const [showContactModal, setShowContactModal] = useState(false);
   const [modalType, setModalType] = useState(''); // 'book', 'customize', 'call'
   
   // Complete places data with all detailed information
-    const allPlaces = [
-=======
-  
-  // Complete places data with all detailed information
   const allPlaces = [
->>>>>>> origin/main
+
     {
       id: "munnar",
       name: "MUNNAR",
@@ -2262,8 +2257,6 @@ const SinglePlacePage = () => {
 
   ];
 
-
-
   // Find the place by ID
   const place = allPlaces.find(p => p.id === placeId) || allPlaces[0];
 
@@ -2296,7 +2289,6 @@ const SinglePlacePage = () => {
     "Historical Tour": { duration: "2 Days", price: "4,999" }
   };
 
-<<<<<<< HEAD
   // Phone numbers
   const phoneNumbers = [
     { number: "+919028803309", display: "+91 9028803309" },
@@ -2354,8 +2346,6 @@ const SinglePlacePage = () => {
     }
   };
 
-=======
->>>>>>> origin/main
   // Tab content renderer
   const renderTabContent = () => {
     switch (activeTab) {
@@ -2366,34 +2356,34 @@ const SinglePlacePage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-emerald-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">🌤️ Best Time to Visit</h3>
+                <h3 className="text-lg font-semibold mb-2">Best Time to Visit</h3>
                 <p className="text-gray-700">{place.bestSeason}</p>
               </div>
               <div className="bg-emerald-50 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">🌡️ Climate</h3>
+                <h3 className="text-lg font-semibold mb-2">Climate</h3>
                 <p className="text-gray-700">{place.climate}</p>
               </div>
             </div>
 
             {place.howToReach && (
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">🚗 How to Reach</h3>
+                <h3 className="text-xl font-semibold mb-4">How to Reach</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {place.howToReach.air && (
                     <div>
-                      <h4 className="font-semibold mb-2">✈️ By Air</h4>
+                      <h4 className="font-semibold mb-2">By Air</h4>
                       <p className="text-gray-700 text-sm">{place.howToReach.air}</p>
                     </div>
                   )}
                   {place.howToReach.rail && (
                     <div>
-                      <h4 className="font-semibold mb-2">🚆 By Rail</h4>
+                      <h4 className="font-semibold mb-2">By Rail</h4>
                       <p className="text-gray-700 text-sm">{place.howToReach.rail}</p>
                     </div>
                   )}
                   {place.howToReach.road && (
                     <div>
-                      <h4 className="font-semibold mb-2">🚗 By Road</h4>
+                      <h4 className="font-semibold mb-2">By Road</h4>
                       <p className="text-gray-700 text-sm">{place.howToReach.road}</p>
                     </div>
                   )}
@@ -2452,7 +2442,7 @@ const SinglePlacePage = () => {
                 <ul className="space-y-3">
                   {place.festivalsCulture.map((item, index) => (
                     <li key={index} className="flex items-start space-x-3">
-                      <span className="text-purple-500 mt-1">🎉</span>
+                      <span className="text-purple-500 mt-1">•</span>
                       <p className="text-gray-700">{item}</p>
                     </li>
                   ))}
@@ -2471,7 +2461,7 @@ const SinglePlacePage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {place.travelTips.map((tip, index) => (
                 <div key={index} className="flex items-start space-x-3 bg-blue-50 p-4 rounded-lg">
-                  <span className="text-blue-500 mt-1">💡</span>
+                  <span className="text-blue-500 mt-1">•</span>
                   <p className="text-gray-700">{tip}</p>
                 </div>
               ))}
@@ -2483,7 +2473,7 @@ const SinglePlacePage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {place.nearbyAttractions.map((attraction, index) => (
                     <div key={index} className="flex items-center space-x-2 text-gray-700">
-                      <span className="text-emerald-500">📍</span>
+                      <span className="text-emerald-500">•</span>
                       <span>{attraction}</span>
                     </div>
                   ))}
@@ -2590,9 +2580,9 @@ const SinglePlacePage = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{place.name}</h1>
             <p className="text-xl max-w-3xl">{place.desc}</p>
             <div className="flex flex-wrap items-center gap-4 mt-4">
-              <span className="bg-white/20 px-3 py-1 rounded-full">⭐ {place.rating}</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">🚗 {place.tours} tours available</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full">📍 {place.distance}</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">Rating: {place.rating}</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">Tours: {place.tours}</span>
+              <span className="bg-white/20 px-3 py-1 rounded-full">Distance: {place.distance}</span>
             </div>
           </div>
         </div>
@@ -2677,49 +2667,29 @@ const SinglePlacePage = () => {
                       <span className="text-sm text-gray-600">{packageData[pkg]?.duration || "Custom"}</span>
                       <span className="text-emerald-600 font-bold">₹{packageData[pkg]?.price || "Custom"}</span>
                     </div>
-<<<<<<< HEAD
                     <button
                       onClick={() => openContactModal('book')}
-=======
-                    <a
-                      href="https://wa.me/919028803309"
-                      target="_blank"
-                      rel="noopener noreferrer"
->>>>>>> origin/main
                       className="w-full bg-emerald-500 text-white py-2 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center mt-3 text-sm"
                     >
                       Book Now
-                    </a>
+                    </button>
                   </div>
                 ))}
               </div>
 
               <div className="text-center space-y-3">
-<<<<<<< HEAD
                 <button
                   onClick={() => openContactModal('customize')}
                   className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
                 >
-                  💬 Customize Your Trip
+                  Customize Your Trip
                 </button>
                 <button
                   onClick={() => openContactModal('call')}
-=======
-                <a
-                  href="https://wa.me/919028803309"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-green-600 text-white py-3 font-semibold hover:bg-green-700 transition duration-300 flex items-center justify-center"
-                >
-                  💬 Customize Your Trip
-                </a>
-                <a
-                  href="tel:+919028803309"
->>>>>>> origin/main
                   className="w-full bg-emerald-500 text-white py-3 font-semibold hover:bg-emerald-600 transition duration-300 flex items-center justify-center"
                 >
-                  📞 Call for Details
-                </a>
+                  Call for Details
+                </button>
               </div>
 
               {/* Quick Facts */}
